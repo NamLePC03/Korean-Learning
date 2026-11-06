@@ -201,66 +201,153 @@
       padding: 0 20px;
     }
 
-    /* TAB NAVIGATION */
-    .tab-navigation {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 6px 4px 14px;
-      scrollbar-width: thin;
-      scrollbar-color: #cbd5e1 transparent;
-      margin-bottom: 20px;
+    /* APP LAYOUT: SIDEBAR + CONTENT */
+    .app-layout {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
     }
 
-    .tab-navigation::-webkit-scrollbar {
-      height: 6px;
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    .tab-navigation::-webkit-scrollbar-thumb {
+    .sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
       background: #cbd5e1;
       border-radius: 4px;
     }
 
+    .sidebar-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .sidebar-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .tab-navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin-bottom: 0;
+      overflow-x: visible;
+    }
+
     .tab-btn {
-      flex: 0 0 auto;
-      padding: 10px 18px;
-      border-radius: 9999px;
-      border: 1px solid var(--border);
-      background: #ffffff;
+      width: 100%;
+      text-align: left;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
       color: var(--text-main);
       font-family: inherit;
       font-size: 13.5px;
-      font-weight: 600;
+      font-weight: 500;
       cursor: pointer;
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-sm);
-      white-space: nowrap;
+      gap: 10px;
+      transition: all 0.15s ease;
+      box-shadow: none;
+      white-space: normal;
+      line-height: 1.35;
     }
 
     .tab-btn:hover {
       background: #f1f5f9;
-      border-color: #cbd5e1;
-      transform: translateY(-1px);
+      color: var(--primary-dark);
+      transform: none;
+      border-color: #e2e8f0;
     }
 
     .tab-btn.active {
       background: var(--primary);
       color: #ffffff;
+      font-weight: 600;
       border-color: var(--primary);
-      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.35);
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
     }
 
     .tab-btn .tab-num {
-      background: rgba(0, 0, 0, 0.06);
+      background: #e2e8f0;
+      color: #475569;
       padding: 2px 7px;
-      border-radius: 9999px;
+      border-radius: 6px;
       font-size: 11px;
+      font-weight: 700;
+      font-family: monospace;
+      min-width: 24px;
+      text-align: center;
+      flex-shrink: 0;
     }
     .tab-btn.active .tab-num {
       background: rgba(255, 255, 255, 0.25);
       color: #ffffff;
+    }
+
+    .content-area {
+      min-width: 0;
+    }
+
+    @media (max-width: 960px) {
+      .app-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        padding: 12px;
+      }
+      .tab-navigation {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .tab-navigation::-webkit-scrollbar {
+        height: 5px;
+      }
+      .tab-navigation::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .tab-btn {
+        width: auto;
+        flex: 0 0 auto;
+        border-radius: 9999px;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        white-space: nowrap;
+        padding: 8px 14px;
+      }
     }
 
     /* TAB CONTENT PANELS */
@@ -802,8 +889,14 @@
 
   <!-- APP MAIN -->
   <main class="app-container">
-    <!-- TABS NAVIGATION -->
-    <nav class="tab-navigation" id="tabNav">
+    <div class="app-layout">
+      <!-- SIDEBAR (LEFT COLUMN) -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-title">Danh Sách Bài Học</div>
+          <div class="sidebar-subtitle">15 bài sơ cấp 1 &amp; chuyên đề</div>
+        </div>
+        <nav class="tab-navigation" id="tabNav">
       <button class="tab-btn active" onclick="switchTab('tab-intro')"><span class="tab-num">★</span> Nhập Môn Hangeul</button>
       <button class="tab-btn" onclick="switchTab('tab-bai01')"><span class="tab-num">01</span> Bài 1: Giới thiệu</button>
       <button class="tab-btn" onclick="switchTab('tab-bai02')"><span class="tab-num">02</span> Bài 2: Trường học</button>
@@ -822,7 +915,11 @@
       <button class="tab-btn" onclick="switchTab('tab-bai15')"><span class="tab-num">15</span> Bài 15: Giao thông</button>
 <button class="tab-btn" onclick="switchTab('tab-batquytac')"><span class="tab-num">⚡</span> Bất quy tắc tiếng Hàn</button>
       <button class="tab-btn" onclick="switchTab('tab-summary')"><span class="tab-num">📊</span> Bảng Tra Cứu Toàn Diện</button>
-    </nav>
+        </nav>
+      </aside>
+
+      <!-- CONTENT AREA (RIGHT COLUMN) -->
+      <div class="content-area">
 
     <!-- ==================== TAB 0: NHẬP MÔN HANGEUL ==================== -->
     <section class="tab-panel active" id="tab-intro">
@@ -5126,6 +5223,8 @@
         </div>
       </div>
     </section>
+      </div><!-- /.content-area -->
+    </div><!-- /.app-layout -->
   </main>
 
   <!-- JAVASCRIPT LOGIC -->
@@ -5170,7 +5269,7 @@
       });
 
       // Scroll top of container smoothly
-      window.scrollTo({ top: 180, behavior: 'smooth' });
+      window.scrollTo({ top: 120, behavior: 'smooth' });
     }
 
     // SPEECH SYNTHESIS (KOREAN TTS)
