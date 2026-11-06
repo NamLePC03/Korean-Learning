@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sổ Tay Toàn Diện: Bất Quy Tắc & Ngoại Lệ Tiếng Hàn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #f1f5f9;
+      --bg-card: rgba(255, 255, 255, 0.96);
+      --border-color: #e2e8f0;
+      --border-highlight: #6366f1;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-indigo: #4f46e5;
+      --accent-indigo-light: #4338ca;
+      --accent-cyan: #0284c7;
+      --accent-emerald: #059669;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      --badge-irreg-bg: #ede9fe;
+      --badge-irreg-border: #c4b5fd;
+      --badge-irreg-text: #6d28d9;
+      --badge-except-bg: #ffe4e6;
+      --badge-except-border: #fecdd3;
+      --badge-except-text: #be123c;
+      --badge-reg-bg: #ecfdf5;
+      --badge-reg-border: #a7f3d0;
+      --badge-reg-text: #047857;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem 4rem;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse at 15% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 100%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 50%, rgba(241, 245, 249, 0.6) 0%, transparent 100%);
+      background-attachment: fixed;
+    }
+
+    .kr-font {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-indigo-light);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      background: linear-gradient(135deg, #0f172a 20%, #4338ca 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Stats bar */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      transition: all 0.25s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--accent-indigo);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .stat-val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    /* Control Panel */
+    .controls-wrapper {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .search-box-wrap {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1.1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      fill: var(--text-muted);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.9rem 1rem 0.9rem 3rem;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      background: #ffffff;
+      border-color: var(--accent-indigo);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    }
+
+    .filter-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filter-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #475569;
+      margin-right: 0.5rem;
+      min-width: 80px;
+    }
+
+    .filter-btn {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #475569;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .filter-btn:hover {
+      background: #f1f5f9;
+      color: var(--text-main);
+      border-color: #94a3b8;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-indigo);
+      border-color: var(--accent-indigo-light);
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
+    }
+
+    /* Table Container */
+    .table-container {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    thead tr {
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      padding: 1.1rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #475569;
+      white-space: nowrap;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.15s ease;
+    }
+
+    tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    td {
+      padding: 1.1rem 1.25rem;
+      vertical-align: middle;
+      font-size: 0.95rem;
+    }
+
+    .word-cell {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+
+    .korean-word {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.15s ease;
+    }
+
+    .korean-word:hover {
+      color: var(--accent-indigo);
+    }
+
+    .word-type {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .conjugated-word {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0369a1;
+      background: #f0f9ff;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      display: inline-block;
+      border: 1px solid #bae6fd;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .conjugated-word:hover {
+      background: #e0f2fe;
+      border-color: #7dd3fc;
+    }
+
+    .viet-meaning {
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-irregular {
+      background: var(--badge-irreg-bg);
+      border: 1px solid var(--badge-irreg-border);
+      color: var(--badge-irreg-text);
+    }
+
+    .badge-exception {
+      background: var(--badge-except-bg);
+      border: 1px solid var(--badge-except-border);
+      color: var(--badge-except-text);
+    }
+
+    .badge-regular {
+      background: var(--badge-reg-bg);
+      border: 1px solid var(--badge-reg-border);
+      color: var(--badge-reg-text);
+    }
+
+    .rule-pill {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #4338ca;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+
+    .rule-explanation {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .no-results {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #334155;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      transform: translateY(15px);
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 1.5rem 0.75rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      .filter-title {
+        width: 100%;
+        margin-bottom: 0.25rem;
+      }
+      th, td {
+        padding: 0.8rem 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="header-badge">
+        <span>📖 Cẩm Nang Ngữ Pháp TOPIK</span>
+      </div>
+      <h1>Tổng Hợp Bất Quy Tắc & Ngoại Lệ Tiếng Hàn</h1>
+      <p class="subtitle">
+        Bảng tra cứu toàn diện gồm đầy đủ 100% các từ vựng, quy tắc biến âm khi chia với đuôi nguyên âm (-아/어/여요) và toàn bộ các ngoại lệ quan trọng.
+      </p>
+    </header>
+
+    <!-- Stat cards -->
+    <div class="stats-container">
+      <div class="stat-card">
+        <span class="stat-label">Tổng số từ vựng</span>
+        <span class="stat-val" id="totalWordsCount">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Từ bất quy tắc</span>
+        <span class="stat-val" style="color: var(--accent-indigo-light);" id="irregWordsCount">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Ngoại lệ (Chia thường)</span>
+        <span class="stat-val" style="color: var(--accent-rose);" id="exceptWordsCount">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Các nhóm quy tắc</span>
+        <span class="stat-val" style="color: var(--accent-cyan);">9 Nhóm</span>
+      </div>
+    </div>
+
+    <!-- Controls / Filters -->
+    <div class="controls-wrapper">
+      <div class="search-box-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Tìm kiếm từ tiếng Hàn, nghĩa tiếng Việt, dạng chia, quy tắc (ví dụ: 춥다, lạnh, 추워요, ㅂ, ngoại lệ)..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="filter-groups">
+        <!-- Nhóm quy tắc -->
+        <div class="filter-row">
+          <span class="filter-title">Theo nhóm:</span>
+          <button class="filter-btn active" data-rule="all">Tất cả</button>
+          <button class="filter-btn" data-rule="ㅂ">Bất quy tắc ㅂ</button>
+          <button class="filter-btn" data-rule="ㄷ">Bất quy tắc ㄷ</button>
+          <button class="filter-btn" data-rule="ㅅ">Bất quy tắc ㅅ</button>
+          <button class="filter-btn" data-rule="ㅡ">Bất quy tắc ㅡ</button>
+          <button class="filter-btn" data-rule="르/러">Bất quy tắc 르 & 러</button>
+          <button class="filter-btn" data-rule="ㅎ">Bất quy tắc ㅎ</button>
+          <button class="filter-btn" data-rule="ㄹ">Quy tắc ㄹ</button>
+          <button class="filter-btn" data-rule="우">Bất quy tắc 우</button>
+          <button class="filter-btn" data-rule="하다/gộp">Đuôi 하다 & Gộp âm</button>
+        </div>
+
+        <!-- Phân loại -->
+        <div class="filter-row">
+          <span class="filter-title">Phân loại:</span>
+          <button class="filter-btn active" data-type="all">Tất cả trạng thái</button>
+          <button class="filter-btn" data-type="irreg">Bất quy tắc (Biến đổi)</button>
+          <button class="filter-btn" data-type="except">Ngoại lệ (Chia thường)</button>
+          <button class="filter-btn" data-type="reg">Rút gọn / Quy ước</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table content -->
+    <div class="table-container">
+      <div class="table-responsive">
+        <table id="verbsTable">
+          <thead>
+            <tr>
+              <th style="width: 18%;">Từ nguyên bản</th>
+              <th style="width: 20%;">Nghĩa tiếng Việt</th>
+              <th style="width: 18%;">Dạng chia (-아/어/여)</th>
+              <th style="width: 16%;">Phân loại</th>
+              <th style="width: 28%;">Quy tắc & Giải thích chi tiết</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Render dynamically -->
+          </tbody>
+        </table>
+      </div>
+      <div id="noResults" class="no-results" style="display: none;">
+        Không tìm thấy từ vựng nào phù hợp với bộ lọc tìm kiếm của bạn.
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">
+    <span>Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <script>
+    const verbsData = [
+      // ================= 1. BẤT QUY TẮC ㅂ =================
+      {
+        base: "춥다",
+        typeTag: "Tính từ",
+        meaning: "Lạnh",
+        conjugated: "추워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 추 + 우 + 어요 → 추워요"
+      },
+      {
+        base: "덥다",
+        typeTag: "Tính từ",
+        meaning: "Nóng",
+        conjugated: "더워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 더 + 우 + 어요 → 더워요"
+      },
+      {
+        base: "어렵다",
+        typeTag: "Tính từ",
+        meaning: "Khó",
+        conjugated: "어려워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ biến thành 우: 어려 + 우 + 어요 → 어려워요"
+      },
+      {
+        base: "돕다",
+        typeTag: "Động từ",
+        meaning: "Giúp đỡ",
+        conjugated: "도와요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ (Đặc biệt)",
+        explanation: "Từ đặc biệt: ㅂ biến thành 오 khi gặp -아/어: 도 + 오 + 아요 → 도와요"
+      },
+      {
+        base: "곱다",
+        typeTag: "Tính từ",
+        meaning: "Đẹp, mịn màng",
+        conjugated: "고와요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ (Đặc biệt)",
+        explanation: "Từ đặc biệt: ㅂ biến thành 오 khi gặp -아/어: 고 + 오 + 아요 → 고와요"
+      },
+      {
+        base: "쉽다",
+        typeTag: "Tính từ",
+        meaning: "Dễ, dễ dàng",
+        conjugated: "쉬워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 쉬 + 우 + 어요 → 쉬워요"
+      },
+      {
+        base: "맵다",
+        typeTag: "Tính từ",
+        meaning: "Cay (vị)",
+        conjugated: "매워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 매 + 우 + 어요 → 매워요"
+      },
+      {
+        base: "귀엽다",
+        typeTag: "Tính từ",
+        meaning: "Đáng yêu, dễ thương",
+        conjugated: "귀여워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 귀여 + 우 + 어요 → 귀여워요"
+      },
+      {
+        base: "무겁다",
+        typeTag: "Tính từ",
+        meaning: "Nặng (trọng lượng)",
+        conjugated: "무거워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 무거 + 우 + 어요 → 무거워요"
+      },
+      {
+        base: "가볍다",
+        typeTag: "Tính từ",
+        meaning: "Nhẹ (trọng lượng)",
+        conjugated: "가벼워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 가벼 + 우 + 어요 → 가벼워요"
+      },
+      {
+        base: "아름답다",
+        typeTag: "Tính từ",
+        meaning: "Xinh đẹp, tuyệt đẹp",
+        conjugated: "아름다워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 아름다 + 우 + 어요 → 아름다워요"
+      },
+      {
+        base: "뜨겁다",
+        typeTag: "Tính từ",
+        meaning: "Nóng (nhiệt độ đồ vật, nước)",
+        conjugated: "뜨거워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 뜨거 + 우 + 어요 → 뜨거워요"
+      },
+      {
+        base: "차갑다",
+        typeTag: "Tính từ",
+        meaning: "Lạnh (đồ vật, nước đá)",
+        conjugated: "차가워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 차가 + 우 + 어요 → 차가워요"
+      },
+      {
+        base: "눕다",
+        typeTag: "Động từ",
+        meaning: "Nằm xuống",
+        conjugated: "누워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 누 + 우 + 어요 → 누워요"
+      },
+      {
+        base: "굽다 (nướng)",
+        typeTag: "Động từ",
+        meaning: "Nướng (thịt, cá, bánh)",
+        conjugated: "구워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Động từ nướng: ㅂ gặp nguyên âm biến thành 우: 구 + 우 + 어요 → 구워요"
+      },
+      {
+        base: "줍다",
+        typeTag: "Động từ",
+        meaning: "Nhặt, lượm lên",
+        conjugated: "주워요",
+        group: "ㅂ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅂ",
+        explanation: "Patchim ㅂ gặp nguyên âm biến thành 우: 주 + 우 + 어요 → 주워요"
+      },
+      // Ngoại lệ ㅂ
+      {
+        base: "입다",
+        typeTag: "Động từ",
+        meaning: "Mặc (áo)",
+        conjugated: "입어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅣ + -어요 → 입어요"
+      },
+      {
+        base: "잡다",
+        typeTag: "Động từ",
+        meaning: "Bắt, cầm, nắm",
+        conjugated: "잡아요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅏ + -아요 → 잡아요"
+      },
+      {
+        base: "뽑다",
+        typeTag: "Động từ",
+        meaning: "Chọn, nhổ, rút",
+        conjugated: "뽑아요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅗ + -아요 → 뽑아요"
+      },
+      {
+        base: "씹다",
+        typeTag: "Động từ",
+        meaning: "Nhai",
+        conjugated: "씹어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅣ + -어요 → 씹어요"
+      },
+      {
+        base: "좁다",
+        typeTag: "Tính từ",
+        meaning: "Hẹp, chật",
+        conjugated: "좁아요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅗ + -아요 → 좁아요"
+      },
+      {
+        base: "넓다",
+        typeTag: "Tính từ",
+        meaning: "Rộng rãi",
+        conjugated: "넓어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅓ + -어요 → 넓어요"
+      },
+      {
+        base: "접다",
+        typeTag: "Động từ",
+        meaning: "Gấp, xếp lại",
+        conjugated: "접어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅓ + -어요 → 접어요"
+      },
+      {
+        base: "업다",
+        typeTag: "Động từ",
+        meaning: "Cõng (trên lưng)",
+        conjugated: "업어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅓ + -어요 → 업어요"
+      },
+      {
+        base: "집다",
+        typeTag: "Động từ",
+        meaning: "Gắp, nhặt, cầm lấy",
+        conjugated: "집어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅣ + -어요 → 집어요"
+      },
+      {
+        base: "붙잡다",
+        typeTag: "Động từ",
+        meaning: "Nắm chặt, tóm lấy",
+        conjugated: "붙잡아요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅏ + -아요 → 붙잡아요"
+      },
+      {
+        base: "뒤집다",
+        typeTag: "Động từ",
+        meaning: "Lật ngược, đảo lộn",
+        conjugated: "뒤집어요",
+        group: "ㅂ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅂ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅂ, chia theo nguyên âm gốc ㅣ + -어요 → 뒤집어요"
+      },
+
+      // ================= 2. BẤT QUY TẮC ㄷ =================
+      {
+        base: "듣다",
+        typeTag: "Động từ",
+        meaning: "Nghe",
+        conjugated: "들어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 들 + 어요 = 들어요"
+      },
+      {
+        base: "걷다",
+        typeTag: "Động từ",
+        meaning: "Đi bộ",
+        conjugated: "걸어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 걸 + 어요 = 걸어요"
+      },
+      {
+        base: "묻다 (hỏi)",
+        typeTag: "Động từ",
+        meaning: "Hỏi (người khác)",
+        conjugated: "물어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Mang nghĩa 'hỏi': ㄷ gặp nguyên âm biến thành ㄹ: 물 + 어요 = 물어요"
+      },
+      {
+        base: "싣다",
+        typeTag: "Động từ",
+        meaning: "Chất lên xe, chở hàng, tải lên",
+        conjugated: "실어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 실 + 어요 = 실어요"
+      },
+      {
+        base: "깨닫다",
+        typeTag: "Động từ",
+        meaning: "Nhận ra, giác ngộ, thấu hiểu",
+        conjugated: "깨달아요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 깨달 + 아요 = 깨달아요"
+      },
+      {
+        base: "붇다",
+        typeTag: "Động/Tính",
+        meaning: "Trương lên, phù nề, nở to ra (mì tôm, ngâm nước)",
+        conjugated: "불어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 불 + 어요 = 불어요"
+      },
+      {
+        base: "긷다",
+        typeTag: "Động từ",
+        meaning: "Múc nước (giếng), gánh nước",
+        conjugated: "길어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 길 + 어요 = 길어요"
+      },
+      {
+        base: "일컫다",
+        typeTag: "Động từ",
+        meaning: "Xưng là, gọi là, nhắc đến",
+        conjugated: "일컬어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 일컬 + 어요 = 일컬어요"
+      },
+      {
+        base: "눋다",
+        typeTag: "Động/Tính",
+        meaning: "Cháy sém, bén nồi, khét (cơm cháy)",
+        conjugated: "눌어요",
+        group: "ㄷ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㄷ",
+        explanation: "Patchim ㄷ gặp nguyên âm biến thành ㄹ: 눌 + 어요 = 눌어요"
+      },
+      // Ngoại lệ ㄷ
+      {
+        base: "닫다",
+        typeTag: "Động từ",
+        meaning: "Đóng (cửa)",
+        conjugated: "닫아요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅏ + -아요 → 닫아요"
+      },
+      {
+        base: "받다",
+        typeTag: "Động từ",
+        meaning: "Nhận",
+        conjugated: "받아요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅏ + -아요 → 받아요"
+      },
+      {
+        base: "믿다",
+        typeTag: "Động từ",
+        meaning: "Tin tưởng",
+        conjugated: "믿어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅣ + -어요 → 믿어요"
+      },
+      {
+        base: "얻다",
+        typeTag: "Động từ",
+        meaning: "Đạt được, nhận lấy",
+        conjugated: "얻어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅓ + -어요 → 얻어요"
+      },
+      {
+        base: "묻다 (chôn)",
+        typeTag: "Động từ",
+        meaning: "Chôn cất / Dính bẩn",
+        conjugated: "묻어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Mang nghĩa 'chôn/dính': giữ nguyên patchim ㄷ + -어요 → 묻어요"
+      },
+      {
+        base: "뜯다",
+        typeTag: "Động từ",
+        meaning: "Xé, bóc, nhổ",
+        conjugated: "뜯어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅡ + -어요 → 뜯어요"
+      },
+      {
+        base: "굳다",
+        typeTag: "Động/Tính",
+        meaning: "Cứng lại, đông lại",
+        conjugated: "굳어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅜ + -어요 → 굳어요"
+      },
+      {
+        base: "쏟다",
+        typeTag: "Động từ",
+        meaning: "Đổ ra, làm tràn, trút ra",
+        conjugated: "쏟아요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅗ + -아요 → 쏟아요"
+      },
+      {
+        base: "뻗다",
+        typeTag: "Động từ",
+        meaning: "Duỗi thẳng, vươn dài",
+        conjugated: "뻗어요",
+        group: "ㄷ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㄷ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㄷ, chia theo nguyên âm gốc ㅓ + -어요 → 뻗어요"
+      },
+
+      // ================= 3. QUY TẮC ㄹ =================
+      {
+        base: "살다",
+        typeTag: "Động từ",
+        meaning: "Sống, sinh sống",
+        conjugated: "살아요",
+        group: "ㄹ",
+        category: "reg",
+        ruleTitle: "Quy tắc với ㄹ",
+        explanation: "Kết thúc bằng patchim ㄹ, khi gặp đuôi nguyên âm chia theo quy tắc thường: 살 + 아요 = 살아요"
+      },
+      {
+        base: "길다",
+        typeTag: "Tính từ",
+        meaning: "Dài",
+        conjugated: "길어요",
+        group: "ㄹ",
+        category: "reg",
+        ruleTitle: "Quy tắc với ㄹ",
+        explanation: "Kết thúc bằng patchim ㄹ, gặp đuôi nguyên âm chia theo quy tắc thường: 길 + 어요 = 길어요"
+      },
+      {
+        base: "알다",
+        typeTag: "Động từ",
+        meaning: "Biết",
+        conjugated: "알아요",
+        group: "ㄹ",
+        category: "reg",
+        ruleTitle: "Quy tắc với ㄹ",
+        explanation: "Gốc kết thúc bằng ㄹ, chia bình thường: 알 + 아요 = 알아요 (Lưu ý: chỉ biến đổi khi gặp ㄴ, ㅂ, ㅅ)"
+      },
+      {
+        base: "멀다",
+        typeTag: "Tính từ",
+        meaning: "Xa",
+        conjugated: "멀어요",
+        group: "ㄹ",
+        category: "reg",
+        ruleTitle: "Quy tắc với ㄹ",
+        explanation: "Gốc kết thúc bằng ㄹ, chia bình thường: 멀 + 어요 = 멀어요"
+      },
+      {
+        base: "팔다",
+        typeTag: "Động từ",
+        meaning: "Bán",
+        conjugated: "팔아요",
+        group: "ㄹ",
+        category: "reg",
+        ruleTitle: "Quy tắc với ㄹ",
+        explanation: "Gốc kết thúc bằng ㄹ, chia bình thường: 팔 + 아요 = 팔아요"
+      },
+
+      // ================= 4. BẤT QUY TẮC 르 & 러 =================
+      {
+        base: "모르다",
+        typeTag: "Động từ",
+        meaning: "Không biết",
+        conjugated: "몰라요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Bỏ ㅡ, âm trước là 모 (có ㅗ) nên mượn ㄹ làm patchim và biến thành 라: 모 + ㄹ + 라요 = 몰라요"
+      },
+      {
+        base: "빠르다",
+        typeTag: "Tính từ",
+        meaning: "Nhanh",
+        conjugated: "빨라요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Bỏ ㅡ, âm trước là 빠 (có ㅏ) → mượn ㄹ và kết hợp 라: 빠 + ㄹ + 라요 = 빨라요"
+      },
+      {
+        base: "고르다",
+        typeTag: "Động từ",
+        meaning: "Chọn, lựa chọn",
+        conjugated: "골라요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Âm trước là 고 (có ㅗ) → mượn ㄹ và kết hợp 라: 고 + ㄹ + 라요 = 골라요"
+      },
+      {
+        base: "자르다",
+        typeTag: "Động từ",
+        meaning: "Cắt, chặt",
+        conjugated: "잘라요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Âm trước là 자 (có ㅏ) → mượn ㄹ và kết hợp 라: 자 + ㄹ + 라요 = 잘라요"
+      },
+      {
+        base: "다르다",
+        typeTag: "Tính từ",
+        meaning: "Khác biệt",
+        conjugated: "달라요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Âm trước là 다 (có ㅏ) → mượn ㄹ và kết hợp 라: 다 + ㄹ + 라요 = 달라요"
+      },
+      {
+        base: "부르다 (hát/gọi)",
+        typeTag: "Động từ",
+        meaning: "Hát / Gọi tên / No bụng",
+        conjugated: "불러요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Âm trước là 부 (có ㅜ khác ㅏ/ㅗ) → mượn ㄹ và biến thành 러: 부 + ㄹ + 러요 = 불러요"
+      },
+      {
+        base: "기르다",
+        typeTag: "Động từ",
+        meaning: "Nuôi, trồng, dưỡng",
+        conjugated: "길러요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Âm trước là 기 (có ㅣ khác ㅏ/ㅗ) → mượn ㄹ và biến thành 러: 기 + ㄹ + 러요 = 길러요 (길러서)"
+      },
+      {
+        base: "누르다 (nhấn)",
+        typeTag: "Động từ",
+        meaning: "Ấn, nhấn (nút)",
+        conjugated: "눌러요",
+        group: "르/러",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 르",
+        explanation: "Động từ mang nghĩa 'ấn/bấm': 누 + ㄹ + 러요 = 눌러요 (눌러야 하다)"
+      },
+      // Ngoại lệ 르 / Bất quy tắc 러
+      {
+        base: "푸르다",
+        typeTag: "Tính từ",
+        meaning: "Xanh biếc, xanh lam",
+        conjugated: "푸르러요",
+        group: "르/러",
+        category: "except",
+        ruleTitle: "Bất quy tắc 러 (Ngoại lệ của 르)",
+        explanation: "Giữ nguyên gốc từ và biến đuôi -어 thành -러: 푸르 + 어요 → 푸르러요 (không biến thành 풀러요)"
+      },
+      {
+        base: "이르다 (đạt đến)",
+        typeTag: "Động từ",
+        meaning: "Đạt đến, chạm tới mốc",
+        conjugated: "이르러요",
+        group: "르/러",
+        category: "except",
+        ruleTitle: "Bất quy tắc 러 (Ngoại lệ của 르)",
+        explanation: "Khi mang nghĩa 'chạm tới, đạt tới': 이르 + 어요 → 이르러요. (Nếu mang nghĩa mách bảo/sớm thì chia là 일러요)"
+      },
+      {
+        base: "누르다 (vàng)",
+        typeTag: "Tính từ",
+        meaning: "Vàng hoe, úa vàng",
+        conjugated: "누르러요",
+        group: "르/러",
+        category: "except",
+        ruleTitle: "Bất quy tắc 러 (Ngoại lệ của 르)",
+        explanation: "Tính từ chỉ màu sắc vàng: 누르 + 어요 → 누르러요"
+      },
+      {
+        base: "따르다",
+        typeTag: "Động từ",
+        meaning: "Đi theo, noi theo, rót nước",
+        conjugated: "따라요",
+        group: "르/러",
+        category: "except",
+        ruleTitle: "Ngoại lệ 르 (Thuộc quy tắc ㅡ)",
+        explanation: "Không thêm patchim ㄹ, chỉ rụng nguyên âm ㅡ kết hợp với -아요: 따ㄹ + 아요 → 따라요 (không phải 딸라요)"
+      },
+
+      // ================= 5. BẤT QUY TẮC ㅡ =================
+      {
+        base: "크다",
+        typeTag: "Tính từ",
+        meaning: "To, lớn",
+        conjugated: "커요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Đơn âm)",
+        explanation: "Từ 1 âm tiết, rụng nguyên âm ㅡ và kết hợp với -어요: ㅋ + 어요 = 커요 (커서)"
+      },
+      {
+        base: "쓰다",
+        typeTag: "Động/Tính",
+        meaning: "Viết / Đắng / Dùng / Đội",
+        conjugated: "써요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Đơn âm)",
+        explanation: "Từ 1 âm tiết, rụng ㅡ và kết hợp với -어요: ㅆ + 어요 = 써요"
+      },
+      {
+        base: "끄다",
+        typeTag: "Động từ",
+        meaning: "Tắt (đèn, điện)",
+        conjugated: "꺼요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Đơn âm)",
+        explanation: "Từ 1 âm tiết, rụng ㅡ và kết hợp với -어요: ㄲ + 어요 = 꺼요 (꺼야 하다)"
+      },
+      {
+        base: "바쁘다",
+        typeTag: "Tính từ",
+        meaning: "Bận rộn",
+        conjugated: "바빠요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước chứa ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm tiết đứng trước là 바 (chứa ㅏ) nên kết hợp -아요: 바ㅃ + 아요 = 바빠요"
+      },
+      {
+        base: "나쁘다",
+        typeTag: "Tính từ",
+        meaning: "Xấu, tồi tệ",
+        conjugated: "나빠요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước chứa ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm tiết đứng trước là 나 (chứa ㅏ) → kết hợp -아요: 나ㅃ + 아요 = 나빠요 (나빠서)"
+      },
+      {
+        base: "배고프다",
+        typeTag: "Tính từ",
+        meaning: "Đói bụng",
+        conjugated: "배고파요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước chứa ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 고 (chứa ㅗ) → kết hợp -아요: 배고ㅍ + 아요 = 배고파요"
+      },
+      {
+        base: "잠그다",
+        typeTag: "Động từ",
+        meaning: "Khóa (cửa, vòi nước)",
+        conjugated: "잠가요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước chứa ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 잠 (chứa ㅏ) → kết hợp -아요: 잠ㄱ + 아요 = 잠가요 (잠가야 하다)"
+      },
+      {
+        base: "아프다",
+        typeTag: "Tính từ",
+        meaning: "Đau, ốm",
+        conjugated: "아파요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước chứa ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 아 (chứa ㅏ) → kết hợp -아요: 아ㅍ + 아요 = 아파요"
+      },
+      {
+        base: "예쁘다",
+        typeTag: "Tính từ",
+        meaning: "Đẹp, xinh xắn",
+        conjugated: "예뻐요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước khác ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 예 (chứa ㅖ) → kết hợp -어요: 예ㅃ + 어요 = 예뻐요"
+      },
+      {
+        base: "슬프다",
+        typeTag: "Tính từ",
+        meaning: "Buồn bã",
+        conjugated: "슬퍼요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước khác ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 슬 (chứa ㅡ) → kết hợp -어요: 슬ㅍ + 어요 = 슬퍼요 (슬퍼서)"
+      },
+      {
+        base: "기쁘다",
+        typeTag: "Tính từ",
+        meaning: "Vui vẻ",
+        conjugated: "기뻐요",
+        group: "ㅡ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅡ (Âm trước khác ㅏ/ㅗ)",
+        explanation: "Rụng ㅡ, âm liền trước là 기 (chứa ㅣ) → kết hợp -어요: 기ㅃ + 어요 = 기뻐요"
+      },
+
+      // ================= 6. BẤT QUY TẮC ㅅ =================
+      {
+        base: "짓다",
+        typeTag: "Động từ",
+        meaning: "Xây (nhà), nấu (cơm), đặt (tên)",
+        conjugated: "지어요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ gặp nguyên âm bị tiêu biến, không gộp âm: 지 + 어요 = 지어요"
+      },
+      {
+        base: "낫다",
+        typeTag: "Động/Tính",
+        meaning: "Khỏi bệnh / Tốt hơn",
+        conjugated: "나아요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ bị tiêu biến khi gặp nguyên âm: 나 + 아요 = 나아요 (나아서)"
+      },
+      {
+        base: "잇다",
+        typeTag: "Động từ",
+        meaning: "Nối liền, kế thừa",
+        conjugated: "이어요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ bị tiêu biến khi gặp nguyên âm: 이 + 어요 = 이어요"
+      },
+      {
+        base: "붓다",
+        typeTag: "Động/Tính",
+        meaning: "Sưng lên / Rót (nước)",
+        conjugated: "부어요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ bị tiêu biến khi gặp nguyên âm: 부 + 어요 = 부어요 (부어서)"
+      },
+      {
+        base: "젓다",
+        typeTag: "Động từ",
+        meaning: "Khuấy (nước), chèo (thuyền)",
+        conjugated: "저어요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ bị tiêu biến khi gặp nguyên âm: 저 + 어요 = 저어요"
+      },
+      {
+        base: "긋다",
+        typeTag: "Động từ",
+        meaning: "Vạch, kẻ (đường thẳng), gạch chân",
+        conjugated: "그어요",
+        group: "ㅅ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅅ",
+        explanation: "Patchim ㅅ bị tiêu biến khi gặp nguyên âm: 그 + 어요 = 그어요"
+      },
+      // Ngoại lệ ㅅ
+      {
+        base: "웃다",
+        typeTag: "Động từ",
+        meaning: "Cười",
+        conjugated: "웃어요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -어요 theo nguyên âm gốc ㅜ: 웃 + 어요 = 웃어요"
+      },
+      {
+        base: "벗다",
+        typeTag: "Động từ",
+        meaning: "Cởi (quần áo, giày)",
+        conjugated: "벗어요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -어요 theo nguyên âm gốc ㅓ: 벗 + 어요 = 벗어요"
+      },
+      {
+        base: "씻다",
+        typeTag: "Động từ",
+        meaning: "Rửa (tay, mặt), tắm rửa",
+        conjugated: "씻어요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -어요 theo nguyên âm gốc ㅣ: 씻 + 어요 = 씻어요"
+      },
+      {
+        base: "빗다",
+        typeTag: "Động từ",
+        meaning: "Chải (tóc)",
+        conjugated: "빗어요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -어요 theo nguyên âm gốc ㅣ: 빗 + 어요 = 빗어요"
+      },
+      {
+        base: "빼앗다",
+        typeTag: "Động từ",
+        meaning: "Cướp, đoạt lấy, tước đoạt",
+        conjugated: "빼앗아요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -아요 theo nguyên âm gốc ㅏ: 빼앗 + 아요 = 빼앗아요"
+      },
+      {
+        base: "앗다",
+        typeTag: "Động từ",
+        meaning: "Đoạt lấy, cướp đi",
+        conjugated: "앗아요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -아요 theo nguyên âm gốc ㅏ: 앗 + 아요 = 앗아요"
+      },
+      {
+        base: "솟다",
+        typeTag: "Động từ",
+        meaning: "Vọt lên, trào lên, nhô lên",
+        conjugated: "솟아요",
+        group: "ㅅ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅅ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅅ, kết hợp -아요 theo nguyên âm gốc ㅗ: 솟 + 아요 = 솟아요"
+      },
+
+      // ================= 7. BẤT QUY TẮC ㅎ =================
+      {
+        base: "빨갛다",
+        typeTag: "Tính từ",
+        meaning: "Đỏ tươi",
+        conjugated: "빨개요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "Tính từ đuôi ㅎ: ㅎ mất đi, nguyên âm đổi thành ㅐ: 빨개 + 요 = 빨개요"
+      },
+      {
+        base: "까맣다",
+        typeTag: "Tính từ",
+        meaning: "Đen tuyền",
+        conjugated: "까매요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 까매 + 요 = 까매요"
+      },
+      {
+        base: "파랗다",
+        typeTag: "Tính từ",
+        meaning: "Xanh da trời, xanh lam",
+        conjugated: "파래요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 파래 + 요 = 파래요"
+      },
+      {
+        base: "노랗다",
+        typeTag: "Tính từ",
+        meaning: "Vàng",
+        conjugated: "노래요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 노래 + 요 = 노래요"
+      },
+      {
+        base: "하얗다",
+        typeTag: "Tính từ",
+        meaning: "Trắng tinh",
+        conjugated: "하얘요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm ㅑ đổi thành ㅒ: 하얘 + 요 = 하얘요"
+      },
+      {
+        base: "어떻다",
+        typeTag: "Tính từ",
+        meaning: "Như thế nào",
+        conjugated: "어때요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 어때 + 요 = 어때요"
+      },
+      {
+        base: "그렇다",
+        typeTag: "Tính từ",
+        meaning: "Như thế đó, đúng vậy",
+        conjugated: "그래요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 그래 + 요 = 그래요"
+      },
+      {
+        base: "이렇다",
+        typeTag: "Tính từ",
+        meaning: "Như thế này",
+        conjugated: "이래요",
+        group: "ㅎ",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc ㅎ",
+        explanation: "ㅎ mất đi, nguyên âm đổi thành ㅐ: 이래 + 요 = 이래요"
+      },
+      // Ngoại lệ ㅎ (Chia bình thường)
+      {
+        base: "좋다",
+        typeTag: "Tính từ",
+        meaning: "Tốt, thích",
+        conjugated: "좋아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Chia thường)",
+        explanation: "Giữ nguyên patchim ㅎ, kết hợp -아요 theo ㅗ: 좋 + 아요 = 좋아요"
+      },
+      {
+        base: "놓다",
+        typeTag: "Động từ",
+        meaning: "Đặt, để",
+        conjugated: "놓아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ luôn chia theo quy tắc thường: 놓 + 아요 = 놓아요"
+      },
+      {
+        base: "넣다",
+        typeTag: "Động từ",
+        meaning: "Bỏ vào, nhét vào",
+        conjugated: "넣어요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ chia theo quy tắc thường: 넣 + 어요 = 넣어요"
+      },
+      {
+        base: "낳다",
+        typeTag: "Động từ",
+        meaning: "Sinh đẻ, sinh ra",
+        conjugated: "낳아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ chia theo quy tắc thường: 낳 + 아요 = 낳아요"
+      },
+      {
+        base: "쌓다",
+        typeTag: "Động từ",
+        meaning: "Chất đống, tích lũy",
+        conjugated: "쌓아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ chia theo quy tắc thường: 쌓 + 아요 = 쌓아요"
+      },
+      {
+        base: "닿다",
+        typeTag: "Động từ",
+        meaning: "Chạm tới, tiếp xúc",
+        conjugated: "닿아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ chia theo quy tắc thường: 닿 + 아요 = 닿아요"
+      },
+      {
+        base: "빻다",
+        typeTag: "Động từ",
+        meaning: "Giã, nghiền nát",
+        conjugated: "빻아요",
+        group: "ㅎ",
+        category: "except",
+        ruleTitle: "Ngoại lệ ㅎ (Động từ chia thường)",
+        explanation: "Động từ có ㅎ chia theo quy tắc thường: 빻 + 아요 = 빻아요"
+      },
+
+      // ================= 8. BẤT QUY TẮC 우 =================
+      {
+        base: "푸다",
+        typeTag: "Động từ",
+        meaning: "Múc (cơm, nước)",
+        conjugated: "퍼요",
+        group: "우",
+        category: "irreg",
+        ruleTitle: "Bất quy tắc 우 (Duy nhất 1 từ)",
+        explanation: "Khi gặp -아/어 thì âm 우 bị biến mất hoàn toàn: ㅍ + 어요 = 퍼요 (không chia là 푸워요)"
+      },
+
+      // ================= 9. ĐUÔI '하다' & GỘP NGUYÊN ÂM =================
+      {
+        base: "하다",
+        typeTag: "Động từ",
+        meaning: "Làm (đuôi động/tính từ)",
+        conjugated: "해요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Quy tắc đuôi 하다",
+        explanation: "Tất cả gốc đuôi 하다 đều biến đổi: 하 + 여요 → 하여요 → 해요"
+      },
+      {
+        base: "가다",
+        typeTag: "Động từ",
+        meaning: "Đi",
+        conjugated: "가요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Rút gọn: ㅏ + 아 → ㅏ",
+        explanation: "Hai nguyên âm ㅏ đồng nhất rút gọn lại thành một: 가 + 아요 = 가요"
+      },
+      {
+        base: "서다",
+        typeTag: "Động từ",
+        meaning: "Đứng",
+        conjugated: "서요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Rút gọn: ㅓ + 어 → ㅓ",
+        explanation: "Hai nguyên âm ㅓ đồng nhất rút gọn lại thành một: 서 + 어요 = 서요"
+      },
+      {
+        base: "오다",
+        typeTag: "Động từ",
+        meaning: "Đến, tới",
+        conjugated: "와요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Gộp âm: ㅗ + 아 → ㅘ",
+        explanation: "Nguyên âm ㅗ kết hợp với 아 tạo thành âm ghép: 오 + 아요 = 와요"
+      },
+      {
+        base: "배우다",
+        typeTag: "Động từ",
+        meaning: "Học",
+        conjugated: "배워요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Gộp âm: ㅜ + 어 → ㅝ",
+        explanation: "Nguyên âm ㅜ kết hợp với 어 tạo thành âm ghép: 배우 + 어요 = 배워요"
+      },
+      {
+        base: "마시다",
+        typeTag: "Động từ",
+        meaning: "Uống",
+        conjugated: "마셔요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Gộp âm: ㅣ + 어 → ㅕ",
+        explanation: "Nguyên âm ㅣ kết hợp với 어 tạo thành ㅕ: 마시 + 어요 = 마셔요"
+      },
+      {
+        base: "보내다",
+        typeTag: "Động từ",
+        meaning: "Gửi (thư, hàng)",
+        conjugated: "보내요",
+        group: "하다/gộp",
+        category: "reg",
+        ruleTitle: "Rút gọn: ㅐ + 어 → ㅐ",
+        explanation: "Nguyên âm ㅐ nuốt đuôi 어: 보내 + 어요 = 보내요"
+      }
+    ];
+
+    // DOM Elements
+    const tableBody = document.getElementById("tableBody");
+    const searchInput = document.getElementById("searchInput");
+    const noResults = document.getElementById("noResults");
+    const totalWordsCount = document.getElementById("totalWordsCount");
+    const irregWordsCount = document.getElementById("irregWordsCount");
+    const exceptWordsCount = document.getElementById("exceptWordsCount");
+    const toast = document.getElementById("toast");
+
+    let currentRule = "all";
+    let currentCategory = "all";
+
+    // Copy to clipboard with toast
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2000);
+      });
+    }
+
+    // Render Table
+    function renderTable() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      const filtered = verbsData.filter(item => {
+        // Rule filter
+        if (currentRule !== "all" && item.group !== currentRule) {
+          return false;
+        }
+        // Category filter
+        if (currentCategory !== "all" && item.category !== currentCategory) {
+          return false;
+        }
+        // Search query
+        if (query) {
+          const matchBase = item.base.toLowerCase().includes(query);
+          const matchMeaning = item.meaning.toLowerCase().includes(query);
+          const matchConj = item.conjugated.toLowerCase().includes(query);
+          const matchRule = item.ruleTitle.toLowerCase().includes(query);
+          const matchExplanation = item.explanation.toLowerCase().includes(query);
+          if (!matchBase && !matchMeaning && !matchConj && !matchRule && !matchExplanation) {
+            return false;
+          }
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tableBody.innerHTML = "";
+        noResults.style.display = "block";
+        return;
+      }
+
+      noResults.style.display = "none";
+      tableBody.innerHTML = filtered.map(item => {
+        let badgeClass = "badge-irregular";
+        let badgeText = "Bất quy tắc";
+
+        if (item.category === "except") {
+          badgeClass = "badge-exception";
+          badgeText = "Ngoại lệ (Chia thường)";
+        } else if (item.category === "reg") {
+          badgeClass = "badge-regular";
+          badgeText = "Rút gọn / Quy ước";
+        }
+
+        return `
+          <tr>
+            <td>
+              <div class="word-cell">
+                <span class="korean-word kr-font" onclick="copyText('${item.base}')" title="Nhấp để sao chép">
+                  ${item.base}
+                </span>
+                <span class="word-type">${item.typeTag}</span>
+              </div>
+            </td>
+            <td>
+              <span class="viet-meaning">${item.meaning}</span>
+            </td>
+            <td>
+              <span class="conjugated-word kr-font" onclick="copyText('${item.conjugated}')" title="Nhấp để sao chép">
+                ${item.conjugated}
+              </span>
+            </td>
+            <td>
+              <span class="badge ${badgeClass}">${badgeText}</span>
+            </td>
+            <td>
+              <span class="rule-pill">${item.ruleTitle}</span>
+              <div class="rule-explanation">${item.explanation}</div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // Update Statistics
+    function updateStats() {
+      totalWordsCount.textContent = verbsData.length;
+      irregWordsCount.textContent = verbsData.filter(v => v.category === "irreg").length;
+      exceptWordsCount.textContent = verbsData.filter(v => v.category === "except").length;
+    }
+
+    // Set up filter buttons
+    document.querySelectorAll("[data-rule]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("[data-rule]").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentRule = btn.getAttribute("data-rule");
+        renderTable();
+      });
+    });
+
+    document.querySelectorAll("[data-type]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("[data-type]").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCategory = btn.getAttribute("data-type");
+        renderTable();
+      });
+    });
+
+    searchInput.addEventListener("input", renderTable);
+
+    // Initial render
+    updateStats();
+    renderTable();
+  </script>
+</body>
+</html>
