@@ -54,7 +54,7 @@
     .hero-header {
       background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
       color: #ffffff;
-      padding: 38px 24px 28px;
+      padding: 40px 24px 30px;
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow-lg);
@@ -77,7 +77,7 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     .header-top {
@@ -85,7 +85,7 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 20px;
     }
 
     .badge-book {
@@ -94,7 +94,7 @@
       gap: 6px;
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(8px);
-      padding: 5px 14px;
+      padding: 6px 14px;
       border-radius: 9999px;
       font-size: 13px;
       font-weight: 600;
@@ -103,7 +103,7 @@
     }
 
     .hero-title {
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-top: 8px;
@@ -117,10 +117,10 @@
     }
 
     .hero-subtitle {
-      font-size: 14.5px;
+      font-size: 15px;
       color: #cbd5e1;
       margin-top: 6px;
-      max-width: 780px;
+      max-width: 720px;
       line-height: 1.55;
     }
 
@@ -131,7 +131,7 @@
       align-items: center;
       flex-wrap: wrap;
       background: rgba(255, 255, 255, 0.1);
-      padding: 10px 16px;
+      padding: 12px 18px;
       border-radius: var(--radius-md);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -145,12 +145,12 @@
 
     .search-wrapper input {
       width: 100%;
-      padding: 10px 40px 10px 40px;
+      padding: 10px 16px 10px 42px;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       background: rgba(255, 255, 255, 0.95);
       color: var(--text-main);
-      font-size: 14.5px;
+      font-size: 14px;
       font-family: inherit;
       outline: none;
       transition: all 0.2s;
@@ -167,26 +167,27 @@
       left: 14px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 15px;
+      font-size: 16px;
       color: #64748b;
       pointer-events: none;
     }
 
-    .clear-btn {
+    .search-clear-btn {
       position: absolute;
-      right: 8px;
+      right: 10px;
       top: 50%;
       transform: translateY(-50%);
       border: none;
       background: transparent;
       color: #64748b;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       padding: 4px 8px;
       border-radius: 6px;
       line-height: 1;
+      display: none;
     }
-    .clear-btn:hover {
+    .search-clear-btn:hover {
       color: var(--text-main);
       background: #e2e8f0;
     }
@@ -359,22 +360,22 @@
       border: 1px solid var(--border);
       border-left: 6px solid var(--primary);
       border-radius: var(--radius-md);
-      padding: 22px 26px;
-      margin-bottom: 22px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
       box-shadow: var(--shadow-sm);
     }
     .lesson-meta {
       display: flex;
-      gap: 10px;
       align-items: center;
-      margin-bottom: 8px;
+      gap: 12px;
+      margin-bottom: 6px;
     }
     .lesson-tag {
       background: var(--primary-light);
       color: var(--primary-dark);
       font-size: 12px;
       font-weight: 700;
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 6px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -383,7 +384,7 @@
       font-family: var(--korean-font);
       font-size: 26px;
       font-weight: 800;
-      color: var(--text-main);
+      color: var(--primary-dark);
       display: flex;
       align-items: baseline;
       gap: 12px;
@@ -391,26 +392,25 @@
     }
     .lesson-title-vi {
       font-family: var(--viet-font);
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--text-muted);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
     }
     .lesson-desc {
+      color: var(--text-muted);
       font-size: 14.5px;
-      color: #475569;
-      margin-top: 6px;
-      line-height: 1.55;
+      margin-top: 8px;
     }
 
-    /* GRAMMAR CARDS */
+    /* GRAMMAR CARD (CHÍNH XÁC 1:1 THEO SƠ CẤP 1) */
     .grammar-card {
-      background: #ffffff;
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
       border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      margin-bottom: 22px;
       box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
       overflow: hidden;
-      transition: all 0.2s ease;
+      transition: box-shadow 0.2s, border-color 0.2s;
     }
     .grammar-card:hover {
       box-shadow: var(--shadow-md);
@@ -418,281 +418,382 @@
     }
 
     .card-header {
-      background: #f8fafc;
-      padding: 14px 22px;
-      border-bottom: 1px solid var(--border);
+      background: #faf5ff;
+      border-bottom: 1px solid #f3e8ff;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .grammar-title-group {
       display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .point-tag {
-      background: var(--primary);
+
+    .grammar-badge {
+      background: var(--accent);
       color: white;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 6px;
       letter-spacing: 0.5px;
-      flex-shrink: 0;
     }
-    .rule-name {
+
+    .grammar-name-ko {
       font-family: var(--korean-font);
       font-size: 20px;
-      font-weight: 700;
-      color: var(--text-main);
+      font-weight: 800;
+      color: #4c1d95;
     }
-    .rule-trans {
-      font-size: 14.5px;
+
+    .grammar-meaning-vi {
+      font-size: 15px;
       font-weight: 600;
-      color: var(--primary);
-      margin-left: auto;
+      color: #6b21a8;
+      background: #f3e8ff;
+      padding: 4px 10px;
+      border-radius: 6px;
     }
 
     .card-body {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 22px;
     }
 
-    .concept-box {
+    /* SECTION TITLES */
+    .section-title {
       font-size: 14.5px;
-      color: #334155;
-      line-height: 1.6;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
     }
-    .concept-box p {
-      margin-bottom: 6px;
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 2px;
     }
 
+    /* EXPLANATION BOX */
+    .explanation-box {
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.7;
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--secondary);
+    }
+    .explanation-box p {
+      margin-bottom: 8px;
+    }
+    .explanation-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FORMULA & COMPARISON BOX */
     .formula-box {
       background: #f8fafc;
       border: 1px dashed #cbd5e1;
       border-radius: var(--radius-sm);
-      padding: 12px 16px;
+      padding: 12px 18px;
       font-family: var(--korean-font);
-      font-size: 14.5px;
+      font-size: 15px;
       color: var(--primary-dark);
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .comparison-box {
+      background: #f0fdfa;
+      border: 1px solid #ccfbf1;
+      border-left: 4px solid var(--secondary);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #134e4a;
+      margin-bottom: 12px;
+    }
+    .comparison-box strong {
+      color: #0f766e;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    /* TABLES */
-    .table-container {
+    /* FORMULA & RULE TABLES */
+    .rule-table-wrapper {
       overflow-x: auto;
+      border-radius: var(--radius-md);
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
     }
-    table {
+    .rule-table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
       font-size: 14px;
     }
-    th {
+    .rule-table th {
       background: #f1f5f9;
-      color: #475569;
-      font-weight: 600;
-      padding: 10px 14px;
+      color: #334155;
+      font-weight: 700;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--border);
-      white-space: nowrap;
     }
-    td {
-      padding: 10px 14px;
-      border-bottom: 1px solid #f1f5f9;
-      color: var(--text-main);
+    .rule-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #1e293b;
     }
-    tr:last-child td {
+    .rule-table tr:last-child td {
       border-bottom: none;
     }
-    .col-highlight {
+    .rule-table tr:hover td {
+      background: #f8fafc;
+    }
+    .rule-highlight {
       font-family: var(--korean-font);
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .col-highlight {
       font-weight: 700;
       color: var(--primary);
     }
 
-    /* EXAMPLES LIST */
-    .examples-header {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .example-list {
+    /* EXAMPLES LIST (NÚT LOA Ở ĐẰNG TRƯỚC, KHÔNG CÓ CHỮ NGHE) */
+    .examples-container {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
     .example-item {
-      background: #f8fafc;
-      border-left: 3px solid var(--primary);
-      border-radius: 0 8px 8px 0;
-      padding: 10px 14px;
       display: flex;
-      flex-direction: column;
-      gap: 3px;
+      align-items: flex-start;
+      gap: 14px;
+      background: #ffffff;
+      border: 1px solid #edf2f7;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
-    .example-top {
+    .example-item:hover {
+      border-color: #cbd5e1;
+      background: #fafafa;
+    }
+    .speak-btn {
+      background: #eef2ff;
+      color: var(--primary);
+      border: 1px solid #c7d2fe;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .speak-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      transform: scale(1.08);
+    }
+    .example-content {
+      flex: 1;
     }
     .example-ko {
       font-family: var(--korean-font);
-      font-size: 15.5px;
+      font-size: 16.5px;
       font-weight: 600;
-      color: var(--text-main);
-      line-height: 1.4;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+    .example-ko .point {
+      color: #4338ca;
+      background: #e0e7ff;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 700;
     }
     .example-vi {
-      font-size: 13.5px;
-      color: #64748b;
-      line-height: 1.4;
+      font-size: 14px;
+      color: #475569;
+      margin-top: 4px;
     }
-    .speak-btn {
-      background: white;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      padding: 3px 8px;
-      font-size: 12px;
-      cursor: pointer;
-      color: var(--primary);
-      transition: all 0.15s;
-      flex-shrink: 0;
-    }
-    .speak-btn:hover {
-      background: var(--primary-light);
-      border-color: var(--primary);
+    .example-note {
+      font-size: 12.5px;
+      color: #94a3b8;
+      margin-top: 2px;
+      font-style: italic;
     }
 
-    /* NOTE & COMPARISON BOXES */
-    .note-box {
+    /* TIPS / CAUTION BOX */
+    .tip-box {
       background: #fffbeb;
-      border: 1px solid #fde68a;
+      border: 1px solid #fef3c7;
       border-left: 4px solid var(--warning);
-      border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      font-size: 13.5px;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: 14px;
       color: #92400e;
-      line-height: 1.55;
     }
-    .comparison-box {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-left: 4px solid var(--secondary);
-      border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      font-size: 13.5px;
-      color: #1e40af;
-      line-height: 1.55;
+    .tip-box strong {
+      color: #78350f;
+    }
+    .danger-box {
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      border-left: 4px solid var(--danger);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #991b1b;
     }
 
-    /* QUIZ CARD */
+    /* MINI QUIZ */
     .quiz-card {
-      background: linear-gradient(to right bottom, #ffffff, #fdf4ff);
-      border: 1px solid #f0abfc;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
       border-radius: var(--radius-md);
-      padding: 18px 22px;
+      padding: 20px 24px;
       margin-top: 10px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow-sm);
     }
     .quiz-title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
-      color: #a21caf;
+      color: #166534;
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 10px;
+      gap: 8px;
+      margin-bottom: 14px;
     }
     .quiz-question {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
-      color: var(--text-main);
+      color: #1e293b;
       margin-bottom: 12px;
     }
     .quiz-options {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    @media (max-width: 600px) {
-      .quiz-options {
-        grid-template-columns: 1fr;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
     .quiz-option {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 9px 14px;
-      font-family: var(--korean-font);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-main);
-      cursor: pointer;
-      transition: all 0.15s;
-      text-align: left;
-    }
-    .quiz-option:hover {
-      background: #fdf4ff;
-      border-color: #d946ef;
-    }
-    .quiz-option.correct {
-      background: #dcfce7 !important;
-      border-color: #22c55e !important;
-      color: #15803d !important;
-    }
-    .quiz-option.wrong {
-      background: #fee2e2 !important;
-      border-color: #ef4444 !important;
-      color: #b91c1c !important;
-    }
-    .quiz-feedback {
-      display: none;
-      margin-top: 10px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
       padding: 10px 14px;
       border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.15s;
+    }
+    .quiz-option:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+    .quiz-option.correct {
+      background: #dcfce7;
+      border-color: #22c55e;
+      color: #15803d;
+      font-weight: 600;
+    }
+    .quiz-option.wrong {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #b91c1c;
+    }
+    .quiz-feedback {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 6px;
       font-size: 13.5px;
-      line-height: 1.5;
+      display: none;
+    }
+    .quiz-feedback.show {
+      display: block;
+    }
+
+    /* QUICK MATRIX TABLE */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    .matrix-table th {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    .matrix-table td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+    .matrix-table tr:nth-child(even) {
+      background: #f8fafc;
     }
 
     /* BACK TO TOP */
     .back-to-top {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: #ffffff;
       border: none;
-      box-shadow: var(--shadow-lg);
-      font-size: 20px;
+      border-radius: 50%;
       cursor: pointer;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s ease;
-      z-index: 100;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      z-index: 999;
     }
     .back-to-top.show {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
     }
     .back-to-top:hover {
+      background: var(--primary-dark);
       transform: translateY(-3px);
-      box-shadow: 0 12px 20px -3px rgba(79, 70, 229, 0.4);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.5);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 960px) {
       .app-layout {
         grid-template-columns: 1fr;
@@ -735,25 +836,24 @@
     <div class="header-container">
       <div class="header-top">
         <div>
-          <div class="badge-book">📚 GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP · SƠ CẤP 2</div>
-          <h1 class="hero-title">한국어 초급 2 문법 · <span>Ngữ Pháp Tiếng Hàn Sơ Cấp 2</span></h1>
-          <p class="hero-subtitle">Hệ thống toàn bộ 15 bài học ngữ pháp chuẩn giáo trình Sơ cấp 2, chuyên đề Bất quy tắc nâng cao, bảng tra cứu ngữ pháp chuyên sâu và trắc nghiệm thực hành.</p>
+          <div class="badge-book">📘 GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP • SƠ CẤP 2</div>
+          <h1 class="hero-title">Bách Khoa <span>Ngữ Pháp Tiếng Hàn</span> Sơ Cấp 2</h1>
+          <p class="hero-subtitle">Toàn bộ 15 bài học ngữ pháp sơ cấp 2, 52 cấu trúc cốt lõi, chuyên đề 3 bất quy tắc trọng tâm (ㅎ, ㅅ, 르), 15 bài trắc nghiệm tương tác &amp; bảng tra cứu toàn diện.</p>
         </div>
       </div>
 
-      <!-- CONTROLS BAR: SEARCH + TTS SPEED -->
+      <!-- CONTROLS BAR: TÌM KIẾM + TỐC ĐỘ ĐỌC -->
       <div class="controls-bar">
         <div class="search-wrapper">
           <span class="search-icon">🔍</span>
-          <input type="search" id="grammarSearch" placeholder="Tìm kiếm ngữ pháp (vd: 으니까, 보다, 지 못하다, thì, so sánh, định ngữ...)" oninput="handleSearch()">
-          <button class="clear-btn" id="clearSearchBtn" onclick="clearSearch()" hidden>&times;</button>
+          <input type="text" id="grammarSearch" placeholder="Tìm kiếm ngữ pháp, từ khóa, ví dụ (vd: -(으)니까, -(으)ㄹ 때, bất quy tắc ㅎ...)" oninput="handleSearch()">
+          <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearSearch()" title="Xóa tìm kiếm">✕</button>
         </div>
-
         <div class="tts-controls">
-          <label for="ttsRate">Tốc độ đọc:</label>
+          <span>🔊 Tốc độ phát âm:</span>
           <select id="ttsRate">
-            <option value="0.7">Chậm (0.7x)</option>
-            <option value="0.85" selected>Chuẩn học tập (0.85x)</option>
+            <option value="0.75">Chậm (0.75x)</option>
+            <option value="0.85" selected>Vừa phải (0.85x)</option>
             <option value="1.0">Chuẩn bản xứ (1.0x)</option>
             <option value="1.2">Nhanh (1.2x)</option>
           </select>
@@ -792,7 +892,7 @@
         </nav>
       </aside>
 
-      <!-- CONTENT AREA (RIGHT COLUMN) -->
+      <!-- RIGHT MAIN CONTENT AREA -->
       <div class="content-area">
 
     <!-- ==================== TAB 1: BÀI 1 ==================== -->
@@ -806,21 +906,25 @@
       <!-- CARD 1: N + 의 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ + 의</span>
-          <span class="rule-trans">Tiểu từ sở hữu: Của...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ + 의</span>
+            <span class="grammar-meaning-vi">Tiểu từ sở hữu: Của...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa &amp; Cách dùng:</strong> <code>의</code> là tiểu từ đứng sau danh từ để biểu thị sự sở hữu, phụ thuộc hoặc quan hệ nguồn gốc của danh từ đứng trước đối với danh từ đứng sau (tương đương với <em>"của"</em> trong tiếng Việt).</p>
             <p><strong>Phát âm:</strong> Dù viết là <code>의</code>, khi làm tiểu từ sở hữu nó thường được phát âm là <strong>[에]</strong>.</p>
           </div>
+          <div class="section-title">2. Quy tắc kết hợp</div>
           <div class="formula-box">
             <span>Danh từ 1 + <strong>의</strong> + Danh từ 2</span>
             <span>(Danh từ 2 của Danh từ 1)</span>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Đại từ nguyên gốc</th>
@@ -851,31 +955,31 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">오늘은 친구의 생일입니다.</span>
-                <button class="speak-btn" onclick="speakText('오늘은 친구의 생일입니다.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('오늘은 친구의 생일입니다.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">오늘은 친구의 생일입니다.</div>
+                <div class="example-vi">Hôm nay là sinh nhật của bạn tôi.</div>
               </div>
-              <span class="example-vi">Hôm nay là sinh nhật của bạn tôi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">김 선생님의 가방이 책상 위에 있어요.</span>
-                <button class="speak-btn" onclick="speakText('김 선생님의 가방이 책상 위에 있어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('김 선생님의 가방이 책상 위에 있어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">김 선생님의 가방이 책상 위에 있어요.</div>
+                <div class="example-vi">Cặp sách của thầy Kim ở trên bàn.</div>
               </div>
-              <span class="example-vi">Cặp sách của thầy Kim ở trên bàn.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">제 이름은 흐엉입니다. 그 사람은 내 동생이에요.</span>
-                <button class="speak-btn" onclick="speakText('제 이름은 흐엉입니다. 그 사람은 내 동생이에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('제 이름은 흐엉입니다. 그 사람은 내 동생이에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">제 이름은 흐엉입니다. 그 사람은 내 동생이에요.</div>
+                <div class="example-vi">Tên của tôi là Hương. Người đó là em của tôi.</div>
               </div>
-              <span class="example-vi">Tên của tôi là Hương. Người đó là em của tôi.</span>
             </div>
-          </div>
-          <div class="note-box">
+          </div><div class="section-title">4. Lưu ý &amp; Mở rộng</div>
+          <div class="tip-box">
             <strong>Lưu ý:</strong> Trong văn nói tự nhiên, khi nói về gia đình, trường học, đất nước của người nói, người Hàn thường dùng <code>우리</code> (chúng tôi/chúng ta) thay vì <code>내 / 제</code>: <em>우리 가족 (gia đình chúng tôi), 우리나라 (đất nước chúng tôi), 우리 학교 (trường của chúng tôi).</em>
           </div>
         </div>
@@ -884,17 +988,21 @@
       <!-- CARD 2: V/A + -(으)ㄹ 때 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)ㄹ 때</span>
-          <span class="rule-trans">Khi..., lúc làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)ㄹ 때</span>
+            <span class="grammar-meaning-vi">Khi..., lúc làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa &amp; Cách dùng:</strong> Gắn vào sau thân động từ hoặc tính từ để biểu thị thời điểm hoặc khoảng thời gian mà một hành động hoặc trạng thái diễn ra (nghĩa là <em>"khi...", "lúc..."</em>).</p>
             <p>Nếu đi kèm với danh từ chỉ thời gian thì dùng trực tiếp <code>Danh từ + 때</code> (vd: <em>방학 때 - lúc nghỉ hè, 점심 때 - lúc ăn trưa</em>).</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Loại từ &amp; Điều kiện</th>
@@ -936,47 +1044,51 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">아플 때 이 약을 드세요.</span>
-                <button class="speak-btn" onclick="speakText('아플 때 이 약을 드세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('아플 때 이 약을 드세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">아플 때 이 약을 드세요.</div>
+                <div class="example-vi">Lúc bị đau/ốm thì bạn hãy uống thuốc này nhé.</div>
               </div>
-              <span class="example-vi">Lúc bị đau/ốm thì bạn hãy uống thuốc này nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국에서 살 때 태권도를 배웠어요.</span>
-                <button class="speak-btn" onclick="speakText('한국에서 살 때 태권도를 배웠어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국에서 살 때 태권도를 배웠어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국에서 살 때 태권도를 배웠어요.</div>
+                <div class="example-vi">Tôi đã học Taekwondo khi còn sống ở Hàn Quốc.</div>
               </div>
-              <span class="example-vi">Tôi đã học Taekwondo khi còn sống ở Hàn Quốc.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">날씨가 더울 때 수영장에 가요.</span>
-                <button class="speak-btn" onclick="speakText('날씨가 더울 때 수영장에 가요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('날씨가 더울 때 수영장에 가요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">날씨가 더울 때 수영장에 가요.</div>
+                <div class="example-vi">Khi thời tiết nóng bức thì tôi đi đến hồ bơi.</div>
               </div>
-              <span class="example-vi">Khi thời tiết nóng bức thì tôi đi đến hồ bơi.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -아/어 주다 [드리다] -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -아/어 주다 [드리다]</span>
-          <span class="rule-trans">Làm gì đó giúp / cho ai...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -아/어 주다 [드리다]</span>
+            <span class="grammar-meaning-vi">Làm gì đó giúp / cho ai...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa &amp; Cách dùng:</strong> Gắn vào sau thân động từ để biểu thị hành động làm một việc gì đó cho người khác hoặc thể hiện lời yêu cầu, nhờ vả người khác làm giúp việc gì cho mình (<em>-아/어 주세요</em> hoặc lịch sự hơn là <em>-아/어 주시겠어요?</em>).</p>
             <p>Khi người nhận hành vi là người có vị trí hoặc tuổi tác cao hơn, dùng dạng kính ngữ <strong>-아/어 드리다</strong>.</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Nguyên âm cuối thân từ</th>
@@ -1018,30 +1130,30 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">창문을 좀 닫아 주세요.</span>
-                <button class="speak-btn" onclick="speakText('창문을 좀 닫아 주세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('창문을 좀 닫아 주세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">창문을 좀 닫아 주세요.</div>
+                <div class="example-vi">Xin hãy đóng cửa sổ giúp tôi với.</div>
               </div>
-              <span class="example-vi">Xin hãy đóng cửa sổ giúp tôi với.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">초대해 주셔서 감사합니다.</span>
-                <button class="speak-btn" onclick="speakText('초대해 주셔서 감사합니다.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('초대해 주셔서 감사합니다.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">초대해 주셔서 감사합니다.</div>
+                <div class="example-vi">Xin cảm ơn vì đã mời tôi.</div>
               </div>
-              <span class="example-vi">Xin cảm ơn vì đã mời tôi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">제가 사진을 찍어 드릴까요?</span>
-                <button class="speak-btn" onclick="speakText('제가 사진을 찍어 드릴까요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('제가 사진을 찍어 드릴까요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">제가 사진을 찍어 드릴까요?</div>
+                <div class="example-vi">Để tôi chụp ảnh cho anh/chị nhé?</div>
               </div>
-              <span class="example-vi">Để tôi chụp ảnh cho anh/chị nhé?</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1070,53 +1182,60 @@
       <!-- CARD 1: N + 만 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ + 만</span>
-          <span class="rule-trans">Trợ từ: Chỉ...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ + 만</span>
+            <span class="grammar-meaning-vi">Trợ từ: Chỉ...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa &amp; Cách dùng:</strong> <code>만</code> gắn sau danh từ để biểu thị sự giới hạn duy nhất đối với danh từ đó, loại trừ các đối tượng khác (tương đương nghĩa <em>"chỉ..."</em> trong tiếng Việt).</p>
             <p><code>만</code> thay thế cho các trợ từ chủ ngữ/tân ngữ như <em>-이/가, -을/를, -은/는</em>. Khi kết hợp với các trợ từ khác như <em>-에, -에서, -에게</em>, nó đứng sau các trợ từ đó: <code>-에만, -에서만, -에게만</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">우리 반에서는 남 씨만 베트남 사람이에요.</span>
-                <button class="speak-btn" onclick="speakText('우리 반에서는 남 씨만 베트남 사람이에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('우리 반에서는 남 씨만 베트남 사람이에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">우리 반에서는 남 씨만 베트남 사람이에요.</div>
+                <div class="example-vi">Trong lớp chúng tôi chỉ có bạn Nam là người Việt Nam.</div>
               </div>
-              <span class="example-vi">Trong lớp chúng tôi chỉ có bạn Nam là người Việt Nam.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">저는 주말에만 운동을 해요.</span>
-                <button class="speak-btn" onclick="speakText('저는 주말에만 운동을 해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('저는 주말에만 운동을 해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">저는 주말에만 운동을 해요.</div>
+                <div class="example-vi">Tôi chỉ tập thể dục vào cuối tuần thôi.</div>
               </div>
-              <span class="example-vi">Tôi chỉ tập thể dục vào cuối tuần thôi.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -(으)니까 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)니까</span>
-          <span class="rule-trans">Vì... nên... (Lý do tiền đề)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)니까</span>
+            <span class="grammar-meaning-vi">Vì... nên... (Lý do tiền đề)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa:</strong> Biểu thị vế trước là lý do, căn cứ chủ quan để đưa ra lời đề nghị, mệnh lệnh, rủ rê hoặc ý kiến ở vế sau.</p>
           </div>
+          <div class="section-title">2. Quy tắc kết hợp &amp; Phân biệt</div>
           <div class="comparison-box">
             <strong>So sánh quan trọng: -(으)니까 vs -아/어서</strong>
             <p>• <code>-아/어서</code> <strong>KHÔNG</strong> được đi cùng câu mệnh lệnh (-(으)세요) hay rủ rê (-(으)ㅂ시다, -(으)ㄹ까요?).</p>
             <p>• <code>-(으)니까</code> <strong>CHUYÊN DÙNG</strong> cho câu mệnh lệnh, rủ rê, khuyên nhủ: <em>날씨가 추우니까 따뜻하게 입으세요 (Đúng).</em></p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Điều kiện thân từ</th>
@@ -1141,85 +1260,91 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">시간이 없으니까 빨리 갑시다.</span>
-                <button class="speak-btn" onclick="speakText('시간이 없으니까 빨리 갑시다.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('시간이 없으니까 빨리 갑시다.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">시간이 없으니까 빨리 갑시다.</div>
+                <div class="example-vi">Vì không có nhiều thời gian nên chúng ta hãy đi nhanh lên.</div>
               </div>
-              <span class="example-vi">Vì không có nhiều thời gian nên chúng ta hãy đi nhanh lên.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">비가 오니까 우산을 가지고 가세요.</span>
-                <button class="speak-btn" onclick="speakText('비가 오니까 우산을 가지고 가세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('비가 오니까 우산을 가지고 가세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">비가 오니까 우산을 가지고 가세요.</div>
+                <div class="example-vi">Trời đang mưa nên bạn hãy mang theo ô nhé.</div>
               </div>
-              <span class="example-vi">Trời đang mưa nên bạn hãy mang theo ô nhé.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -지 말다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -지 말다 [-지 마세요]</span>
-          <span class="rule-trans">Đừng làm gì... (Mệnh lệnh phủ định)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -지 말다 [-지 마세요]</span>
+            <span class="grammar-meaning-vi">Đừng làm gì... (Mệnh lệnh phủ định)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn vào thân động từ để yêu cầu hoặc khuyên bảo người nghe không nên thực hiện hành động đó. Thường dùng dưới dạng <strong>-지 마세요</strong> (thân mật lịch sự) hoặc <strong>-지 맙시다</strong> (chúng ta đừng...).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">수업 시간에 늦지 마세요.</span>
-                <button class="speak-btn" onclick="speakText('수업 시간에 늦지 마세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('수업 시간에 늦지 마세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">수업 시간에 늦지 마세요.</div>
+                <div class="example-vi">Xin đừng đi muộn vào giờ học.</div>
               </div>
-              <span class="example-vi">Xin đừng đi muộn vào giờ học.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">여기에서 담배를 피우지 마세요.</span>
-                <button class="speak-btn" onclick="speakText('여기에서 담배를 피우지 마세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('여기에서 담배를 피우지 마세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">여기에서 담배를 피우지 마세요.</div>
+                <div class="example-vi">Xin đừng hút thuốc lá ở đây.</div>
               </div>
-              <span class="example-vi">Xin đừng hút thuốc lá ở đây.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 4: V + -아/어도 되다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 04</span>
-          <span class="rule-name">Động từ + -아/어도 되다</span>
-          <span class="rule-trans">Được phép làm gì... / Làm... cũng được</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 04</span>
+            <span class="grammar-name-ko">Động từ + -아/어도 되다</span>
+            <span class="grammar-meaning-vi">Được phép làm gì... / Làm... cũng được</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị sự cho phép hoặc hỏi xin phép đối phương thực hiện một hành động nào đó. Câu hỏi thường kết thúc bằng <strong>-아/어도 돼요?</strong> (<em>Tôi làm... có được không ạ?</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">여기 앉아도 돼요? - 네, 앉으세요.</span>
-                <button class="speak-btn" onclick="speakText('여기 앉아도 돼요? 네, 앉으세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('여기 앉아도 돼요? 네, 앉으세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">여기 앉아도 돼요? - 네, 앉으세요.</div>
+                <div class="example-vi">Tôi ngồi ở đây có được không? - Vâng, xin mời bạn ngồi.</div>
               </div>
-              <span class="example-vi">Tôi ngồi ở đây có được không? - Vâng, xin mời bạn ngồi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">사진을 찍어도 돼요.</span>
-                <button class="speak-btn" onclick="speakText('사진을 찍어도 돼요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('사진을 찍어도 돼요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">사진을 찍어도 돼요.</div>
+                <div class="example-vi">Bạn có thể chụp ảnh ở đây được.</div>
               </div>
-              <span class="example-vi">Bạn có thể chụp ảnh ở đây được.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1248,51 +1373,59 @@
       <!-- CARD 1: N + 보다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ + 보다</span>
-          <span class="rule-trans">So với... (So sánh hơn)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ + 보다</span>
+            <span class="grammar-meaning-vi">So với... (So sánh hơn)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><code>보다</code> gắn sau danh từ làm mốc so sánh (danh từ được so sánh). Có thể đi kèm phó từ <code>더</code> (hơn) để nhấn mạnh mức độ.</p>
           </div>
+          <div class="section-title">2. Quy tắc kết hợp</div>
           <div class="formula-box">
             <span>Danh từ 1 + 이/가 + <strong>Danh từ 2 + 보다</strong> + (더) + Tính từ</span>
             <span>(N1 tính từ hơn N2)</span>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">비행기가 기차보다 더 빨라요.</span>
-                <button class="speak-btn" onclick="speakText('비행기가 기차보다 더 빨라요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('비행기가 기차보다 더 빨라요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">비행기가 기차보다 더 빨라요.</div>
+                <div class="example-vi">Máy bay chạy nhanh hơn so với tàu hỏa.</div>
               </div>
-              <span class="example-vi">Máy bay chạy nhanh hơn so với tàu hỏa.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">수박이 사과보다 커요.</span>
-                <button class="speak-btn" onclick="speakText('수박이 사과보다 커요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('수박이 사과보다 커요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">수박이 사과보다 커요.</div>
+                <div class="example-vi">Dưa hấu to hơn quả táo.</div>
               </div>
-              <span class="example-vi">Dưa hấu to hơn quả táo.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: A + -(으)ㄴ + N -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Tính từ + -(으)ㄴ + Danh từ</span>
-          <span class="rule-trans">Định ngữ Tính từ (bổ nghĩa danh từ)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Tính từ + -(으)ㄴ + Danh từ</span>
+            <span class="grammar-meaning-vi">Định ngữ Tính từ (bổ nghĩa danh từ)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Bản chất định ngữ:</strong> Đặt tính từ đứng ngay trước danh từ để miêu tả đặc điểm, tính chất của danh từ đó (vd: <em>hoa đẹp, người tốt, căn phòng lớn</em>).</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Đặc điểm tính từ</th>
@@ -1334,55 +1467,58 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">예쁜 옷을 사고 싶어요.</span>
-                <button class="speak-btn" onclick="speakText('예쁜 옷을 사고 싶어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('예쁜 옷을 사고 싶어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">예쁜 옷을 사고 싶어요.</div>
+                <div class="example-vi">Tôi muốn mua một bộ quần áo đẹp.</div>
               </div>
-              <span class="example-vi">Tôi muốn mua một bộ quần áo đẹp.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국 식당에서 맛있는 음식을 먹었어요.</span>
-                <button class="speak-btn" onclick="speakText('한국 식당에서 맛있는 음식을 먹었어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국 식당에서 맛있는 음식을 먹었어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 식당에서 맛있는 음식을 먹었어요.</div>
+                <div class="example-vi">Tôi đã ăn món ăn ngon tại nhà hàng Hàn Quốc.</div>
               </div>
-              <span class="example-vi">Tôi đã ăn món ăn ngon tại nhà hàng Hàn Quốc.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -는 + N -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -는 + Danh từ</span>
-          <span class="rule-trans">Định ngữ Động từ thì hiện tại</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -는 + Danh từ</span>
+            <span class="grammar-meaning-vi">Định ngữ Động từ thì hiện tại</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn <code>-는</code> vào sau thân động từ để biến động từ thành mệnh đề bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>đang diễn ra ở thời điểm hiện tại</strong> (hoặc thói quen thường nhật): <em>người đang đọc sách, món ăn tôi hay ăn</em>.</p>
             <p><strong>Quy tắc:</strong> Dù động từ có patchim hay không đều gắn <code>-는</code>. Nếu patchim là <code>ㄹ</code> thì 'ㄹ' sẽ bị lược bỏ trước khi gắn <code>-는</code> (<em>만들다 -&gt; 만드는, 살다 -&gt; 사는</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지금 책을 읽는 사람이 제 친구예요.</span>
-                <button class="speak-btn" onclick="speakText('지금 책을 읽는 사람이 제 친구예요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지금 책을 읽는 사람이 제 친구예요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 책을 읽는 사람이 제 친구예요.</div>
+                <div class="example-vi">Người đang đọc sách bây giờ là bạn của tôi.</div>
               </div>
-              <span class="example-vi">Người đang đọc sách bây giờ là bạn của tôi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">제가 자주 가는 카페는 아주 조용해요.</span>
-                <button class="speak-btn" onclick="speakText('제가 자주 가는 카페는 아주 조용해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('제가 자주 가는 카페는 아주 조용해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">제가 자주 가는 카페는 아주 조용해요.</div>
+                <div class="example-vi">Quán cà phê mà tôi thường hay đến thì rất yên tĩnh.</div>
               </div>
-              <span class="example-vi">Quán cà phê mà tôi thường hay đến thì rất yên tĩnh.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1411,95 +1547,104 @@
       <!-- CARD 1: V + -(으)ㄴ + N -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -(으)ㄴ + Danh từ</span>
-          <span class="rule-trans">Định ngữ Động từ thì quá khứ</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄴ + Danh từ</span>
+            <span class="grammar-meaning-vi">Định ngữ Động từ thì quá khứ</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn vào thân động từ để bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>đã hoàn thành trong quá khứ</strong> (nghĩa là <em>"người/vật/việc đã..."</em>).</p>
             <p>• Có patchim: <code>-은</code> (<em>먹은 음식 - món đã ăn, 읽은 책 - sách đã đọc</em>).</p>
             <p>• Không patchim hoặc patchim 'ㄹ': <code>-ㄴ</code> (<em>어제 본 영화 - phim đã xem hôm qua, 만든 음식 - món đã nấu</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">어제 만난 사람이 의사 선생님이에요.</span>
-                <button class="speak-btn" onclick="speakText('어제 만난 사람이 의사 선생님이에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('어제 만난 사람이 의사 선생님이에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">어제 만난 사람이 의사 선생님이에요.</div>
+                <div class="example-vi">Người mà tôi đã gặp ngày hôm qua là bác sĩ.</div>
               </div>
-              <span class="example-vi">Người mà tôi đã gặp ngày hôm qua là bác sĩ.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">아침에 먹은 약이 효과가 좋아요.</span>
-                <button class="speak-btn" onclick="speakText('아침에 먹은 약이 효과가 좋아요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('아침에 먹은 약이 효과가 좋아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">아침에 먹은 약이 효과가 좋아요.</div>
+                <div class="example-vi">Thuốc tôi đã uống sáng nay có hiệu quả rất tốt.</div>
               </div>
-              <span class="example-vi">Thuốc tôi đã uống sáng nay có hiệu quả rất tốt.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: N + 마다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Danh từ + 마다</span>
-          <span class="rule-trans">Mỗi..., cứ mỗi...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Danh từ + 마다</span>
+            <span class="grammar-meaning-vi">Mỗi..., cứ mỗi...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn sau danh từ chỉ thời gian hoặc đối tượng để biểu thị sự lặp lại đều đặn không sót một đơn vị nào (<em>날마다 - mỗi ngày, 주말마다 - mỗi cuối tuần, 나라마다 - mỗi quốc gia</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이 약은 4시간마다 드세요.</span>
-                <button class="speak-btn" onclick="speakText('이 약은 4시간마다 드세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이 약은 4시간마다 드세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이 약은 4시간마다 드세요.</div>
+                <div class="example-vi">Thuốc này cứ mỗi 4 tiếng bạn hãy uống một lần nhé.</div>
               </div>
-              <span class="example-vi">Thuốc này cứ mỗi 4 tiếng bạn hãy uống một lần nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">주말마다 도서관에 가서 공부해요.</span>
-                <button class="speak-btn" onclick="speakText('주말마다 도서관에 가서 공부해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('주말마다 도서관에 가서 공부해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">주말마다 도서관에 가서 공부해요.</div>
+                <div class="example-vi">Cứ mỗi dịp cuối tuần tôi lại đến thư viện học bài.</div>
               </div>
-              <span class="example-vi">Cứ mỗi dịp cuối tuần tôi lại đến thư viện học bài.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V/A + -아/어야 하다 [되다] -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động/Tính từ + -아/어야 하다 [되다]</span>
-          <span class="rule-trans">Phải làm gì... (Nghĩa vụ, bắt buộc)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động/Tính từ + -아/어야 하다 [되다]</span>
+            <span class="grammar-meaning-vi">Phải làm gì... (Nghĩa vụ, bắt buộc)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị nghĩa vụ, bổn phận hoặc tính tất yếu cần phải làm việc gì. Trong văn giao tiếp thường ngày, <code>-아/어야 되다</code> được sử dụng rất phổ biến thay cho <code>하다</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">감기에 걸려서 병원에 가야 해요.</span>
-                <button class="speak-btn" onclick="speakText('감기에 걸려서 병원에 가야 해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('감기에 걸려서 병원에 가야 해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">감기에 걸려서 병원에 가야 해요.</div>
+                <div class="example-vi">Vì bị cảm cúm nên tôi phải đi đến bệnh viện.</div>
               </div>
-              <span class="example-vi">Vì bị cảm cúm nên tôi phải đi đến bệnh viện.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">내일 시험이 있어서 열심히 공부해야 돼요.</span>
-                <button class="speak-btn" onclick="speakText('내일 시험이 있어서 열심히 공부해야 돼요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('내일 시험이 있어서 열심히 공부해야 돼요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">내일 시험이 있어서 열심히 공부해야 돼요.</div>
+                <div class="example-vi">Ngày mai có bài thi nên tôi phải chăm chỉ học bài.</div>
               </div>
-              <span class="example-vi">Ngày mai có bài thi nên tôi phải chăm chỉ học bài.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1528,93 +1673,102 @@
       <!-- CARD 1: V + -지 못하다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -지 못하다 [못 + V]</span>
-          <span class="rule-trans">Không thể làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -지 못하다 [못 + V]</span>
+            <span class="grammar-meaning-vi">Không thể làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị chủ ngữ dù có ý chí nhưng <strong>không đủ năng lực hoặc do hoàn cảnh khách quan chi phối</strong> nên không thể thực hiện được hành động (khác với <code>-지 않다 / 안</code> là không muốn làm theo ý chí).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">어제 일이 많아서 파티에 가지 못했어요.</span>
-                <button class="speak-btn" onclick="speakText('어제 일이 많아서 파티에 가지 못했어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('어제 일이 많아서 파티에 가지 못했어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">어제 일이 많아서 파티에 가지 못했어요.</div>
+                <div class="example-vi">Hôm qua vì có nhiều việc nên tôi đã không thể đến dự bữa tiệc.</div>
               </div>
-              <span class="example-vi">Hôm qua vì có nhiều việc nên tôi đã không thể đến dự bữa tiệc.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">매운 음식을 잘 먹지 못해요.</span>
-                <button class="speak-btn" onclick="speakText('매운 음식을 잘 먹지 못해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('매운 음식을 잘 먹지 못해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">매운 음식을 잘 먹지 못해요.</div>
+                <div class="example-vi">Tôi không ăn được đồ ăn cay.</div>
               </div>
-              <span class="example-vi">Tôi không ăn được đồ ăn cay.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -(으)면 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)면</span>
-          <span class="rule-trans">Nếu... thì... (Giả định điều kiện)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)면</span>
+            <span class="grammar-meaning-vi">Nếu... thì... (Giả định điều kiện)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị điều kiện hoặc giả định ở vế trước để dẫn tới kết quả ở vế sau. Nếu thân từ có patchim dùng <code>-으면</code>, không patchim hoặc patchim 'ㄹ' dùng <code>-면</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">시간이 있으면 같이 영화를 볼까요?</span>
-                <button class="speak-btn" onclick="speakText('시간이 있으면 같이 영화를 볼까요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('시간이 있으면 같이 영화를 볼까요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">시간이 있으면 같이 영화를 볼까요?</div>
+                <div class="example-vi">Nếu bạn có thời gian thì chúng mình cùng đi xem phim nhé?</div>
               </div>
-              <span class="example-vi">Nếu bạn có thời gian thì chúng mình cùng đi xem phim nhé?</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">날씨가 좋으면 한강 공원에 가요.</span>
-                <button class="speak-btn" onclick="speakText('날씨가 좋으면 한강 공원에 가요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('날씨가 좋으면 한강 공원에 가요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">날씨가 좋으면 한강 공원에 가요.</div>
+                <div class="example-vi">Nếu thời tiết đẹp thì chúng mình hãy đến công viên sông Hàn.</div>
               </div>
-              <span class="example-vi">Nếu thời tiết đẹp thì chúng mình hãy đến công viên sông Hàn.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -(으)ㄹ + N -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -(으)ㄹ + Danh từ</span>
-          <span class="rule-trans">Định ngữ Động từ thì tương lai</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄹ + Danh từ</span>
+            <span class="grammar-meaning-vi">Định ngữ Động từ thì tương lai</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn vào thân động từ để bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>sẽ làm trong tương lai</strong> hoặc <strong>việc cần phải làm</strong> (vd: <em>việc ngày mai sẽ làm, món ăn sẽ ăn</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">내일 할 일이 너무 많아요.</span>
-                <button class="speak-btn" onclick="speakText('내일 할 일이 너무 많아요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('내일 할 일이 너무 많아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">내일 할 일이 너무 많아요.</div>
+                <div class="example-vi">Việc ngày mai tôi phải làm có nhiều quá.</div>
               </div>
-              <span class="example-vi">Việc ngày mai tôi phải làm có nhiều quá.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">주말에 읽을 책을 도서관에서 빌렸어요.</span>
-                <button class="speak-btn" onclick="speakText('주말에 읽을 책을 도서관에서 빌렸어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('주말에 읽을 책을 도서관에서 빌렸어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">주말에 읽을 책을 도서관에서 빌렸어요.</div>
+                <div class="example-vi">Tôi đã mượn ở thư viện cuốn sách dự định sẽ đọc vào cuối tuần.</div>
               </div>
-              <span class="example-vi">Tôi đã mượn ở thư viện cuốn sách dự định sẽ đọc vào cuối tuần.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1643,99 +1797,109 @@
       <!-- CARD 1: V + -아/어서 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -아/어서</span>
-          <span class="rule-trans">Trật tự thời gian: ...rồi...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -아/어서</span>
+            <span class="grammar-meaning-vi">Trật tự thời gian: ...rồi...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa:</strong> Nối hai hành động diễn ra theo trình tự trước sau, trong đó hành động ở vế trước là tiền đề hoặc có liên quan chặt chẽ tới hành động ở vế sau (nghĩa là <em>"làm cái này... rồi làm cái kia"</em>).</p>
           </div>
+          <div class="section-title">2. Quy tắc kết hợp &amp; Phân biệt</div>
           <div class="comparison-box">
             <strong>Phân biệt: -아/어서 (thời gian) vs -고</strong>
             <p>• <code>-고</code>: Nối hai hành động độc lập, không nhất thiết có quan hệ lệ thuộc (<em>Tôi ăn cơm và tôi xem tivi</em>).</p>
             <p>• <code>-아/어서</code>: Hai hành động có tính liên kết chặt chẽ về không gian và địa điểm: <em>가게에 가서 빵을 샀어요 (Đi đến tiệm rồi mua bánh ở tiệm đó)</em>. Các động từ di chuyển <strong>가다, 오다, 일어나다</strong> bắt buộc phải dùng <code>-아/어서</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">도서관에 가서 책을 빌렸어요.</span>
-                <button class="speak-btn" onclick="speakText('도서관에 가서 책을 빌렸어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('도서관에 가서 책을 빌렸어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">도서관에 가서 책을 빌렸어요.</div>
+                <div class="example-vi">Tôi đã đến thư viện rồi mượn sách ở đó.</div>
               </div>
-              <span class="example-vi">Tôi đã đến thư viện rồi mượn sách ở đó.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">친구를 만나서 같이 점심을 먹었어요.</span>
-                <button class="speak-btn" onclick="speakText('친구를 만나서 같이 점심을 먹었어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('친구를 만나서 같이 점심을 먹었어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">친구를 만나서 같이 점심을 먹었어요.</div>
+                <div class="example-vi">Tôi gặp bạn rồi cùng nhau ăn trưa.</div>
               </div>
-              <span class="example-vi">Tôi gặp bạn rồi cùng nhau ăn trưa.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -지요? -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -지요? [-죠?]</span>
-          <span class="rule-trans">...phải không?, ...đúng không?</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -지요? [-죠?]</span>
+            <span class="grammar-meaning-vi">...phải không?, ...đúng không?</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Dùng khi người nói muốn <strong>xác nhận lại một sự thật</strong> mà mình đã biết trước hoặc tin rằng người nghe cũng biết và đồng tình với mình. Trong văn nói thường rút gọn thành <code>-죠?</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">오늘 날씨가 정말 덥지요? - 네, 아주 더워요.</span>
-                <button class="speak-btn" onclick="speakText('오늘 날씨가 정말 덥지요? 네, 아주 더워요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('오늘 날씨가 정말 덥지요? 네, 아주 더워요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">오늘 날씨가 정말 덥지요? - 네, 아주 더워요.</div>
+                <div class="example-vi">Hôm nay thời tiết thực sự nóng quá đúng không? - Vâng, nóng lắm ạ.</div>
               </div>
-              <span class="example-vi">Hôm nay thời tiết thực sự nóng quá đúng không? - Vâng, nóng lắm ạ.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">흐엉 씨는 베트남 사람이지요?</span>
-                <button class="speak-btn" onclick="speakText('흐엉 씨는 베트남 사람이지요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('흐엉 씨는 베트남 사람이지요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">흐엉 씨는 베트남 사람이지요?</div>
+                <div class="example-vi">Hương là người Việt Nam đúng không bạn?</div>
               </div>
-              <span class="example-vi">Hương là người Việt Nam đúng không bạn?</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: Số từ thứ tự -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Số từ thứ tự (첫 번째, 두 번째...)</span>
-          <span class="rule-trans">Thứ nhất, thứ nhì, thứ ba...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Số từ thứ tự (첫 번째, 두 번째...)</span>
+            <span class="grammar-meaning-vi">Thứ nhất, thứ nhì, thứ ba...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Dùng số thuần Hàn kết hợp với hậu tố <code>번째</code> để chỉ số thứ tự. Riêng vị trí đầu tiên dùng <strong>첫 번째</strong> (thứ nhất).</p>
             <p>• <em>첫 번째 (thứ nhất), 두 번째 (thứ hai), 세 번째 (thứ ba), 네 번째 (thứ tư), 다섯 번째 (thứ năm)...</em></p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">두 번째 사거리에서 오른쪽으로 가세요.</span>
-                <button class="speak-btn" onclick="speakText('두 번째 사거리에서 오른쪽으로 가세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('두 번째 사거리에서 오른쪽으로 가세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">두 번째 사거리에서 오른쪽으로 가세요.</div>
+                <div class="example-vi">Ở ngã tư thứ hai, bạn hãy rẽ sang bên phải nhé.</div>
               </div>
-              <span class="example-vi">Ở ngã tư thứ hai, bạn hãy rẽ sang bên phải nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이것은 제가 한국에서 산 첫 번째 선물이에요.</span>
-                <button class="speak-btn" onclick="speakText('이것은 제가 한국에서 산 첫 번째 선물이에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이것은 제가 한국에서 산 첫 번째 선물이에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이것은 제가 한국에서 산 첫 번째 선물이에요.</div>
+                <div class="example-vi">Đây là món quà đầu tiên mà tôi đã mua ở Hàn Quốc.</div>
               </div>
-              <span class="example-vi">Đây là món quà đầu tiên mà tôi đã mua ở Hàn Quốc.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1764,99 +1928,109 @@
       <!-- CARD 1: V + -(으)려고 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -(으)려고 [하다]</span>
-          <span class="rule-trans">Để... / Định làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -(으)려고 [하다]</span>
+            <span class="grammar-meaning-vi">Để... / Định làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa:</strong> Gắn vào thân động từ để chỉ ý định hoặc mục đích thực hiện hành động ở vế sau (<em>"để làm gì..."</em>). Khi kết hợp thành <code>-(으)려고 하다</code>, nó mang nghĩa <em>"dự định làm gì..."</em>.</p>
           </div>
+          <div class="section-title">2. Quy tắc kết hợp &amp; Phân biệt</div>
           <div class="comparison-box">
             <strong>So sánh: -(으)려고 vs -(으)러</strong>
             <p>• <code>-(으)러</code> chỉ đi kèm với động từ di chuyển như <em>가다, 오다, 다니다</em>: <em>밥을 먹으러 가요.</em></p>
             <p>• <code>-(으)려고</code> đi được với <strong>mọi động từ</strong>: <em>책을 읽으려고 안경을 썼어요 (Tôi đeo kính để đọc sách).</em></p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">친구를 만나려고 약속 장소에 일찍 갔어요.</span>
-                <button class="speak-btn" onclick="speakText('친구를 만나려고 약속 장소에 일찍 갔어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('친구를 만나려고 약속 장소에 일찍 갔어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">친구를 만나려고 약속 장소에 일찍 갔어요.</div>
+                <div class="example-vi">Tôi đã đến điểm hẹn sớm để gặp bạn.</div>
               </div>
-              <span class="example-vi">Tôi đã đến điểm hẹn sớm để gặp bạn.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이번 방학에 한국어를 공부하려고 해요.</span>
-                <button class="speak-btn" onclick="speakText('이번 방학에 한국어를 공부하려고 해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이번 방학에 한국어를 공부하려고 해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이번 방학에 한국어를 공부하려고 해요.</div>
+                <div class="example-vi">Kỳ nghỉ hè này tôi dự định sẽ học tiếng Hàn.</div>
               </div>
-              <span class="example-vi">Kỳ nghỉ hè này tôi dự định sẽ học tiếng Hàn.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V + -기 전에 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động từ + -기 전에 [N + 전에]</span>
-          <span class="rule-trans">Trước khi làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động từ + -기 전에 [N + 전에]</span>
+            <span class="grammar-meaning-vi">Trước khi làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị hành động ở vế sau diễn ra <strong>trước thời điểm</strong> diễn ra hành động hoặc sự kiện ở vế trước. Thân động từ không cần xét patchim, luôn gắn trực tiếp <code>-기 전에</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">식사하기 전에 손을 깨끗이 씻으세요.</span>
-                <button class="speak-btn" onclick="speakText('식사하기 전에 손을 깨끗이 씻으세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('식사하기 전에 손을 깨끗이 씻으세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">식사하기 전에 손을 깨끗이 씻으세요.</div>
+                <div class="example-vi">Trước khi dùng bữa bạn hãy rửa tay thật sạch nhé.</div>
               </div>
-              <span class="example-vi">Trước khi dùng bữa bạn hãy rửa tay thật sạch nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">수업 시작하기 전에 교실에 도착했어요.</span>
-                <button class="speak-btn" onclick="speakText('수업 시작하기 전에 교실에 도착했어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('수업 시작하기 전에 교실에 도착했어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">수업 시작하기 전에 교실에 도착했어요.</div>
+                <div class="example-vi">Tôi đã đến phòng học trước khi tiết học bắt đầu.</div>
               </div>
-              <span class="example-vi">Tôi đã đến phòng học trước khi tiết học bắt đầu.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -(으)ㄹ게요 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -(으)ㄹ게요</span>
-          <span class="rule-trans">Tôi sẽ... (Hứa hẹn, cam kết)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄹ게요</span>
+            <span class="grammar-meaning-vi">Tôi sẽ... (Hứa hẹn, cam kết)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Chỉ dùng cho <strong>ngôi thứ nhất (tôi/chúng tôi)</strong> trong câu trần thuật để biểu thị ý chí, sự cam kết hoặc lời hứa hẹn sẽ thực hiện một việc gì đó cho người nghe.</p>
             <p><strong>Lưu ý:</strong> Không dùng trong câu hỏi, không dùng cho ngôi thứ 2 hoặc ngôi thứ 3.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">제가 내일 다시 전화할게요.</span>
-                <button class="speak-btn" onclick="speakText('제가 내일 다시 전화할게요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('제가 내일 다시 전화할게요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">제가 내일 다시 전화할게요.</div>
+                <div class="example-vi">Ngày mai tôi sẽ gọi điện thoại lại cho bạn nhé.</div>
               </div>
-              <span class="example-vi">Ngày mai tôi sẽ gọi điện thoại lại cho bạn nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지금 바쁘니까 조금 후에 연락할게요.</span>
-                <button class="speak-btn" onclick="speakText('지금 바쁘니까 조금 후에 연락할게요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지금 바쁘니까 조금 후에 연락할게요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 바쁘니까 조금 후에 연락할게요.</div>
+                <div class="example-vi">Bây giờ tôi đang bận nên một lát nữa tôi sẽ liên lạc lại nhé.</div>
               </div>
-              <span class="example-vi">Bây giờ tôi đang bận nên một lát nữa tôi sẽ liên lạc lại nhé.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -1885,95 +2059,104 @@
       <!-- CARD 1: V/A + -겠- -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động/Tính từ + -겠-</span>
-          <span class="rule-trans">Chắc là... / Sẽ...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động/Tính từ + -겠-</span>
+            <span class="grammar-meaning-vi">Chắc là... / Sẽ...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>1. <strong>Phỏng đoán:</strong> Khi nhìn vào tình huống hoặc trạng thái trước mắt để phỏng đoán (<em>"chắc là...", "có vẻ là..."</em>): <em>맛있겠다 (Chắc ngon lắm đây), 피곤하겠어요 (Chắc là bạn mệt lắm).</em></p>
             <p>2. <strong>Ý chí trang trọng:</strong> Thể hiện ý chí quyết tâm của người nói trong hoàn cảnh trang trọng (<em>알겠습니다 - Tôi hiểu rồi ạ, 잘 먹겠습니다 - Tôi sẽ ăn ngon miệng ạ</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">하루 종일 걸어서 다리가 많이 아프겠어요.</span>
-                <button class="speak-btn" onclick="speakText('하루 종일 걸어서 다리가 많이 아프겠어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('하루 종일 걸어서 다리가 많이 아프겠어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">하루 종일 걸어서 다리가 많이 아프겠어요.</div>
+                <div class="example-vi">Đi bộ cả ngày thế thì chắc chân bạn mệt và đau lắm nhỉ.</div>
               </div>
-              <span class="example-vi">Đi bộ cả ngày thế thì chắc chân bạn mệt và đau lắm nhỉ.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">그 영화가 아주 재미있겠어요.</span>
-                <button class="speak-btn" onclick="speakText('그 영화가 아주 재미있겠어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('그 영화가 아주 재미있겠어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">그 영화가 아주 재미있겠어요.</div>
+                <div class="example-vi">Bộ phim đó chắc hẳn là hay lắm đấy.</div>
               </div>
-              <span class="example-vi">Bộ phim đó chắc hẳn là hay lắm đấy.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -네요 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -네요</span>
-          <span class="rule-trans">Đuôi câu cảm thán: ...quá!, ...thế!</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -네요</span>
+            <span class="grammar-meaning-vi">Đuôi câu cảm thán: ...quá!, ...thế!</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn vào thân động/tính từ để thể hiện sự <strong>ngạc nhiên, cảm thán trước một sự việc, hiện tượng mà người nói vừa mới trực tiếp trải nghiệm hoặc nhìn thấy</strong>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국말을 정말 잘하시네요!</span>
-                <button class="speak-btn" onclick="speakText('한국말을 정말 잘하시네요!')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국말을 정말 잘하시네요!')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국말을 정말 잘하시네요!</div>
+                <div class="example-vi">Bạn nói tiếng Hàn giỏi quá đi mất!</div>
               </div>
-              <span class="example-vi">Bạn nói tiếng Hàn giỏi quá đi mất!</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">벌써 12시네요. 시간이 정말 빨라요.</span>
-                <button class="speak-btn" onclick="speakText('벌써 12시네요. 시간이 정말 빨라요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('벌써 12시네요. 시간이 정말 빨라요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">벌써 12시네요. 시간이 정말 빨라요.</div>
+                <div class="example-vi">Đã 12 giờ rồi cơ đấy! Thời gian trôi nhanh thật.</div>
               </div>
-              <span class="example-vi">Đã 12 giờ rồi cơ đấy! Thời gian trôi nhanh thật.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -아/어 보다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -아/어 보다</span>
-          <span class="rule-trans">Thử làm gì... / Từng làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -아/어 보다</span>
+            <span class="grammar-meaning-vi">Thử làm gì... / Từng làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>1. Ở thì hiện tại/tương lai: Khuyên nhủ hoặc đề nghị ai đó <strong>hãy thử làm</strong> một điều mới (<em>-아/어 보세요</em>): <em>이 옷을 입어 보세요 (Hãy thử mặc chiếc áo này).</em></p>
             <p>2. Ở thì quá khứ <code>-아/어 봤다</code>: Biểu thị <strong>kinh nghiệm đã từng trải qua</strong>: <em>제주도에 가 봤어요 (Tôi đã từng đến đảo Jeju).</em></p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국 전통 음식을 먹어 보고 싶어요.</span>
-                <button class="speak-btn" onclick="speakText('한국 전통 음식을 먹어 보고 싶어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국 전통 음식을 먹어 보고 싶어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 전통 음식을 먹어 보고 싶어요.</div>
+                <div class="example-vi">Tôi muốn ăn thử món ăn truyền thống của Hàn Quốc.</div>
               </div>
-              <span class="example-vi">Tôi muốn ăn thử món ăn truyền thống của Hàn Quốc.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이 책을 한번 읽어 보세요. 정말 감동적이에요.</span>
-                <button class="speak-btn" onclick="speakText('이 책을 한번 읽어 보세요. 정말 감동적이에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이 책을 한번 읽어 보세요. 정말 감동적이에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이 책을 한번 읽어 보세요. 정말 감동적이에요.</div>
+                <div class="example-vi">Bạn hãy thử đọc cuốn sách này một lần xem. Rất xúc động đấy.</div>
               </div>
-              <span class="example-vi">Bạn hãy thử đọc cuốn sách này một lần xem. Rất xúc động đấy.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2002,93 +2185,102 @@
       <!-- CARD 1: N + (이)나 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ + (이)나</span>
-          <span class="rule-trans">Hoặc là, hay là... (Sự lựa chọn)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ + (이)나</span>
+            <span class="grammar-meaning-vi">Hoặc là, hay là... (Sự lựa chọn)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn sau danh từ để biểu thị sự lựa chọn giữa hai hay nhiều đối tượng (nghĩa là <em>"hoặc", "hay là"</em>). Có patchim dùng <code>이나</code>, không patchim dùng <code>나</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">주말에 영화나 연극을 보고 싶어요.</span>
-                <button class="speak-btn" onclick="speakText('주말에 영화나 연극을 보고 싶어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('주말에 영화나 연극을 보고 싶어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">주말에 영화나 연극을 보고 싶어요.</div>
+                <div class="example-vi">Cuối tuần tôi muốn đi xem phim hoặc là xem kịch.</div>
               </div>
-              <span class="example-vi">Cuối tuần tôi muốn đi xem phim hoặc là xem kịch.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">목이 마른데 물이나 주스 좀 주세요.</span>
-                <button class="speak-btn" onclick="speakText('목이 마른데 물이나 주스 좀 주세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('목이 마른데 물이나 주스 좀 주세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">목이 마른데 물이나 주스 좀 주세요.</div>
+                <div class="example-vi">Tôi đang khát nước, xin hãy cho tôi nước lọc hay nước hoa quả cũng được.</div>
               </div>
-              <span class="example-vi">Tôi đang khát nước, xin hãy cho tôi nước lọc hay nước hoa quả cũng được.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -(으)면 좋겠다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)면 좋겠다</span>
-          <span class="rule-trans">Ước gì..., giá mà... (Hy vọng, mong ước)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)면 좋겠다</span>
+            <span class="grammar-meaning-vi">Ước gì..., giá mà... (Hy vọng, mong ước)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị niềm hy vọng, mong ước thiết tha của người nói về một sự việc trong tương lai hoặc một điều trái ngược với thực tế hiện tại (<em>"Nếu... thì thật tốt biết mấy", "Ước gì..."</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이번 휴가에 고향에 갈 수 있으면 좋겠어요.</span>
-                <button class="speak-btn" onclick="speakText('이번 휴가에 고향에 갈 수 있으면 좋겠어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이번 휴가에 고향에 갈 수 있으면 좋겠어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이번 휴가에 고향에 갈 수 있으면 좋겠어요.</div>
+                <div class="example-vi">Kỳ nghỉ này giá mà tôi có thể về thăm quê thì tốt biết mấy.</div>
               </div>
-              <span class="example-vi">Kỳ nghỉ này giá mà tôi có thể về thăm quê thì tốt biết mấy.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">내일 날씨가 맑으면 좋겠어요.</span>
-                <button class="speak-btn" onclick="speakText('내일 날씨가 맑으면 좋겠어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('내일 날씨가 맑으면 좋겠어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">내일 날씨가 맑으면 좋겠어요.</div>
+                <div class="example-vi">Ước gì ngày mai trời nắng ráo đẹp trời.</div>
               </div>
-              <span class="example-vi">Ước gì ngày mai trời nắng ráo đẹp trời.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -기 위해서 / N + -을/를 위해 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -기 위해서 / N + -을/를 위해</span>
-          <span class="rule-trans">Để..., vì mục đích...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -기 위해서 / N + -을/를 위해</span>
+            <span class="grammar-meaning-vi">Để..., vì mục đích...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị mục đích hoặc nỗ lực để đạt được kết quả ở vế sau. So với <code>-(으)려고</code>, <code>-기 위해서</code> mang sắc thái trang trọng, quyết tâm và hướng tới mục tiêu lớn hơn.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">건강을 위해서 매일 아침 조깅을 해요.</span>
-                <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 조깅을 해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 조깅을 해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">건강을 위해서 매일 아침 조깅을 해요.</div>
+                <div class="example-vi">Vì sức khỏe nên mỗi sáng tôi đều chạy bộ.</div>
               </div>
-              <span class="example-vi">Vì sức khỏe nên mỗi sáng tôi đều chạy bộ.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국 유학을 가기 위해서 열심히 한국어를 배워요.</span>
-                <button class="speak-btn" onclick="speakText('한국 유학을 가기 위해서 열심히 한국어를 배워요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국 유학을 가기 위해서 열심히 한국어를 배워요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 유학을 가기 위해서 열심히 한국어를 배워요.</div>
+                <div class="example-vi">Để đi du học Hàn Quốc, tôi đang chăm chỉ học tiếng Hàn.</div>
               </div>
-              <span class="example-vi">Để đi du học Hàn Quốc, tôi đang chăm chỉ học tiếng Hàn.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2117,16 +2309,20 @@
       <!-- CARD 1: A + -아/어지다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Tính từ + -아/어지다</span>
-          <span class="rule-trans">Trở nên..., dần dần...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Tính từ + -아/어지다</span>
+            <span class="grammar-meaning-vi">Trở nên..., dần dần...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn vào thân tính từ để biến tính từ thành động từ miêu tả <strong>sự biến đổi trạng thái hoặc tính chất</strong> theo tiến trình thời gian (<em>trở nên đẹp hơn, thời tiết trở lạnh...</em>).</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Nguyên âm tính từ</th>
@@ -2157,67 +2353,73 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">운동을 해서 몸이 아주 건강해졌어요.</span>
-                <button class="speak-btn" onclick="speakText('운동을 해서 몸이 아주 건강해졌어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('운동을 해서 몸이 아주 건강해졌어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">운동을 해서 몸이 아주 건강해졌어요.</div>
+                <div class="example-vi">Nhờ tập thể dục mà cơ thể tôi đã trở nên rất khỏe mạnh.</div>
               </div>
-              <span class="example-vi">Nhờ tập thể dục mà cơ thể tôi đã trở nên rất khỏe mạnh.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">가을이 되어서 날씨가 쌀쌀해졌어요.</span>
-                <button class="speak-btn" onclick="speakText('가을이 되어서 날씨가 쌀쌀해졌어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('가을이 되어서 날씨가 쌀쌀해졌어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">가을이 되어서 날씨가 쌀쌀해졌어요.</div>
+                <div class="example-vi">Vì đã sang thu nên thời tiết đã trở nên se lạnh.</div>
               </div>
-              <span class="example-vi">Vì đã sang thu nên thời tiết đã trở nên se lạnh.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -기 때문에 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -기 때문에 [N + 때문에]</span>
-          <span class="rule-trans">Vì... nên... (Nguyên nhân khách quan)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -기 때문에 [N + 때문에]</span>
+            <span class="grammar-meaning-vi">Vì... nên... (Nguyên nhân khách quan)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị nguyên nhân hoặc lý do khách quan, rõ ràng dẫn đến kết quả ở vế sau. Cấu trúc này thường dùng trong văn viết, báo chí hoặc phát biểu trang trọng.</p>
             <p>Nếu là danh từ thì dùng trực tiếp <code>Danh từ + 때문에</code>: <em>비 때문에 (do mưa), 감기 때문에 (do cảm cúm).</em></p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">눈이 많이 왔기 때문에 길이 아주 미끄러워요.</span>
-                <button class="speak-btn" onclick="speakText('눈이 많이 왔기 때문에 길이 아주 미끄러워요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('눈이 많이 왔기 때문에 길이 아주 미끄러워요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">눈이 많이 왔기 때문에 길이 아주 미끄러워요.</div>
+                <div class="example-vi">Vì tuyết rơi nhiều nên đường sá rất trơn trượt.</div>
               </div>
-              <span class="example-vi">Vì tuyết rơi nhiều nên đường sá rất trơn trượt.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">바쁜 일 때문에 고향에 가지 못했어요.</span>
-                <button class="speak-btn" onclick="speakText('바쁜 일 때문에 고향에 가지 못했어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('바쁜 일 때문에 고향에 가지 못했어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">바쁜 일 때문에 고향에 가지 못했어요.</div>
+                <div class="example-vi">Do công việc bận rộn nên tôi đã không thể về thăm quê.</div>
               </div>
-              <span class="example-vi">Do công việc bận rộn nên tôi đã không thể về thăm quê.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: Bất quy tắc 'ㅎ' -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Bất quy tắc của phụ âm 'ㅎ'</span>
-          <span class="rule-trans">ㅎ 불규칙</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Bất quy tắc của phụ âm 'ㅎ'</span>
+            <span class="grammar-meaning-vi">ㅎ 불규칙</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Hầu hết các <strong>tính từ chỉ màu sắc và tính từ chỉ định kết thúc bằng patchim 'ㅎ'</strong> (như <em>하얗다, 빨갛다, 노랗다, 파랗다, 까맣다, 그렇다, 어떻다, 이렇다</em>) đều tuân theo quy tắc sau:</p>
             <p>1. Khi gặp đuôi bắt đầu bằng nguyên âm <code>-아/어</code>: Phụ âm <code>ㅎ</code> bị rụng đi, và nguyên âm đứng trước kết hợp biến đổi thành <code>애</code> (hoặc <code>얘</code> đối với 하얗다):</p>
             <p>• <em>빨갛다 + 아요 -&gt; 빨개요</em></p>
@@ -2229,26 +2431,27 @@
             <p>• <em>하얗다 + (으)ㄴ -&gt; 하얀 (trắng)</em></p>
             <p>• <em>그렇다 + (으)면 -&gt; 그러면 (nếu vậy)</em></p>
           </div>
-          <div class="note-box">
+          <div class="section-title">4. Lưu ý &amp; Mở rộng</div>
+          <div class="tip-box">
             <strong>Ngoại lệ có quy tắc (ㅎ KHÔNG đổi):</strong> Các từ như <em>좋다 (tốt), 많다 (nhiều), 낳다 (sinh con), 넣다 (bỏ vào)</em> chia bình thường có quy tắc: <em>좋아요, 많아요.</em>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">하얀 눈이 내리고 있어요.</span>
-                <button class="speak-btn" onclick="speakText('하얀 눈이 내리고 있어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('하얀 눈이 내리고 있어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">하얀 눈이 내리고 있어요.</div>
+                <div class="example-vi">Những bông tuyết trắng muốt đang rơi.</div>
               </div>
-              <span class="example-vi">Những bông tuyết trắng muốt đang rơi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">얼굴이 왜 그렇게 빨개요?</span>
-                <button class="speak-btn" onclick="speakText('얼굴이 왜 그렇게 빨개요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('얼굴이 왜 그렇게 빨개요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">얼굴이 왜 그렇게 빨개요?</div>
+                <div class="example-vi">Sao mặt bạn lại đỏ bừng lên như thế?</div>
               </div>
-              <span class="example-vi">Sao mặt bạn lại đỏ bừng lên như thế?</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2277,95 +2480,104 @@
       <!-- CARD 1: V/A + -거나 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động/Tính từ + -거나</span>
-          <span class="rule-trans">Hoặc, hay là... (Nối hành động / tính chất)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động/Tính từ + -거나</span>
+            <span class="grammar-meaning-vi">Hoặc, hay là... (Nối hành động / tính chất)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Dùng để nối hai hay nhiều động từ hoặc tính từ, biểu thị <strong>sự lựa chọn giữa các hành động hoặc trạng thái</strong> (nghĩa là <em>"hoặc là...", "hay là..."</em>).</p>
             <p><strong>Lưu ý:</strong> Nối 2 danh từ dùng <code>(이)나</code>; nối 2 động từ/tính từ dùng <code>-거나</code>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">주말에는 집에서 쉬거나 친구를 만나요.</span>
-                <button class="speak-btn" onclick="speakText('주말에는 집에서 쉬거나 친구를 만나요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('주말에는 집에서 쉬거나 친구를 만나요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">주말에는 집에서 쉬거나 친구를 만나요.</div>
+                <div class="example-vi">Vào cuối tuần tôi thường nghỉ ngơi ở nhà hoặc đi gặp gỡ bạn bè.</div>
               </div>
-              <span class="example-vi">Vào cuối tuần tôi thường nghỉ ngơi ở nhà hoặc đi gặp gỡ bạn bè.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">음악을 듣거나 책을 읽는 것을 좋아해요.</span>
-                <button class="speak-btn" onclick="speakText('음악을 듣거나 책을 읽는 것을 좋아해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('음악을 듣거나 책을 읽는 것을 좋아해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">음악을 듣거나 책을 읽는 것을 좋아해요.</div>
+                <div class="example-vi">Tôi thích nghe nhạc hoặc đọc sách.</div>
               </div>
-              <span class="example-vi">Tôi thích nghe nhạc hoặc đọc sách.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V + -고 있다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động từ + -고 있다</span>
-          <span class="rule-trans">Đang... (Thì hiện tại tiếp diễn)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động từ + -고 있다</span>
+            <span class="grammar-meaning-vi">Đang... (Thì hiện tại tiếp diễn)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị một hành động <strong>đang diễn ra tại thời điểm nói</strong>. Kính ngữ của cấu trúc này là <strong>-고 계시다</strong>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지금 여행 가방을 싸고 있어요.</span>
-                <button class="speak-btn" onclick="speakText('지금 여행 가방을 싸고 있어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지금 여행 가방을 싸고 있어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 여행 가방을 싸고 있어요.</div>
+                <div class="example-vi">Bây giờ tôi đang thu xếp hành lý du lịch.</div>
               </div>
-              <span class="example-vi">Bây giờ tôi đang thu xếp hành lý du lịch.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">선생님께서 교실에서 학생들을 가르치고 계세요.</span>
-                <button class="speak-btn" onclick="speakText('선생님께서 교실에서 학생들을 가르치고 계세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('선생님께서 교실에서 학생들을 가르치고 계세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">선생님께서 교실에서 학생들을 가르치고 계세요.</div>
+                <div class="example-vi">Thầy giáo đang giảng bài cho các học sinh ở trong phòng học.</div>
               </div>
-              <span class="example-vi">Thầy giáo đang giảng bài cho các học sinh ở trong phòng học.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -(으)ㄴ 적이 있다 [없다] -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -(으)ㄴ 적이 있다 [없다]</span>
-          <span class="rule-trans">Đã từng / Chưa từng làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄴ 적이 있다 [없다]</span>
+            <span class="grammar-meaning-vi">Đã từng / Chưa từng làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị người nói <strong>đã từng hoặc chưa từng có trải nghiệm</strong> làm một việc gì đó trong quá khứ.</p>
             <p>Thường kết hợp với <code>-아/어 보다</code> thành cụm <code>-아/어 본 적이 있다/없다</code> (<em>đã từng thử làm gì...</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국에 가 본 적이 있어요? - 아니요, 가 본 적이 없어요.</span>
-                <button class="speak-btn" onclick="speakText('한국에 가 본 적이 있어요? 아니요, 가 본 적이 없어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국에 가 본 적이 있어요? 아니요, 가 본 적이 없어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국에 가 본 적이 있어요? - 아니요, 가 본 적이 없어요.</div>
+                <div class="example-vi">Bạn đã từng đến Hàn Quốc chưa? - Chưa, tôi chưa từng đến đó.</div>
               </div>
-              <span class="example-vi">Bạn đã từng đến Hàn Quốc chưa? - Chưa, tôi chưa từng đến đó.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한복을 입어 본 적이 있어요. 정말 예뻤어요.</span>
-                <button class="speak-btn" onclick="speakText('한복을 입어 본 적이 있어요. 정말 예뻤어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한복을 입어 본 적이 있어요. 정말 예뻤어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한복을 입어 본 적이 있어요. 정말 예뻤어요.</div>
+                <div class="example-vi">Tôi đã từng mặc thử trang phục Hanbok. Đẹp lắm bạn ạ.</div>
               </div>
-              <span class="example-vi">Tôi đã từng mặc thử trang phục Hanbok. Đẹp lắm bạn ạ.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2394,94 +2606,103 @@
       <!-- CARD 1: V + -(으)면서 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -(으)면서</span>
-          <span class="rule-trans">Vừa... vừa... (Hành động song song)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -(으)면서</span>
+            <span class="grammar-meaning-vi">Vừa... vừa... (Hành động song song)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị <strong>hai hành động cùng diễn ra đồng thời</strong> do một chủ ngữ thực hiện (nghĩa là <em>"vừa làm A vừa làm B"</em>).</p>
             <p><strong>Điều kiện:</strong> Hai vế bắt buộc phải <strong>cùng một chủ ngữ</strong>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">음악을 들으면서 청소를 해요.</span>
-                <button class="speak-btn" onclick="speakText('음악을 들으면서 청소를 해요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('음악을 들으면서 청소를 해요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">음악을 들으면서 청소를 해요.</div>
+                <div class="example-vi">Tôi vừa nghe nhạc vừa dọn dẹp phòng.</div>
               </div>
-              <span class="example-vi">Tôi vừa nghe nhạc vừa dọn dẹp phòng.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">친구들과 이야기하면서 커피를 마셨어요.</span>
-                <button class="speak-btn" onclick="speakText('친구들과 이야기하면서 커피를 마셨어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('친구들과 이야기하면서 커피를 마셨어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">친구들과 이야기하면서 커피를 마셨어요.</div>
+                <div class="example-vi">Tôi vừa trò chuyện với bạn bè vừa uống cà phê.</div>
               </div>
-              <span class="example-vi">Tôi vừa trò chuyện với bạn bè vừa uống cà phê.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: Đuôi câu -요 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Đuôi câu thân mật lịch sự: -요</span>
-          <span class="rule-trans">Rút gọn trong hội thoại thân mật</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Đuôi câu thân mật lịch sự: -요</span>
+            <span class="grammar-meaning-vi">Rút gọn trong hội thoại thân mật</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Trong khẩu ngữ giao tiếp hàng ngày, khi người nghe hỏi một câu hỏi đầy đủ, người nói có thể <strong>trả lời rút gọn bằng danh từ hoặc cụm từ gắn thêm <code>-요</code></strong> ở cuối để vừa ngắn gọn vừa giữ được phép lịch sự tôn trọng.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지금 어디에 가요? - 도서관에요.</span>
-                <button class="speak-btn" onclick="speakText('지금 어디에 가요? 도서관에요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지금 어디에 가요? 도서관에요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 어디에 가요? - 도서관에요.</div>
+                <div class="example-vi">Bây giờ bạn đi đâu thế? - Đi thư viện ạ.</div>
               </div>
-              <span class="example-vi">Bây giờ bạn đi đâu thế? - Đi thư viện ạ.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">무엇을 마실래요? - 시원한 주스요.</span>
-                <button class="speak-btn" onclick="speakText('무엇을 마실래요? 시원한 주스요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('무엇을 마실래요? 시원한 주스요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">무엇을 마실래요? - 시원한 주스요.</div>
+                <div class="example-vi">Bạn muốn uống gì? - Cho tôi nước trái cây mát lạnh nhé.</div>
               </div>
-              <span class="example-vi">Bạn muốn uống gì? - Cho tôi nước trái cây mát lạnh nhé.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -(으)면 안 되다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -(으)면 안 되다</span>
-          <span class="rule-trans">Không được làm gì... (Cấm đoán)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -(으)면 안 되다</span>
+            <span class="grammar-meaning-vi">Không được làm gì... (Cấm đoán)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị <strong>sự cấm đoán hoặc quy định không được phép làm</strong> việc gì đó (đối lập với cấu trúc cho phép <em>-아/어도 되다</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">도서관에서 큰 소리로 이야기하면 안 돼요.</span>
-                <button class="speak-btn" onclick="speakText('도서관에서 큰 소리로 이야기하면 안 돼요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('도서관에서 큰 소리로 이야기하면 안 돼요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">도서관에서 큰 소리로 이야기하면 안 돼요.</div>
+                <div class="example-vi">Trong thư viện không được nói chuyện lớn tiếng.</div>
               </div>
-              <span class="example-vi">Trong thư viện không được nói chuyện lớn tiếng.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">미술관 안에서는 사진을 찍으면 안 돼요.</span>
-                <button class="speak-btn" onclick="speakText('미술관 안에서는 사진을 찍으면 안 돼요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('미술관 안에서는 사진을 찍으면 안 돼요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">미술관 안에서는 사진을 찍으면 안 돼요.</div>
+                <div class="example-vi">Ở bên trong bảo tàng mỹ thuật không được phép chụp ảnh.</div>
               </div>
-              <span class="example-vi">Ở bên trong bảo tàng mỹ thuật không được phép chụp ảnh.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2510,100 +2731,110 @@
       <!-- CARD 1: N + (이)나 (nhấn mạnh số lượng) -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ (số từ) + (이)나</span>
-          <span class="rule-trans">Tận..., đến tận... (Nhấn mạnh số lượng)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ (số từ) + (이)나</span>
+            <span class="grammar-meaning-vi">Tận..., đến tận... (Nhấn mạnh số lượng)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn sau danh từ chỉ số lượng để <strong>nhấn mạnh số lượng đó là rất nhiều</strong>, vượt quá mức bình thường hoặc vượt quá sự mong đợi của người nói (nghĩa là <em>"tận...", "những...", "đến tận..."</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">어제 커피를 5잔이나 마셨어요.</span>
-                <button class="speak-btn" onclick="speakText('어제 커피를 5잔이나 마셨어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('어제 커피를 5잔이나 마셨어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">어제 커피를 5잔이나 마셨어요.</div>
+                <div class="example-vi">Hôm qua tôi đã uống đến tận 5 ly cà phê lận đấy.</div>
               </div>
-              <span class="example-vi">Hôm qua tôi đã uống đến tận 5 ly cà phê lận đấy.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">친구가 약속 시간에 1시간이나 늦었어요.</span>
-                <button class="speak-btn" onclick="speakText('친구가 약속 시간에 1시간이나 늦었어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('친구가 약속 시간에 1시간이나 늦었어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">친구가 약속 시간에 1시간이나 늦었어요.</div>
+                <div class="example-vi">Bạn tôi đã đến trễ giờ hẹn tận 1 tiếng đồng hồ.</div>
               </div>
-              <span class="example-vi">Bạn tôi đã đến trễ giờ hẹn tận 1 tiếng đồng hồ.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -(으)ㄹ 것 같다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)ㄹ 것 같다</span>
-          <span class="rule-trans">Hình như..., dường như..., có vẻ là...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)ㄹ 것 같다</span>
+            <span class="grammar-meaning-vi">Hình như..., dường như..., có vẻ là...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị sự <strong>phỏng đoán mang tính dè dặt, tế nhị</strong> của người nói về một việc gì đó chưa xảy ra hoặc dựa trên cảm nhận trực quan.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">하늘에 구름이 많아서 곧 비가 올 것 같아요.</span>
-                <button class="speak-btn" onclick="speakText('하늘에 구름이 많아서 곧 비가 올 것 같아요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('하늘에 구름이 많아서 곧 비가 올 것 같아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">하늘에 구름이 많아서 곧 비가 올 것 같아요.</div>
+                <div class="example-vi">Trời nhiều mây thế này hình như sắp có mưa rồi.</div>
               </div>
-              <span class="example-vi">Trời nhiều mây thế này hình như sắp có mưa rồi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이 옷은 남 씨에게 잘 어울릴 것 같아요.</span>
-                <button class="speak-btn" onclick="speakText('이 옷은 남 씨에게 잘 어울릴 것 같아요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이 옷은 남 씨에게 잘 어울릴 것 같아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이 옷은 남 씨에게 잘 어울릴 것 같아요.</div>
+                <div class="example-vi">Chiếc áo này có vẻ rất hợp với bạn Nam đấy.</div>
               </div>
-              <span class="example-vi">Chiếc áo này có vẻ rất hợp với bạn Nam đấy.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: Bất quy tắc 'ㅅ' -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Bất quy tắc của phụ âm 'ㅅ'</span>
-          <span class="rule-trans">ㅅ 불규칙</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Bất quy tắc của phụ âm 'ㅅ'</span>
+            <span class="grammar-meaning-vi">ㅅ 불규칙</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Một số động từ kết thúc bằng patchim <code>ㅅ</code> (như <em>낫다 - khỏi bệnh/tốt hơn, 짓다 - xây dựng/nấu cơm/đặt tên, 붓다 - sưng lên/rót nước, 잇다 - nối liền</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm</strong> thì phụ âm <code>ㅅ</code> sẽ bị rụng đi:</p>
             <p>• <em>낫다 + 아요 -&gt; 나아요 (Khỏi bệnh)</em></p>
             <p>• <em>짓다 + 어요 -&gt; 지어요 (Xây nhà, nấu cơm)</em></p>
             <p>• <em>붓다 + 어요 -&gt; 부어요 (Bị sưng)</em></p>
             <p>• <em>낫다 + (으)면 -&gt; 나으면 (Nếu khỏi bệnh)</em></p>
           </div>
-          <div class="note-box">
+          <div class="section-title">4. Lưu ý &amp; Mở rộng</div>
+          <div class="tip-box">
             <strong>Ngoại lệ có quy tắc (ㅅ KHÔNG rụng):</strong> Các động từ như <em>웃다 (cười) -&gt; 웃어요, 씻다 (rửa) -&gt; 씻어요, 벗다 (cởi đồ) -&gt; 벗어요, 빗다 (chải đầu) -&gt; 빗어요</em> chia bình thường có quy tắc!
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">감기가 다 나았어요.</span>
-                <button class="speak-btn" onclick="speakText('감기가 다 나았어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('감기가 다 나았어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">감기가 다 나았어요.</div>
+                <div class="example-vi">Bệnh cảm cúm của tôi đã khỏi hẳn rồi.</div>
               </div>
-              <span class="example-vi">Bệnh cảm cúm của tôi đã khỏi hẳn rồi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">새 집을 짓고 있어요.</span>
-                <button class="speak-btn" onclick="speakText('새 집을 짓고 있어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('새 집을 짓고 있어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">새 집을 짓고 있어요.</div>
+                <div class="example-vi">Họ đang xây một ngôi nhà mới.</div>
               </div>
-              <span class="example-vi">Họ đang xây một ngôi nhà mới.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2632,93 +2863,102 @@
       <!-- CARD 1: V + -(으)ㄴ 지 되다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Động từ + -(으)ㄴ 지 [khoảng thời gian] 되다</span>
-          <span class="rule-trans">Đã làm gì được [bao lâu] rồi</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄴ 지 [khoảng thời gian] 되다</span>
+            <span class="grammar-meaning-vi">Đã làm gì được [bao lâu] rồi</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị khoảng thời gian đã trôi qua kể từ khi bắt đầu thực hiện một hành động nào đó trong quá khứ cho tới hiện tại (<em>"Đã làm việc gì được bao lâu rồi"</em>).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국어를 배운 지 6개월이 되었어요.</span>
-                <button class="speak-btn" onclick="speakText('한국어를 배운 지 6개월이 되었어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국어를 배운 지 6개월이 되었어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국어를 배운 지 6개월이 되었어요.</div>
+                <div class="example-vi">Tôi đã học tiếng Hàn được 6 tháng rồi.</div>
               </div>
-              <span class="example-vi">Tôi đã học tiếng Hàn được 6 tháng rồi.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국에 온 지 얼마나 되었어요?</span>
-                <button class="speak-btn" onclick="speakText('한국에 온 지 얼마나 되었어요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국에 온 지 얼마나 되었어요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국에 온 지 얼마나 되었어요?</div>
+                <div class="example-vi">Bạn đã đến Hàn Quốc được bao lâu rồi?</div>
               </div>
-              <span class="example-vi">Bạn đã đến Hàn Quốc được bao lâu rồi?</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V + -(으)ㄴ 후에 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động từ + -(으)ㄴ 후에 [N + 후에]</span>
-          <span class="rule-trans">Sau khi làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động từ + -(으)ㄴ 후에 [N + 후에]</span>
+            <span class="grammar-meaning-vi">Sau khi làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị hành động ở vế sau diễn ra <strong>sau khi hoàn thành hành động ở vế trước</strong> (nghĩa là <em>"sau khi làm..."</em>). Đối lập với <code>-기 전에</code> (trước khi).</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">식사를 한 후에 이 약을 드세요.</span>
-                <button class="speak-btn" onclick="speakText('식사를 한 후에 이 약을 드세요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('식사를 한 후에 이 약을 드세요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">식사를 한 후에 이 약을 드세요.</div>
+                <div class="example-vi">Sau khi dùng bữa xong thì bạn hãy uống thuốc này nhé.</div>
               </div>
-              <span class="example-vi">Sau khi dùng bữa xong thì bạn hãy uống thuốc này nhé.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">대학교를 졸업한 후에 회사에 취직할 거예요.</span>
-                <button class="speak-btn" onclick="speakText('대학교를 졸업한 후에 회사에 취직할 거예요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('대학교를 졸업한 후에 회사에 취직할 거예요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">대학교를 졸업한 후에 회사에 취직할 거예요.</div>
+                <div class="example-vi">Sau khi tốt nghiệp đại học tôi sẽ xin việc vào công ty.</div>
               </div>
-              <span class="example-vi">Sau khi tốt nghiệp đại học tôi sẽ xin việc vào công ty.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: V + -기로 하다 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Động từ + -기로 하다</span>
-          <span class="rule-trans">Quyết định làm gì...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Động từ + -기로 하다</span>
+            <span class="grammar-meaning-vi">Quyết định làm gì...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Biểu thị <strong>người nói đã đưa ra một quyết định hoặc một lời hứa, cam kết</strong> sẽ thực hiện hành động nào đó. Thường dùng dưới dạng thì quá khứ <strong>-기로 했어요</strong>.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">이번 주말에 친구들과 등산하기로 했어요.</span>
-                <button class="speak-btn" onclick="speakText('이번 주말에 친구들과 등산하기로 했어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('이번 주말에 친구들과 등산하기로 했어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">이번 주말에 친구들과 등산하기로 했어요.</div>
+                <div class="example-vi">Cuối tuần này tôi đã quyết định sẽ đi leo núi cùng với bạn bè.</div>
               </div>
-              <span class="example-vi">Cuối tuần này tôi đã quyết định sẽ đi leo núi cùng với bạn bè.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">건강을 위해서 매일 아침 운동하기로 했어요.</span>
-                <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 운동하기로 했어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 운동하기로 했어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">건강을 위해서 매일 아침 운동하기로 했어요.</div>
+                <div class="example-vi">Vì sức khỏe nên tôi đã quyết định mỗi sáng sẽ tập thể dục.</div>
               </div>
-              <span class="example-vi">Vì sức khỏe nên tôi đã quyết định mỗi sáng sẽ tập thể dục.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2747,50 +2987,57 @@
       <!-- CARD 1: N + 에게서 / 한테서 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 01</span>
-          <span class="rule-name">Danh từ + 에게서 / 한테서 [께]</span>
-          <span class="rule-trans">Từ ai... (Nguồn gốc nhận)</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 01</span>
+            <span class="grammar-name-ko">Danh từ + 에게서 / 한테서 [께]</span>
+            <span class="grammar-meaning-vi">Từ ai... (Nguồn gốc nhận)</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Gắn sau danh từ chỉ người hoặc động vật để biểu thị <strong>nơi xuất phát hoặc nguồn gốc nhận được một vật thể, thông tin, hành động nào đó</strong> (nghĩa là <em>"nhận từ ai đó"</em>).</p>
             <p>• <code>에게서</code>: Dùng trong văn viết hoặc tình huống trang trọng.</p>
             <p>• <code>한테서</code>: Dùng phổ biến trong văn nói giao tiếp hàng ngày.</p>
             <p>• <code>께</code>: Dùng với người bề trên (kính ngữ), không dùng 서.</p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">어제 고향 친구한테서 편지를 받았어요.</span>
-                <button class="speak-btn" onclick="speakText('어제 고향 친구한테서 편지를 받았어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('어제 고향 친구한테서 편지를 받았어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">어제 고향 친구한테서 편지를 받았어요.</div>
+                <div class="example-vi">Hôm qua tôi đã nhận được một bức thư từ người bạn ở quê.</div>
               </div>
-              <span class="example-vi">Hôm qua tôi đã nhận được một bức thư từ người bạn ở quê.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">선생님께 칭찬을 들었어요.</span>
-                <button class="speak-btn" onclick="speakText('선생님께 칭찬을 들었어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('선생님께 칭찬을 들었어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">선생님께 칭찬을 들었어요.</div>
+                <div class="example-vi">Tôi đã được nghe lời khen từ thầy giáo.</div>
               </div>
-              <span class="example-vi">Tôi đã được nghe lời khen từ thầy giáo.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 2: V/A + -(으)ㄴ/는데 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 02</span>
-          <span class="rule-name">Động/Tính từ + -(으)ㄴ/는데</span>
-          <span class="rule-trans">Bối cảnh, tiền đề / Đối chiếu: ...thì..., ...mà...</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 02</span>
+            <span class="grammar-name-ko">Động/Tính từ + -(으)ㄴ/는데</span>
+            <span class="grammar-meaning-vi">Bối cảnh, tiền đề / Đối chiếu: ...thì..., ...mà...</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p><strong>Ý nghĩa cốt lõi:</strong> Đưa ra bối cảnh, thông tin nền tảng ở vế 1 để chuẩn bị cho câu hỏi, mệnh lệnh, rủ rê hoặc giải thích ở vế 2. Cũng có thể dùng để diễn tả sự đối chiếu tương phản nhẹ nhàng giữa hai vế.</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Từ loại &amp; Thì</th>
@@ -2827,35 +3074,38 @@
               </tbody>
             </table>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지금 비가 오는데 우산이 있어요?</span>
-                <button class="speak-btn" onclick="speakText('지금 비가 오는데 우산이 있어요?')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지금 비가 오는데 우산이 있어요?')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 비가 오는데 우산이 있어요?</div>
+                <div class="example-vi">Bây giờ trời đang mưa đấy, bạn có mang ô không? (đưa bối cảnh trời mưa để hỏi)</div>
               </div>
-              <span class="example-vi">Bây giờ trời đang mưa đấy, bạn có mang ô không? (đưa bối cảnh trời mưa để hỏi)</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국 생활이 조금 외로운데 그래도 재미있어요.</span>
-                <button class="speak-btn" onclick="speakText('한국 생활이 조금 외로운데 그래도 재미있어요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국 생활이 조금 외로운데 그래도 재미있어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 생활이 조금 외로운데 그래도 재미있어요.</div>
+                <div class="example-vi">Cuộc sống ở Hàn Quốc có chút cô đơn nhưng dù sao cũng rất thú vị.</div>
               </div>
-              <span class="example-vi">Cuộc sống ở Hàn Quốc có chút cô đơn nhưng dù sao cũng rất thú vị.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
       <!-- CARD 3: Bất quy tắc '르' -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Điểm 03</span>
-          <span class="rule-name">Bất quy tắc của phụ âm '르'</span>
-          <span class="rule-trans">르 불규칙</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Ngữ pháp 03</span>
+            <span class="grammar-name-ko">Bất quy tắc của phụ âm '르'</span>
+            <span class="grammar-meaning-vi">르 불규칙</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Hầu hết các động từ và tính từ kết thúc bằng âm tiết <code>르</code> (như <em>모르다 - không biết, 빠르다 - nhanh, 부르다 - hát/gọi/no, 다르다 - khác biệt, 고르다 - lựa chọn, 자르다 - cắt</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm <code>-아/어</code></strong>:</p>
             <p>1. Nguyên âm <code>ㅡ</code> bị biến mất.</p>
             <p>2. Thêm phụ âm <code>ㄹ</code> làm patchim cho âm tiết đứng ngay trước.</p>
@@ -2865,23 +3115,23 @@
             <p>• <em>부르다 + 어요 -&gt; 불러요 (Hát / Gọi / No)</em></p>
             <p>• <em>다르다 + 아요 -&gt; 달라요 (Khác nhau)</em></p>
           </div>
-          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
-          <div class="example-list">
+          <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
+          <div class="examples-container">
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">한국 노래를 아주 잘 불러요.</span>
-                <button class="speak-btn" onclick="speakText('한국 노래를 아주 잘 불러요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('한국 노래를 아주 잘 불러요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 노래를 아주 잘 불러요.</div>
+                <div class="example-vi">Bạn ấy hát bài hát tiếng Hàn rất hay.</div>
               </div>
-              <span class="example-vi">Bạn ấy hát bài hát tiếng Hàn rất hay.</span>
             </div>
             <div class="example-item">
-              <div class="example-top">
-                <span class="example-ko">지하철이 버스보다 훨씬 빨라요.</span>
-                <button class="speak-btn" onclick="speakText('지하철이 버스보다 훨씬 빨라요.')">🔊 Nghe</button>
+              <button class="speak-btn" onclick="speakText('지하철이 버스보다 훨씬 빨라요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지하철이 버스보다 훨씬 빨라요.</div>
+                <div class="example-vi">Tàu điện ngầm chạy nhanh hơn xe buýt rất nhiều.</div>
               </div>
-              <span class="example-vi">Tàu điện ngầm chạy nhanh hơn xe buýt rất nhiều.</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
 
@@ -2910,13 +3160,16 @@
       <!-- CARD 1: TỔNG QUAN 3 BẤT QUY TẮC MỚI TRONG SƠ CẤP 2 -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Chuyên đề 01</span>
-          <span class="rule-name">3 Bất quy tắc trọng tâm Sơ cấp 2: 'ㅎ', 'ㅅ', '르'</span>
-          <span class="rule-trans">So sánh &amp; Bảng đối chiếu</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Chuyên đề 01</span>
+            <span class="grammar-name-ko">3 Bất quy tắc trọng tâm Sơ cấp 2: 'ㅎ', 'ㅅ', '르'</span>
+            <span class="grammar-meaning-vi">So sánh &amp; Bảng đối chiếu</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="table-container">
-            <table>
+          <div class="section-title">1. Bảng tra cứu &amp; Tổng hợp chi tiết</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Bất quy tắc</th>
@@ -2951,7 +3204,8 @@
               </tbody>
             </table>
           </div>
-          <div class="note-box">
+          <div class="section-title">4. Lưu ý &amp; Mở rộng</div>
+          <div class="tip-box">
             <strong>Bảng các từ có quy tắc (KHÔNG biến đổi):</strong>
             <p>• <strong>ㅎ có quy tắc:</strong> <em>좋다 (좋아요, 좋은), 많다 (많아요, 많은), 낳다 (낳아요), 넣다 (넣어요).</em></p>
             <p>• <strong>ㅅ có quy tắc:</strong> <em>웃다 (cười -&gt; 웃어요), 씻다 (rửa -&gt; 씻어요), 벗다 (cởi -&gt; 벗어요), 빗다 (chải -&gt; 빗어요).</em></p>
@@ -2963,13 +3217,16 @@
       <!-- CARD 2: BẢNG TỔNG HỢP 7 BẤT QUY TẮC KINH ĐIỂN CỦA TIẾNG HÀN -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Chuyên đề 02</span>
-          <span class="rule-name">Bảng Tra Cứu 7 Bất Quy Tắc Kinh Điển Tiếng Hàn</span>
-          <span class="rule-trans">Sơ cấp 1 + Sơ cấp 2</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Chuyên đề 02</span>
+            <span class="grammar-name-ko">Bảng Tra Cứu 7 Bất Quy Tắc Kinh Điển Tiếng Hàn</span>
+            <span class="grammar-meaning-vi">Sơ cấp 1 + Sơ cấp 2</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="table-container">
-            <table>
+          <div class="section-title">1. Bảng tra cứu &amp; Tổng hợp chi tiết</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>STT</th>
@@ -3055,13 +3312,16 @@
       <!-- NHÓM 1: TRỢ TỪ -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Nhóm 1</span>
-          <span class="rule-name">Trợ từ &amp; Bổ từ Danh từ</span>
-          <span class="rule-trans">7 cấu trúc tiểu từ</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Nhóm 1</span>
+            <span class="grammar-name-ko">Trợ từ &amp; Bổ từ Danh từ</span>
+            <span class="grammar-meaning-vi">7 cấu trúc tiểu từ</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="table-container">
-            <table>
+          <div class="section-title">1. Bảng tra cứu &amp; Tổng hợp chi tiết</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Ngữ pháp</th>
@@ -3122,13 +3382,16 @@
       <!-- NHÓM 2: LIÊN TỪ NỐI CÂU -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Nhóm 2</span>
-          <span class="rule-name">Cấu trúc Nối Câu &amp; Liên kết Mệnh đề</span>
-          <span class="rule-trans">9 cấu trúc liên từ</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Nhóm 2</span>
+            <span class="grammar-name-ko">Cấu trúc Nối Câu &amp; Liên kết Mệnh đề</span>
+            <span class="grammar-meaning-vi">9 cấu trúc liên từ</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="table-container">
-            <table>
+          <div class="section-title">1. Bảng tra cứu &amp; Tổng hợp chi tiết</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Ngữ pháp</th>
@@ -3201,13 +3464,16 @@
       <!-- NHÓM 3: CHIA ĐỘNG/TÍNH TỪ -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Nhóm 3</span>
-          <span class="rule-name">Cấu trúc Chia Động/Tính từ theo Ý định, Trạng thái &amp; Cảm xúc</span>
-          <span class="rule-trans">18 cấu trúc quan trọng</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Nhóm 3</span>
+            <span class="grammar-name-ko">Cấu trúc Chia Động/Tính từ theo Ý định, Trạng thái &amp; Cảm xúc</span>
+            <span class="grammar-meaning-vi">18 cấu trúc quan trọng</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="table-container">
-            <table>
+          <div class="section-title">1. Bảng tra cứu &amp; Tổng hợp chi tiết</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Ngữ pháp</th>
@@ -3346,16 +3612,20 @@
       <!-- NHÓM 4: CHUYÊN ĐỀ ĐỊNH NGỮ TOÀN DIỆN -->
       <div class="grammar-card">
         <div class="card-header">
-          <span class="point-tag">Nhóm 4</span>
-          <span class="rule-name">Chuyên Đề Định Ngữ Tiếng Hàn Toàn Diện</span>
-          <span class="rule-trans">Bổ nghĩa cho Danh từ</span>
+          <div class="grammar-title-group">
+            <span class="grammar-badge">Nhóm 4</span>
+            <span class="grammar-name-ko">Chuyên Đề Định Ngữ Tiếng Hàn Toàn Diện</span>
+            <span class="grammar-meaning-vi">Bổ nghĩa cho Danh từ</span>
+          </div>
         </div>
         <div class="card-body">
-          <div class="concept-box">
+          <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
+          <div class="explanation-box">
             <p>Định ngữ là một trong những chuyên đề cốt lõi nhất của Sơ cấp 2, giúp câu văn trở nên phong phú, tự nhiên và liên kết nhiều thông tin trong cùng một mệnh đề.</p>
           </div>
-          <div class="table-container">
-            <table>
+          <div class="section-title">2. Quy tắc kết hợp</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
               <thead>
                 <tr>
                   <th>Thời gian / Loại từ</th>
