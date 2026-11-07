@@ -1,0 +1,3552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngữ Pháp Tiếng Hàn Sơ Cấp 2 - Giáo Trình Tiếng Hàn Tổng Hợp</title>
+  <!-- Google Fonts: Đồng nhất hoàn toàn với file Sơ Cấp 1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --primary-light: #e0e7ff;
+      --secondary: #0ea5e9;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --success-bg: #ecfdf5;
+      --warning: #f59e0b;
+      --warning-bg: #fffbeb;
+      --danger: #ef4444;
+      --danger-bg: #fef2f2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --korean-font: 'Noto Sans KR', sans-serif;
+      --viet-font: 'Be Vietnam Pro', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--viet-font);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* HERO HEADER */
+    .hero-header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+      color: #ffffff;
+      padding: 38px 24px 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-header::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .badge-book {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-top: 8px;
+      line-height: 1.25;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #93c5fd, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      margin-top: 6px;
+      max-width: 780px;
+      line-height: 1.55;
+    }
+
+    /* CONTROLS BAR */
+    .controls-bar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      padding: 10px 40px 10px 40px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-main);
+      font-size: 14.5px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-wrapper input:focus {
+      background: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.4);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      color: #64748b;
+      pointer-events: none;
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      line-height: 1;
+    }
+    .clear-btn:hover {
+      color: var(--text-main);
+      background: #e2e8f0;
+    }
+
+    /* TTS CONTROLS */
+    .tts-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+
+    .tts-controls select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+    }
+    .tts-controls select option {
+      color: #1e293b;
+      background: #ffffff;
+    }
+
+    /* APP LAYOUT: SIDEBAR + CONTENT */
+    .app-container {
+      max-width: 1400px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .app-layout {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* SIDEBAR (LEFT COLUMN) */
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .sidebar-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .sidebar-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .tab-navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin-bottom: 0;
+      overflow-x: visible;
+    }
+
+    .tab-btn {
+      width: 100%;
+      text-align: left;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.15s ease;
+      box-shadow: none;
+      white-space: normal;
+      line-height: 1.35;
+    }
+
+    .tab-btn:hover {
+      background: #f1f5f9;
+      color: var(--primary-dark);
+      transform: none;
+      border-color: #e2e8f0;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+    }
+
+    .tab-btn .tab-num {
+      background: #e2e8f0;
+      color: #475569;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: monospace;
+      min-width: 24px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .tab-btn.active .tab-num {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* RIGHT CONTENT AREA */
+    .content-area {
+      min-width: 0;
+    }
+
+    /* TAB CONTENT PANELS */
+    .tab-panel {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* LESSON HEADER */
+    .lesson-banner {
+      background: linear-gradient(to right, #ffffff, #f8fafc);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 22px 26px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+    .lesson-meta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .lesson-tag {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .lesson-title-ko {
+      font-family: var(--korean-font);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .lesson-title-vi {
+      font-family: var(--viet-font);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .lesson-desc {
+      font-size: 14.5px;
+      color: #475569;
+      margin-top: 6px;
+      line-height: 1.55;
+    }
+
+    /* GRAMMAR CARDS */
+    .grammar-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+    .grammar-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .card-header {
+      background: #f8fafc;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .point-tag {
+      background: var(--primary);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .rule-name {
+      font-family: var(--korean-font);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .rule-trans {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-left: auto;
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .concept-box {
+      font-size: 14.5px;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .concept-box p {
+      margin-bottom: 6px;
+    }
+
+    .formula-box {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-family: var(--korean-font);
+      font-size: 14.5px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* TABLES */
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    th {
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: var(--text-main);
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .col-highlight {
+      font-family: var(--korean-font);
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* EXAMPLES LIST */
+    .examples-header {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .example-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .example-item {
+      background: #f8fafc;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .example-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .example-ko {
+      font-family: var(--korean-font);
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+    .example-vi {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    .speak-btn {
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--primary);
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .speak-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+
+    /* NOTE & COMPARISON BOXES */
+    .note-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid var(--warning);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #92400e;
+      line-height: 1.55;
+    }
+    .comparison-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid var(--secondary);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #1e40af;
+      line-height: 1.55;
+    }
+
+    /* QUIZ CARD */
+    .quiz-card {
+      background: linear-gradient(to right bottom, #ffffff, #fdf4ff);
+      border: 1px solid #f0abfc;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .quiz-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #a21caf;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .quiz-question {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    @media (max-width: 600px) {
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+    }
+    .quiz-option {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-family: var(--korean-font);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s;
+      text-align: left;
+    }
+    .quiz-option:hover {
+      background: #fdf4ff;
+      border-color: #d946ef;
+    }
+    .quiz-option.correct {
+      background: #dcfce7 !important;
+      border-color: #22c55e !important;
+      color: #15803d !important;
+    }
+    .quiz-option.wrong {
+      background: #fee2e2 !important;
+      border-color: #ef4444 !important;
+      color: #b91c1c !important;
+    }
+    .quiz-feedback {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      z-index: 100;
+    }
+    .back-to-top.show {
+      display: flex;
+    }
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -3px rgba(79, 70, 229, 0.4);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .app-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        padding: 12px;
+      }
+      .tab-navigation {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .tab-navigation::-webkit-scrollbar {
+        height: 5px;
+      }
+      .tab-navigation::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .tab-btn {
+        width: auto;
+        flex: 0 0 auto;
+        border-radius: 9999px;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        white-space: nowrap;
+        padding: 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="hero-header">
+    <div class="header-container">
+      <div class="header-top">
+        <div>
+          <div class="badge-book">📚 GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP · SƠ CẤP 2</div>
+          <h1 class="hero-title">한국어 초급 2 문법 · <span>Ngữ Pháp Tiếng Hàn Sơ Cấp 2</span></h1>
+          <p class="hero-subtitle">Hệ thống toàn bộ 15 bài học ngữ pháp chuẩn giáo trình Sơ cấp 2, chuyên đề Bất quy tắc nâng cao, bảng tra cứu ngữ pháp chuyên sâu và trắc nghiệm thực hành.</p>
+        </div>
+      </div>
+
+      <!-- CONTROLS BAR: SEARCH + TTS SPEED -->
+      <div class="controls-bar">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="grammarSearch" placeholder="Tìm kiếm ngữ pháp (vd: 으니까, 보다, 지 못하다, thì, so sánh, định ngữ...)" oninput="handleSearch()">
+          <button class="clear-btn" id="clearSearchBtn" onclick="clearSearch()" hidden>&times;</button>
+        </div>
+
+        <div class="tts-controls">
+          <label for="ttsRate">Tốc độ đọc:</label>
+          <select id="ttsRate">
+            <option value="0.7">Chậm (0.7x)</option>
+            <option value="0.85" selected>Chuẩn học tập (0.85x)</option>
+            <option value="1.0">Chuẩn bản xứ (1.0x)</option>
+            <option value="1.2">Nhanh (1.2x)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- APP MAIN -->
+  <main class="app-container">
+    <div class="app-layout">
+      <!-- SIDEBAR (LEFT COLUMN) -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-title">Danh Sách Bài Học</div>
+          <div class="sidebar-subtitle">15 bài sơ cấp 2 &amp; chuyên đề</div>
+        </div>
+        <nav class="tab-navigation" id="tabNav">
+          <button class="tab-btn active" onclick="switchTab('tab-bai01')"><span class="tab-num">01</span> Bài 1: Gặp gỡ (만남)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai02')"><span class="tab-num">02</span> Bài 2: Hẹn gặp (약속)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai03')"><span class="tab-num">03</span> Bài 3: Mua sắm 2 (물건 사기)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai04')"><span class="tab-num">04</span> Bài 4: Bệnh viện (병원)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai05')"><span class="tab-num">05</span> Bài 5: Thư tín (편지)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai06')"><span class="tab-num">06</span> Bài 6: Giao thông 2 (교통)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai07')"><span class="tab-num">07</span> Bài 7: Điện thoại 2 (전화)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai08')"><span class="tab-num">08</span> Bài 8: Phim ảnh (영화)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai09')"><span class="tab-num">09</span> Bài 9: Ngày nghỉ (휴일)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai10')"><span class="tab-num">10</span> Bài 10: Ngoại hình (외모)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai11')"><span class="tab-num">11</span> Bài 11: Du lịch (여행)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai12')"><span class="tab-num">12</span> Bài 12: Nơi công cộng (공공장소)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai13')"><span class="tab-num">13</span> Bài 13: Đô thị (도시)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai14')"><span class="tab-num">14</span> Bài 14: Kế hoạch (계획)</button>
+          <button class="tab-btn" onclick="switchTab('tab-bai15')"><span class="tab-num">15</span> Bài 15: Cuộc sống HQ (한국 생활)</button>
+          <button class="tab-btn" onclick="switchTab('tab-batquytac')"><span class="tab-num">⚡</span> Bất quy tắc Sơ cấp 2</button>
+          <button class="tab-btn" onclick="switchTab('tab-summary')"><span class="tab-num">📊</span> Bảng Tra Cứu Toàn Diện</button>
+        </nav>
+      </aside>
+
+      <!-- CONTENT AREA (RIGHT COLUMN) -->
+      <div class="content-area">
+
+    <!-- ==================== TAB 1: BÀI 1 ==================== -->
+    <section class="tab-panel active" id="tab-bai01">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 01</span></div>
+        <h2 class="lesson-title-ko">만남 <span class="lesson-title-vi">Gặp Gỡ</span></h2>
+        <p class="lesson-desc">Học cách thăm hỏi, giới thiệu người khác, biểu thị quyền sở hữu và thời điểm diễn ra hành động cùng cách nhờ vả lịch sự.</p>
+      </div>
+
+      <!-- CARD 1: N + 의 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ + 의</span>
+          <span class="rule-trans">Tiểu từ sở hữu: Của...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa &amp; Cách dùng:</strong> <code>의</code> là tiểu từ đứng sau danh từ để biểu thị sự sở hữu, phụ thuộc hoặc quan hệ nguồn gốc của danh từ đứng trước đối với danh từ đứng sau (tương đương với <em>"của"</em> trong tiếng Việt).</p>
+            <p><strong>Phát âm:</strong> Dù viết là <code>의</code>, khi làm tiểu từ sở hữu nó thường được phát âm là <strong>[에]</strong>.</p>
+          </div>
+          <div class="formula-box">
+            <span>Danh từ 1 + <strong>의</strong> + Danh từ 2</span>
+            <span>(Danh từ 2 của Danh từ 1)</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Đại từ nguyên gốc</th>
+                  <th>Dạng rút gọn thông dụng</th>
+                  <th>Nghĩa tiếng Việt</th>
+                  <th>Ví dụ kết hợp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>저의 (Tôi + của)</td>
+                  <td class="col-highlight">제</td>
+                  <td>Của tôi (kính ngữ khiêm nhường)</td>
+                  <td>제 가방 (cặp của tôi), 제 이름 (tên tôi)</td>
+                </tr>
+                <tr>
+                  <td>나의 (Tao/tôi + của)</td>
+                  <td class="col-highlight">내</td>
+                  <td>Của tôi/tao (thân mật)</td>
+                  <td>내 친구 (bạn tôi), 내 동생 (em tôi)</td>
+                </tr>
+                <tr>
+                  <td>너의 (Mày + của)</td>
+                  <td class="col-highlight">네 [phát âm 니]</td>
+                  <td>Của mày/cậu (thân mật)</td>
+                  <td>네 책 (sách của cậu)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">오늘은 친구의 생일입니다.</span>
+                <button class="speak-btn" onclick="speakText('오늘은 친구의 생일입니다.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hôm nay là sinh nhật của bạn tôi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">김 선생님의 가방이 책상 위에 있어요.</span>
+                <button class="speak-btn" onclick="speakText('김 선생님의 가방이 책상 위에 있어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Cặp sách của thầy Kim ở trên bàn.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">제 이름은 흐엉입니다. 그 사람은 내 동생이에요.</span>
+                <button class="speak-btn" onclick="speakText('제 이름은 흐엉입니다. 그 사람은 내 동생이에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tên của tôi là Hương. Người đó là em của tôi.</span>
+            </div>
+          </div>
+          <div class="note-box">
+            <strong>Lưu ý:</strong> Trong văn nói tự nhiên, khi nói về gia đình, trường học, đất nước của người nói, người Hàn thường dùng <code>우리</code> (chúng tôi/chúng ta) thay vì <code>내 / 제</code>: <em>우리 가족 (gia đình chúng tôi), 우리나라 (đất nước chúng tôi), 우리 학교 (trường của chúng tôi).</em>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)ㄹ 때 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)ㄹ 때</span>
+          <span class="rule-trans">Khi..., lúc làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa &amp; Cách dùng:</strong> Gắn vào sau thân động từ hoặc tính từ để biểu thị thời điểm hoặc khoảng thời gian mà một hành động hoặc trạng thái diễn ra (nghĩa là <em>"khi...", "lúc..."</em>).</p>
+            <p>Nếu đi kèm với danh từ chỉ thời gian thì dùng trực tiếp <code>Danh từ + 때</code> (vd: <em>방학 때 - lúc nghỉ hè, 점심 때 - lúc ăn trưa</em>).</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Loại từ &amp; Điều kiện</th>
+                  <th>Quy tắc kết hợp</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Dạng chia</th>
+                  <th>Ý nghĩa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Có patchim (trừ ㄹ)</td>
+                  <td class="col-highlight">-을 때</td>
+                  <td>먹다, 읽다, 아프다</td>
+                  <td>먹을 때, 읽을 때</td>
+                  <td>Khi ăn, khi đọc</td>
+                </tr>
+                <tr>
+                  <td>Không patchim</td>
+                  <td class="col-highlight">-ㄹ 때</td>
+                  <td>가다, 보다, 만나다</td>
+                  <td>갈 때, 볼 때, 만날 때</td>
+                  <td>Khi đi, khi xem, khi gặp</td>
+                </tr>
+                <tr>
+                  <td>Patchim 'ㄹ'</td>
+                  <td class="col-highlight">-ㄹ 때 (giữ nguyên)</td>
+                  <td>살다, 만들다, 놀다</td>
+                  <td>살 때, 만들 때, 놀 때</td>
+                  <td>Khi sống, khi làm, khi chơi</td>
+                </tr>
+                <tr>
+                  <td>Bất quy tắc ㄷ, ㅂ</td>
+                  <td class="col-highlight">ㄷ-&gt;ㄹ, ㅂ-&gt;우</td>
+                  <td>듣다, 덥다</td>
+                  <td>들을 때, 더울 때</td>
+                  <td>Khi nghe, lúc trời nóng</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">아플 때 이 약을 드세요.</span>
+                <button class="speak-btn" onclick="speakText('아플 때 이 약을 드세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Lúc bị đau/ốm thì bạn hãy uống thuốc này nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국에서 살 때 태권도를 배웠어요.</span>
+                <button class="speak-btn" onclick="speakText('한국에서 살 때 태권도를 배웠어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã học Taekwondo khi còn sống ở Hàn Quốc.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">날씨가 더울 때 수영장에 가요.</span>
+                <button class="speak-btn" onclick="speakText('날씨가 더울 때 수영장에 가요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Khi thời tiết nóng bức thì tôi đi đến hồ bơi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -아/어 주다 [드리다] -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -아/어 주다 [드리다]</span>
+          <span class="rule-trans">Làm gì đó giúp / cho ai...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa &amp; Cách dùng:</strong> Gắn vào sau thân động từ để biểu thị hành động làm một việc gì đó cho người khác hoặc thể hiện lời yêu cầu, nhờ vả người khác làm giúp việc gì cho mình (<em>-아/어 주세요</em> hoặc lịch sự hơn là <em>-아/어 주시겠어요?</em>).</p>
+            <p>Khi người nhận hành vi là người có vị trí hoặc tuổi tác cao hơn, dùng dạng kính ngữ <strong>-아/어 드리다</strong>.</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nguyên âm cuối thân từ</th>
+                  <th>Quy tắc chia</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Dạng kết hợp</th>
+                  <th>Ý nghĩa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nguyên âm 'ㅏ, ㅗ'</td>
+                  <td class="col-highlight">-아 주다</td>
+                  <td>닫다, 도와주다, 사다</td>
+                  <td>닫아 주다, 사 주다</td>
+                  <td>Đóng giúp, mua cho</td>
+                </tr>
+                <tr>
+                  <td>Các nguyên âm khác</td>
+                  <td class="col-highlight">-어 주다</td>
+                  <td>빌리다, 가르치다, 읽다</td>
+                  <td>빌려 주다, 가르쳐 주다</td>
+                  <td>Cho mượn, dạy cho, đọc cho</td>
+                </tr>
+                <tr>
+                  <td>Động từ đuôi '하다'</td>
+                  <td class="col-highlight">-해 주다</td>
+                  <td>소개하다, 설명하다</td>
+                  <td>소개해 주다, 설명해 주다</td>
+                  <td>Giới thiệu cho, giải thích cho</td>
+                </tr>
+                <tr>
+                  <td>Dành cho người bề trên</td>
+                  <td class="col-highlight">-아/어 드리다</td>
+                  <td>사진을 찍다, 돕다</td>
+                  <td>찍어 드리다, 도와 드리다</td>
+                  <td>Chụp ảnh cho (bác/thầy), giúp đỡ (ông/bà)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">창문을 좀 닫아 주세요.</span>
+                <button class="speak-btn" onclick="speakText('창문을 좀 닫아 주세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Xin hãy đóng cửa sổ giúp tôi với.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">초대해 주셔서 감사합니다.</span>
+                <button class="speak-btn" onclick="speakText('초대해 주셔서 감사합니다.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Xin cảm ơn vì đã mời tôi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">제가 사진을 찍어 드릴까요?</span>
+                <button class="speak-btn" onclick="speakText('제가 사진을 찍어 드릴까요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Để tôi chụp ảnh cho anh/chị nhé?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 1 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 1</div>
+        <div class="quiz-question">Chọn phương án đúng điền vào chỗ trống: "너무 바빠서 친구에게 부탁했어요: '이 서류를 좀 (...)주세요'."</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '보내다' (gửi) + '-어 주다' -> '보내 주세요' (Hãy gửi giúp tôi).')">보내</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''보내고' mang ý nghĩa liên kết nối tiếp, không dùng trực tiếp trước trợ động từ '주세요'.')">보내고</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''보낼 때' diễn tả thời điểm 'khi gửi', không phù hợp với lời nhờ vả.')">보낼 때</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''보내지' dùng trong câu phủ định hoặc xác nhận, không dùng với '주세요'.')">보내지</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: BÀI 2 ==================== -->
+    <section class="tab-panel" id="tab-bai02">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 02</span></div>
+        <h2 class="lesson-title-ko">약속 <span class="lesson-title-vi">Hẹn Gặp</span></h2>
+        <p class="lesson-desc">Học cách hẹn hò, đưa ra lý do dẫn đến lời rủ rê/đề nghị, thể hiện sự giới hạn, cấm đoán và cho phép làm một việc gì đó.</p>
+      </div>
+
+      <!-- CARD 1: N + 만 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ + 만</span>
+          <span class="rule-trans">Trợ từ: Chỉ...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa &amp; Cách dùng:</strong> <code>만</code> gắn sau danh từ để biểu thị sự giới hạn duy nhất đối với danh từ đó, loại trừ các đối tượng khác (tương đương nghĩa <em>"chỉ..."</em> trong tiếng Việt).</p>
+            <p><code>만</code> thay thế cho các trợ từ chủ ngữ/tân ngữ như <em>-이/가, -을/를, -은/는</em>. Khi kết hợp với các trợ từ khác như <em>-에, -에서, -에게</em>, nó đứng sau các trợ từ đó: <code>-에만, -에서만, -에게만</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">우리 반에서는 남 씨만 베트남 사람이에요.</span>
+                <button class="speak-btn" onclick="speakText('우리 반에서는 남 씨만 베트남 사람이에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Trong lớp chúng tôi chỉ có bạn Nam là người Việt Nam.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">저는 주말에만 운동을 해요.</span>
+                <button class="speak-btn" onclick="speakText('저는 주말에만 운동을 해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi chỉ tập thể dục vào cuối tuần thôi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)니까 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)니까</span>
+          <span class="rule-trans">Vì... nên... (Lý do tiền đề)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa:</strong> Biểu thị vế trước là lý do, căn cứ chủ quan để đưa ra lời đề nghị, mệnh lệnh, rủ rê hoặc ý kiến ở vế sau.</p>
+          </div>
+          <div class="comparison-box">
+            <strong>So sánh quan trọng: -(으)니까 vs -아/어서</strong>
+            <p>• <code>-아/어서</code> <strong>KHÔNG</strong> được đi cùng câu mệnh lệnh (-(으)세요) hay rủ rê (-(으)ㅂ시다, -(으)ㄹ까요?).</p>
+            <p>• <code>-(으)니까</code> <strong>CHUYÊN DÙNG</strong> cho câu mệnh lệnh, rủ rê, khuyên nhủ: <em>날씨가 추우니까 따뜻하게 입으세요 (Đúng).</em></p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Điều kiện thân từ</th>
+                  <th>Công thức</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Dạng chia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Có patchim (trừ ㄹ)</td>
+                  <td class="col-highlight">-으니까</td>
+                  <td>좋다, 바쁘다(X), 춥다</td>
+                  <td>좋으니까, 추우니까 (ㅂ-&gt;우)</td>
+                </tr>
+                <tr>
+                  <td>Không patchim hoặc patchim 'ㄹ'</td>
+                  <td class="col-highlight">-니까</td>
+                  <td>가다, 만들다, 바쁘다</td>
+                  <td>가니까, 만드니까 (ㄹ rụng), 바쁘니까</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">시간이 없으니까 빨리 갑시다.</span>
+                <button class="speak-btn" onclick="speakText('시간이 없으니까 빨리 갑시다.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì không có nhiều thời gian nên chúng ta hãy đi nhanh lên.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">비가 오니까 우산을 가지고 가세요.</span>
+                <button class="speak-btn" onclick="speakText('비가 오니까 우산을 가지고 가세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Trời đang mưa nên bạn hãy mang theo ô nhé.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -지 말다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -지 말다 [-지 마세요]</span>
+          <span class="rule-trans">Đừng làm gì... (Mệnh lệnh phủ định)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn vào thân động từ để yêu cầu hoặc khuyên bảo người nghe không nên thực hiện hành động đó. Thường dùng dưới dạng <strong>-지 마세요</strong> (thân mật lịch sự) hoặc <strong>-지 맙시다</strong> (chúng ta đừng...).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">수업 시간에 늦지 마세요.</span>
+                <button class="speak-btn" onclick="speakText('수업 시간에 늦지 마세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Xin đừng đi muộn vào giờ học.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">여기에서 담배를 피우지 마세요.</span>
+                <button class="speak-btn" onclick="speakText('여기에서 담배를 피우지 마세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Xin đừng hút thuốc lá ở đây.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: V + -아/어도 되다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 04</span>
+          <span class="rule-name">Động từ + -아/어도 되다</span>
+          <span class="rule-trans">Được phép làm gì... / Làm... cũng được</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị sự cho phép hoặc hỏi xin phép đối phương thực hiện một hành động nào đó. Câu hỏi thường kết thúc bằng <strong>-아/어도 돼요?</strong> (<em>Tôi làm... có được không ạ?</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">여기 앉아도 돼요? - 네, 앉으세요.</span>
+                <button class="speak-btn" onclick="speakText('여기 앉아도 돼요? 네, 앉으세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi ngồi ở đây có được không? - Vâng, xin mời bạn ngồi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">사진을 찍어도 돼요.</span>
+                <button class="speak-btn" onclick="speakText('사진을 찍어도 돼요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn có thể chụp ảnh ở đây được.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 2 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 2</div>
+        <div class="quiz-question">Chọn câu đúng nhất khi muốn khuyên bạn: "Trời đang lạnh đấy, đừng đi ra ngoài nhé":</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '날씨가 추우니까' (vì trời lạnh - lý do dẫn đến khuyên nhủ) + '나가지 마세요' (xin đừng đi ra ngoài).')">날씨가 추우니까 나가지 마세요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai ngữ pháp: Đuôi mệnh lệnh phủ định '-지 마세요' không đi với '-아/어서'.')">날씨가 추워서 나가지 마세요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어도 돼요' là biểu hiện xin phép/cho phép (được phép ra ngoài).')">날씨가 추우니까 나가도 돼요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''나가지 않아요' là câu trần thuật phủ định, không phải lời khuyên nhủ mệnh lệnh.')">날씨가 추워서 나가지 않아요.</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: BÀI 3 ==================== -->
+    <section class="tab-panel" id="tab-bai03">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 03</span></div>
+        <h2 class="lesson-title-ko">물건 사기 (2) <span class="lesson-title-vi">Mua Sắm (2)</span></h2>
+        <p class="lesson-desc">Học cách nói so sánh hơn kém, làm quen với Chuyên đề Định ngữ tiếng Hàn: Định ngữ tính từ và Định ngữ động từ thì hiện tại.</p>
+      </div>
+
+      <!-- CARD 1: N + 보다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ + 보다</span>
+          <span class="rule-trans">So với... (So sánh hơn)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><code>보다</code> gắn sau danh từ làm mốc so sánh (danh từ được so sánh). Có thể đi kèm phó từ <code>더</code> (hơn) để nhấn mạnh mức độ.</p>
+          </div>
+          <div class="formula-box">
+            <span>Danh từ 1 + 이/가 + <strong>Danh từ 2 + 보다</strong> + (더) + Tính từ</span>
+            <span>(N1 tính từ hơn N2)</span>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">비행기가 기차보다 더 빨라요.</span>
+                <button class="speak-btn" onclick="speakText('비행기가 기차보다 더 빨라요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Máy bay chạy nhanh hơn so với tàu hỏa.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">수박이 사과보다 커요.</span>
+                <button class="speak-btn" onclick="speakText('수박이 사과보다 커요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Dưa hấu to hơn quả táo.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: A + -(으)ㄴ + N -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Tính từ + -(으)ㄴ + Danh từ</span>
+          <span class="rule-trans">Định ngữ Tính từ (bổ nghĩa danh từ)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Bản chất định ngữ:</strong> Đặt tính từ đứng ngay trước danh từ để miêu tả đặc điểm, tính chất của danh từ đó (vd: <em>hoa đẹp, người tốt, căn phòng lớn</em>).</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Đặc điểm tính từ</th>
+                  <th>Công thức</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Cụm định ngữ</th>
+                  <th>Ý nghĩa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Có patchim (trừ ㅂ)</td>
+                  <td class="col-highlight">-(으)ㄴ</td>
+                  <td>작다, 좋다, 많다</td>
+                  <td>작은 가방, 좋은 사람</td>
+                  <td>Cái túi nhỏ, người tốt</td>
+                </tr>
+                <tr>
+                  <td>Không patchim</td>
+                  <td class="col-highlight">-ㄴ</td>
+                  <td>크다, 예쁘다, 비싸다</td>
+                  <td>큰 방, 예쁜 옷, 비싼 물건</td>
+                  <td>Phòng lớn, áo đẹp, đồ đắt</td>
+                </tr>
+                <tr>
+                  <td>Đuôi 있다/없다</td>
+                  <td class="col-highlight">-는 (Đặc biệt!)</td>
+                  <td>맛있다, 재미있다</td>
+                  <td>맛있는 음식, 재미있는 책</td>
+                  <td>Món ăn ngon, sách hay</td>
+                </tr>
+                <tr>
+                  <td>Bất quy tắc ㅂ</td>
+                  <td class="col-highlight">ㅂ -&gt; 운</td>
+                  <td>춥다, 맵다, 가볍다</td>
+                  <td>추운 날씨, 매운 음식</td>
+                  <td>Thời tiết lạnh, đồ ăn cay</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">예쁜 옷을 사고 싶어요.</span>
+                <button class="speak-btn" onclick="speakText('예쁜 옷을 사고 싶어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi muốn mua một bộ quần áo đẹp.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국 식당에서 맛있는 음식을 먹었어요.</span>
+                <button class="speak-btn" onclick="speakText('한국 식당에서 맛있는 음식을 먹었어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã ăn món ăn ngon tại nhà hàng Hàn Quốc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -는 + N -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -는 + Danh từ</span>
+          <span class="rule-trans">Định ngữ Động từ thì hiện tại</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn <code>-는</code> vào sau thân động từ để biến động từ thành mệnh đề bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>đang diễn ra ở thời điểm hiện tại</strong> (hoặc thói quen thường nhật): <em>người đang đọc sách, món ăn tôi hay ăn</em>.</p>
+            <p><strong>Quy tắc:</strong> Dù động từ có patchim hay không đều gắn <code>-는</code>. Nếu patchim là <code>ㄹ</code> thì 'ㄹ' sẽ bị lược bỏ trước khi gắn <code>-는</code> (<em>만들다 -&gt; 만드는, 살다 -&gt; 사는</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지금 책을 읽는 사람이 제 친구예요.</span>
+                <button class="speak-btn" onclick="speakText('지금 책을 읽는 사람이 제 친구예요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Người đang đọc sách bây giờ là bạn của tôi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">제가 자주 가는 카페는 아주 조용해요.</span>
+                <button class="speak-btn" onclick="speakText('제가 자주 가는 카페는 아주 조용해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Quán cà phê mà tôi thường hay đến thì rất yên tĩnh.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 3 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 3</div>
+        <div class="quiz-question">Điền dạng định ngữ thích hợp: "저기에서 커피를 (...) 사람이 누구예요?" (người đang uống cà phê)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '마시다' ở thì hiện tại tạo định ngữ bằng cách thêm '-는' -> '마시는'.')">마시는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''마신' là định ngữ thì quá khứ (người đã uống).')">마신</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''마실' là định ngữ thì tương lai (người sẽ uống).')">마실</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''마시다' là động từ nguyên thể chưa chia định ngữ.')">마시다</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: BÀI 4 ==================== -->
+    <section class="tab-panel" id="tab-bai04">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 04</span></div>
+        <h2 class="lesson-title-ko">병원 <span class="lesson-title-vi">Bệnh Viện</span></h2>
+        <p class="lesson-desc">Học cách mô tả triệu chứng sức khỏe, sự bắt buộc phải làm gì, tính lặp lại định kỳ và định ngữ động từ thì quá khứ.</p>
+      </div>
+
+      <!-- CARD 1: V + -(으)ㄴ + N -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -(으)ㄴ + Danh từ</span>
+          <span class="rule-trans">Định ngữ Động từ thì quá khứ</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn vào thân động từ để bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>đã hoàn thành trong quá khứ</strong> (nghĩa là <em>"người/vật/việc đã..."</em>).</p>
+            <p>• Có patchim: <code>-은</code> (<em>먹은 음식 - món đã ăn, 읽은 책 - sách đã đọc</em>).</p>
+            <p>• Không patchim hoặc patchim 'ㄹ': <code>-ㄴ</code> (<em>어제 본 영화 - phim đã xem hôm qua, 만든 음식 - món đã nấu</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">어제 만난 사람이 의사 선생님이에요.</span>
+                <button class="speak-btn" onclick="speakText('어제 만난 사람이 의사 선생님이에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Người mà tôi đã gặp ngày hôm qua là bác sĩ.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">아침에 먹은 약이 효과가 좋아요.</span>
+                <button class="speak-btn" onclick="speakText('아침에 먹은 약이 효과가 좋아요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Thuốc tôi đã uống sáng nay có hiệu quả rất tốt.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: N + 마다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Danh từ + 마다</span>
+          <span class="rule-trans">Mỗi..., cứ mỗi...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn sau danh từ chỉ thời gian hoặc đối tượng để biểu thị sự lặp lại đều đặn không sót một đơn vị nào (<em>날마다 - mỗi ngày, 주말마다 - mỗi cuối tuần, 나라마다 - mỗi quốc gia</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이 약은 4시간마다 드세요.</span>
+                <button class="speak-btn" onclick="speakText('이 약은 4시간마다 드세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Thuốc này cứ mỗi 4 tiếng bạn hãy uống một lần nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">주말마다 도서관에 가서 공부해요.</span>
+                <button class="speak-btn" onclick="speakText('주말마다 도서관에 가서 공부해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Cứ mỗi dịp cuối tuần tôi lại đến thư viện học bài.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V/A + -아/어야 하다 [되다] -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động/Tính từ + -아/어야 하다 [되다]</span>
+          <span class="rule-trans">Phải làm gì... (Nghĩa vụ, bắt buộc)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị nghĩa vụ, bổn phận hoặc tính tất yếu cần phải làm việc gì. Trong văn giao tiếp thường ngày, <code>-아/어야 되다</code> được sử dụng rất phổ biến thay cho <code>하다</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">감기에 걸려서 병원에 가야 해요.</span>
+                <button class="speak-btn" onclick="speakText('감기에 걸려서 병원에 가야 해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì bị cảm cúm nên tôi phải đi đến bệnh viện.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">내일 시험이 있어서 열심히 공부해야 돼요.</span>
+                <button class="speak-btn" onclick="speakText('내일 시험이 있어서 열심히 공부해야 돼요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Ngày mai có bài thi nên tôi phải chăm chỉ học bài.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 4 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 4</div>
+        <div class="quiz-question">Chọn từ chia đúng: "어제 시장에서 (...) 과일이 아주 달아요." (trái cây đã mua hôm qua)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '사다' chia thì quá khứ định ngữ thành '산' (đã mua).')">산</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''사는' diễn tả hành động đang mua ở hiện tại.')">사는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''살' diễn tả hành động sẽ mua trong tương lai.')">살</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''샀는' là dạng sai ngữ pháp trong tiếng Hàn.')">샀는</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 5: BÀI 5 ==================== -->
+    <section class="tab-panel" id="tab-bai05">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 05</span></div>
+        <h2 class="lesson-title-ko">편지 <span class="lesson-title-vi">Thư Tín</span></h2>
+        <p class="lesson-desc">Học cách viết thư thăm hỏi, giả định điều kiện 'nếu... thì', phủ định khả năng 'không thể' và định ngữ động từ thì tương lai.</p>
+      </div>
+
+      <!-- CARD 1: V + -지 못하다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -지 못하다 [못 + V]</span>
+          <span class="rule-trans">Không thể làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị chủ ngữ dù có ý chí nhưng <strong>không đủ năng lực hoặc do hoàn cảnh khách quan chi phối</strong> nên không thể thực hiện được hành động (khác với <code>-지 않다 / 안</code> là không muốn làm theo ý chí).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">어제 일이 많아서 파티에 가지 못했어요.</span>
+                <button class="speak-btn" onclick="speakText('어제 일이 많아서 파티에 가지 못했어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hôm qua vì có nhiều việc nên tôi đã không thể đến dự bữa tiệc.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">매운 음식을 잘 먹지 못해요.</span>
+                <button class="speak-btn" onclick="speakText('매운 음식을 잘 먹지 못해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi không ăn được đồ ăn cay.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)면 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)면</span>
+          <span class="rule-trans">Nếu... thì... (Giả định điều kiện)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị điều kiện hoặc giả định ở vế trước để dẫn tới kết quả ở vế sau. Nếu thân từ có patchim dùng <code>-으면</code>, không patchim hoặc patchim 'ㄹ' dùng <code>-면</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">시간이 있으면 같이 영화를 볼까요?</span>
+                <button class="speak-btn" onclick="speakText('시간이 있으면 같이 영화를 볼까요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Nếu bạn có thời gian thì chúng mình cùng đi xem phim nhé?</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">날씨가 좋으면 한강 공원에 가요.</span>
+                <button class="speak-btn" onclick="speakText('날씨가 좋으면 한강 공원에 가요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Nếu thời tiết đẹp thì chúng mình hãy đến công viên sông Hàn.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -(으)ㄹ + N -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -(으)ㄹ + Danh từ</span>
+          <span class="rule-trans">Định ngữ Động từ thì tương lai</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn vào thân động từ để bổ nghĩa cho danh từ đứng sau, biểu thị hành động <strong>sẽ làm trong tương lai</strong> hoặc <strong>việc cần phải làm</strong> (vd: <em>việc ngày mai sẽ làm, món ăn sẽ ăn</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">내일 할 일이 너무 많아요.</span>
+                <button class="speak-btn" onclick="speakText('내일 할 일이 너무 많아요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Việc ngày mai tôi phải làm có nhiều quá.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">주말에 읽을 책을 도서관에서 빌렸어요.</span>
+                <button class="speak-btn" onclick="speakText('주말에 읽을 책을 도서관에서 빌렸어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã mượn ở thư viện cuốn sách dự định sẽ đọc vào cuối tuần.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 5 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 5</div>
+        <div class="quiz-question">Chọn liên kết thích hợp: "한국에 (...) 꼭 연락해 주세요." (Nếu bạn đến Hàn Quốc...)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '오다' kết thúc bằng nguyên âm nên gắn '-면' -> '오면' (Nếu đến).')">오면</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''오으니까' sai vì '오다' không có patchim.')">오으니까</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어서' không dùng được trước câu cầu khiến '-아/어 주세요'.')">와서</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''올 때' mang nghĩa 'vào lúc đến', tự nhiên nhất vẫn là câu giả định điều kiện '-면'.')">올 때</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 6: BÀI 6 ==================== -->
+    <section class="tab-panel" id="tab-bai06">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 06</span></div>
+        <h2 class="lesson-title-ko">교통 (2) <span class="lesson-title-vi">Giao Thông (2)</span></h2>
+        <p class="lesson-desc">Học cách chỉ đường, diễn đạt trình tự hành động trước sau, xác nhận thông tin và sử dụng các số từ chỉ thứ tự.</p>
+      </div>
+
+      <!-- CARD 1: V + -아/어서 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -아/어서</span>
+          <span class="rule-trans">Trật tự thời gian: ...rồi...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa:</strong> Nối hai hành động diễn ra theo trình tự trước sau, trong đó hành động ở vế trước là tiền đề hoặc có liên quan chặt chẽ tới hành động ở vế sau (nghĩa là <em>"làm cái này... rồi làm cái kia"</em>).</p>
+          </div>
+          <div class="comparison-box">
+            <strong>Phân biệt: -아/어서 (thời gian) vs -고</strong>
+            <p>• <code>-고</code>: Nối hai hành động độc lập, không nhất thiết có quan hệ lệ thuộc (<em>Tôi ăn cơm và tôi xem tivi</em>).</p>
+            <p>• <code>-아/어서</code>: Hai hành động có tính liên kết chặt chẽ về không gian và địa điểm: <em>가게에 가서 빵을 샀어요 (Đi đến tiệm rồi mua bánh ở tiệm đó)</em>. Các động từ di chuyển <strong>가다, 오다, 일어나다</strong> bắt buộc phải dùng <code>-아/어서</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">도서관에 가서 책을 빌렸어요.</span>
+                <button class="speak-btn" onclick="speakText('도서관에 가서 책을 빌렸어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã đến thư viện rồi mượn sách ở đó.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">친구를 만나서 같이 점심을 먹었어요.</span>
+                <button class="speak-btn" onclick="speakText('친구를 만나서 같이 점심을 먹었어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi gặp bạn rồi cùng nhau ăn trưa.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -지요? -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -지요? [-죠?]</span>
+          <span class="rule-trans">...phải không?, ...đúng không?</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Dùng khi người nói muốn <strong>xác nhận lại một sự thật</strong> mà mình đã biết trước hoặc tin rằng người nghe cũng biết và đồng tình với mình. Trong văn nói thường rút gọn thành <code>-죠?</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">오늘 날씨가 정말 덥지요? - 네, 아주 더워요.</span>
+                <button class="speak-btn" onclick="speakText('오늘 날씨가 정말 덥지요? 네, 아주 더워요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hôm nay thời tiết thực sự nóng quá đúng không? - Vâng, nóng lắm ạ.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">흐엉 씨는 베트남 사람이지요?</span>
+                <button class="speak-btn" onclick="speakText('흐엉 씨는 베트남 사람이지요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hương là người Việt Nam đúng không bạn?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Số từ thứ tự -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Số từ thứ tự (첫 번째, 두 번째...)</span>
+          <span class="rule-trans">Thứ nhất, thứ nhì, thứ ba...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Dùng số thuần Hàn kết hợp với hậu tố <code>번째</code> để chỉ số thứ tự. Riêng vị trí đầu tiên dùng <strong>첫 번째</strong> (thứ nhất).</p>
+            <p>• <em>첫 번째 (thứ nhất), 두 번째 (thứ hai), 세 번째 (thứ ba), 네 번째 (thứ tư), 다섯 번째 (thứ năm)...</em></p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">두 번째 사거리에서 오른쪽으로 가세요.</span>
+                <button class="speak-btn" onclick="speakText('두 번째 사거리에서 오른쪽으로 가세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Ở ngã tư thứ hai, bạn hãy rẽ sang bên phải nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이것은 제가 한국에서 산 첫 번째 선물이에요.</span>
+                <button class="speak-btn" onclick="speakText('이것은 제가 한국에서 산 첫 번째 선물이에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Đây là món quà đầu tiên mà tôi đã mua ở Hàn Quốc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 6 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 6</div>
+        <div class="quiz-question">Chọn từ điền vào chỗ trống: "사과를 (...) 드세요." (Hãy gọt táo rồi ăn nhé)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '깎다' (gọt) + '-아/어서' -> '깎아서 드세요' biểu thị gọt xong rồi mới ăn.')">깎아서</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎으니까' biểu thị lý do nguyên nhân, không diễn tả thứ tự thời gian.')">깎으니까</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎으면' mang tính giả định điều kiện.')">깎으면</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎을 때' mang nghĩa lúc đang gọt.')">깎을 때</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 7: BÀI 7 ==================== -->
+    <section class="tab-panel" id="tab-bai07">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 07</span></div>
+        <h2 class="lesson-title-ko">전화 (2) <span class="lesson-title-vi">Điện Thoại (2)</span></h2>
+        <p class="lesson-desc">Học cách nói chuyện điện thoại nâng cao, để lại tin nhắn, thể hiện mục đích 'để làm gì', trình tự 'trước khi' và lời hứa hẹn 'tôi sẽ làm'.</p>
+      </div>
+
+      <!-- CARD 1: V + -(으)려고 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -(으)려고 [하다]</span>
+          <span class="rule-trans">Để... / Định làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa:</strong> Gắn vào thân động từ để chỉ ý định hoặc mục đích thực hiện hành động ở vế sau (<em>"để làm gì..."</em>). Khi kết hợp thành <code>-(으)려고 하다</code>, nó mang nghĩa <em>"dự định làm gì..."</em>.</p>
+          </div>
+          <div class="comparison-box">
+            <strong>So sánh: -(으)려고 vs -(으)러</strong>
+            <p>• <code>-(으)러</code> chỉ đi kèm với động từ di chuyển như <em>가다, 오다, 다니다</em>: <em>밥을 먹으러 가요.</em></p>
+            <p>• <code>-(으)려고</code> đi được với <strong>mọi động từ</strong>: <em>책을 읽으려고 안경을 썼어요 (Tôi đeo kính để đọc sách).</em></p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">친구를 만나려고 약속 장소에 일찍 갔어요.</span>
+                <button class="speak-btn" onclick="speakText('친구를 만나려고 약속 장소에 일찍 갔어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã đến điểm hẹn sớm để gặp bạn.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이번 방학에 한국어를 공부하려고 해요.</span>
+                <button class="speak-btn" onclick="speakText('이번 방학에 한국어를 공부하려고 해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Kỳ nghỉ hè này tôi dự định sẽ học tiếng Hàn.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V + -기 전에 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động từ + -기 전에 [N + 전에]</span>
+          <span class="rule-trans">Trước khi làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị hành động ở vế sau diễn ra <strong>trước thời điểm</strong> diễn ra hành động hoặc sự kiện ở vế trước. Thân động từ không cần xét patchim, luôn gắn trực tiếp <code>-기 전에</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">식사하기 전에 손을 깨끗이 씻으세요.</span>
+                <button class="speak-btn" onclick="speakText('식사하기 전에 손을 깨끗이 씻으세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Trước khi dùng bữa bạn hãy rửa tay thật sạch nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">수업 시작하기 전에 교실에 도착했어요.</span>
+                <button class="speak-btn" onclick="speakText('수업 시작하기 전에 교실에 도착했어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã đến phòng học trước khi tiết học bắt đầu.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -(으)ㄹ게요 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -(으)ㄹ게요</span>
+          <span class="rule-trans">Tôi sẽ... (Hứa hẹn, cam kết)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Chỉ dùng cho <strong>ngôi thứ nhất (tôi/chúng tôi)</strong> trong câu trần thuật để biểu thị ý chí, sự cam kết hoặc lời hứa hẹn sẽ thực hiện một việc gì đó cho người nghe.</p>
+            <p><strong>Lưu ý:</strong> Không dùng trong câu hỏi, không dùng cho ngôi thứ 2 hoặc ngôi thứ 3.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">제가 내일 다시 전화할게요.</span>
+                <button class="speak-btn" onclick="speakText('제가 내일 다시 전화할게요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Ngày mai tôi sẽ gọi điện thoại lại cho bạn nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지금 바쁘니까 조금 후에 연락할게요.</span>
+                <button class="speak-btn" onclick="speakText('지금 바쁘니까 조금 후에 연락할게요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bây giờ tôi đang bận nên một lát nữa tôi sẽ liên lạc lại nhé.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 7 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 7</div>
+        <div class="quiz-question">Chọn câu trả lời đúng khi đồng nghiệp nhờ vả: "이 서류 좀 확인해 주세요" (Xin xem giúp tài liệu này):</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '제가 지금 확인할게요' thể hiện lời hứa hẹn/nhận lời của người nói ở ngôi thứ nhất.')">네, 제가 지금 확인할게요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인할래요' dùng để hỏi ý định hoặc thể hiện nguyện vọng, không tự nhiên khi nhận lời.')">네, 제가 지금 확인할래요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인하려고 해요' là nói về dự định cá nhân, không mang tính cam kết trực tiếp với người nhờ.')">네, 제가 지금 확인하려고 해요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인하세요' là câu mệnh lệnh (bạn hãy xem đi), ngược ý nhờ vả.')">네, 지금 확인하세요.</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 8: BÀI 8 ==================== -->
+    <section class="tab-panel" id="tab-bai08">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 08</span></div>
+        <h2 class="lesson-title-ko">영화 <span class="lesson-title-vi">Phim Ảnh</span></h2>
+        <p class="lesson-desc">Học cách nói về sở thích xem phim, biểu thị sự cảm thán, dự đoán tương lai và trải nghiệm 'đã từng thử làm gì'.</p>
+      </div>
+
+      <!-- CARD 1: V/A + -겠- -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động/Tính từ + -겠-</span>
+          <span class="rule-trans">Chắc là... / Sẽ...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>1. <strong>Phỏng đoán:</strong> Khi nhìn vào tình huống hoặc trạng thái trước mắt để phỏng đoán (<em>"chắc là...", "có vẻ là..."</em>): <em>맛있겠다 (Chắc ngon lắm đây), 피곤하겠어요 (Chắc là bạn mệt lắm).</em></p>
+            <p>2. <strong>Ý chí trang trọng:</strong> Thể hiện ý chí quyết tâm của người nói trong hoàn cảnh trang trọng (<em>알겠습니다 - Tôi hiểu rồi ạ, 잘 먹겠습니다 - Tôi sẽ ăn ngon miệng ạ</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">하루 종일 걸어서 다리가 많이 아프겠어요.</span>
+                <button class="speak-btn" onclick="speakText('하루 종일 걸어서 다리가 많이 아프겠어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Đi bộ cả ngày thế thì chắc chân bạn mệt và đau lắm nhỉ.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">그 영화가 아주 재미있겠어요.</span>
+                <button class="speak-btn" onclick="speakText('그 영화가 아주 재미있겠어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bộ phim đó chắc hẳn là hay lắm đấy.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -네요 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -네요</span>
+          <span class="rule-trans">Đuôi câu cảm thán: ...quá!, ...thế!</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn vào thân động/tính từ để thể hiện sự <strong>ngạc nhiên, cảm thán trước một sự việc, hiện tượng mà người nói vừa mới trực tiếp trải nghiệm hoặc nhìn thấy</strong>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국말을 정말 잘하시네요!</span>
+                <button class="speak-btn" onclick="speakText('한국말을 정말 잘하시네요!')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn nói tiếng Hàn giỏi quá đi mất!</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">벌써 12시네요. 시간이 정말 빨라요.</span>
+                <button class="speak-btn" onclick="speakText('벌써 12시네요. 시간이 정말 빨라요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Đã 12 giờ rồi cơ đấy! Thời gian trôi nhanh thật.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -아/어 보다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -아/어 보다</span>
+          <span class="rule-trans">Thử làm gì... / Từng làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>1. Ở thì hiện tại/tương lai: Khuyên nhủ hoặc đề nghị ai đó <strong>hãy thử làm</strong> một điều mới (<em>-아/어 보세요</em>): <em>이 옷을 입어 보세요 (Hãy thử mặc chiếc áo này).</em></p>
+            <p>2. Ở thì quá khứ <code>-아/어 봤다</code>: Biểu thị <strong>kinh nghiệm đã từng trải qua</strong>: <em>제주도에 가 봤어요 (Tôi đã từng đến đảo Jeju).</em></p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국 전통 음식을 먹어 보고 싶어요.</span>
+                <button class="speak-btn" onclick="speakText('한국 전통 음식을 먹어 보고 싶어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi muốn ăn thử món ăn truyền thống của Hàn Quốc.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이 책을 한번 읽어 보세요. 정말 감동적이에요.</span>
+                <button class="speak-btn" onclick="speakText('이 책을 한번 읽어 보세요. 정말 감동적이에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn hãy thử đọc cuốn sách này một lần xem. Rất xúc động đấy.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 8 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 8</div>
+        <div class="quiz-question">Khi vừa bước vào một căn phòng ấm áp vào mùa đông và thốt lên cảm thán, bạn nói:</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Đuôi cảm thán '-네요' gắn trực tiếp vào thân tính từ '따뜻하다' -> '따뜻하네요!'.')">방이 아주 따뜻하네요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻하겠어요' là phỏng đoán từ xa (chắc là ấm), không phải cảm nhận trực tiếp khi đã ở trong phòng.')">방이 아주 따뜻하겠어요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻해 보세요' là câu cầu khiến (hãy thử ấm đi), sai nghĩa.')">방이 아주 따뜻해 보세요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻할게요' dùng cho ý chí ngôi thứ nhất, không dùng cho tính từ căn phòng.')">방이 아주 따뜻할게요!</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 9: BÀI 9 ==================== -->
+    <section class="tab-panel" id="tab-bai09">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 09</span></div>
+        <h2 class="lesson-title-ko">휴일 <span class="lesson-title-vi">Ngày Nghỉ</span></h2>
+        <p class="lesson-desc">Học cách nói về các ngày lễ kỷ niệm, sự lựa chọn 'hoặc là', biểu đạt hy vọng 'ước gì...' và mục đích hành động 'vì, để...'.</p>
+      </div>
+
+      <!-- CARD 1: N + (이)나 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ + (이)나</span>
+          <span class="rule-trans">Hoặc là, hay là... (Sự lựa chọn)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn sau danh từ để biểu thị sự lựa chọn giữa hai hay nhiều đối tượng (nghĩa là <em>"hoặc", "hay là"</em>). Có patchim dùng <code>이나</code>, không patchim dùng <code>나</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">주말에 영화나 연극을 보고 싶어요.</span>
+                <button class="speak-btn" onclick="speakText('주말에 영화나 연극을 보고 싶어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Cuối tuần tôi muốn đi xem phim hoặc là xem kịch.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">목이 마른데 물이나 주스 좀 주세요.</span>
+                <button class="speak-btn" onclick="speakText('목이 마른데 물이나 주스 좀 주세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đang khát nước, xin hãy cho tôi nước lọc hay nước hoa quả cũng được.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)면 좋겠다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)면 좋겠다</span>
+          <span class="rule-trans">Ước gì..., giá mà... (Hy vọng, mong ước)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị niềm hy vọng, mong ước thiết tha của người nói về một sự việc trong tương lai hoặc một điều trái ngược với thực tế hiện tại (<em>"Nếu... thì thật tốt biết mấy", "Ước gì..."</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이번 휴가에 고향에 갈 수 있으면 좋겠어요.</span>
+                <button class="speak-btn" onclick="speakText('이번 휴가에 고향에 갈 수 있으면 좋겠어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Kỳ nghỉ này giá mà tôi có thể về thăm quê thì tốt biết mấy.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">내일 날씨가 맑으면 좋겠어요.</span>
+                <button class="speak-btn" onclick="speakText('내일 날씨가 맑으면 좋겠어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Ước gì ngày mai trời nắng ráo đẹp trời.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -기 위해서 / N + -을/를 위해 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -기 위해서 / N + -을/를 위해</span>
+          <span class="rule-trans">Để..., vì mục đích...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị mục đích hoặc nỗ lực để đạt được kết quả ở vế sau. So với <code>-(으)려고</code>, <code>-기 위해서</code> mang sắc thái trang trọng, quyết tâm và hướng tới mục tiêu lớn hơn.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">건강을 위해서 매일 아침 조깅을 해요.</span>
+                <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 조깅을 해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì sức khỏe nên mỗi sáng tôi đều chạy bộ.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국 유학을 가기 위해서 열심히 한국어를 배워요.</span>
+                <button class="speak-btn" onclick="speakText('한국 유학을 가기 위해서 열심히 한국어를 배워요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Để đi du học Hàn Quốc, tôi đang chăm chỉ học tiếng Hàn.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 9 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 9</div>
+        <div class="quiz-question">Chọn từ liên kết danh từ: "아침에 보통 빵(...) 우유를 먹어요." (bánh mì hoặc sữa)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '빵' có patchim nên dùng '이나' -> '빵이나 우유'.')">이나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''나' chỉ dùng cho danh từ không có patchim.')">나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''거나' dùng để nối hai động từ/tính từ, không nối trực tiếp hai danh từ.')">거나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''마다' mang nghĩa mỗi (mỗi bánh mì), không phù hợp ngữ nghĩa.')">마다</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 10: BÀI 10 ==================== -->
+    <section class="tab-panel" id="tab-bai10">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 10</span></div>
+        <h2 class="lesson-title-ko">외모 <span class="lesson-title-vi">Ngoại Hình</span></h2>
+        <p class="lesson-desc">Học cách miêu tả ngoại hình, tính cách, biểu thị sự thay đổi trạng thái theo thời gian, nguyên nhân khách quan và chuyên đề Bất quy tắc 'ㅎ'.</p>
+      </div>
+
+      <!-- CARD 1: A + -아/어지다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Tính từ + -아/어지다</span>
+          <span class="rule-trans">Trở nên..., dần dần...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn vào thân tính từ để biến tính từ thành động từ miêu tả <strong>sự biến đổi trạng thái hoặc tính chất</strong> theo tiến trình thời gian (<em>trở nên đẹp hơn, thời tiết trở lạnh...</em>).</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nguyên âm tính từ</th>
+                  <th>Công thức</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Dạng biến đổi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nguyên âm 'ㅏ, ㅗ'</td>
+                  <td class="col-highlight">-아지다</td>
+                  <td>좋다, 맑다, 작다</td>
+                  <td>좋아지다 (tốt lên), 작아지다 (nhỏ đi)</td>
+                </tr>
+                <tr>
+                  <td>Các nguyên âm khác</td>
+                  <td class="col-highlight">-어지다</td>
+                  <td>예쁘다, 넓다, 춥다</td>
+                  <td>예뻐지다 (xinh lên), 추워지다 (lạnh đi)</td>
+                </tr>
+                <tr>
+                  <td>Tính từ đuôi '하다'</td>
+                  <td class="col-highlight">-해지다</td>
+                  <td>따뜻하다, 건강하다</td>
+                  <td>따뜻해지다 (ấm lên), 건강해지다 (khỏe lên)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">운동을 해서 몸이 아주 건강해졌어요.</span>
+                <button class="speak-btn" onclick="speakText('운동을 해서 몸이 아주 건강해졌어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Nhờ tập thể dục mà cơ thể tôi đã trở nên rất khỏe mạnh.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">가을이 되어서 날씨가 쌀쌀해졌어요.</span>
+                <button class="speak-btn" onclick="speakText('가을이 되어서 날씨가 쌀쌀해졌어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì đã sang thu nên thời tiết đã trở nên se lạnh.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -기 때문에 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -기 때문에 [N + 때문에]</span>
+          <span class="rule-trans">Vì... nên... (Nguyên nhân khách quan)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị nguyên nhân hoặc lý do khách quan, rõ ràng dẫn đến kết quả ở vế sau. Cấu trúc này thường dùng trong văn viết, báo chí hoặc phát biểu trang trọng.</p>
+            <p>Nếu là danh từ thì dùng trực tiếp <code>Danh từ + 때문에</code>: <em>비 때문에 (do mưa), 감기 때문에 (do cảm cúm).</em></p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">눈이 많이 왔기 때문에 길이 아주 미끄러워요.</span>
+                <button class="speak-btn" onclick="speakText('눈이 많이 왔기 때문에 길이 아주 미끄러워요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì tuyết rơi nhiều nên đường sá rất trơn trượt.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">바쁜 일 때문에 고향에 가지 못했어요.</span>
+                <button class="speak-btn" onclick="speakText('바쁜 일 때문에 고향에 가지 못했어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Do công việc bận rộn nên tôi đã không thể về thăm quê.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Bất quy tắc 'ㅎ' -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Bất quy tắc của phụ âm 'ㅎ'</span>
+          <span class="rule-trans">ㅎ 불규칙</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Hầu hết các <strong>tính từ chỉ màu sắc và tính từ chỉ định kết thúc bằng patchim 'ㅎ'</strong> (như <em>하얗다, 빨갛다, 노랗다, 파랗다, 까맣다, 그렇다, 어떻다, 이렇다</em>) đều tuân theo quy tắc sau:</p>
+            <p>1. Khi gặp đuôi bắt đầu bằng nguyên âm <code>-아/어</code>: Phụ âm <code>ㅎ</code> bị rụng đi, và nguyên âm đứng trước kết hợp biến đổi thành <code>애</code> (hoặc <code>얘</code> đối với 하얗다):</p>
+            <p>• <em>빨갛다 + 아요 -&gt; 빨개요</em></p>
+            <p>• <em>노랗다 + 아요 -&gt; 노래요</em></p>
+            <p>• <em>하얗다 + 아요 -&gt; 하얘요</em></p>
+            <p>• <em>그렇다 + 어요 -&gt; 그래요</em></p>
+            <p>2. Khi gặp đuôi bắt đầu bằng <code>-(으)ㄴ, -(으)ㄹ, -(으)면</code>: Cả <code>ㅎ</code> và <code>으</code> đều bị rụng:</p>
+            <p>• <em>빨갛다 + (으)ㄴ -&gt; 빨간 (đỏ)</em></p>
+            <p>• <em>하얗다 + (으)ㄴ -&gt; 하얀 (trắng)</em></p>
+            <p>• <em>그렇다 + (으)면 -&gt; 그러면 (nếu vậy)</em></p>
+          </div>
+          <div class="note-box">
+            <strong>Ngoại lệ có quy tắc (ㅎ KHÔNG đổi):</strong> Các từ như <em>좋다 (tốt), 많다 (nhiều), 낳다 (sinh con), 넣다 (bỏ vào)</em> chia bình thường có quy tắc: <em>좋아요, 많아요.</em>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">하얀 눈이 내리고 있어요.</span>
+                <button class="speak-btn" onclick="speakText('하얀 눈이 내리고 있어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Những bông tuyết trắng muốt đang rơi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">얼굴이 왜 그렇게 빨개요?</span>
+                <button class="speak-btn" onclick="speakText('얼굴이 왜 그렇게 빨개요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Sao mặt bạn lại đỏ bừng lên như thế?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 10 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 10</div>
+        <div class="quiz-question">Chia đúng tính từ '노랗다' (màu vàng) khi bổ nghĩa danh từ: "(...) 꽃을 샀어요." (Tôi đã mua bông hoa màu vàng)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '노랗다' gặp định ngữ '-은' thì 'ㅎ' và '으' đều rụng, trở thành '노란 꽃'.')">노란</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''노랗은' là dạng sai do chưa rụng phụ âm bất quy tắc 'ㅎ'.')">노랗은</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''노래' là dạng chia đuôi câu thân mật '-아/어요', không phải dạng định ngữ.')">노래</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''노랗는' sai vì định ngữ tính từ không dùng '-는'.')">노랗는</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 11: BÀI 11 ==================== -->
+    <section class="tab-panel" id="tab-bai11">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 11</span></div>
+        <h2 class="lesson-title-ko">여행 <span class="lesson-title-vi">Du Lịch</span></h2>
+        <p class="lesson-desc">Học cách chia sẻ kinh nghiệm du lịch, nối các hành động bằng 'hoặc', diễn tả thì hiện tại tiếp diễn và trải nghiệm 'đã từng/chưa từng'.</p>
+      </div>
+
+      <!-- CARD 1: V/A + -거나 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động/Tính từ + -거나</span>
+          <span class="rule-trans">Hoặc, hay là... (Nối hành động / tính chất)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Dùng để nối hai hay nhiều động từ hoặc tính từ, biểu thị <strong>sự lựa chọn giữa các hành động hoặc trạng thái</strong> (nghĩa là <em>"hoặc là...", "hay là..."</em>).</p>
+            <p><strong>Lưu ý:</strong> Nối 2 danh từ dùng <code>(이)나</code>; nối 2 động từ/tính từ dùng <code>-거나</code>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">주말에는 집에서 쉬거나 친구를 만나요.</span>
+                <button class="speak-btn" onclick="speakText('주말에는 집에서 쉬거나 친구를 만나요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vào cuối tuần tôi thường nghỉ ngơi ở nhà hoặc đi gặp gỡ bạn bè.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">음악을 듣거나 책을 읽는 것을 좋아해요.</span>
+                <button class="speak-btn" onclick="speakText('음악을 듣거나 책을 읽는 것을 좋아해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi thích nghe nhạc hoặc đọc sách.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V + -고 있다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động từ + -고 있다</span>
+          <span class="rule-trans">Đang... (Thì hiện tại tiếp diễn)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị một hành động <strong>đang diễn ra tại thời điểm nói</strong>. Kính ngữ của cấu trúc này là <strong>-고 계시다</strong>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지금 여행 가방을 싸고 있어요.</span>
+                <button class="speak-btn" onclick="speakText('지금 여행 가방을 싸고 있어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bây giờ tôi đang thu xếp hành lý du lịch.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">선생님께서 교실에서 학생들을 가르치고 계세요.</span>
+                <button class="speak-btn" onclick="speakText('선생님께서 교실에서 학생들을 가르치고 계세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Thầy giáo đang giảng bài cho các học sinh ở trong phòng học.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -(으)ㄴ 적이 있다 [없다] -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -(으)ㄴ 적이 있다 [없다]</span>
+          <span class="rule-trans">Đã từng / Chưa từng làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị người nói <strong>đã từng hoặc chưa từng có trải nghiệm</strong> làm một việc gì đó trong quá khứ.</p>
+            <p>Thường kết hợp với <code>-아/어 보다</code> thành cụm <code>-아/어 본 적이 있다/없다</code> (<em>đã từng thử làm gì...</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국에 가 본 적이 있어요? - 아니요, 가 본 적이 없어요.</span>
+                <button class="speak-btn" onclick="speakText('한국에 가 본 적이 있어요? 아니요, 가 본 적이 없어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn đã từng đến Hàn Quốc chưa? - Chưa, tôi chưa từng đến đó.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한복을 입어 본 적이 있어요. 정말 예뻤어요.</span>
+                <button class="speak-btn" onclick="speakText('한복을 입어 본 적이 있어요. 정말 예뻤어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã từng mặc thử trang phục Hanbok. Đẹp lắm bạn ạ.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 11 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 11</div>
+        <div class="quiz-question">Chọn phương án đúng: "저는 비행기를 (...) 적이 없어서 조금 긴장돼요." (chưa từng đi máy bay)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '타다' (đi xe/máy bay) không có patchim nên chia thành '탄 적이 없다'.')">탄</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''타는' diễn tả định ngữ hiện tại, không kết hợp với '적이 없다'.')">타는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''탈' diễn tả định ngữ tương lai.')">탈</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''타은' sai quy tắc chia định ngữ vì '타다' không có patchim.')">타은</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 12: BÀI 12 ==================== -->
+    <section class="tab-panel" id="tab-bai12">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 12</span></div>
+        <h2 class="lesson-title-ko">공공장소 <span class="lesson-title-vi">Nơi Công Cộng</span></h2>
+        <p class="lesson-desc">Học các quy tắc tại nơi công cộng, cách diễn tả hai hành động song song 'vừa... vừa', biểu hiện cấm đoán 'không được phép' và cách dùng đuôi câu thân mật.</p>
+      </div>
+
+      <!-- CARD 1: V + -(으)면서 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -(으)면서</span>
+          <span class="rule-trans">Vừa... vừa... (Hành động song song)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị <strong>hai hành động cùng diễn ra đồng thời</strong> do một chủ ngữ thực hiện (nghĩa là <em>"vừa làm A vừa làm B"</em>).</p>
+            <p><strong>Điều kiện:</strong> Hai vế bắt buộc phải <strong>cùng một chủ ngữ</strong>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">음악을 들으면서 청소를 해요.</span>
+                <button class="speak-btn" onclick="speakText('음악을 들으면서 청소를 해요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi vừa nghe nhạc vừa dọn dẹp phòng.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">친구들과 이야기하면서 커피를 마셨어요.</span>
+                <button class="speak-btn" onclick="speakText('친구들과 이야기하면서 커피를 마셨어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi vừa trò chuyện với bạn bè vừa uống cà phê.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: Đuôi câu -요 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Đuôi câu thân mật lịch sự: -요</span>
+          <span class="rule-trans">Rút gọn trong hội thoại thân mật</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Trong khẩu ngữ giao tiếp hàng ngày, khi người nghe hỏi một câu hỏi đầy đủ, người nói có thể <strong>trả lời rút gọn bằng danh từ hoặc cụm từ gắn thêm <code>-요</code></strong> ở cuối để vừa ngắn gọn vừa giữ được phép lịch sự tôn trọng.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지금 어디에 가요? - 도서관에요.</span>
+                <button class="speak-btn" onclick="speakText('지금 어디에 가요? 도서관에요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bây giờ bạn đi đâu thế? - Đi thư viện ạ.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">무엇을 마실래요? - 시원한 주스요.</span>
+                <button class="speak-btn" onclick="speakText('무엇을 마실래요? 시원한 주스요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn muốn uống gì? - Cho tôi nước trái cây mát lạnh nhé.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -(으)면 안 되다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -(으)면 안 되다</span>
+          <span class="rule-trans">Không được làm gì... (Cấm đoán)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị <strong>sự cấm đoán hoặc quy định không được phép làm</strong> việc gì đó (đối lập với cấu trúc cho phép <em>-아/어도 되다</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">도서관에서 큰 소리로 이야기하면 안 돼요.</span>
+                <button class="speak-btn" onclick="speakText('도서관에서 큰 소리로 이야기하면 안 돼요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Trong thư viện không được nói chuyện lớn tiếng.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">미술관 안에서는 사진을 찍으면 안 돼요.</span>
+                <button class="speak-btn" onclick="speakText('미술관 안에서는 사진을 찍으면 안 돼요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Ở bên trong bảo tàng mỹ thuật không được phép chụp ảnh.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 12 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 12</div>
+        <div class="quiz-question">Tại trạm xăng dầu có biển báo cấm lửa, câu quy định đúng là:</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '담배를 피우면 안 됩니다' thể hiện rõ ràng quy định cấm đoán.')">여기에서 담배를 피우면 안 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어도 됩니다' thể hiện sự cho phép (được hút thuốc), nguy hiểm và sai quy tắc.')">여기에서 담배를 피워도 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''-으면서' là liên từ chỉ hai hành động song song.')">여기에서 담배를 피우면서 안 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''-기 때문에' diễn đạt nguyên nhân.')">여기에서 담배를 피우기 때문에 안 됩니다.</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 13: BÀI 13 ==================== -->
+    <section class="tab-panel" id="tab-bai13">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 13</span></div>
+        <h2 class="lesson-title-ko">도시 <span class="lesson-title-vi">Đô Thị</span></h2>
+        <p class="lesson-desc">Học cách nói về cảnh quan đô thị, nhấn mạnh số lượng vượt mong đợi, phỏng đoán nhẹ nhàng 'hình như...' và chuyên đề Bất quy tắc 'ㅅ'.</p>
+      </div>
+
+      <!-- CARD 1: N + (이)나 (nhấn mạnh số lượng) -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ (số từ) + (이)나</span>
+          <span class="rule-trans">Tận..., đến tận... (Nhấn mạnh số lượng)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn sau danh từ chỉ số lượng để <strong>nhấn mạnh số lượng đó là rất nhiều</strong>, vượt quá mức bình thường hoặc vượt quá sự mong đợi của người nói (nghĩa là <em>"tận...", "những...", "đến tận..."</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">어제 커피를 5잔이나 마셨어요.</span>
+                <button class="speak-btn" onclick="speakText('어제 커피를 5잔이나 마셨어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hôm qua tôi đã uống đến tận 5 ly cà phê lận đấy.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">친구가 약속 시간에 1시간이나 늦었어요.</span>
+                <button class="speak-btn" onclick="speakText('친구가 약속 시간에 1시간이나 늦었어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn tôi đã đến trễ giờ hẹn tận 1 tiếng đồng hồ.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)ㄹ 것 같다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)ㄹ 것 같다</span>
+          <span class="rule-trans">Hình như..., dường như..., có vẻ là...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị sự <strong>phỏng đoán mang tính dè dặt, tế nhị</strong> của người nói về một việc gì đó chưa xảy ra hoặc dựa trên cảm nhận trực quan.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">하늘에 구름이 많아서 곧 비가 올 것 같아요.</span>
+                <button class="speak-btn" onclick="speakText('하늘에 구름이 많아서 곧 비가 올 것 같아요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Trời nhiều mây thế này hình như sắp có mưa rồi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이 옷은 남 씨에게 잘 어울릴 것 같아요.</span>
+                <button class="speak-btn" onclick="speakText('이 옷은 남 씨에게 잘 어울릴 것 같아요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Chiếc áo này có vẻ rất hợp với bạn Nam đấy.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Bất quy tắc 'ㅅ' -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Bất quy tắc của phụ âm 'ㅅ'</span>
+          <span class="rule-trans">ㅅ 불규칙</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Một số động từ kết thúc bằng patchim <code>ㅅ</code> (như <em>낫다 - khỏi bệnh/tốt hơn, 짓다 - xây dựng/nấu cơm/đặt tên, 붓다 - sưng lên/rót nước, 잇다 - nối liền</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm</strong> thì phụ âm <code>ㅅ</code> sẽ bị rụng đi:</p>
+            <p>• <em>낫다 + 아요 -&gt; 나아요 (Khỏi bệnh)</em></p>
+            <p>• <em>짓다 + 어요 -&gt; 지어요 (Xây nhà, nấu cơm)</em></p>
+            <p>• <em>붓다 + 어요 -&gt; 부어요 (Bị sưng)</em></p>
+            <p>• <em>낫다 + (으)면 -&gt; 나으면 (Nếu khỏi bệnh)</em></p>
+          </div>
+          <div class="note-box">
+            <strong>Ngoại lệ có quy tắc (ㅅ KHÔNG rụng):</strong> Các động từ như <em>웃다 (cười) -&gt; 웃어요, 씻다 (rửa) -&gt; 씻어요, 벗다 (cởi đồ) -&gt; 벗어요, 빗다 (chải đầu) -&gt; 빗어요</em> chia bình thường có quy tắc!
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">감기가 다 나았어요.</span>
+                <button class="speak-btn" onclick="speakText('감기가 다 나았어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bệnh cảm cúm của tôi đã khỏi hẳn rồi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">새 집을 짓고 있어요.</span>
+                <button class="speak-btn" onclick="speakText('새 집을 짓고 있어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Họ đang xây một ngôi nhà mới.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 13 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 13</div>
+        <div class="quiz-question">Chia đúng động từ '짓다' trong câu: "할머니께서 밥을 (...)." (Bà đang nấu cơm)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '짓다' là bất quy tắc 'ㅅ', khi gặp '-어요' thì 'ㅅ' biến mất -> '지어요'.')">지어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''짓어요' sai vì chưa lược bỏ phụ âm bất quy tắc 'ㅅ'.')">짓어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''지워요' là dạng chia của bất quy tắc 'ㅂ' (như 춥다 -> 추워요).')">지워요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''지나요' là một từ khác mang nghĩa trôi qua.')">지나요</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 14: BÀI 14 ==================== -->
+    <section class="tab-panel" id="tab-bai14">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 14</span></div>
+        <h2 class="lesson-title-ko">계획 <span class="lesson-title-vi">Kế Hoạch</span></h2>
+        <p class="lesson-desc">Học cách nói về kế hoạch tương lai, khoảng thời gian đã trải qua 'đã được bao lâu', trật tự 'sau khi làm gì' và quyết định 'quyết định làm gì'.</p>
+      </div>
+
+      <!-- CARD 1: V + -(으)ㄴ 지 되다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Động từ + -(으)ㄴ 지 [khoảng thời gian] 되다</span>
+          <span class="rule-trans">Đã làm gì được [bao lâu] rồi</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị khoảng thời gian đã trôi qua kể từ khi bắt đầu thực hiện một hành động nào đó trong quá khứ cho tới hiện tại (<em>"Đã làm việc gì được bao lâu rồi"</em>).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국어를 배운 지 6개월이 되었어요.</span>
+                <button class="speak-btn" onclick="speakText('한국어를 배운 지 6개월이 되었어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã học tiếng Hàn được 6 tháng rồi.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국에 온 지 얼마나 되었어요?</span>
+                <button class="speak-btn" onclick="speakText('한국에 온 지 얼마나 되었어요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn đã đến Hàn Quốc được bao lâu rồi?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V + -(으)ㄴ 후에 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động từ + -(으)ㄴ 후에 [N + 후에]</span>
+          <span class="rule-trans">Sau khi làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị hành động ở vế sau diễn ra <strong>sau khi hoàn thành hành động ở vế trước</strong> (nghĩa là <em>"sau khi làm..."</em>). Đối lập với <code>-기 전에</code> (trước khi).</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">식사를 한 후에 이 약을 드세요.</span>
+                <button class="speak-btn" onclick="speakText('식사를 한 후에 이 약을 드세요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Sau khi dùng bữa xong thì bạn hãy uống thuốc này nhé.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">대학교를 졸업한 후에 회사에 취직할 거예요.</span>
+                <button class="speak-btn" onclick="speakText('대학교를 졸업한 후에 회사에 취직할 거예요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Sau khi tốt nghiệp đại học tôi sẽ xin việc vào công ty.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: V + -기로 하다 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Động từ + -기로 하다</span>
+          <span class="rule-trans">Quyết định làm gì...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Biểu thị <strong>người nói đã đưa ra một quyết định hoặc một lời hứa, cam kết</strong> sẽ thực hiện hành động nào đó. Thường dùng dưới dạng thì quá khứ <strong>-기로 했어요</strong>.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">이번 주말에 친구들과 등산하기로 했어요.</span>
+                <button class="speak-btn" onclick="speakText('이번 주말에 친구들과 등산하기로 했어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Cuối tuần này tôi đã quyết định sẽ đi leo núi cùng với bạn bè.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">건강을 위해서 매일 아침 운동하기로 했어요.</span>
+                <button class="speak-btn" onclick="speakText('건강을 위해서 매일 아침 운동하기로 했어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Vì sức khỏe nên tôi đã quyết định mỗi sáng sẽ tập thể dục.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 14 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 14</div>
+        <div class="quiz-question">Chọn từ điền vào chỗ trống: "수업이 (...) 도서관에서 만나요." (Sau khi tiết học kết thúc...)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '끝나다' không có patchim nên chia thành '끝난 후에' (Sau khi kết thúc).')">끝난 후에</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝나기 전에' mang nghĩa trước khi kết thúc.')">끝나기 전에</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝난 지' dùng với thời gian chỉ thời lượng đã trôi qua.')">끝난 지</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝나면 안 되다' là cấu trúc cấm đoán.')">끝나면 안 돼서</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 15: BÀI 15 ==================== -->
+    <section class="tab-panel" id="tab-bai15">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Bài 15</span></div>
+        <h2 class="lesson-title-ko">한국 생활 <span class="lesson-title-vi">Cuộc Sống Tại Hàn Quốc</span></h2>
+        <p class="lesson-desc">Học cách chia sẻ về đời sống thực tế tại Hàn Quốc, tìm nhà, chỉ nguồn gốc tiếp nhận 'từ ai', liên từ nối câu đa năng '-(으)ㄴ/는데' và bất quy tắc '르'.</p>
+      </div>
+
+      <!-- CARD 1: N + 에게서 / 한테서 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 01</span>
+          <span class="rule-name">Danh từ + 에게서 / 한테서 [께]</span>
+          <span class="rule-trans">Từ ai... (Nguồn gốc nhận)</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Gắn sau danh từ chỉ người hoặc động vật để biểu thị <strong>nơi xuất phát hoặc nguồn gốc nhận được một vật thể, thông tin, hành động nào đó</strong> (nghĩa là <em>"nhận từ ai đó"</em>).</p>
+            <p>• <code>에게서</code>: Dùng trong văn viết hoặc tình huống trang trọng.</p>
+            <p>• <code>한테서</code>: Dùng phổ biến trong văn nói giao tiếp hàng ngày.</p>
+            <p>• <code>께</code>: Dùng với người bề trên (kính ngữ), không dùng 서.</p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">어제 고향 친구한테서 편지를 받았어요.</span>
+                <button class="speak-btn" onclick="speakText('어제 고향 친구한테서 편지를 받았어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Hôm qua tôi đã nhận được một bức thư từ người bạn ở quê.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">선생님께 칭찬을 들었어요.</span>
+                <button class="speak-btn" onclick="speakText('선생님께 칭찬을 들었어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tôi đã được nghe lời khen từ thầy giáo.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: V/A + -(으)ㄴ/는데 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 02</span>
+          <span class="rule-name">Động/Tính từ + -(으)ㄴ/는데</span>
+          <span class="rule-trans">Bối cảnh, tiền đề / Đối chiếu: ...thì..., ...mà...</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p><strong>Ý nghĩa cốt lõi:</strong> Đưa ra bối cảnh, thông tin nền tảng ở vế 1 để chuẩn bị cho câu hỏi, mệnh lệnh, rủ rê hoặc giải thích ở vế 2. Cũng có thể dùng để diễn tả sự đối chiếu tương phản nhẹ nhàng giữa hai vế.</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Từ loại &amp; Thì</th>
+                  <th>Công thức chia</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Dạng chia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Động từ (Hiện tại)</td>
+                  <td class="col-highlight">-는데</td>
+                  <td>가다, 먹다, 살다</td>
+                  <td>가는데, 먹는데, 사는데 (ㄹ rụng)</td>
+                </tr>
+                <tr>
+                  <td>Tính từ (Hiện tại)</td>
+                  <td class="col-highlight">-(으)ㄴ데</td>
+                  <td>예쁘다, 좋다, 바쁘다</td>
+                  <td>예쁜데, 좋은데, 바쁜데</td>
+                </tr>
+                <tr>
+                  <td>Danh từ + 이다</td>
+                  <td class="col-highlight">-인데</td>
+                  <td>학생, 친구</td>
+                  <td>학생인데, 친구인데</td>
+                </tr>
+                <tr>
+                  <td>Thì quá khứ (았/었)</td>
+                  <td class="col-highlight">-았/었는데</td>
+                  <td>갔다, 먹었다, 좋았다</td>
+                  <td>갔는데, 먹었는데, 좋았는데</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지금 비가 오는데 우산이 있어요?</span>
+                <button class="speak-btn" onclick="speakText('지금 비가 오는데 우산이 있어요?')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bây giờ trời đang mưa đấy, bạn có mang ô không? (đưa bối cảnh trời mưa để hỏi)</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국 생활이 조금 외로운데 그래도 재미있어요.</span>
+                <button class="speak-btn" onclick="speakText('한국 생활이 조금 외로운데 그래도 재미있어요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Cuộc sống ở Hàn Quốc có chút cô đơn nhưng dù sao cũng rất thú vị.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Bất quy tắc '르' -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Điểm 03</span>
+          <span class="rule-name">Bất quy tắc của phụ âm '르'</span>
+          <span class="rule-trans">르 불규칙</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Hầu hết các động từ và tính từ kết thúc bằng âm tiết <code>르</code> (như <em>모르다 - không biết, 빠르다 - nhanh, 부르다 - hát/gọi/no, 다르다 - khác biệt, 고르다 - lựa chọn, 자르다 - cắt</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm <code>-아/어</code></strong>:</p>
+            <p>1. Nguyên âm <code>ㅡ</code> bị biến mất.</p>
+            <p>2. Thêm phụ âm <code>ㄹ</code> làm patchim cho âm tiết đứng ngay trước.</p>
+            <p>3. Dựa vào nguyên âm của âm tiết trước để chọn <code>-라</code> (nếu là ㅏ/ㅗ) hoặc <code>-러</code> (các nguyên âm còn lại):</p>
+            <p>• <em>모르다 + 아요 -&gt; 몰라요 (Không biết)</em></p>
+            <p>• <em>빠르다 + 아요 -&gt; 빨라요 (Nhanh)</em></p>
+            <p>• <em>부르다 + 어요 -&gt; 불러요 (Hát / Gọi / No)</em></p>
+            <p>• <em>다르다 + 아요 -&gt; 달라요 (Khác nhau)</em></p>
+          </div>
+          <div class="examples-header">Ví dụ mẫu chuẩn:</div>
+          <div class="example-list">
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">한국 노래를 아주 잘 불러요.</span>
+                <button class="speak-btn" onclick="speakText('한국 노래를 아주 잘 불러요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Bạn ấy hát bài hát tiếng Hàn rất hay.</span>
+            </div>
+            <div class="example-item">
+              <div class="example-top">
+                <span class="example-ko">지하철이 버스보다 훨씬 빨라요.</span>
+                <button class="speak-btn" onclick="speakText('지하철이 버스보다 훨씬 빨라요.')">🔊 Nghe</button>
+              </div>
+              <span class="example-vi">Tàu điện ngầm chạy nhanh hơn xe buýt rất nhiều.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIZ 15 -->
+      <div class="quiz-card">
+        <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 15</div>
+        <div class="quiz-question">Chia đúng động từ '모르다' trong câu: "저는 그 사람의 전화번호를 (...)." (Tôi không biết số điện thoại người đó)</div>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '모르다' là bất quy tắc '르', khi chia đuôi '-아요' biến đổi thành '몰라요'.')">몰라요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''모라요' sai do chưa thêm phụ âm 'ㄹ' vào làm patchim của âm tiết đứng trước.')">모라요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''모르어요' là dạng chia sai có quy tắc thông thường.')">모르어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, ''몰러요' sai vì nguyên âm đứng trước là 'ㅗ' nên phải gắn '-라요', không gắn '-러요'.')">몰러요</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 16: CHUYÊN ĐỀ BẤT QUY TẮC ==================== -->
+    <section class="tab-panel" id="tab-batquytac">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Chuyên Đề Đặc Biệt</span></div>
+        <h2 class="lesson-title-ko">한국어 불규칙 활용 <span class="lesson-title-vi">Chuyên Đề Bất Quy Tắc Tiếng Hàn Toàn Diện</span></h2>
+        <p class="lesson-desc">Hệ thống hóa toàn bộ các hiện tượng biến đổi bất quy tắc trọng tâm của Sơ cấp 2 (ㅎ, ㅅ, 르) và bảng tra cứu 7 bất quy tắc kinh điển của tiếng Hàn cùng các ngoại lệ cần nhớ.</p>
+      </div>
+
+      <!-- CARD 1: TỔNG QUAN 3 BẤT QUY TẮC MỚI TRONG SƠ CẤP 2 -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Chuyên đề 01</span>
+          <span class="rule-name">3 Bất quy tắc trọng tâm Sơ cấp 2: 'ㅎ', 'ㅅ', '르'</span>
+          <span class="rule-trans">So sánh &amp; Bảng đối chiếu</span>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Bất quy tắc</th>
+                  <th>Hiện tượng biến đổi khi gặp nguyên âm</th>
+                  <th>Từ tiêu biểu</th>
+                  <th>Ví dụ chia đuôi -아/어요</th>
+                  <th>Ví dụ chia -(으)면 / -(으)ㄴ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-highlight">Bất quy tắc 'ㅎ' (Bài 10)</td>
+                  <td>• 'ㅎ' rụng đi<br>• Nguyên âm trước biến thành 애/얘</td>
+                  <td>하얗다, 빨갛다, 노랗다, 파랗다, 까맣다, 그렇다, 어떻다</td>
+                  <td>하얘요, 빨개요, 노래요, 파래요, 그래요</td>
+                  <td>하얀 눈, 빨간 사과, 그러면 (ㅎ và 으 đều rụng)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">Bất quy tắc 'ㅅ' (Bài 13)</td>
+                  <td>• 'ㅅ' rụng đi<br>• Giữ nguyên hai nguyên âm độc lập (không gộp âm)</td>
+                  <td>낫다 (khỏi bệnh), 짓다 (xây/nấu), 붓다 (sưng/rót), 잇다 (nối)</td>
+                  <td>나아요, 지어요, 부어요, 이어요</td>
+                  <td>나으면, 지은 집 (vẫn giữ nguyên '으')</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">Bất quy tắc '르' (Bài 15)</td>
+                  <td>• 'ㅡ' mất đi<br>• Thêm 'ㄹ' làm patchim âm trước<br>• Gắn thêm 라/러 theo nguyên âm trước</td>
+                  <td>모르다, 빠르다, 부르다, 고르다, 자르다, 다르다</td>
+                  <td>몰라요, 빨라요, 불러요, 골라요, 잘라요, 달라요</td>
+                  <td>모르면, 빠른 (khi gặp phụ âm chia bình thường)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note-box">
+            <strong>Bảng các từ có quy tắc (KHÔNG biến đổi):</strong>
+            <p>• <strong>ㅎ có quy tắc:</strong> <em>좋다 (좋아요, 좋은), 많다 (많아요, 많은), 낳다 (낳아요), 넣다 (넣어요).</em></p>
+            <p>• <strong>ㅅ có quy tắc:</strong> <em>웃다 (cười -&gt; 웃어요), 씻다 (rửa -&gt; 씻어요), 벗다 (cởi -&gt; 벗어요), 빗다 (chải -&gt; 빗어요).</em></p>
+            <p>• <strong>르 có quy tắc:</strong> <em>따르다 (rót nước/tuân theo -&gt; 따라요 - đây là bất quy tắc 'ㅡ', không phải bất quy tắc '르').</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: BẢNG TỔNG HỢP 7 BẤT QUY TẮC KINH ĐIỂN CỦA TIẾNG HÀN -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Chuyên đề 02</span>
+          <span class="rule-name">Bảng Tra Cứu 7 Bất Quy Tắc Kinh Điển Tiếng Hàn</span>
+          <span class="rule-trans">Sơ cấp 1 + Sơ cấp 2</span>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Bất quy tắc</th>
+                  <th>Quy tắc biến đổi</th>
+                  <th>Ví dụ từ gốc</th>
+                  <th>Chia đuôi -아/어요</th>
+                  <th>Từ ngoại lệ (Có quy tắc)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="col-highlight">'ㄷ' 불규칙</td>
+                  <td>'ㄷ' biến thành 'ㄹ' khi gặp nguyên âm</td>
+                  <td>듣다 (nghe), 걷다 (đi bộ), 묻다 (hỏi)</td>
+                  <td>들어요, 걸어요, 물어요</td>
+                  <td>받다 (nhận), 닫다 (đóng), 믿다 (tin)</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="col-highlight">'ㅂ' 불규칙</td>
+                  <td>'ㅂ' biến thành '우' khi gặp nguyên âm</td>
+                  <td>춥다 (lạnh), 덥다 (nóng), 돕다 (giúp)</td>
+                  <td>추워요, 더워요, 도와요 (돕-&gt;오)</td>
+                  <td>입다 (mặc), 잡다 (bắt), 좁다 (hẹp)</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="col-highlight">'ㅡ' 탈락</td>
+                  <td>'ㅡ' bị rụng khi gặp nguyên âm -아/어</td>
+                  <td>크다 (to), 쓰다 (viết), 바쁘다 (bận)</td>
+                  <td>커요, 써요, 바빠요</td>
+                  <td>Hầu hết mọi từ có 'ㅡ' đều rụng</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="col-highlight">'ㄹ' 탈락</td>
+                  <td>'ㄹ' bị rụng khi gặp ㄴ, ㅂ, ㅅ, (으)ㄹ, (으)ㄴ</td>
+                  <td>살다 (sống), 알다 (biết), 만들다 (làm)</td>
+                  <td>삽니다, 아는 사람, 만듭니다</td>
+                  <td>Gặp nguyên âm -아/어 thì giữ nguyên (살아요)</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="col-highlight">'ㅎ' 불규칙</td>
+                  <td>'ㅎ' rụng, nguyên âm biến thành 애/얘</td>
+                  <td>하얗다, 빨갛다, 그렇다, 어떻다</td>
+                  <td>하얘요, 빨개요, 그래요, 어때요</td>
+                  <td>좋다, 많다, 낳다, 넣다</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="col-highlight">'ㅅ' 불규칙</td>
+                  <td>'ㅅ' rụng khi gặp nguyên âm</td>
+                  <td>낫다 (khỏi), 짓다 (xây), 붓다 (sưng)</td>
+                  <td>나아요, 지어요, 부어요</td>
+                  <td>웃다 (cười), 씻다 (rửa), 벗다 (cởi)</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="col-highlight">'르' 불규칙</td>
+                  <td>'ㅡ' mất, thêm 'ㄹ' làm patchim âm trước</td>
+                  <td>모르다, 빠르다, 부르다, 다르다</td>
+                  <td>몰라요, 빨라요, 불러요, 달라요</td>
+                  <td>따르다 (theo quy tắc rụng 'ㅡ')</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 17: BẢNG TRA CỨU TOÀN DIỆN ==================== -->
+    <section class="tab-panel" id="tab-summary">
+      <div class="lesson-banner">
+        <div class="lesson-meta"><span class="lesson-tag">Tra Cứu Nhanh</span></div>
+        <h2 class="lesson-title-ko">초급 2 문법 총정리 <span class="lesson-title-vi">Bảng Tra Cứu Toàn Diện Ngữ Pháp Sơ Cấp 2</span></h2>
+        <p class="lesson-desc">Phân loại toàn bộ các cấu trúc ngữ pháp trong 15 bài học Sơ cấp 2 thành 4 nhóm logic: Trợ từ, Liên từ nối câu, Cấu trúc chia Động/Tính từ và Chuyên đề Định ngữ.</p>
+      </div>
+
+      <!-- NHÓM 1: TRỢ TỪ -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Nhóm 1</span>
+          <span class="rule-name">Trợ từ &amp; Bổ từ Danh từ</span>
+          <span class="rule-trans">7 cấu trúc tiểu từ</span>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ngữ pháp</th>
+                  <th>Ý nghĩa cốt lõi</th>
+                  <th>Bài</th>
+                  <th>Ví dụ tiêu biểu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-highlight">N + 의</td>
+                  <td>Tiểu từ sở hữu (Của...)</td>
+                  <td>Bài 1</td>
+                  <td>친구의 생일 (Sinh nhật của bạn), 제 이름 (Tên tôi)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + 만</td>
+                  <td>Trợ từ giới hạn (Chỉ...)</td>
+                  <td>Bài 2</td>
+                  <td>주말에만 운동해요 (Tôi chỉ tập thể dục vào cuối tuần)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + 보다</td>
+                  <td>Trợ từ so sánh hơn (So với...)</td>
+                  <td>Bài 3</td>
+                  <td>비행기가 기차보다 빨라요 (Máy bay nhanh hơn tàu hỏa)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + 마다</td>
+                  <td>Trợ từ lặp lại (Mỗi..., cứ mỗi...)</td>
+                  <td>Bài 4</td>
+                  <td>4시간마다 약을 드세요 (Cứ mỗi 4 tiếng hãy uống thuốc)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + (이)나 (lựa chọn)</td>
+                  <td>Hoặc là, hay là...</td>
+                  <td>Bài 9</td>
+                  <td>영화나 연극을 봐요 (Xem phim hoặc xem kịch)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + (이)나 (số lượng)</td>
+                  <td>Tận..., đến tận... (Nhấn mạnh nhiều)</td>
+                  <td>Bài 13</td>
+                  <td>커피를 5잔이나 마셨어요 (Uống tận 5 ly cà phê)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">N + 에게서 / 한테서</td>
+                  <td>Từ ai... (Nguồn gốc nhận)</td>
+                  <td>Bài 15</td>
+                  <td>친구한테서 편지를 받았어요 (Nhận thư từ người bạn)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- NHÓM 2: LIÊN TỪ NỐI CÂU -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Nhóm 2</span>
+          <span class="rule-name">Cấu trúc Nối Câu &amp; Liên kết Mệnh đề</span>
+          <span class="rule-trans">9 cấu trúc liên từ</span>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ngữ pháp</th>
+                  <th>Chức năng &amp; Ý nghĩa</th>
+                  <th>Bài</th>
+                  <th>Ví dụ tiêu biểu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)니까</td>
+                  <td>Vì... nên... (Lý do cho mệnh lệnh, rủ rê)</td>
+                  <td>Bài 2</td>
+                  <td>비가 오니까 우산을 쓰세요 (Vì trời mưa nên hãy che ô)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)면</td>
+                  <td>Nếu... thì... (Giả định điều kiện)</td>
+                  <td>Bài 5</td>
+                  <td>시간이 있으면 영화 봐요 (Nếu có thời gian thì xem phim)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -아/어서</td>
+                  <td>Làm cái này... rồi làm cái kia (Trật tự trước sau)</td>
+                  <td>Bài 6</td>
+                  <td>도서관에 가서 책을 빌렸어요 (Đến thư viện rồi mượn sách)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -기 전에</td>
+                  <td>Trước khi làm gì...</td>
+                  <td>Bài 7</td>
+                  <td>밥 먹기 전에 손 씻어요 (Rửa tay trước khi ăn)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)ㄴ 후에</td>
+                  <td>Sau khi làm gì...</td>
+                  <td>Bài 14</td>
+                  <td>졸업한 후에 취직할 거예요 (Sẽ xin việc sau khi tốt nghiệp)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -거나</td>
+                  <td>Hoặc là, hay là... (Nối 2 hành động/tính chất)</td>
+                  <td>Bài 11</td>
+                  <td>음악을 듣거나 쉬어요 (Nghe nhạc hoặc nghỉ ngơi)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)면서</td>
+                  <td>Vừa... vừa... (Hai hành động song song cùng chủ ngữ)</td>
+                  <td>Bài 12</td>
+                  <td>음악 들으면서 청소해요 (Vừa nghe nhạc vừa dọn phòng)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)ㄴ/는데</td>
+                  <td>Bối cảnh mở đầu / Đối chiếu tương phản nhẹ</td>
+                  <td>Bài 15</td>
+                  <td>비가 오는데 우산 있어요? (Trời đang mưa đấy, có ô không?)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -기 때문에</td>
+                  <td>Vì... nên... (Nguyên nhân khách quan)</td>
+                  <td>Bài 10</td>
+                  <td>눈이 오기 때문에 미끄러워요 (Vì tuyết rơi nên đường trơn)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- NHÓM 3: CHIA ĐỘNG/TÍNH TỪ -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Nhóm 3</span>
+          <span class="rule-name">Cấu trúc Chia Động/Tính từ theo Ý định, Trạng thái &amp; Cảm xúc</span>
+          <span class="rule-trans">18 cấu trúc quan trọng</span>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ngữ pháp</th>
+                  <th>Ý nghĩa cốt lõi</th>
+                  <th>Bài</th>
+                  <th>Ví dụ tiêu biểu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)ㄹ 때</td>
+                  <td>Khi..., lúc làm gì...</td>
+                  <td>Bài 1</td>
+                  <td>아플 때 약을 드세요 (Uống thuốc khi bị đau)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -아/어 주다</td>
+                  <td>Làm gì đó giúp / cho ai</td>
+                  <td>Bài 1</td>
+                  <td>창문 좀 닫아 주세요 (Đóng cửa sổ giúp tôi)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -지 말다</td>
+                  <td>Đừng làm gì... (Mệnh lệnh phủ định)</td>
+                  <td>Bài 2</td>
+                  <td>늦지 마세요 (Xin đừng đến muộn)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -아/어도 되다</td>
+                  <td>Được phép làm gì... / Làm... cũng được</td>
+                  <td>Bài 2</td>
+                  <td>여기 앉아도 돼요? (Tôi ngồi đây có được không?)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)면 안 되다</td>
+                  <td>Không được phép làm gì... (Cấm đoán)</td>
+                  <td>Bài 12</td>
+                  <td>담배를 피우면 안 돼요 (Không được hút thuốc)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -아/어야 하다</td>
+                  <td>Phải làm gì... (Nghĩa vụ bắt buộc)</td>
+                  <td>Bài 4</td>
+                  <td>병원에 가야 해요 (Tôi phải đi bệnh viện)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -지 못하다</td>
+                  <td>Không thể làm gì... (Do hoàn cảnh khách quan)</td>
+                  <td>Bài 5</td>
+                  <td>매운 음식을 못 먹어요 (Không thể ăn đồ cay)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)려고 [하다]</td>
+                  <td>Để làm gì / Dự định làm gì</td>
+                  <td>Bài 7</td>
+                  <td>한국어를 공부하려고 해요 (Tôi dự định học tiếng Hàn)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)ㄹ게요</td>
+                  <td>Tôi sẽ... (Hứa hẹn, cam kết ngôi thứ nhất)</td>
+                  <td>Bài 7</td>
+                  <td>내일 다시 전화할게요 (Ngày mai tôi sẽ gọi lại)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -겠-</td>
+                  <td>Chắc là... / Sẽ... (Phỏng đoán hoặc ý chí trang trọng)</td>
+                  <td>Bài 8</td>
+                  <td>정말 맛있겠어요 (Chắc là ngon lắm đấy)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -네요</td>
+                  <td>Đuôi câu cảm thán (...quá!, ...thế!)</td>
+                  <td>Bài 8</td>
+                  <td>한국말을 잘하시네요 (Bạn nói tiếng Hàn giỏi quá!)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -아/어 보다</td>
+                  <td>Thử làm gì... / Từng làm gì...</td>
+                  <td>Bài 8</td>
+                  <td>입어 보세요 (Hãy mặc thử chiếc áo này)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)면 좋겠다</td>
+                  <td>Ước gì..., giá mà... (Hy vọng mong ước)</td>
+                  <td>Bài 9</td>
+                  <td>날씨가 맑으면 좋겠어요 (Ước gì trời nắng đẹp)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -기 위해서</td>
+                  <td>Vì..., để đạt được mục đích lớn</td>
+                  <td>Bài 9</td>
+                  <td>건강을 위해서 운동해요 (Tập thể dục vì sức khỏe)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">A + -아/어지다</td>
+                  <td>Trở nên..., dần dần... (Biến đổi trạng thái)</td>
+                  <td>Bài 10</td>
+                  <td>날씨가 쌀쌀해졌어요 (Thời tiết trở nên se lạnh)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -고 있다</td>
+                  <td>Đang... (Hiện tại tiếp diễn)</td>
+                  <td>Bài 11</td>
+                  <td>가방을 싸고 있어요 (Tôi đang xếp hành lý)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)ㄴ 적이 있다</td>
+                  <td>Đã từng có trải nghiệm làm gì</td>
+                  <td>Bài 11</td>
+                  <td>한국에 간 적이 있어요 (Tôi đã từng đến Hàn Quốc)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V/A + -(으)ㄹ 것 같다</td>
+                  <td>Hình như..., có vẻ là... (Phỏng đoán nhẹ)</td>
+                  <td>Bài 13</td>
+                  <td>비가 올 것 같아요 (Hình như trời sắp mưa)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -(으)ㄴ 지 되다</td>
+                  <td>Đã làm gì được [khoảng thời gian] rồi</td>
+                  <td>Bài 14</td>
+                  <td>배운 지 6개월 되었어요 (Đã học được 6 tháng rồi)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">V + -기로 하다</td>
+                  <td>Quyết định làm gì...</td>
+                  <td>Bài 14</td>
+                  <td>등산하기로 했어요 (Đã quyết định sẽ đi leo núi)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- NHÓM 4: CHUYÊN ĐỀ ĐỊNH NGỮ TOÀN DIỆN -->
+      <div class="grammar-card">
+        <div class="card-header">
+          <span class="point-tag">Nhóm 4</span>
+          <span class="rule-name">Chuyên Đề Định Ngữ Tiếng Hàn Toàn Diện</span>
+          <span class="rule-trans">Bổ nghĩa cho Danh từ</span>
+        </div>
+        <div class="card-body">
+          <div class="concept-box">
+            <p>Định ngữ là một trong những chuyên đề cốt lõi nhất của Sơ cấp 2, giúp câu văn trở nên phong phú, tự nhiên và liên kết nhiều thông tin trong cùng một mệnh đề.</p>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Thời gian / Loại từ</th>
+                  <th>Công thức</th>
+                  <th>Có patchim</th>
+                  <th>Không patchim</th>
+                  <th>Ví dụ kết hợp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-highlight">Tính từ (Đặc điểm tính chất)</td>
+                  <td><strong>A + -(으)ㄴ</strong></td>
+                  <td>작은, 좋은</td>
+                  <td>예쁜, 큰</td>
+                  <td>예쁜 꽃 (bông hoa đẹp), 큰 방 (căn phòng to)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">Động từ - Hiện tại (Đang làm)</td>
+                  <td><strong>V + -는</strong></td>
+                  <td>먹는, 읽는</td>
+                  <td>가는, 보는, 만드는 (ㄹ rụng)</td>
+                  <td>책을 읽는 사람 (người đang đọc sách)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">Động từ - Quá khứ (Đã làm)</td>
+                  <td><strong>V + -(으)ㄴ</strong></td>
+                  <td>먹은, 읽은</td>
+                  <td>간, 본, 산, 만든</td>
+                  <td>어제 만난 친구 (bạn đã gặp hôm qua)</td>
+                </tr>
+                <tr>
+                  <td class="col-highlight">Động từ - Tương lai (Sẽ làm)</td>
+                  <td><strong>V + -(으)ㄹ</strong></td>
+                  <td>먹을, 읽을</td>
+                  <td>갈, 볼, 살, 만들</td>
+                  <td>내일 할 일 (việc sẽ làm vào ngày mai)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div><!-- /.content-area -->
+    </div><!-- /.app-layout -->
+  </main>
+
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="Lên đầu trang">↑</button>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // LOAD KOREAN VOICE FOR WEB SPEECH API
+    let koreanVoice = null;
+    function loadKoreanVoice() {
+      if ('speechSynthesis' in window) {
+        const voices = window.speechSynthesis.getVoices();
+        koreanVoice = voices.find(v => v.lang === 'ko-KR' || v.lang.startsWith('ko') || (v.name && v.name.toLowerCase().includes('korean')));
+      }
+    }
+    if ('speechSynthesis' in window) {
+      loadKoreanVoice();
+      window.speechSynthesis.onvoiceschanged = loadKoreanVoice;
+    }
+
+    // TAB SWITCHING
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+      const targetPanel = document.getElementById(tabId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+        const searchInput = document.getElementById('grammarSearch');
+        if (!searchInput || !searchInput.value.trim()) {
+          targetPanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+        }
+      }
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // SPEECH SYNTHESIS (KOREAN TTS)
+    function speakText(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const cleanText = text.replace(/\[.*?\]/g, '')
+                              .replace(/➔.*$/g, '')
+                              .replace(/[^\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\s0-9,.?!]/g, ' ')
+                              .trim();
+        const utterance = new SpeechSynthesisUtterance(cleanText || text);
+        utterance.lang = 'ko-KR';
+        if (koreanVoice) utterance.voice = koreanVoice;
+
+        const rateSelect = document.getElementById('ttsRate');
+        utterance.rate = rateSelect ? (parseFloat(rateSelect.value) || 0.85) : 0.85;
+
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Trình duyệt của bạn chưa hỗ trợ Web Speech API để phát âm!');
+      }
+    }
+
+    // CLEAR SEARCH
+    function clearSearch() {
+      const searchInput = document.getElementById('grammarSearch');
+      if (searchInput) {
+        searchInput.value = '';
+        handleSearch();
+      }
+    }
+
+    // SEARCH FUNCTIONALITY
+    function handleSearch() {
+      const searchInput = document.getElementById('grammarSearch');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      const query = (searchInput.value || '').trim().toLowerCase();
+
+      if (clearBtn) clearBtn.hidden = (query.length === 0);
+
+      const allCards = document.querySelectorAll('.grammar-card');
+
+      if (!query) {
+        const activePanel = document.querySelector('.tab-panel.active');
+        if (activePanel) {
+          activePanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+        }
+        return;
+      }
+
+      let firstMatchFound = false;
+      allCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+          if (!firstMatchFound) {
+            const parentPanel = card.closest('.tab-panel');
+            if (parentPanel && !parentPanel.classList.contains('active')) {
+              switchTab(parentPanel.id);
+            }
+            firstMatchFound = true;
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // SCROLL TO TOP
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      if (btn) {
+        if (window.scrollY > 300) btn.classList.add('show');
+        else btn.classList.remove('show');
+      }
+    });
+
+    // QUIZ CHECKER
+    function checkQuiz(optionElem, isCorrect, explanation) {
+      const parentQuiz = optionElem.closest('.quiz-card');
+      const allOptions = parentQuiz.querySelectorAll('.quiz-option');
+      const feedbackElem = parentQuiz.querySelector('.quiz-feedback');
+
+      allOptions.forEach(opt => opt.style.pointerEvents = 'none');
+
+      if (isCorrect) {
+        optionElem.classList.add('correct');
+        feedbackElem.style.display = 'block';
+        feedbackElem.style.backgroundColor = '#dcfce7';
+        feedbackElem.style.color = '#15803d';
+        feedbackElem.innerHTML = '🎉 <strong>Chính xác!</strong> ' + explanation;
+      } else {
+        optionElem.classList.add('wrong');
+        feedbackElem.style.display = 'block';
+        feedbackElem.style.backgroundColor = '#fee2e2';
+        feedbackElem.style.color = '#b91c1c';
+        feedbackElem.innerHTML = '❌ <strong>Chưa chính xác:</strong> ' + explanation;
+      }
+    }
+  </script>
+</body>
+</html>
