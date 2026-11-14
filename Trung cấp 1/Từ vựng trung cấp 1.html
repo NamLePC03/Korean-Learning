@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Từ Vựng Tiếng Hàn Trung Cấp 1 — Bảng Từ Mới Toàn Diện</title>
+  <!-- Google Fonts: Đồng nhất hoàn toàn với file Ngữ Pháp -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --primary-light: #e0e7ff;
+      --secondary: #0ea5e9;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --success-bg: #ecfdf5;
+      --warning: #f59e0b;
+      --warning-bg: #fffbeb;
+      --danger: #ef4444;
+      --danger-bg: #fef2f2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --korean-font: 'Noto Sans KR', sans-serif;
+      --viet-font: 'Be Vietnam Pro', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--viet-font);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* HERO HEADER */
+    .hero-header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+      color: #ffffff;
+      padding: 38px 24px 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-header::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .badge-book {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-top: 8px;
+      line-height: 1.25;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #93c5fd, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      margin-top: 6px;
+      max-width: 780px;
+      line-height: 1.55;
+    }
+
+    /* CONTROLS BAR */
+    .controls-bar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      padding: 10px 40px 10px 40px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-main);
+      font-size: 14.5px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-wrapper input:focus {
+      background: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.4);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      color: #64748b;
+      pointer-events: none;
+    }
+
+    #clearSearch {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      line-height: 1;
+    }
+    #clearSearch:hover {
+      color: var(--text-main);
+      background: #e2e8f0;
+    }
+    #clearSearch[hidden] {
+      display: none !important;
+    }
+
+    /* TTS CONTROLS */
+    .tts-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+
+    .tts-controls select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+    }
+    .tts-controls select option {
+      color: #1e293b;
+      background: #ffffff;
+    }
+
+    /* APP LAYOUT: SIDEBAR + CONTENT */
+    .app-container {
+      max-width: 1400px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+    }
+
+    .app-layout {
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* SIDEBAR (LEFT COLUMN) */
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-header {
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* TOPIC BUTTONS */
+    .topic-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .side-btn {
+      width: 100%;
+      text-align: left;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .side-btn:hover {
+      background: #f1f5f9;
+      color: var(--primary-dark);
+      border-color: #e2e8f0;
+    }
+    .side-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+    }
+    .side-btn .btn-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .side-btn .btn-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 1px 7px;
+      border-radius: 9999px;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+    }
+    .side-btn.active .btn-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* POS PILLS IN SIDEBAR */
+    .pos-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .pos-chip {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .pos-chip:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+    .pos-chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .pos-chip .num {
+      font-size: 10.5px;
+      opacity: 0.8;
+    }
+
+    /* JAMO GRID IN SIDEBAR */
+    .jamo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4px;
+    }
+    .jbtn {
+      padding: 6px 2px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--korean-font);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.1;
+    }
+    .jbtn:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+    .jbtn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+    .jbtn .jn {
+      font-size: 9.5px;
+      font-family: var(--viet-font);
+      font-weight: 400;
+      opacity: 0.75;
+      margin-top: 1px;
+    }
+    .jbtn.all-jamo {
+      grid-column: 1 / -1;
+      font-family: var(--viet-font);
+      font-size: 12px;
+      flex-direction: row;
+      justify-content: center;
+      padding: 6px 10px;
+    }
+
+    /* RIGHT CONTENT AREA */
+    .content-area {
+      min-width: 0;
+    }
+
+    /* STATUS BAR */
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .status-info {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .status-info strong {
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .status-filter-tags {
+      display: inline-flex;
+      gap: 6px;
+      margin-left: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-tag-pill {
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .btn-reset-all {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--danger);
+      background: var(--danger-bg);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-reset-all:hover {
+      background: #fee2e2;
+    }
+
+    /* VOCABULARY LIST / GRID */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      .vocab-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* VOCABULARY CARD */
+    .vocab-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .vocab-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .card-word-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .word-ko {
+      font-family: var(--korean-font);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+    }
+
+    .word-ro {
+      font-size: 12.5px;
+      color: var(--primary);
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .btn-speak {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .btn-speak:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      transform: scale(1.08);
+    }
+    .btn-speak:active {
+      transform: scale(0.95);
+    }
+
+    /* BADGES */
+    .card-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      line-height: 1.35;
+    }
+    .badge-topic {
+      background: #f8fafc;
+      color: #334155;
+      border: 1px solid var(--border);
+    }
+    .badge-pos-danh {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+    .badge-pos-dong {
+      background: var(--success-bg);
+      color: #065f46;
+    }
+    .badge-pos-tinh {
+      background: var(--warning-bg);
+      color: #92400e;
+    }
+    .badge-pos-khac {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .word-vi {
+      font-size: 14.5px;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .word-vi .flag {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-left: 6px;
+    }
+
+    mark {
+      background: #fef08a;
+      color: inherit;
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+
+    /* JAMO SECTION HEADER (WHEN SHOWING ALL) */
+    .jamo-divider {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary);
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      margin-top: 8px;
+    }
+    .jamo-divider b {
+      font-family: var(--korean-font);
+      font-size: 18px;
+      color: var(--primary);
+    }
+    .jamo-divider span {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      grid-column: 1 / -1;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .empty-state h3 {
+      font-family: var(--korean-font);
+      font-size: 26px;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .empty-state p {
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      z-index: 100;
+    }
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -3px rgba(79, 70, 229, 0.4);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 960px) {
+      .app-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        padding: 14px;
+      }
+      .topic-list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+      .side-btn {
+        width: auto;
+        flex: 0 0 auto;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO HEADER (Đồng nhất hoàn toàn với file Ngữ Pháp) -->
+  <header class="hero-header">
+    <div class="header-container">
+      <div class="header-top">
+        <div>
+          <div class="badge-book">📚 GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP · TRUNG CẤP 1</div>
+          <h1 class="hero-title">새 단어 찾기 · <span>Bảng Từ Mới Toàn Diện Trung Cấp 1</span></h1>
+          <p class="hero-subtitle">Toàn bộ <b>952 từ vựng</b> chuẩn trung cấp 1 (15 bài học chính khóa, tổng hợp đầy đủ từ 기본 어휘 &amp; 새 단어), tra cứu đa chiều, phiên âm chuẩn &amp; phát âm AI.</p>
+        </div>
+      </div>
+
+      <!-- CONTROLS BAR: TÌM KIẾM + TỐC ĐỘ ĐỌC -->
+      <div class="controls-bar">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="q" placeholder="Tìm bằng tiếng Hàn, phiên âm, hoặc tiếng Việt (phím tắt: /)..." autocomplete="off" spellcheck="false">
+          <button type="button" id="clearSearch" title="Xóa tìm kiếm" hidden>&times;</button>
+        </div>
+
+        <!-- TÙY CHỈNH TỐC ĐỘ ĐỌC TTS -->
+        <div class="tts-controls">
+          <label for="ttsRate">Tốc độ đọc:</label>
+          <select id="ttsRate">
+            <option value="0.7">Chậm (0.7x)</option>
+            <option value="0.85" selected>Chuẩn học tập (0.85x)</option>
+            <option value="1.0">Chuẩn bản xứ (1.0x)</option>
+            <option value="1.2">Nhanh (1.2x)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- APP MAIN CONTAINER -->
+  <main class="app-container">
+    <div class="app-layout">
+
+      <!-- LEFT SIDEBAR: PHÂN LOẠI DỰNG THÀNH CỘT DỄ DÀNG CHUYỂN TAB -->
+      <aside class="sidebar" id="sidebar">
+
+        <!-- 1. CHỦ ĐỀ TỪ VỰNG -->
+        <div class="sidebar-section">
+          <div class="sidebar-header">
+            <div class="sidebar-title">
+              <span>Chủ Đề Từ Vựng</span>
+              <span id="topicTotalBadge">15 bài học</span>
+            </div>
+            <div class="sidebar-subtitle">Theo 15 bài học Trung Cấp 1</div>
+          </div>
+          <div class="topic-list" id="topicList"></div>
+        </div>
+
+        <!-- 2. TỪ LOẠI -->
+        <div class="sidebar-section">
+          <div class="sidebar-header">
+            <div class="sidebar-title">
+              <span>Từ Loại (POS)</span>
+            </div>
+            <div class="sidebar-subtitle">Danh từ, Động từ, Tính từ</div>
+          </div>
+          <div class="pos-group" id="posGroup"></div>
+        </div>
+
+        <!-- 3. PHỤ ÂM ĐẦU (HANGEUL) -->
+        <div class="sidebar-section">
+          <div class="sidebar-header">
+            <div class="sidebar-title">
+              <span>Phụ Âm Đầu</span>
+            </div>
+            <div class="sidebar-subtitle">Tra theo bảng chữ cái Hangeul</div>
+          </div>
+          <div class="jamo-grid" id="jamoGrid"></div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT AREA -->
+      <div class="content-area">
+
+        <!-- STATUS BAR -->
+        <div class="status-bar" id="statusBar">
+          <div class="status-info" id="statusInfo">
+            Hiển thị: <strong>952</strong> / 952 từ vựng
+          </div>
+          <div id="statusActions"></div>
+        </div>
+
+        <!-- VOCABULARY CARDS LIST -->
+        <div class="vocab-grid" id="vocabGrid"></div>
+
+      </div><!-- /.content-area -->
+
+    </div><!-- /.app-layout -->
+  </main>
+
+  <button class="back-to-top" id="backToTop" type="button" title="Lên đầu trang">↑</button>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const DATA = [{"k": "MP3", "v": "mp3", "r": "empisseuri", "c": "bai-15", "pos": "danh", "g": "기타", "a": 0}, {"k": "MT", "v": "dã ngoại tập thể (membership training)", "r": "emti", "c": "bai-01", "pos": "danh", "g": "기타", "a": 0}, {"k": "가계부를 쓰다", "v": "viết sổ chi tiêu", "r": "gagyebureul sseuda", "c": "bai-06", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "가능하면", "v": "nếu có thể", "r": "ganeunghamyeon", "c": "bai-02", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "가루비누", "v": "xà phòng bột", "r": "garubinu", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "가벼운 운동을 하다", "v": "vận động nhẹ nhàng", "r": "gabyeoun undongeul hada", "c": "bai-03", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "(가슴이) 답답하다", "v": "tức ngực, khó chịu", "r": "gaseumi dapdaphada", "c": "bai-03", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "가정 문제", "v": "vấn đề gia đình", "r": "gajeong munje", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "가족 여행", "v": "du lịch gia đình", "r": "gajok yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "각각", "v": "từng cái", "r": "gakgak", "c": "bai-14", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "각종", "v": "các loại", "r": "gakjong", "c": "bai-13", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "간식", "v": "món ăn nhẹ", "r": "gansik", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "간을 보다", "v": "nếm độ mặn nhạt", "r": "ganeul boda", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "간을 하다", "v": "thêm gia vị", "r": "ganeul hada", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "간이 맞다", "v": "vừa", "r": "gani matda", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "간장", "v": "xì dầu", "r": "ganjang", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "갈등을 겪다", "v": "trải qua mâu thuẫn", "r": "galdeungeul gyeokda", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "갈등을 극복하다", "v": "khắc phục mâu thuẫn", "r": "galdeungeul geukbokhada", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "갈등을 해소하다", "v": "giải quyết mâu thuẫn", "r": "galdeungeul haesohada", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "갈등이 생기다", "v": "xảy ra mâu thuẫn", "r": "galdeungi saenggida", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "갈비찜", "v": "sườn hấp", "r": "galbijjim", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "갈비탕", "v": "canh sườn", "r": "galbitang", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "감독", "v": "đạo diễn", "r": "gamdok", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "감동적이다", "v": "cảm động", "r": "gamdongjeogida", "c": "bai-14", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "감상문", "v": "bài cảm nhận", "r": "gamsangmun", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "(감정이) 풍부하다", "v": "(tình cảm) phong phú", "r": "(gamjeongi) pungbuhada", "c": "bai-07", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "갑자기", "v": "bất ngờ", "r": "gapjagi", "c": "bai-08", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "강력 접착제", "v": "keo tăng lực", "r": "gangnyeok jeopchakje", "c": "bai-08", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "강의를 듣다", "v": "nghe giảng, dự thính", "r": "ganguireul deutda", "c": "bai-01", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "강의실", "v": "phòng học", "r": "ganguisil", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "개교기념일", "v": "Ngày kỷ niệm thành lập trường", "r": "gaegyoginyeomil", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "개발하다", "v": "khai thác, phát triển", "r": "gaebalhada", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "개발하다", "v": "khai thác, phát triển", "r": "gaebalhada", "c": "bai-13", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "개별난방", "v": "hệ thống sưởi sàn riêng", "r": "gaebyeolnanbang", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "개봉하다", "v": "khởi chiếu", "r": "gaebonghada", "c": "bai-14", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "개인 주택", "v": "nhà riêng", "r": "gaein jutaek", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "거절을 당하다", "v": "bị từ chối", "r": "geojeoreul danghada", "c": "bai-02", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "거절하다", "v": "từ chối", "r": "geojeolhada", "c": "bai-02", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "건강에 나쁘다", "v": "không tốt cho sức khỏe", "r": "geongange nappeuda", "c": "bai-03", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "건강에 좋다", "v": "tốt cho sức khỏe", "r": "geongange jota", "c": "bai-03", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "건강을 유지하다", "v": "duy trì sức khỏe", "r": "geongangeul yujihada", "c": "bai-03", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "건강을 잃다", "v": "mất sức khỏe", "r": "geongangeul ilta", "c": "bai-03", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "건강을 지키다", "v": "giữ gìn sức khỏe", "r": "geongangeul jikida", "c": "bai-03", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "건강하다", "v": "khỏe mạnh", "r": "geonganghada", "c": "bai-03", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "건망증이 있다", "v": "đãng trí", "r": "geonmangjeungi itda", "c": "bai-08", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "검색", "v": "tìm kiếm", "r": "geomsaek", "c": "bai-12", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "겁이 나다", "v": "lo sợ", "r": "geobi nada", "c": "bai-02", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "겉옷", "v": "áo ngoài", "r": "geodot", "c": "bai-04", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "게으르다", "v": "lười nhác", "r": "geeureuda", "c": "bai-07", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "격려하다", "v": "khích lệ, động viên", "r": "gyeongnyeohada", "c": "bai-07", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "견과", "v": "quả hạch", "r": "gyeongwa", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "결근", "v": "vắng mặt, không đến cơ quan", "r": "gyeolgeun", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "경로석", "v": "ghế dành cho người già", "r": "gyeongnoseok", "c": "bai-08", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "경쟁", "v": "cạnh tranh", "r": "gyeongjaeng", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "경제적 문제", "v": "vấn đề kinh tế", "r": "gyeongjejeok munje", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "경험을 쌓다", "v": "tích lũy kinh nghiệm", "r": "gyeongheomeul ssata", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "계곡", "v": "khe suối", "r": "gyegok", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계란찜", "v": "trứng bác", "r": "gyeranjjim", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계산적이다", "v": "mang tính thống kê", "r": "gyesanjeogida", "c": "bai-07", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "계약금", "v": "tiền hợp đồng", "r": "gyeyakgeum", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계약서", "v": "bản hợp đồng", "r": "gyeyakseo", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계약하다", "v": "ký hợp đồng", "r": "gyeyakhada", "c": "bai-09", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "계좌 번호", "v": "số tài khoản", "r": "gyejwa beonho", "c": "bai-06", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계좌 이체", "v": "chuyển tiền qua tài khoản", "r": "gyejwa iche", "c": "bai-06", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "계획을 세우다", "v": "lên kế hoạch", "r": "gyehoegeul seuda", "c": "bai-10", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "고객", "v": "quý khách", "r": "gogaek", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "고궁", "v": "cố cung", "r": "gogung", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "고민을 해결하다", "v": "giải quyết nỗi lo", "r": "gomineul haegyeolhada", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "고민이 생기다", "v": "có nỗi lo", "r": "gomini saenggida", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "고시원", "v": "nhà ở cho học sinh học thi", "r": "gosiwon", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "고아원", "v": "viện trẻ mồ côi", "r": "goawon", "c": "bai-13", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "고집이 세다", "v": "bảo thủ, bướng bỉnh, cứng đầu", "r": "gojibi seda", "c": "bai-07", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "고추장 양념", "v": "gia vị tương ớt", "r": "gochujang yangnyeom", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "고춧가루", "v": "bột ớt", "r": "gochutgaru", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "곡창지대", "v": "kho thóc, vựa lúa", "r": "gokchangjidae", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "골프 여행", "v": "du lịch chơi gôn", "r": "golpeu yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "곰곰이", "v": "cẩn thận, kỹ càng (suy nghĩ)", "r": "gomgomi", "c": "bai-08", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "공경하다", "v": "cung kính, kính trọng", "r": "gonggyeonghada", "c": "bai-15", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "공고", "v": "thông báo, chắc chắn, vững chắc", "r": "gonggo", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공공장소", "v": "nơi công cộng", "r": "gonggongjangso", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공과금", "v": "tiền công ích (như tiền điện, tiền nước, thuế...)", "r": "gonggwageum", "c": "bai-06", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공과금을 내다", "v": "nộp chi phí công cộng", "r": "gonggwageumeul naeda", "c": "bai-06", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "공동생활", "v": "sinh hoạt chung", "r": "gongdongsaenghwal", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공상과학영화", "v": "phim khoa học viễn tưởng", "r": "gongsanggwahagyeonghwa", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공연장", "v": "nơi biểu diễn", "r": "gongyeonjang", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "공포 영화", "v": "phim kinh dị", "r": "gongpo yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "과로하다", "v": "lao động quá sức", "r": "gwarohada", "c": "bai-03", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "과목", "v": "môn học", "r": "gwamok", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "과제", "v": "bài tập", "r": "gwaje", "c": "bai-08", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관계", "v": "quan hệ", "r": "gwangye", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관공서", "v": "cơ quan nhà nước", "r": "gwangongseo", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관람객", "v": "người xem", "r": "gwallamgaek", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관람평", "v": "bình luận sau khi xem", "r": "gwallampyeong", "c": "bai-14", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관람하다", "v": "xem phim", "r": "gwallamhada", "c": "bai-14", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "관련되다", "v": "có liên quan", "r": "gwallyeondoeda", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "관리", "v": "quản lý", "r": "gwalli", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관리비", "v": "phí quản lý", "r": "gwallibi", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "관습", "v": "thói quen, theo thói quen", "r": "gwanseup", "c": "bai-09", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교류", "v": "giao lưu", "r": "gyoryu", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교복", "v": "đồng phục học sinh", "r": "gyobok", "c": "bai-04", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교육자", "v": "nhà giáo dục", "r": "gyoyukja", "c": "bai-13", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교환", "v": "đổi lại (hàng hóa)", "r": "gyohwan", "c": "bai-04", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교환권", "v": "có quyền đổi lại, chứng từ đổi hàng", "r": "gyohwangwon", "c": "bai-04", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "교환학생", "v": "sinh viên trao đổi", "r": "gyohwanhaksaeng", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "구멍", "v": "cái lỗ", "r": "gumeong", "c": "bai-04", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "구분되다", "v": "bị chia ra, được phân ra", "r": "gubundoeda", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "구입하다", "v": "mua sắm", "r": "guiphada", "c": "bai-04", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "구체적으로", "v": "một cách cụ thể", "r": "guchejeogeuro", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "국내 여행", "v": "du lịch trong nước", "r": "gungnae yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "국립공원", "v": "công viên quốc gia", "r": "gungnipgongwon", "c": "bai-10", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "굽다", "v": "nướng", "r": "gupda", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "궁궐", "v": "cung vua", "r": "gunggwol", "c": "bai-12", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "궁중", "v": "trong cung", "r": "gungjung", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "권하다", "v": "yêu cầu", "r": "gwonhada", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "귀가 얇다", "v": "cả tin", "r": "gwiga yalda", "c": "bai-07", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "규칙", "v": "quy tắc", "r": "gyuchik", "c": "bai-03", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "규칙", "v": "quy tắc", "r": "gyuchik", "c": "bai-15", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "규칙[법]을 어기다[위반하다]", "v": "trái, vi phạm quy tắc [luật]", "r": "gyuchik[beob]eul eogida[wibanhada]", "c": "bai-15", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "규칙에 어긋나다", "v": "trái quy tắc", "r": "gyuchige eogeunnada", "c": "bai-15", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "규칙을 지키다", "v": "giữ quy tắc", "r": "gyuchigeul jikida", "c": "bai-15", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "규칙적", "v": "mang tính quy tắc", "r": "gyuchikjeok", "c": "bai-03", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "그리 -지 않다", "v": "(bổ trợ nghĩa phủ định)", "r": "geuri -ji anta", "c": "bai-03", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "글씨", "v": "chữ viết", "r": "geulssi", "c": "bai-07", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "글씨", "v": "chữ", "r": "geulssi", "c": "bai-08", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "글씨 모양", "v": "phông chữ", "r": "geulssi moyang", "c": "bai-12", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "글씨 크기", "v": "cỡ chữ", "r": "geulssi keugi", "c": "bai-12", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "금메달을 따다", "v": "đạt huy chương vàng", "r": "geummedareul ttada", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "긍정적이다", "v": "mang tính tích cực", "r": "geungjeongjeogida", "c": "bai-07", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "기도", "v": "sự cầu nguyện", "r": "gido", "c": "bai-13", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "기말고사", "v": "thi cuối kỳ", "r": "gimalgosa", "c": "bai-01", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "기법", "v": "kỹ xảo, phương pháp", "r": "gibeop", "c": "bai-11", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "기부를 하다", "v": "quyên góp", "r": "gibureul hada", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "기억에 남다", "v": "đáng nhớ", "r": "gieoge namda", "c": "bai-14", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "기억하다", "v": "nhớ, ghi nhớ", "r": "gieokhada", "c": "bai-08", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "긴장되다", "v": "căng thẳng", "r": "ginjangdoeda", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "긴장하다", "v": "căng thẳng", "r": "ginjanghada", "c": "bai-07", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "김치찌개", "v": "canh Kimchi", "r": "gimchijjigae", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "깎다", "v": "gọt", "r": "kkakda", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "깜빡하다", "v": "quên khuấy mất", "r": "kkamppakhada", "c": "bai-08", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "깨뜨리다", "v": "làm vỡ", "r": "kkaetteurida", "c": "bai-08", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "깨소금", "v": "muối vừng", "r": "kkaesogeum", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "껍질", "v": "vỏ", "r": "kkeopjil", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "꼬치", "v": "đuôi", "r": "kkochi", "c": "bai-05", "pos": "danh", "g": "ㄱ", "a": 0}, {"k": "꿈을 이루다", "v": "đạt được ước mơ", "r": "kkumeul iruda", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "꿈을 펼치다", "v": "dang rộng ước mơ", "r": "kkumeul pyeolchida", "c": "bai-13", "pos": "khac", "g": "ㄱ", "a": 0}, {"k": "끌다", "v": "kéo, lôi kéo", "r": "kkeulda", "c": "bai-11", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "끓이다", "v": "đun", "r": "kkeurida", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "끔찍하다", "v": "kinh khủng, khủng khiếp", "r": "kkeumjjikada", "c": "bai-14", "pos": "tinh", "g": "ㄱ", "a": 0}, {"k": "끼다", "v": "chật", "r": "kkida", "c": "bai-04", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "끼우다", "v": "bỏ vào, cho vào", "r": "kkiuda", "c": "bai-05", "pos": "dong", "g": "ㄱ", "a": 0}, {"k": "나뉘다", "v": "được chia ra", "r": "nanwida", "c": "bai-14", "pos": "dong", "g": "ㄴ", "a": 0}, {"k": "나룻배", "v": "thuyền nhỏ, đò chèo", "r": "narutbae", "c": "bai-10", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "나물", "v": "rau, rau cỏ", "r": "namul", "c": "bai-05", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "낙서", "v": "hình vẽ hoặc chữ viết bậy", "r": "nakseo", "c": "bai-15", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "난방비", "v": "phí sưởi ấm, phí lò sưởi", "r": "nanbangbi", "c": "bai-09", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "남향집", "v": "nhà hướng Nam", "r": "namhyangjip", "c": "bai-09", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "내성적이다", "v": "trầm lắng, có nội tâm", "r": "naeseongjeogida", "c": "bai-07", "pos": "tinh", "g": "ㄴ", "a": 0}, {"k": "넘어지다", "v": "ngã", "r": "neomeojida", "c": "bai-08", "pos": "dong", "g": "ㄴ", "a": 0}, {"k": "노력하다", "v": "nỗ lực", "r": "noryeokada", "c": "bai-13", "pos": "dong", "g": "ㄴ", "a": 0}, {"k": "놀이공원", "v": "công viên vui chơi, giải trí", "r": "norigongwon", "c": "bai-10", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "농담", "v": "nói đùa", "r": "nongdam", "c": "bai-02", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "누구든지", "v": "bất cứ ai", "r": "nugudeunji", "c": "bai-08", "pos": "khac", "g": "ㄴ", "a": 0}, {"k": "눈높이", "v": "đòi hỏi tiêu chuẩn cao", "r": "nunnopi", "c": "bai-11", "pos": "danh", "g": "ㄴ", "a": 0}, {"k": "눈이 높다", "v": "kén chọn, tiêu chuẩn cao", "r": "nuni nopda", "c": "bai-07", "pos": "khac", "g": "ㄴ", "a": 0}, {"k": "늘다", "v": "tăng", "r": "neulda", "c": "bai-11", "pos": "dong", "g": "ㄴ", "a": 0}, {"k": "다가오다", "v": "đến gần", "r": "dagaoda", "c": "bai-02", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "다세대주택", "v": "nhà có nhiều thế hệ cùng chung sống", "r": "dasedaejutaek", "c": "bai-09", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "다양하다", "v": "đa dạng, nhiều loại", "r": "dayanghada", "c": "bai-07", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "다지다", "v": "giã", "r": "dajida", "c": "bai-05", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "다투다", "v": "cãi nhau", "r": "datuda", "c": "bai-07", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "단백질", "v": "chất đạm", "r": "danbaekjil", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "달구다", "v": "làm nóng, nung", "r": "dalguda", "c": "bai-05", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "달콤하다", "v": "ngọt dịu", "r": "dalkomhada", "c": "bai-05", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "닮다", "v": "giống", "r": "damda", "c": "bai-07", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "담그다", "v": "muối, ướp, ngâm", "r": "damgeuda", "c": "bai-05", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "담백하다", "v": "đạm bạc", "r": "dambaekhada", "c": "bai-05", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "답 메일", "v": "Thư điện tử(E-mail)trả lời", "r": "dap meil", "c": "bai-12", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "당근", "v": "cà rốt", "r": "danggeun", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "당면", "v": "miến", "r": "dangmyeon", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "당일", "v": "ngày đó (ngày xảy ra sự kiện)", "r": "dangil", "c": "bai-10", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "당첨되다", "v": "trúng, được chọn", "r": "dangcheomdoeda", "c": "bai-13", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "대기업", "v": "doanh nghiệp lớn", "r": "daegieop", "c": "bai-01", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "대사", "v": "lời thoại", "r": "daesa", "c": "bai-14", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "대인 관계", "v": "quan hệ xã hội", "r": "daein gwangye", "c": "bai-02", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "대인 관계가 좋다", "v": "quan hệ xã hội tốt", "r": "daein gwangyega jota", "c": "bai-02", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "대중교통", "v": "giao thông công cộng", "r": "daejunggyotong", "c": "bai-15", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "대출", "v": "cho vay, cho mượn", "r": "daechul", "c": "bai-12", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "대출하다", "v": "vay tiền", "r": "daechulhada", "c": "bai-06", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "대파", "v": "hành paro", "r": "daepa", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "댓글", "v": "ý kiến cá nhân", "r": "daetgeul", "c": "bai-12", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "덜", "v": "ít hơn", "r": "deol", "c": "bai-05", "pos": "khac", "g": "ㄷ", "a": 0}, {"k": "데이트 신청을 하다", "v": "đặt vấn đề hẹn hò (quan hệ nam nữ)", "r": "deiteu sincheongeul hada", "c": "bai-08", "pos": "khac", "g": "ㄷ", "a": 0}, {"k": "델타", "v": "vùng châu thổ", "r": "delta", "c": "bai-10", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "도덕", "v": "đạo đức", "r": "dodeok", "c": "bai-15", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "도둑맞다", "v": "bị ăn trộm", "r": "dodungmatda", "c": "bai-06", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "도보", "v": "đi bộ", "r": "dobo", "c": "bai-09", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "도움을 청하다", "v": "yêu cầu được giúp", "r": "doumeul cheonghada", "c": "bai-02", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "도장", "v": "con dấu", "r": "dojang", "c": "bai-06", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "도전하다", "v": "thử thách", "r": "dojeonhada", "c": "bai-05", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "도전하다", "v": "thử thách", "r": "dojeonhada", "c": "bai-13", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "도착하다", "v": "đến nơi", "r": "dochakhada", "c": "bai-10", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "독특하다", "v": "đặc biệt, khác lạ", "r": "dokteukhada", "c": "bai-05", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "돌려주다", "v": "đưa trả lại", "r": "dollyeojuda", "c": "bai-08", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "돌리다", "v": "quay lại, quay", "r": "dollida", "c": "bai-12", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "동반", "v": "đồng hành", "r": "dongban", "c": "bai-10", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동시통역사", "v": "người thông dịch đuổi", "r": "dongsitongyeoksa", "c": "bai-13", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동아리", "v": "câu lạc bộ", "r": "dongari", "c": "bai-01", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동영상", "v": "đoạn phim hình", "r": "dongyeongsang", "c": "bai-12", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동전", "v": "tiền xu", "r": "dongjeon", "c": "bai-06", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동전을 교환하다", "v": "đổi tiền xu", "r": "dongjeoneul gyohwanhada", "c": "bai-06", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "동창회", "v": "họp mặt bạn cùng lớp", "r": "dongchanghoe", "c": "bai-02", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "동호회", "v": "hội người cùng sở thích", "r": "donghohoe", "c": "bai-02", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "되돌리기", "v": "quay lại", "r": "doedolligi", "c": "bai-12", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "된장찌개", "v": "canh tương", "r": "doenjangjjigae", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "두려워하다", "v": "lo ngại, sợ", "r": "duryeowohada", "c": "bai-08", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "두렵다", "v": "lo sợ", "r": "duryeopda", "c": "bai-11", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "두르다", "v": "cuốn", "r": "dureuda", "c": "bai-05", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "두부조림", "v": "đậu phụ rim", "r": "dubujorim", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "뒤풀이", "v": "ăn mừng hoàn thành công việc, liên hoan tổng kết", "r": "dwipuri", "c": "bai-02", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "드라마", "v": "phim truyền hình dài tập", "r": "deurama", "c": "bai-08", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "든든하다", "v": "rắn chắc, khỏe", "r": "deundeunhada", "c": "bai-05", "pos": "tinh", "g": "ㄷ", "a": 0}, {"k": "들르다", "v": "ghé qua", "r": "deulleuda", "c": "bai-02", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "등급", "v": "đẳng cấp", "r": "deunggeup", "c": "bai-14", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "등록금", "v": "tiền đăng ký học", "r": "deungnokgeum", "c": "bai-01", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "등록하다", "v": "đăng ký", "r": "deungnokhada", "c": "bai-01", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "등뼈", "v": "xương sống", "r": "deungppyeo", "c": "bai-05", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "등산복", "v": "trang phục leo núi", "r": "deungsanbok", "c": "bai-04", "pos": "danh", "g": "ㄷ", "a": 0}, {"k": "때때로", "v": "đôi khi, thỉnh thoảng", "r": "ttaettaero", "c": "bai-02", "pos": "khac", "g": "ㄷ", "a": 0}, {"k": "때로", "v": "đôi khi, thỉnh thoảng", "r": "ttaero", "c": "bai-11", "pos": "khac", "g": "ㄷ", "a": 0}, {"k": "떠올리다", "v": "nhớ lại, hiện ra", "r": "tteoollida", "c": "bai-11", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "떡을 돌리다", "v": "chia bánh teok cho láng giềng", "r": "tteogeul dollida", "c": "bai-09", "pos": "khac", "g": "ㄷ", "a": 0}, {"k": "떨어뜨리다", "v": "làm rơi", "r": "tteoreotteurida", "c": "bai-08", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "떨어지다", "v": "rơi, cách xa", "r": "tteoreojida", "c": "bai-08", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "떨치다", "v": "rũ bỏ, phủi (tay)", "r": "tteolchida", "c": "bai-11", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "떼다", "v": "bóc ra, xé ra", "r": "tteda", "c": "bai-08", "pos": "dong", "g": "ㄷ", "a": 0}, {"k": "롤 플레이 (role play)", "v": "(role play): tập diễn kịch phân theo vai", "r": "rol peullei", "c": "bai-03", "pos": "danh", "g": "ㄹ", "a": 0}, {"k": "리터", "v": "lít", "r": "riteo", "c": "bai-03", "pos": "danh", "g": "ㄹ", "a": 0}, {"k": "리포트", "v": "báo cáo", "r": "ripoteu", "c": "bai-11", "pos": "danh", "g": "ㄹ", "a": 0}, {"k": "마늘", "v": "tỏi", "r": "maneul", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "마당", "v": "sân", "r": "madang", "c": "bai-09", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "마무리하다", "v": "kết thúc", "r": "mamurihada", "c": "bai-12", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "마음에 들다", "v": "vừa lòng", "r": "maeume deulda", "c": "bai-04", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "마음에 안 들다", "v": "không vừa lòng", "r": "maeume an deulda", "c": "bai-04", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "마음이 넓다", "v": "rộng lượng", "r": "maeumi neolda", "c": "bai-02", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "마음이 넓다", "v": "độ lượng, rộng lòng", "r": "maeumi neolda", "c": "bai-07", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "막다", "v": "chặn lại", "r": "makda", "c": "bai-03", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "만족하다", "v": "thỏa mãn, hài lòng", "r": "manjokhada", "c": "bai-03", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "만화영화", "v": "phim hoạt hình", "r": "manhwayeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "말이 많다", "v": "nói nhiều", "r": "mari manta", "c": "bai-07", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "맛을 보다", "v": "nếm thử", "r": "maseul boda", "c": "bai-05", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "맛이 나다", "v": "có vị ngon", "r": "masi nada", "c": "bai-05", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "매력적", "v": "có sức hấp dẫn", "r": "maeryeokjeok", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "매장", "v": "nơi bán hàng, nơi chôn cất", "r": "maejang", "c": "bai-04", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "매진되다", "v": "bán hết", "r": "maejindoeda", "c": "bai-14", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "매표소", "v": "điểm bán vé", "r": "maepyoso", "c": "bai-14", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "멜로 영화", "v": "phim tình cảm lãng mạn", "r": "mello yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "멥쌀", "v": "gạo tẻ", "r": "mepssal", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "면접시험", "v": "thi vấn đáp", "r": "myeonjeopsiheom", "c": "bai-02", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "멸치볶음", "v": "cá cơm xào", "r": "myeolchibokkeum", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "명랑하다", "v": "sáng sủa, vui vẻ, rạng rỡ", "r": "myeongnanghada", "c": "bai-07", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "명심하다", "v": "ghi nhớ, khắc vào tâm khảm", "r": "myeongsimhada", "c": "bai-08", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "모집하다", "v": "thu thập, tuyển chọn", "r": "mojiphada", "c": "bai-01", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "몸무게", "v": "trọng lượng cơ thể", "r": "mommuge", "c": "bai-13", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "몸이 안 좋다", "v": "cơ thể không khỏe", "r": "momi an jota", "c": "bai-03", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "몸이 약하다", "v": "cơ thể yếu ớt", "r": "momi yakhada", "c": "bai-03", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "무", "v": "củ cải", "r": "mu", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "무난하다", "v": "nhẹ nhàng thanh lịch", "r": "munanhada", "c": "bai-04", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "무리하다", "v": "vô lý, không hợp lý", "r": "murihada", "c": "bai-15", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "무사히", "v": "vô sự, an toàn", "r": "musahi", "c": "bai-02", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "무엇이든지", "v": "bất kể cái gì", "r": "mueosideunji", "c": "bai-14", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "무조건", "v": "vô điều kiện", "r": "mujogeon", "c": "bai-03", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "문단 모양", "v": "kiểu đoạn", "r": "mundan moyang", "c": "bai-12", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "문의하다", "v": "hỏi, thắc mắc", "r": "munuihada", "c": "bai-09", "pos": "dong", "g": "ㅁ", "a": 0}, {"k": "문제가 생기다", "v": "có vấn đề nảy sinh", "r": "munjega saenggida", "c": "bai-08", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "문학작품", "v": "tác phẩm văn học", "r": "munhakjakpum", "c": "bai-01", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "문화유산", "v": "di sản văn hoá", "r": "munhwayusan", "c": "bai-10", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "물엿", "v": "mạch nha", "r": "muryeot", "c": "bai-05", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "미리", "v": "đã", "r": "miri", "c": "bai-08", "pos": "khac", "g": "ㅁ", "a": 0}, {"k": "민속박물관", "v": "bảo tàng dân tộc", "r": "minsokbangmulgwan", "c": "bai-12", "pos": "danh", "g": "ㅁ", "a": 0}, {"k": "믿음직하다", "v": "đáng tin", "r": "mideumjikhada", "c": "bai-07", "pos": "tinh", "g": "ㅁ", "a": 0}, {"k": "바느질", "v": "khâu vá", "r": "baneujil", "c": "bai-07", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "바르다", "v": "đúng đắn, phải", "r": "bareuda", "c": "bai-08", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "박물관", "v": "viện bảo tàng", "r": "bangmulgwan", "c": "bai-10", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "반말", "v": "lời nói không tôn kính (với người dưới mình)", "r": "banmal", "c": "bai-08", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "반복하다", "v": "lặp lại", "r": "banbokhada", "c": "bai-08", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "반영하다", "v": "phản ánh", "r": "banyeonghada", "c": "bai-11", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "반응", "v": "phản ứng", "r": "baneung", "c": "bai-11", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "반입", "v": "trả lại", "r": "banip", "c": "bai-01", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "반품하다", "v": "trả lại hàng", "r": "banpumhada", "c": "bai-04", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "받기", "v": "nhận", "r": "batgi", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "발달", "v": "phát triển, nở rộ", "r": "baldal", "c": "bai-11", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "발명품", "v": "vật phát minh, đồ sáng chế", "r": "balmyeongpum", "c": "bai-08", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "발이 넓다", "v": "quan hệ rộng", "r": "bari neolda", "c": "bai-07", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "발표회", "v": "buổi thuyết trình", "r": "balpyohoe", "c": "bai-01", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "발효", "v": "lên men", "r": "balhyo", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "밝다", "v": "sáng sủa", "r": "bakda", "c": "bai-07", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "방해하다", "v": "cản trở", "r": "banghaehada", "c": "bai-15", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "배경", "v": "bối cảnh", "r": "baegyeong", "c": "bai-14", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배경음악", "v": "nhạc nền", "r": "baegyeongeumak", "c": "bai-14", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배낭여행", "v": "du lịch ba lô", "r": "baenang yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배다", "v": "ngấm", "r": "baeda", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "배송료", "v": "phí vận chuyển", "r": "baesongnyo", "c": "bai-04", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배송하다", "v": "vận chuyển hàng", "r": "baesonghada", "c": "bai-04", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "배우", "v": "diễn viên", "r": "baeu", "c": "bai-14", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배즙", "v": "nước cốt lê", "r": "baejeup", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "배추", "v": "cải thảo", "r": "baechu", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "백만장자", "v": "đại tỉ phú", "r": "baengmanjangja", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "백악관", "v": "nhà trắng", "r": "baegakgwan", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "버무리다", "v": "trộn", "r": "beomurida", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "버섯", "v": "nấm", "r": "beoseot", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "번호표", "v": "phiếu ghi số (để chờ đến lượt)", "r": "beonhopyo", "c": "bai-15", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "벌금을 내다", "v": "nộp tiền phạt", "r": "beolgeumeul naeda", "c": "bai-08", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "법", "v": "luật, phép", "r": "beop", "c": "bai-15", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "변경", "v": "thay đổi", "r": "byeongyeong", "c": "bai-02", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "변경하다", "v": "thay đổi", "r": "byeongyeonghada", "c": "bai-10", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "변명하다", "v": "biện minh, giải thích", "r": "byeonmyeonghada", "c": "bai-08", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "변비", "v": "táo bón", "r": "byeonbi", "c": "bai-03", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "변신", "v": "biến tướng, biến đổi", "r": "byeonsin", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "보고서 작성", "v": "làm, viết báo cáo", "r": "bogoseo jakseong", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "보고서를 제출하다", "v": "nộp báo cáo", "r": "bogoseoreul jechulhada", "c": "bai-01", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "보고하다", "v": "báo cáo", "r": "bogohada", "c": "bai-08", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "보내기", "v": "gửi", "r": "bonaegi", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "보람을 느끼다", "v": "cảm thấy có ý nghĩa", "r": "borameul neukkida", "c": "bai-13", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "보람이 있다", "v": "có ý nghĩa", "r": "borami itda", "c": "bai-13", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "보일러", "v": "nồi hơi", "r": "boilleo", "c": "bai-09", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "보장하다", "v": "bảo đảm", "r": "bojanghada", "c": "bai-04", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "보증금", "v": "tiền đặt cọc", "r": "bojeunggeum", "c": "bai-09", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "보험 가입", "v": "gia nhập bảo hiểm", "r": "boheom gaip", "c": "bai-09", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "복권", "v": "xổ số", "r": "bokgwon", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "복사하기", "v": "sao chép", "r": "boksahagi", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "볶다", "v": "rang, xào", "r": "bokda", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "볶음", "v": "món xào, rang", "r": "bokkeum", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "볶음밥", "v": "cơm rang", "r": "bokkeumbap", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "볼링", "v": "bolling", "r": "bolling", "c": "bai-03", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "봉사 활동", "v": "hoạt động tình nguyện, hoạt động phục vụ cộng đồng", "r": "bongsa hwaldong", "c": "bai-01", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "봉사 활동", "v": "hoạt động từ thiện", "r": "bongsa hwaldong", "c": "bai-10", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "봉사 활동을 하다", "v": "hoạt động từ thiện", "r": "bongsa hwaldong-eul hada", "c": "bai-13", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "부끄럽다", "v": "xấu hổ, thẹn", "r": "bukkeureopda", "c": "bai-08", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "부담", "v": "gánh nặng", "r": "budam", "c": "bai-11", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "부담을 줄이다", "v": "giảm gánh nặng", "r": "budameul jurida", "c": "bai-09", "pos": "khac", "g": "ㅂ", "a": 0}, {"k": "부동산 소개소(중개소)", "v": "văn phòng bất động sản", "r": "budongsan sogaeso(junggaeso)", "c": "bai-09", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "부드럽다", "v": "mềm mại, nhẹ nhàng", "r": "budeureopda", "c": "bai-02", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "부딪치다", "v": "đâm vào", "r": "buditchida", "c": "bai-11", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "부적응", "v": "không thích ứng", "r": "bujeogeung", "c": "bai-11", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "부지런하다", "v": "chăm chỉ, cần cù", "r": "bujireonhada", "c": "bai-07", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "부치다", "v": "rán", "r": "buchida", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "부탁을 거절하다", "v": "từ chối giúp đỡ", "r": "butageul geojeolhada", "c": "bai-02", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "부탁을 들어주다", "v": "nhận lời giúp đỡ", "r": "butageul deureojuda", "c": "bai-02", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "부탁을 받다", "v": "được đề nghị giúp đỡ", "r": "butageul batda", "c": "bai-02", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "부탁하다", "v": "nhờ cậy, nhờ giúp", "r": "butakhada", "c": "bai-02", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "분석적이다", "v": "mang tính phân tích", "r": "bunseokjeogida", "c": "bai-07", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "분식", "v": "cơm phần, ăn theo suất", "r": "bunsik", "c": "bai-05", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "분실", "v": "mất (đồ đạc)", "r": "bunsil", "c": "bai-06", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "분실되다", "v": "mất mát", "r": "bunsildoeda", "c": "bai-09", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "분실물 센터", "v": "trung tâm khai báo mất đồ", "r": "bunsilmul senteo", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "분실신고", "v": "thông báo mất (đồ đạc)", "r": "bunsilsingo", "c": "bai-06", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "분야", "v": "lĩnh vực, ngành", "r": "bunya", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "불규칙적", "v": "có tính bất quy tắc", "r": "bulgyuchikjeok", "c": "bai-03", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "불러오기", "v": "mở", "r": "bulleoogi", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "불리다", "v": "nhúng, ngâm", "r": "bullida", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "불만", "v": "bất mãn", "r": "bulman", "c": "bai-04", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "불면증", "v": "chứng mất ngủ", "r": "bulmyeonjeung", "c": "bai-11", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "불안하다", "v": "bất an", "r": "buranhada", "c": "bai-11", "pos": "tinh", "g": "ㅂ", "a": 0}, {"k": "불쾌감", "v": "cảm giác không thoải mái", "r": "bulkwaegam", "c": "bai-15", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "붙이기", "v": "dán", "r": "buchigi", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "블로그", "v": "Blog", "r": "beullogeu", "c": "bai-12", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비결", "v": "bí quyết", "r": "bigyeol", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비만 클리닉", "v": "nơi khám chữa bệnh béo phì", "r": "biman keullinik", "c": "bai-13", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비밀", "v": "bí mật", "r": "bimil", "c": "bai-15", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비밀번호", "v": "số bí mật", "r": "bimilbeonho", "c": "bai-06", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비비다", "v": "trộn", "r": "bibida", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "비수기", "v": "mùa vắng khách", "r": "bisugi", "c": "bai-10", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "비자", "v": "visa, thị thực", "r": "bija", "c": "bai-10", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "빌라", "v": "villa", "r": "billa", "c": "bai-09", "pos": "danh", "g": "ㅂ", "a": 0}, {"k": "빠뜨리다", "v": "rơi, đánh rơi", "r": "ppatteurida", "c": "bai-12", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "빼놓다", "v": "bỏ ra, bóc ra", "r": "ppaenota", "c": "bai-05", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "뽑다", "v": "nhổ ra, chọn ra", "r": "ppopda", "c": "bai-06", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "뽑다", "v": "lấy, rút", "r": "ppopda", "c": "bai-15", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "뽑히다", "v": "được chọn", "r": "ppopida", "c": "bai-10", "pos": "dong", "g": "ㅂ", "a": 0}, {"k": "사과하다", "v": "xin lỗi", "r": "sagwahada", "c": "bai-08", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "사교적이다", "v": "dễ gần, thân mật, có tài xã giao", "r": "sagyojeogida", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "사라지다", "v": "biến mất", "r": "sarajida", "c": "bai-09", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "사람을 대하다", "v": "tiếp xúc với con người, giao tiếp với con người", "r": "sarameul daehada", "c": "bai-02", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "사람을 사귀다", "v": "làm quen với người khác, kết bạn", "r": "sarameul sagwida", "c": "bai-02", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "사막", "v": "sa mạc", "r": "samak", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사소하다", "v": "không đáng kể, không quan trọng", "r": "sasohada", "c": "bai-11", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "사업가", "v": "người làm kinh doanh", "r": "saeopga", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사연", "v": "lý do, nguyên nhân, câu chuyện, ý chính", "r": "sayeon", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사은회", "v": "lễ cảm ơn, lễ cảm ơn thầy cô", "r": "saeunhoe", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사이버", "v": "mạng máy tính (cyber)", "r": "saibeo", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사이즈", "v": "kích thước", "r": "saijeu", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사이클링", "v": "đi xe đạp", "r": "saikeulling", "c": "bai-03", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사이트", "v": "Trang web", "r": "saiteu", "c": "bai-12", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사정", "v": "lý do riêng, việc riêng", "r": "sajeong", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사찰", "v": "chùa chiền", "r": "sachal", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "사투리", "v": "tiếng địa phương", "r": "saturi", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "삭제하기", "v": "bỏ, xoá", "r": "sakjehagi", "c": "bai-12", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "살펴보다", "v": "xem xét, quan sát", "r": "salpyeoboda", "c": "bai-08", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "삶", "v": "cuộc sống", "r": "sam", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "삶다", "v": "luộc", "r": "samda", "c": "bai-05", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "삼계탕", "v": "gà tần sâm", "r": "samgyetang", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상담 센터", "v": "trung tâm tư vấn", "r": "sangdam senteo", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상담사", "v": "người tư vấn", "r": "sangdamsa", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상담을 받다", "v": "được tư vấn", "r": "sangdameul batda", "c": "bai-11", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "상대방", "v": "đối phương, người đối diện", "r": "sangdaebang", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상사", "v": "cơ quan, người cấp trên", "r": "sangsa", "c": "bai-15", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상영 시간", "v": "thời gian chiếu", "r": "sangyeong sigan", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상영관", "v": "phòng chiếu phim", "r": "sangyeonggwan", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상영하다", "v": "trình, chiếu", "r": "sangyeonghada", "c": "bai-14", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "상의", "v": "áo", "r": "sangui", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "상표", "v": "nhãn hiệu sản phẩm", "r": "sangpyo", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "새내기", "v": "học sinh mới", "r": "saenaegi", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "색상이 연하다", "v": "màu nhạt", "r": "saeksangi yeonhada", "c": "bai-04", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "색상이 진하다", "v": "màu đậm", "r": "saeksangi jinhada", "c": "bai-04", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "생각이 깊다", "v": "suy nghĩ sâu sắc", "r": "saenggagi gipda", "c": "bai-07", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "생각이 나다", "v": "nghĩ ra, nhớ ra", "r": "saenggagi nada", "c": "bai-08", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "생선조림", "v": "cá rim", "r": "saengseonjorim", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "석회암 동굴", "v": "hang đá vôi", "r": "seokhoeam donggul", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "섞다", "v": "trộn", "r": "seokda", "c": "bai-05", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "설렁탕", "v": "canh sườn và lòng bò", "r": "seolleongtang", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "설문 조사", "v": "câu hỏi thăm dò, câu hỏi điều tra", "r": "seolmun josa", "c": "bai-12", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "섬", "v": "đảo", "r": "seom", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "섭취하다", "v": "hấp thu, đưa vào, uống vào", "r": "seopchwihada", "c": "bai-05", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "성", "v": "giới tính", "r": "seong", "c": "bai-08", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "성격이 좋다", "v": "tính tình tốt", "r": "seonggyeogi jota", "c": "bai-02", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "(성격이) 급하다", "v": "vội vàng, hấp tấp", "r": "(seonggyeogi) geuphada", "c": "bai-07", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "(성격이) 시원시원하다", "v": "tính tình dễ chịu, tính xởi lởi", "r": "(seonggyeogi) siwonsiwonhada", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "성공 비결", "v": "bí quyết thành công", "r": "seonggong bigyeol", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "성공을 거두다", "v": "gặt hái thành công", "r": "seonggongeul geoduda", "c": "bai-13", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "성공하다", "v": "thành công", "r": "seonggonghada", "c": "bai-13", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "성분", "v": "thành phần", "r": "seongbun", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "성수기", "v": "mùa cao điểm", "r": "seongsugi", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "성실하다", "v": "thành thật", "r": "seongsilhada", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "성적 우수자", "v": "học sinh có thành tích ưu tú", "r": "seongjeok usuja", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "세계 문화유산", "v": "di sản văn hoá thế giới", "r": "segye munhwayusan", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "세제", "v": "chất giặt tẩy, xà phòng giặt", "r": "seje", "c": "bai-09", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "소극적이다", "v": "tiêu cực", "r": "sogeukjeogida", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "소년소녀가장", "v": "chủ nhỏ trong gia đình (do cha mẹ mất sớm, ly hôn)", "r": "sonyeonsonyeogajang", "c": "bai-07", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "소매가 길다", "v": "ống tay dài", "r": "somaega gilda", "c": "bai-04", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "소매가 짧다", "v": "ống tay ngắn", "r": "somaega jjalda", "c": "bai-04", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "소비자", "v": "người tiêu dùng", "r": "sobija", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "소스", "v": "nước xốt", "r": "soseu", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "속옷", "v": "áo trong", "r": "sogot", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "솔직하다", "v": "thẳng thắn", "r": "soljikhada", "c": "bai-02", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "솔직하다", "v": "thật thà", "r": "soljikhada", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "송금하다", "v": "gửi tiền, chuyển tiền", "r": "songgeumhada", "c": "bai-06", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "송년회", "v": "tiệc tất niên", "r": "songnyeonhoe", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "송별회", "v": "tiệc chia tay", "r": "songbyeolhoe", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "쇼핑센터", "v": "trung tâm mua sắm", "r": "syopingsenteo", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수강 신청하다", "v": "đăng ký học", "r": "sugang sincheonghada", "c": "bai-01", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "수강하다", "v": "thụ giảng, học", "r": "suganghada", "c": "bai-01", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "수선비", "v": "tiền sửa chữa", "r": "suseonbi", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수선하다", "v": "sửa chữa", "r": "suseonhada", "c": "bai-04", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "수수료를 내다", "v": "trả tiền lệ phí, hoa hồng", "r": "susuryoreul naeda", "c": "bai-06", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "수입", "v": "thu nhập", "r": "suip", "c": "bai-06", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수저", "v": "bộ thìa đũa", "r": "sujeo", "c": "bai-15", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수첩", "v": "sổ tay", "r": "sucheop", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수표", "v": "ngân phiếu", "r": "supyo", "c": "bai-06", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "수학여행", "v": "tham quan thực tế", "r": "suhangnyeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "숙녀복", "v": "trang phục nữ", "r": "sungnyeobok", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "숙박 시설", "v": "chỗ ở", "r": "sukbak siseol", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "숙소", "v": "chỗ ở, chỗ nghỉ", "r": "sukso", "c": "bai-12", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "순두부", "v": "đậu non", "r": "sundubu", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "순두부찌개", "v": "canh đậu phụ non", "r": "sundubujjigae", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "쉬다", "v": "nghỉ", "r": "swida", "c": "bai-03", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "스승의 날", "v": "ngày nhà giáo", "r": "seuseungui nal", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "스트레스가 쌓이다", "v": "chồng chất căng thẳng", "r": "seuteureseuga ssaida", "c": "bai-11", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "스트레스를 받다", "v": "bị căng thẳng", "r": "seutereseureul batda", "c": "bai-03", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "스트레스를 풀다", "v": "giải tỏa căng thẳng", "r": "seutereseureul pulda", "c": "bai-03", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "스트레스를 풀다", "v": "giải stress, giải toả căng thẳng", "r": "seuteureseureul pulda", "c": "bai-11", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "슬프다", "v": "buồn", "r": "seulpeuda", "c": "bai-14", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "시각장애인", "v": "người khiếm thị", "r": "sigakjangaein", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "시사회", "v": "buổi lễ ra mắt phim", "r": "sisahoe", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "시설", "v": "thiết bị", "r": "siseol", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "시인", "v": "nhà thơ", "r": "siin", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "시험 기간", "v": "thời gian thi", "r": "siheom gigan", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "시험을 보다", "v": "thi", "r": "siheomeul boda", "c": "bai-01", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "식품", "v": "thực phẩm", "r": "sikpum", "c": "bai-05", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신나다", "v": "thích thú, phấn chấn", "r": "sinnada", "c": "bai-03", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "신나다", "v": "phấn khởi, hoan hỉ", "r": "sinnada", "c": "bai-14", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "신분증", "v": "Giấy chứng minh thư, căn cước", "r": "sinbunjeung", "c": "bai-06", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신사복", "v": "âu phục nam", "r": "sinsabok", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신입생", "v": "học sinh mới", "r": "sinipsaeng", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신입생 환영회", "v": "lễ đón sinh viên mới", "r": "sinipsaeng hwanyeonghoe", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신중하다", "v": "thận trọng", "r": "sinjunghada", "c": "bai-07", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "신청 마감", "v": "hết hạn nộp đơn", "r": "sincheong magam", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신청서", "v": "đơn xin", "r": "sincheongseo", "c": "bai-06", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신청서", "v": "đơn xin", "r": "sincheongseo", "c": "bai-12", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신체장애인", "v": "người tàn tật", "r": "sinchejangaein", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신축", "v": "co giãn; mới xây dựng", "r": "sinchuk", "c": "bai-09", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신학기", "v": "học kỳ mới", "r": "sinhakgi", "c": "bai-01", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "신혼여행", "v": "du lịch tuần trăng mật", "r": "sinhonyeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "실감나다", "v": "cảm giác như thật", "r": "silgamnada", "c": "bai-14", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "실력", "v": "thực lực", "r": "sillyeok", "c": "bai-02", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "실례가 되다", "v": "thất lễ", "r": "sillyega doeda", "c": "bai-15", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "실생활", "v": "cuộc sống thực tế", "r": "silsaenghwal", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "실수", "v": "thất thố, sai lầm", "r": "silsu", "c": "bai-04", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "실수하다", "v": "sai sót, mắc lỗi", "r": "silsuhada", "c": "bai-08", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "실제 크기", "v": "độ lớn thực tế", "r": "silje keugi", "c": "bai-13", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "실제로", "v": "trên thực tế", "r": "siljero", "c": "bai-13", "pos": "khac", "g": "ㅅ", "a": 0}, {"k": "실천하다", "v": "thực hiện, thực hành, đưa vào thực tế", "r": "silcheonhada", "c": "bai-03", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "실패하다", "v": "thất bại", "r": "silpaehada", "c": "bai-13", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "심각하다", "v": "nghiêm trọng, trầm trọng", "r": "simgakhada", "c": "bai-11", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "심리", "v": "tâm lý", "r": "simni", "c": "bai-11", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "심야 영화", "v": "phim chiếu lúc nửa đêm", "r": "simya yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅅ", "a": 0}, {"k": "싱겁다", "v": "nhạt", "r": "singgeopda", "c": "bai-03", "pos": "tinh", "g": "ㅅ", "a": 0}, {"k": "싸먹다", "v": "gói vào ăn", "r": "ssameokda", "c": "bai-05", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "썰다", "v": "thái", "r": "sseolda", "c": "bai-05", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "쏟다", "v": "đổ", "r": "ssotda", "c": "bai-08", "pos": "dong", "g": "ㅅ", "a": 0}, {"k": "아귀찜", "v": "cá vây chân hấp", "r": "agwijjim", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "아동복", "v": "quần áo trẻ em", "r": "adongbok", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "아이디어", "v": "ý tưởng", "r": "aidieo", "c": "bai-07", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "악수", "v": "bắt tay", "r": "aksu", "c": "bai-15", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "안마", "v": "mát xa", "r": "anma", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "안부 전화를 하다", "v": "gọi điện thoại thăm hỏi", "r": "anbu jeonhwareul hada", "c": "bai-02", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "안부 편지를 보내다", "v": "viết thư hỏi thăm", "r": "anbu pyeonjireul bonaeda", "c": "bai-02", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "안부를 묻다", "v": "thăm hỏi", "r": "anbureul mutda", "c": "bai-02", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "안부를 여쭙다", "v": "thăm hỏi (kính ngữ)", "r": "anbureul yeojjupda", "c": "bai-02", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "안부를 전하다", "v": "gửi lời hỏi thăm", "r": "anbureul jeonhada", "c": "bai-02", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "안색이 나쁘다", "v": "sắc mặt không tốt (không khỏe)", "r": "ansaegi nappeuda", "c": "bai-03", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "안색이 좋다", "v": "sắc mặt tốt (khỏe)", "r": "ansaegi jota", "c": "bai-03", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "안심하다", "v": "an tâm", "r": "ansimhada", "c": "bai-09", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "알람 시계", "v": "đồng hồ báo thức", "r": "allam sigye", "c": "bai-08", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "알아보다", "v": "xem xét, tìm hiểu", "r": "araboda", "c": "bai-08", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "암", "v": "ung thư, am (một ngôi chùa nhỏ)", "r": "am", "c": "bai-03", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "암", "v": "ung thư", "r": "am", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "액션 영화", "v": "phim hành động", "r": "aeksyeon yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "야경", "v": "cảnh đêm", "r": "yagyeong", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "야외", "v": "dã ngoại", "r": "yaoe", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "야유회", "v": "buổi picnic", "r": "yayuhoe", "c": "bai-02", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "얌전하다", "v": "nhẹ nhàng, dịu dàng, thanh lịch", "r": "yamjeonhada", "c": "bai-07", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "양로원", "v": "viện dưỡng lão", "r": "yangnowon", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "양보하다", "v": "nhượng bộ", "r": "yangbohada", "c": "bai-15", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "양식", "v": "món ăn Âu", "r": "yangsik", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "양파", "v": "hành tây", "r": "yangpa", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "양해를 구하다", "v": "mong sự thông cảm", "r": "yanghaereul guhada", "c": "bai-08", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "(어려움/장애/가난)을/를 극복하다", "v": "khắc phục khó khăn /trở ngại/nghèo khó", "r": "(eoryeoum/jangae/ganan)eul/reul geukbokada", "c": "bai-13", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "어묵", "v": "cá khô", "r": "eomuk", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "어버이날", "v": "ngày của bố mẹ", "r": "eobeoinal", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "어색하다", "v": "không tự nhiên, ngượng ngập", "r": "eosaekhada", "c": "bai-02", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "어울리다", "v": "phù hợp, hợp", "r": "eoullida", "c": "bai-04", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "어쩔 수 없다", "v": "không thể tránh khỏi, đành phải", "r": "eojjeol su eopda", "c": "bai-08", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "얼룩", "v": "vết bẩn", "r": "eolluk", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "에어로빅", "v": "thể dục nhịp điệu", "r": "eerobik", "c": "bai-03", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "여가 시간", "v": "thời gian rỗi", "r": "yeoga sigan", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "여권", "v": "hộ chiếu", "r": "yeogwon", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "여행자 보험", "v": "bảo hiểm du lịch", "r": "yeohaengja boheom", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "여행자수표", "v": "ngân phiếu du lịch", "r": "yeohaengjasupyo", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "역세권", "v": "địa bàn có số dân sử dụng phương tiện tàu, tàu điện ngầm", "r": "yeoksegwon", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "역할", "v": "vai trò", "r": "yeokhal", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "역할 놀이", "v": "trò chơi phân vai", "r": "yeokhal nori", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "역할(을 맡다)", "v": "nhận vai", "r": "yeokhal(eul matda)", "c": "bai-14", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "연구", "v": "nghiên cứu", "r": "yeongu", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "연기되다", "v": "bị hoãn lại, được kéo dài", "r": "yeongidoeda", "c": "bai-12", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "연기를 잘하다", "v": "diễn xuất tốt", "r": "yeongireul jalhada", "c": "bai-14", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "연락", "v": "liên lạc", "r": "yeollak", "c": "bai-02", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "연령대", "v": "lứa tuổi", "r": "yeollyeongdae", "c": "bai-03", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "연립주택", "v": "nhà tập thể (nhà có các phòng độc lập để cho thuê)", "r": "yeollipjutaek", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "연예인", "v": "văn nghệ sĩ", "r": "yeonyein", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "염려", "v": "lo lắng", "r": "yeomnyeo", "c": "bai-02", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "영수증", "v": "hóa đơn", "r": "yeongsujeung", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "영양", "v": "dinh dưỡng", "r": "yeongyang", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "영화 표", "v": "vé xem phim", "r": "yeonghwa pyo", "c": "bai-14", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "예고편", "v": "bản giới thiệu tóm tắt", "r": "yegopyeon", "c": "bai-14", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "예금하다", "v": "gửi tiền vào ngân hàng", "r": "yegeumhada", "c": "bai-06", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "예매하다", "v": "đặt vé", "r": "yemaehada", "c": "bai-14", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "예약하다", "v": "đặt chỗ trước", "r": "yeyakhada", "c": "bai-10", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "예의", "v": "lễ nghĩa", "r": "yeui", "c": "bai-15", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "예의가 없다", "v": "không lễ phép, vô lễ", "r": "yeuiga eopda", "c": "bai-15", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "예의에 어긋나다", "v": "trái với lễ nghĩa, vô lễ", "r": "yeuie eogeunnada", "c": "bai-15", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "예절", "v": "lễ phép, lễ độ", "r": "yejeol", "c": "bai-15", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "예절 바르다", "v": "lễ phép, lễ độ, đúng mực", "r": "yejeol bareuda", "c": "bai-15", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "예절[예의]을/를 안 지키다", "v": "không giữ lễ phép", "r": "yejeol[yeui]eul/reul an jikida", "c": "bai-15", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "예절[예의]을/를 지키다", "v": "giữ lễ nghĩa/ giữ lễ phép", "r": "yejeol[yeui]eul/reul jikida", "c": "bai-15", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "오려두기", "v": "cắt(văn bản)", "r": "oryeodugi", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "오리엔테이션", "v": "giới thiệu định hướng", "r": "orienteisyeon", "c": "bai-01", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "오븐", "v": "lò nướng", "r": "obeun", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "오싹하다", "v": "lạnh lẽo, giá lạnh", "r": "ossakada", "c": "bai-14", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "오징어볶음", "v": "mực xào", "r": "ojingeobokkeum", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "오해하다", "v": "hiểu nhầm", "r": "ohaehada", "c": "bai-08", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "오히려", "v": "ngược lại", "r": "ohiryeo", "c": "bai-11", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "온천", "v": "suối nước nóng", "r": "oncheon", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "완성하다", "v": "hoàn thành", "r": "wanseonghada", "c": "bai-03", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "외박", "v": "ngủ bên ngoài, ngủ lang", "r": "oebak", "c": "bai-15", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "외향적이다", "v": "có tính hướng ngoại", "r": "oehyangjeogida", "c": "bai-07", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "요가", "v": "yoga", "r": "yoga", "c": "bai-03", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "요약", "v": "tóm lược", "r": "yoyak", "c": "bai-02", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "요약", "v": "tóm lược", "r": "yoyak", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "요청하다", "v": "yêu cầu", "r": "yocheonghada", "c": "bai-09", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "용기를 가지다", "v": "có dũng khí", "r": "yonggireul gajida", "c": "bai-13", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "용돈 기입장", "v": "sổ ghi chép tiền tiêu cá nhân", "r": "yongdon giipjang", "c": "bai-06", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "우울증", "v": "chứng trầm cảm", "r": "uuljeung", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "운동복", "v": "trang phục thể thao", "r": "undongbok", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "운전면허", "v": "bằng lái xe", "r": "unjeonmyeonheo", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "웃기다", "v": "buồn cười", "r": "utgida", "c": "bai-14", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "원래", "v": "nguyên gốc, vốn dĩ", "r": "wollae", "c": "bai-02", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "원룸", "v": "phòng một buồng khép kín", "r": "wonnum", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "원서", "v": "văn bản gốc", "r": "wonseo", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "월세", "v": "thuê trả tiền theo tháng", "r": "wolse", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "웹 문서", "v": "bài trên web", "r": "wep munseo", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "위대하다", "v": "vĩ đại, to lớn", "r": "widaehada", "c": "bai-08", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "유능하다", "v": "có khả năng", "r": "yuneunghada", "c": "bai-07", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "유리하다", "v": "có lợi, sinh lợi", "r": "yurihada", "c": "bai-11", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "유머 감각이 있다", "v": "có tính vui nhộn, thích pha trò", "r": "yumeo gamgagi itda", "c": "bai-07", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "유용하다", "v": "hữu ích", "r": "yuyonghada", "c": "bai-10", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "유인물", "v": "ấn phẩm", "r": "yuinmul", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "유적지", "v": "khu di tích", "r": "yujeokji", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "유지하다", "v": "duy trì", "r": "yujihada", "c": "bai-03", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "유치하다", "v": "trẻ con, ấu trĩ", "r": "yuchihada", "c": "bai-14", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "유학을 가다", "v": "đi du học", "r": "yuhageul gada", "c": "bai-13", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "유행에 뒤떨어지다", "v": "lỗi mốt", "r": "yuhaenge dwitteoreojida", "c": "bai-04", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "유행을 타다", "v": "đang lưu hành", "r": "yuhaengeul tada", "c": "bai-04", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "유행이 지나다", "v": "hết mốt", "r": "yuhaengi jinada", "c": "bai-04", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "유행하다", "v": "thịnh hành", "r": "yuhaenghada", "c": "bai-04", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "육수", "v": "nước dùng (nước hầm từ thịt)", "r": "yuksu", "c": "bai-05", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "의학계", "v": "giới y học", "r": "uihakgye", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이동 수단", "v": "phương tiện di chuyển", "r": "idong sudan", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이메일 주소", "v": "địa chỉ email", "r": "imeil juso", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이미지", "v": "hình ảnh, ấn tượng", "r": "imiji", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이미지", "v": "hình ảnh", "r": "imiji", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이사", "v": "chuyển nhà", "r": "isa", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이사 비용", "v": "chi phí di chuyển", "r": "isa biyong", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이삿짐", "v": "đồ đạc cần chuyển", "r": "isatjim", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이삿짐센터", "v": "Trung tâm dịch vụ chuyển nhà", "r": "isatjimsenteo", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이상이 있다", "v": "có sự khác thường", "r": "isangi itda", "c": "bai-04", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "이상하다", "v": "lạ lùng, khác thường", "r": "isanghada", "c": "bai-08", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "이성 문제", "v": "vấn đề khác giới", "r": "iseong munje", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이어폰", "v": "tai nghe", "r": "ieopon", "c": "bai-15", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이웃", "v": "láng giềng", "r": "iut", "c": "bai-09", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이웃", "v": "hàng xóm", "r": "iut", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "이해심이 많다", "v": "dễ thông cảm, bao dung", "r": "ihaesimi manta", "c": "bai-07", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "인간관계 문제", "v": "vấn đề quan hệ với mọi người", "r": "ingangwangye munje", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "인기가 있다", "v": "có tiếng, nổi tiếng", "r": "ingiga itda", "c": "bai-02", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "인기가 있다/없다", "v": "được hâm mộ/ không được hâm mộ", "r": "ingiga itda/eopda", "c": "bai-14", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "인기를 끌다", "v": "tạo sự nổi tiếng, giành được tiếng tăm", "r": "ingireul kkeulda", "c": "bai-10", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "인내하다", "v": "nhẫn nại", "r": "innaehada", "c": "bai-13", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "인상적이다", "v": "ấn tượng", "r": "insangjeogida", "c": "bai-14", "pos": "tinh", "g": "ㅇ", "a": 0}, {"k": "인쇄하기", "v": "in", "r": "inswaehagi", "c": "bai-12", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "인터넷 쇼핑", "v": "mua sắm qua mạng", "r": "inteonet syoping", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "인터넷뱅킹을 하다", "v": "Giao dịch ngân hàng qua mạng", "r": "inteonetbaengkingeul hada", "c": "bai-06", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "인턴", "v": "Khóa huấn luyện nhân viên tập sự, bác sĩ thực tập", "r": "inteon", "c": "bai-11", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "인턴사원", "v": "nhân viên nội trú", "r": "inteonsawon", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "인형", "v": "búp bê", "r": "inhyeong", "c": "bai-13", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "일교차", "v": "chênh lệch nhiệt độ trong ngày", "r": "ilgyocha", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "일상생활", "v": "cuộc sống thường ngày", "r": "ilsangsaenghwal", "c": "bai-14", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "일시불", "v": "trả một lần", "r": "ilsibul", "c": "bai-04", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "(일에) 집중하다", "v": "tập trung (vào công việc)", "r": "(ire) jipjunghada", "c": "bai-07", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "일정을 짜다", "v": "lập lịch trình", "r": "iljeongeul jjada", "c": "bai-10", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "잃어버리다", "v": "mất, đánh mất", "r": "ireobeorida", "c": "bai-08", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "입국하다", "v": "nhập cảnh", "r": "ipgukhada", "c": "bai-10", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "입금", "v": "nhập tiền", "r": "ipgeum", "c": "bai-06", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "입맛에 맞다", "v": "hợp khẩu vị", "r": "immase matda", "c": "bai-05", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "입술 보호제", "v": "son dưỡng môi", "r": "ipsul bohoje", "c": "bai-10", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "입이 가볍다", "v": "nói nhiều", "r": "ibi gabyeopda", "c": "bai-07", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "입이 무겁다", "v": "trầm lặng, ít nói", "r": "ibi mugeopda", "c": "bai-07", "pos": "khac", "g": "ㅇ", "a": 0}, {"k": "입학식", "v": "lễ khai giảng, lễ nhập học", "r": "iphaksik", "c": "bai-01", "pos": "danh", "g": "ㅇ", "a": 0}, {"k": "입학하다", "v": "nhập học", "r": "iphakhada", "c": "bai-01", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "잊어버리다", "v": "quên mất", "r": "ijeobeorida", "c": "bai-08", "pos": "dong", "g": "ㅇ", "a": 0}, {"k": "자격", "v": "tư cách", "r": "jagyeok", "c": "bai-11", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자기중심적", "v": "lấy mình làm trung tâm", "r": "jagijungsimjeok", "c": "bai-07", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자동 납부", "v": "trả, nộp tiền tự động", "r": "jadong napbu", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자동이체를 하다", "v": "chuyển tiền tự động", "r": "jadongichereul hada", "c": "bai-06", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "자료실", "v": "phòng tư liệu", "r": "jaryosil", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자신감을 잃다", "v": "mất tự tin", "r": "jasingameul ilta", "c": "bai-11", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "자신감이 있다", "v": "tự tin", "r": "jasingami itda", "c": "bai-11", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "자연스럽게", "v": "một cách tự nhiên, thoải mái", "r": "jayeonseureopge", "c": "bai-14", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "자외선 차단제", "v": "kem chống nắng", "r": "jaoeseon chadanje", "c": "bai-10", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자원봉사", "v": "phục vụ tình nguyện", "r": "jawonbongsa", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자원봉사를 하다", "v": "làm từ thiện tình nguyện", "r": "jawonbongsareul hada", "c": "bai-13", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "자원봉사자", "v": "người hoạt động từ thiện tình nguyện", "r": "jawonbongsaja", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "자유롭다", "v": "tự do", "r": "jayuropda", "c": "bai-07", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "자취", "v": "ở trọ (tự phục vụ các sinh hoạt cá nhân)", "r": "jachwi", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "작품", "v": "tác phẩm", "r": "jakpum", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "잔금을 치르다", "v": "trả nốt phần tiền còn lại", "r": "jangeumeul chireuda", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "잔돈", "v": "tiền lẻ", "r": "jandon", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "잔액 조회", "v": "kiểm tra tiền dư", "r": "janaek johoe", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "잘 맞다", "v": "vừa vặn", "r": "jal matda", "c": "bai-04", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "잘라내기", "v": "cắt", "r": "jallanaegi", "c": "bai-12", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "잘못하다", "v": "làm sai", "r": "jalmothada", "c": "bai-08", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "잠을 자다", "v": "ngủ", "r": "jameul jada", "c": "bai-03", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "장래 희망", "v": "hy vọng trong tương lai", "r": "jangnae huimang", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "장면", "v": "cảnh", "r": "jangmyeon", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "장애인 복지시설", "v": "Thiết bị phục vụ người tàn tật", "r": "jangaein bokjisiseol", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "장애인위원회", "v": "Hội người tàn tật", "r": "jangaeinwiwonhoe", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "장조림", "v": "thịt bò rim tương", "r": "jangjorim", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "장학금을 받다", "v": "nhận học bổng", "r": "janghakgeumeul batda", "c": "bai-01", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "재다", "v": "đo", "r": "jaeda", "c": "bai-05", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "재주가 많다", "v": "nhiều tài, có tài", "r": "jaejuga manta", "c": "bai-07", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "재학생", "v": "học sinh đang học", "r": "jaehaksaeng", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "저금통", "v": "thùng bỏ tiền tiết kiệm (tiền xu)", "r": "jeogeumtong", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "저렴하다", "v": "giá rẻ, giá phải chăng", "r": "jeoryeomhada", "c": "bai-09", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "저장하기", "v": "lưu", "r": "jeojanghagi", "c": "bai-12", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "저절로", "v": "tự động, tự nó", "r": "jeojeollo", "c": "bai-11", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "적극적이다", "v": "tích cực, năng động", "r": "jeokgeukjeogida", "c": "bai-07", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "적금을 들다", "v": "gửi tiết kiệm định kỳ", "r": "jeokgeumeul deulda", "c": "bai-06", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "적립하다", "v": "tích lũy", "r": "jeongniphada", "c": "bai-04", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "적성에 맞다", "v": "phù hợp với sở trường", "r": "jeokseonge matda", "c": "bai-13", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "적응", "v": "sự thích ứng", "r": "jeogeung", "c": "bai-12", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "적응하다", "v": "thích ứng", "r": "jeogeunghada", "c": "bai-08", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "적응하다", "v": "thích ứng", "r": "jeogeunghada", "c": "bai-09", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "적응하다", "v": "thích ứng", "r": "jeogeunghada", "c": "bai-12", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "적합하다", "v": "thích hợp", "r": "jeokapada", "c": "bai-13", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "전단", "v": "nguyên trang, tờ rơi, truyền đơn", "r": "jeondan", "c": "bai-03", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전달하기", "v": "chuyển tiếp", "r": "jeondalhagi", "c": "bai-12", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전망", "v": "triển vọng", "r": "jeonmang", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전문적", "v": "có chuyên môn", "r": "jeonmunjeok", "c": "bai-11", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전세", "v": "thuê có đặt cọc một lần (không phải trả tiền thuê nhà)", "r": "jeonse", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전액 배상", "v": "bồi thường toàn bộ", "r": "jeonaek baesang", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전쟁 영화", "v": "phim chiến tranh", "r": "jeonjaeng yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "전체 메일", "v": "thư gửi cho nhiều người", "r": "jeonche meil", "c": "bai-12", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "절대", "v": "tuyệt đối", "r": "jeoldae", "c": "bai-11", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "절반", "v": "một nửa", "r": "jeolban", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "절이다", "v": "ướp muối", "r": "jeorida", "c": "bai-05", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "젊다", "v": "trẻ", "r": "jeomda", "c": "bai-03", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "점검하다", "v": "kiểm tra", "r": "jeomgeomhada", "c": "bai-09", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "정기 모임", "v": "họp mặt định kì", "r": "jeonggi moim", "c": "bai-02", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "정이 많다", "v": "giàu tình cảm", "r": "jeongi manta", "c": "bai-07", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "정장", "v": "đồ vest", "r": "jeongjang", "c": "bai-04", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "젖다", "v": "ướt", "r": "jeotda", "c": "bai-08", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "제공하다", "v": "cung cấp, tặng", "r": "jegonghada", "c": "bai-09", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "제대로", "v": "một cách đúng đắn, đúng theo ý mình, còn nguyên vẹn", "r": "jedaero", "c": "bai-11", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "제도", "v": "cơ chế, chế độ", "r": "jedo", "c": "bai-11", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "제시하다", "v": "đưa ra, đề nghị", "r": "jesihada", "c": "bai-01", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "제출하다", "v": "đưa ra, nộp", "r": "jechulhada", "c": "bai-12", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "제한하다", "v": "hạn chế", "r": "jehanhada", "c": "bai-14", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "조교", "v": "giáo vụ, sinh viên phụ tá cho giáo sư", "r": "jogyo", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "조리다", "v": "rim", "r": "jorida", "c": "bai-05", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "조림", "v": "món kho, rim", "r": "jorim", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "조언을 구하다", "v": "tìm lời khuyên", "r": "joeoneul guhada", "c": "bai-11", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "조연", "v": "vai phụ", "r": "joyeon", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "조용하다", "v": "lặng lẽ, im lặng", "r": "joyonghada", "c": "bai-07", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "조조", "v": "sáng sớm", "r": "jojo", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "졸업생", "v": "học sinh tốt nghiệp", "r": "joreopsaeng", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "졸업생 환송회", "v": "lễ tiễn sinh viên tốt nghiệp", "r": "joreopsaeng hwansonghoe", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "졸업식", "v": "lễ tốt nghiệp", "r": "joreopsik", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "졸업하다", "v": "tốt nghiệp", "r": "joreophada", "c": "bai-01", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "종강", "v": "kết thúc khóa học, kết thúc môn học", "r": "jonggang", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "좌절하다", "v": "dao động", "r": "jwajeolhada", "c": "bai-13", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "주무르다", "v": "sờ", "r": "jumureuda", "c": "bai-05", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "주문하다", "v": "đặt hàng", "r": "jumunhada", "c": "bai-04", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "주방용품", "v": "đồ dùng nhà bếp", "r": "jubangyongpum", "c": "bai-04", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "주변 환경", "v": "môi trường xung quanh", "r": "jubyeon hwangyeong", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "주의하다", "v": "chú ý", "r": "juuihada", "c": "bai-04", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "주인공", "v": "nhân vật chính", "r": "juingong", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "주장이 강하다", "v": "chủ trương mạnh mẽ, ý kiến mạnh mẽ", "r": "jujangi ganghada", "c": "bai-07", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "주재료", "v": "nguyên liệu chính", "r": "jujaeryo", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "주차장", "v": "nhà để xe", "r": "juchajang", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "주택가", "v": "khu dân cư, nhà ở", "r": "jutaekga", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "줄거리", "v": "cốt truyện", "r": "julgeori", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "중간고사", "v": "thi giữa kỳ", "r": "junggangosa", "c": "bai-01", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "중식", "v": "món ăn Trung Quốc", "r": "jungsik", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "중심지", "v": "vùng trung tâm", "r": "jungsimji", "c": "bai-14", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "중앙난방", "v": "hệ thống sưởi trung tâm", "r": "jungangnanbang", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "즐겨 보다", "v": "xem một cách thích thú", "r": "jeulgyeo boda", "c": "bai-14", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "증명사진", "v": "ảnh chứng minh", "r": "jeungmyeongsajin", "c": "bai-08", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "증상", "v": "triệu chứng, biểu hiện bệnh", "r": "jeungsang", "c": "bai-03", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지급하다", "v": "chi cấp", "r": "jigeuphada", "c": "bai-01", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "지도자", "v": "người lãnh đạo", "r": "jidoja", "c": "bai-07", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지로용지", "v": "giấy báo chuyển khoản (giấy báo chuyển khoản tiền điện, nước...)", "r": "jiroyongji", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지름길", "v": "đường tắt, đường ngắn nhất", "r": "jireumgil", "c": "bai-08", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지방", "v": "địa phương, chất béo", "r": "jibang", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지출", "v": "chi tiêu", "r": "jichul", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지치다", "v": "kiệt sức", "r": "jichida", "c": "bai-03", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "지퍼", "v": "khoá kéo, phéc mơ tuya", "r": "jipeo", "c": "bai-04", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "지폐", "v": "tiền giấy", "r": "jipye", "c": "bai-06", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "직장", "v": "nơi làm việc", "r": "jikjang", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "진동", "v": "chấn động", "r": "jindong", "c": "bai-15", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "진로", "v": "bước tiến trong tương lai", "r": "jillo", "c": "bai-13", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "진로 문제", "v": "vấn đề tiến thân", "r": "jinllo munje", "c": "bai-11", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "진로를 정하다", "v": "định ra bước tiến trong tương lai", "r": "jilloreul jeonghada", "c": "bai-13", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "진학하다", "v": "Học lên cao", "r": "jinhakada", "c": "bai-13", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "질기다", "v": "dai", "r": "jilgida", "c": "bai-05", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "질서가 있다", "v": "có trật tự, có nề nếp", "r": "jilseoga itda", "c": "bai-15", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "질이 나쁘다", "v": "chất liệu không tốt", "r": "jiri nappeuda", "c": "bai-04", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "질이 좋다", "v": "chất liệu tốt", "r": "jiri jota", "c": "bai-04", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "짐을 싣다", "v": "chất hàng", "r": "jimeul sitda", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "짐을 싸다", "v": "đóng gói đồ đạc", "r": "jimeul ssada", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "짐을 옮기다", "v": "chuyển đồ", "r": "jimeul omgida", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "짐을 정리하다", "v": "sắp xếp đồ đạc", "r": "jimeul jeongnihada", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "짐을 풀다", "v": "tháo, dỡ đồ đạc", "r": "jimeul pulda", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "집들이", "v": "liên hoan mừng nhà mới, tiệc tân gia", "r": "jipdeuri", "c": "bai-09", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "집을 구하다", "v": "tìm nhà", "r": "jibeul guhada", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "집이 나가다", "v": "nhà được bán", "r": "jibi nagada", "c": "bai-09", "pos": "khac", "g": "ㅈ", "a": 0}, {"k": "짜다", "v": "mặn", "r": "jjada", "c": "bai-12", "pos": "tinh", "g": "ㅈ", "a": 0}, {"k": "찌개", "v": "canh", "r": "jjigae", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "찌다", "v": "hấp", "r": "jjida", "c": "bai-05", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "찜", "v": "món hấp, hầm", "r": "jjim", "c": "bai-05", "pos": "danh", "g": "ㅈ", "a": 0}, {"k": "찢다", "v": "xé", "r": "jjitda", "c": "bai-08", "pos": "dong", "g": "ㅈ", "a": 0}, {"k": "차분하다", "v": "bình tĩnh, điềm tĩnh", "r": "chabunhada", "c": "bai-07", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "차지하다", "v": "chiếm", "r": "chajihada", "c": "bai-14", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "착각하다", "v": "nhầm lẫn, lầm tưởng", "r": "chakgakhada", "c": "bai-08", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "착하다", "v": "hiền lành", "r": "chakhada", "c": "bai-07", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "찰떡궁합", "v": "hợp, hòa hợp", "r": "chaltteokgunghap", "c": "bai-05", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참가비", "v": "phí tham gia", "r": "chamgabi", "c": "bai-12", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참고 자료", "v": "tài liệu tham khảo", "r": "chamgo jaryo", "c": "bai-12", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참기름", "v": "dầu mè", "r": "chamgireum", "c": "bai-05", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참다", "v": "chịu đựng", "r": "chamda", "c": "bai-07", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "참석", "v": "tham dự", "r": "chamseok", "c": "bai-01", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참석", "v": "tham dự, có mặt", "r": "chamseok", "c": "bai-02", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "참여하다", "v": "tham dự", "r": "chamyeohada", "c": "bai-07", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "찻집", "v": "quán trà", "r": "chatjip", "c": "bai-12", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "창립", "v": "sáng lập", "r": "changnip", "c": "bai-04", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "창피하다", "v": "xấu hổ", "r": "changpihada", "c": "bai-15", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "찾아뵙다", "v": "đến thăm", "r": "chajaboepda", "c": "bai-02", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "채썰다", "v": "thái rau", "r": "chaesseolda", "c": "bai-05", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "채용", "v": "tuyển dụng, bổ nhiệm", "r": "chaeyong", "c": "bai-11", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "책임감이 강하다", "v": "có trách nhiệm cao", "r": "chaegimgami ganghada", "c": "bai-07", "pos": "khac", "g": "ㅊ", "a": 0}, {"k": "천 원짜리", "v": "loại tiền 1000won", "r": "cheon wonjjari", "c": "bai-06", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "청각장애인", "v": "người khiếm thính", "r": "cheonggakjangaein", "c": "bai-13", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "청강하다", "v": "nghe giảng", "r": "cheongganghada", "c": "bai-01", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "청주", "v": "rượu trắng", "r": "cheongju", "c": "bai-05", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "청하다", "v": "yêu cầu, xin", "r": "cheonghada", "c": "bai-15", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "체육대회", "v": "đại hội thể thao", "r": "cheyukdaehoe", "c": "bai-01", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "체중", "v": "thể trọng, cân nặng cơ thể", "r": "chejung", "c": "bai-03", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "초대", "v": "mời", "r": "chodae", "c": "bai-01", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "초원", "v": "thảo nguyên", "r": "chowon", "c": "bai-10", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "초조하다", "v": "hồi hộp", "r": "chojohada", "c": "bai-11", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "촬영하다", "v": "quay phim", "r": "chwaryeonghada", "c": "bai-14", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "최선을 다하다", "v": "cố gắng hết sức", "r": "choeseoneul dahada", "c": "bai-01", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "최선을 다하다", "v": "cố gắng hết mình", "r": "choeseoneul dahada", "c": "bai-13", "pos": "khac", "g": "ㅊ", "a": 0}, {"k": "최초", "v": "đầu tiên", "r": "choecho", "c": "bai-13", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "추진하다", "v": "đẩy tới, thúc đẩy", "r": "chujinhada", "c": "bai-07", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "추천", "v": "đề cử, tiến cử", "r": "chucheon", "c": "bai-02", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "추천하다", "v": "tiến cử", "r": "chucheonhada", "c": "bai-12", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "추천하다", "v": "giới thiệu", "r": "chucheonhada", "c": "bai-14", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "축제", "v": "lễ hội", "r": "chukje", "c": "bai-01", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "출국하다", "v": "xuất cảnh", "r": "chulgukhada", "c": "bai-10", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "출금", "v": "rút tiền", "r": "chulgeum", "c": "bai-06", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "출발하다", "v": "xuất phát", "r": "chulbalhada", "c": "bai-10", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "출연하다", "v": "biểu diễn, đóng (kịch, phim...)", "r": "churyeonhada", "c": "bai-14", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "충격", "v": "sốc", "r": "chunggyeok", "c": "bai-13", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "충분히", "v": "đủ, đầy đủ", "r": "chungbunhi", "c": "bai-02", "pos": "khac", "g": "ㅊ", "a": 0}, {"k": "취소", "v": "hủy bỏ", "r": "chwiso", "c": "bai-02", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "취소되다", "v": "bị hủy bỏ", "r": "chwisodoeda", "c": "bai-12", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "취소하다", "v": "huỷ bỏ", "r": "chwisohada", "c": "bai-10", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "취업 문제", "v": "vấn đề xin việc", "r": "chwieop munje", "c": "bai-11", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "취업 준비", "v": "chuẩn bị xin việc", "r": "chwieop junbi", "c": "bai-13", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "취업하다", "v": "xin việc làm", "r": "chwieopada", "c": "bai-13", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "취직", "v": "đi làm, có việc làm", "r": "chwijik", "c": "bai-02", "pos": "danh", "g": "ㅊ", "a": 0}, {"k": "치료하다", "v": "điều trị", "r": "chiryohada", "c": "bai-13", "pos": "dong", "g": "ㅊ", "a": 0}, {"k": "치수가 작다", "v": "chỉ số nhỏ", "r": "chisuga jakda", "c": "bai-04", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "치수가 크다", "v": "chỉ số to", "r": "chisuga keuda", "c": "bai-04", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "친절하다", "v": "thân thiện, tử tế", "r": "chinjeolhada", "c": "bai-02", "pos": "tinh", "g": "ㅊ", "a": 0}, {"k": "카네이션", "v": "hoa cẩm chướng", "r": "kaneisyeon", "c": "bai-05", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "캐주얼", "v": "trang phục thường ngày", "r": "kaejueol", "c": "bai-04", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "코너", "v": "góc", "r": "koneo", "c": "bai-11", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "코미디 영화", "v": "phim hài", "r": "komidi yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "콧대가 높다", "v": "kiêu căng, trịch thượng", "r": "kotdaega nopda", "c": "bai-07", "pos": "khac", "g": "ㅋ", "a": 0}, {"k": "콩", "v": "đậu, đỗ", "r": "kong", "c": "bai-05", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "크루즈 여행", "v": "du lịch đường biển", "r": "keurujeu yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅋ", "a": 0}, {"k": "탕", "v": "canh hầm", "r": "tang", "c": "bai-05", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "탤런트", "v": "người có tài năng, người nổi tiếng", "r": "taelleonteu", "c": "bai-14", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "털어놓다", "v": "tháo ra, mở ra", "r": "teoreonota", "c": "bai-11", "pos": "dong", "g": "ㅌ", "a": 0}, {"k": "텔레뱅킹을 하다", "v": "Giao dịch ngân hàng qua phương tiện truyền thông", "r": "tellebaengkingeul hada", "c": "bai-06", "pos": "dong", "g": "ㅌ", "a": 0}, {"k": "토론", "v": "thảo luận", "r": "toron", "c": "bai-01", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "통역", "v": "thông dịch", "r": "tongyeok", "c": "bai-01", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "통장", "v": "sổ tài khoản", "r": "tongjang", "c": "bai-06", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "통장 정리", "v": "kiểm tra sổ tài khoản", "r": "tongjang jeongni", "c": "bai-06", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "통장을 개설하다", "v": "mở sổ tài khoản", "r": "tongjangeul gaeseolhada", "c": "bai-06", "pos": "dong", "g": "ㅌ", "a": 0}, {"k": "튀기다", "v": "rán (ngập mỡ)", "r": "twigida", "c": "bai-05", "pos": "dong", "g": "ㅌ", "a": 0}, {"k": "특별보좌관", "v": "đặc vụ, cơ quan chuyên trách đặc biệt", "r": "teukbyeolbojwagwan", "c": "bai-13", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "특유", "v": "đặc biệt, riêng biệt", "r": "teugyu", "c": "bai-05", "pos": "danh", "g": "ㅌ", "a": 0}, {"k": "특히", "v": "đặc biệt", "r": "teukhi", "c": "bai-01", "pos": "khac", "g": "ㅌ", "a": 0}, {"k": "파", "v": "hành", "r": "pa", "c": "bai-05", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "파손되다", "v": "hỏng, bị hỏng", "r": "pasondoeda", "c": "bai-09", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "판매하다", "v": "bán", "r": "panmaehada", "c": "bai-04", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "판타지 영화", "v": "phim tưởng tượng, phim lập dị", "r": "pantaji yeonghwa", "c": "bai-14", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "패키지여행", "v": "du lịch trọn gói", "r": "paekiji yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "편의 시설", "v": "thiết bị tiện nghi", "r": "pyeoni siseol", "c": "bai-09", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "평범하다", "v": "bình thường, không có gì đặc biệt", "r": "pyeongbeomhada", "c": "bai-11", "pos": "tinh", "g": "ㅍ", "a": 0}, {"k": "평생", "v": "cuộc đời, bình sinh", "r": "pyeongsaeng", "c": "bai-13", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "포기하다", "v": "bỏ cuộc", "r": "pogihada", "c": "bai-02", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "포인트", "v": "điểm", "r": "pointeu", "c": "bai-04", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "포인트", "v": "điểm, thời điểm, chấm", "r": "pointeu", "c": "bai-13", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "포장 이사", "v": "chuyển nhà trọn gói", "r": "pojang isa", "c": "bai-09", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "폭넓다", "v": "rộng rãi", "r": "pongneolda", "c": "bai-11", "pos": "tinh", "g": "ㅍ", "a": 0}, {"k": "폭력적이다", "v": "bạo lực", "r": "pongnyeokjeogida", "c": "bai-14", "pos": "tinh", "g": "ㅍ", "a": 0}, {"k": "표시하다", "v": "biểu thị, thể hiện", "r": "pyosihada", "c": "bai-08", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "표정", "v": "biểu cảm, nét mặt", "r": "pyojeong", "c": "bai-11", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "표정을 짓다", "v": "biểu hiện bằng nét mặt", "r": "pyojeongeul jitda", "c": "bai-02", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "푹", "v": "hoàn toàn, sâu", "r": "puk", "c": "bai-11", "pos": "khac", "g": "ㅍ", "a": 0}, {"k": "품질", "v": "chất lượng", "r": "pumjil", "c": "bai-08", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "피곤하다", "v": "mệt", "r": "pigonhada", "c": "bai-03", "pos": "tinh", "g": "ㅍ", "a": 0}, {"k": "피로 회복", "v": "xua tan mệt mỏi", "r": "piro hoebok", "c": "bai-10", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "피로를 풀다", "v": "giải tỏa sự mệt mỏi", "r": "piroreul pulda", "c": "bai-03", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "피망", "v": "ớt ngọt", "r": "pimang", "c": "bai-05", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "피아니스트", "v": "nghệ sĩ đàn piano", "r": "pianiseuteu", "c": "bai-13", "pos": "danh", "g": "ㅍ", "a": 0}, {"k": "피하다", "v": "tránh", "r": "pihada", "c": "bai-11", "pos": "dong", "g": "ㅍ", "a": 0}, {"k": "피해를 주다", "v": "gây hại", "r": "pihaereul juda", "c": "bai-15", "pos": "khac", "g": "ㅍ", "a": 0}, {"k": "핑계를 대다", "v": "lấy cớ", "r": "pinggyereul daeda", "c": "bai-08", "pos": "khac", "g": "ㅍ", "a": 0}, {"k": "하숙", "v": "ở trọ (chủ nhà nấu ăn cho)", "r": "hasuk", "c": "bai-09", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "하의", "v": "quần", "r": "haui", "c": "bai-04", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "학과 대표", "v": "đại diện khoa", "r": "hakgwa daepyo", "c": "bai-07", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "학과 사무실", "v": "văn phòng khoa", "r": "hakgwa samusil", "c": "bai-01", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "학기", "v": "học kỳ", "r": "hakgi", "c": "bai-01", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "학점", "v": "tín chỉ", "r": "hakjeom", "c": "bai-01", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "한식", "v": "món Hàn Quốc", "r": "hansik", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "한식당", "v": "nhà hàng Hàn Quốc", "r": "hansikdang", "c": "bai-12", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "할부", "v": "trả góp, trả làm nhiều lần", "r": "halbu", "c": "bai-04", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "할인 매장", "v": "khu bán hàng giảm giá", "r": "harin maejang", "c": "bai-04", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "함부로", "v": "hồ đồ, không suy nghĩ", "r": "hamburo", "c": "bai-06", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "합리적이다", "v": "hợp lý", "r": "hamnijeogida", "c": "bai-07", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "항공권", "v": "vé máy bay", "r": "hanggonggwon", "c": "bai-10", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "해결되다", "v": "được giải quyết", "r": "haegyeoldoeda", "c": "bai-09", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "해리포터", "v": "Heri porter", "r": "haeripoteo", "c": "bai-14", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "해물", "v": "hải sản", "r": "haemul", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "해수욕", "v": "bãi biển", "r": "haesuyok", "c": "bai-10", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "해수욕장", "v": "bãi tắm biển", "r": "haesuyokjang", "c": "bai-10", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "해외여행", "v": "du lịch nước ngoài", "r": "haeoe yeohaeng", "c": "bai-10", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "향", "v": "hương", "r": "hyang", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "허리가 작다", "v": "vòng eo nhỏ", "r": "heoriga jakda", "c": "bai-04", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "허리가 크다", "v": "vòng eo to", "r": "heoriga keuda", "c": "bai-04", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "헐렁하다", "v": "rộng", "r": "heolleonghada", "c": "bai-04", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "헷갈리다", "v": "lẫn lộn", "r": "hetgallida", "c": "bai-08", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "현금", "v": "tiền mặt", "r": "hyeongeum", "c": "bai-06", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "현금자동입출금기(ATM기)", "v": "máy nhập rút tiền mặt tự động", "r": "hyeongeumjadongipchulgeumgi", "c": "bai-06", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "현금카드", "v": "thẻ tiền mặt", "r": "hyeongeumkadeu", "c": "bai-06", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "현대화", "v": "hiện đại hóa", "r": "hyeondaehwa", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "현명하다", "v": "khôn ngoan sáng suốt, thông minh", "r": "hyeonmyeonghada", "c": "bai-02", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "현실적이다", "v": "có tính hiện thực", "r": "hyeonsiljeogida", "c": "bai-13", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "혈액형", "v": "nhóm máu", "r": "hyeoraekhyeong", "c": "bai-07", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "협동성", "v": "tính hợp tác", "r": "hyeopdongseong", "c": "bai-13", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "호기심", "v": "tính tò mò, lòng hiếu kỳ", "r": "hogisim", "c": "bai-07", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "호박전", "v": "bánh bí nhúng bột rán", "r": "hobakjeon", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "호수", "v": "hồ", "r": "hosu", "c": "bai-10", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "홈쇼핑", "v": "mua sắm tại nhà", "r": "homsyoping", "c": "bai-04", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "홈페이지", "v": "Trang chủ", "r": "hompeiji", "c": "bai-12", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "화가 풀리다", "v": "giải tỏa, làm nguôi cơn giận", "r": "hwaga pullida", "c": "bai-08", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "확인하다", "v": "xác nhận", "r": "hwaginhada", "c": "bai-08", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "환불", "v": "trả hàng (lấy lại tiền)", "r": "hwanbul", "c": "bai-04", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "환전하다", "v": "đổi tiền", "r": "hwanjeonhada", "c": "bai-06", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "활발하다", "v": "hoạt bát", "r": "hwalbalhada", "c": "bai-07", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "회", "v": "tập(phim)", "r": "hoe", "c": "bai-14", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "회복되다", "v": "được hồi phục", "r": "hoebokdoeda", "c": "bai-13", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "회비", "v": "hội phí", "r": "hoebi", "c": "bai-02", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "회식", "v": "liên hoan công ty", "r": "hoesik", "c": "bai-02", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "효심", "v": "lòng hiếu thảo", "r": "hyosim", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "후춧가루", "v": "tiêu bột", "r": "huchutgaru", "c": "bai-05", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "훨씬", "v": "vượt bậc, ......hẳn hơn", "r": "hwolssin", "c": "bai-11", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "휴가를 가다", "v": "đi nghỉ", "r": "hyugareul gada", "c": "bai-03", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "휴강", "v": "nghỉ dạy", "r": "hyugang", "c": "bai-01", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "휴관", "v": "đóng cửa, nghỉ (hoạt động)", "r": "hyugwan", "c": "bai-01", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "휴식을 취하다", "v": "nghỉ ngơi", "r": "hyusigeul chwihada", "c": "bai-03", "pos": "dong", "g": "ㅎ", "a": 0}, {"k": "흡연실", "v": "phòng hút thuốc lá", "r": "heubyeonsil", "c": "bai-15", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "흥행", "v": "sự trình diễn, trình chiếu", "r": "heunghaeng", "c": "bai-14", "pos": "danh", "g": "ㅎ", "a": 0}, {"k": "희망/ 꿈을 가지다", "v": "mang ước mơ/hy vọng", "r": "huimang/ kkumeul gajida", "c": "bai-13", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "희망/ 꿈을 나누다", "v": "chia sẻ ước mơ/hy vọng", "r": "huimang/ kkumeul nanuda", "c": "bai-13", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "희망/ 꿈을 키우다", "v": "Nuôi dưỡng ước mơ/hy vọng", "r": "huimang/ kkumeul kiuda", "c": "bai-13", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "희망/ 꿈이 있다", "v": "có ước mơ/hy vọng", "r": "huimang/ kkumi itda", "c": "bai-13", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "희망을 잃다", "v": "Đánh mất hy vọng", "r": "huimangeul ilta", "c": "bai-13", "pos": "khac", "g": "ㅎ", "a": 0}, {"k": "희망적이다", "v": "có tính hy vọng", "r": "huimangjeogida", "c": "bai-13", "pos": "tinh", "g": "ㅎ", "a": 0}, {"k": "힘들다", "v": "vất vả, khó khăn", "r": "himdeulda", "c": "bai-03", "pos": "tinh", "g": "ㅎ", "a": 0}];
+
+    const TOPICS = [
+      {
+            "id": "*",
+            "name": "Tất cả chủ đề",
+            "icon": "📚"
+      },
+      {
+            "id": "bai-01",
+            "name": "Bài 01: Sinh hoạt ở trường (학교생활)",
+            "icon": "🏫"
+      },
+      {
+            "id": "bai-02",
+            "name": "Bài 02: Quan hệ xã hội (대인 관계)",
+            "icon": "🤝"
+      },
+      {
+            "id": "bai-03",
+            "name": "Bài 03: Sức khỏe (건강)",
+            "icon": "🩺"
+      },
+      {
+            "id": "bai-04",
+            "name": "Bài 04: Mua sắm (쇼핑)",
+            "icon": "🛍️"
+      },
+      {
+            "id": "bai-05",
+            "name": "Bài 05: Nấu ăn (요리)",
+            "icon": "🍳"
+      },
+      {
+            "id": "bai-06",
+            "name": "Bài 06: Ngân hàng (은행)",
+            "icon": "🏦"
+      },
+      {
+            "id": "bai-07",
+            "name": "Bài 07: Tính cách (성격)",
+            "icon": "😊"
+      },
+      {
+            "id": "bai-08",
+            "name": "Bài 08: Sai sót (실수)",
+            "icon": "😅"
+      },
+      {
+            "id": "bai-09",
+            "name": "Bài 09: Chuyển nhà (이사)",
+            "icon": "📦"
+      },
+      {
+            "id": "bai-10",
+            "name": "Bài 10: Du lịch (여행)",
+            "icon": "✈️"
+      },
+      {
+            "id": "bai-11",
+            "name": "Bài 11: Nỗi lo (고민)",
+            "icon": "💭"
+      },
+      {
+            "id": "bai-12",
+            "name": "Bài 12: Internet (인터넷)",
+            "icon": "🌐"
+      },
+      {
+            "id": "bai-13",
+            "name": "Bài 13: Hy vọng (희망)",
+            "icon": "🌟"
+      },
+      {
+            "id": "bai-14",
+            "name": "Bài 14: Phim điện ảnh và phim truyền hình (영화와 드라마)",
+            "icon": "🎬"
+      },
+      {
+            "id": "bai-15",
+            "name": "Bài 15: Phép lịch sự và quy tắc (예절과 규칙)",
+            "icon": "🙇"
+      }
+];
+
+    const POS_TYPES = [
+      { id: "*", name: "Tất cả" },
+      { id: "danh", name: "Danh từ" },
+      { id: "dong", name: "Động từ" },
+      { id: "tinh", name: "Tính từ" },
+      { id: "khac", name: "Khác / Phó từ" }
+    ];
+
+    const POS_LABEL = {
+      "danh": "Danh từ",
+      "dong": "Động từ",
+      "tinh": "Tính từ",
+      "khac": "Khác"
+    };
+
+    const TOPIC_LABEL = {
+      "bai-01": "🏫 Bài 01: Sinh hoạt ở trường",
+      "bai-02": "🤝 Bài 02: Quan hệ xã hội",
+      "bai-03": "🩺 Bài 03: Sức khỏe",
+      "bai-04": "🛍️ Bài 04: Mua sắm",
+      "bai-05": "🍳 Bài 05: Nấu ăn",
+      "bai-06": "🏦 Bài 06: Ngân hàng",
+      "bai-07": "😊 Bài 07: Tính cách",
+      "bai-08": "😅 Bài 08: Sai sót",
+      "bai-09": "📦 Bài 09: Chuyển nhà",
+      "bai-10": "✈️ Bài 10: Du lịch",
+      "bai-11": "💭 Bài 11: Nỗi lo",
+      "bai-12": "🌐 Bài 12: Internet",
+      "bai-13": "🌟 Bài 13: Hy vọng",
+      "bai-14": "🎬 Bài 14: Phim điện ảnh và phim truyền hình",
+      "bai-15": "🙇 Bài 15: Phép lịch sự và quy tắc"
+};
+
+    const GROUPS = ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ","기타"];
+    const GROUP_LABEL = {"기타": "Khác"};
+
+    const fold = s => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+                        .replace(/đ/g,"d").replace(/Đ/g,"D").toLowerCase();
+
+    DATA.forEach(d => {
+      d._v = fold(d.v);
+      d._k = (d.k || "").toLowerCase();
+      d._r = (d.r || "").toLowerCase();
+    });
+
+    // SPEECH SYNTHESIS (TTS KOREAN)
+    let koreanVoice = null;
+    function loadKoreanVoice() {
+      if ('speechSynthesis' in window) {
+        const voices = window.speechSynthesis.getVoices();
+        koreanVoice = voices.find(v => v.lang === 'ko-KR' || v.lang.startsWith('ko') || (v.name && v.name.toLowerCase().includes('korean')));
+      }
+    }
+    if ('speechSynthesis' in window) {
+      loadKoreanVoice();
+      window.speechSynthesis.onvoiceschanged = loadKoreanVoice;
+    }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) {
+        alert('Trình duyệt của bạn chưa hỗ trợ Web Speech API để phát âm!');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const clean = text.replace(/\(.*?\)/g, '').trim();
+      const u = new SpeechSynthesisUtterance(clean || text);
+      u.lang = 'ko-KR';
+      if (koreanVoice) u.voice = koreanVoice;
+
+      const rateSelect = document.getElementById("ttsRate");
+      u.rate = rateSelect ? (parseFloat(rateSelect.value) || 0.85) : 0.85;
+
+      window.speechSynthesis.speak(u);
+    }
+
+    // STATE
+    let curTopic = "*";
+    let curPos = "*";
+    let curJamo = "*";
+
+    const qEl = document.getElementById("q");
+    const clearEl = document.getElementById("clearSearch");
+    const topicListEl = document.getElementById("topicList");
+    const posGroupEl = document.getElementById("posGroup");
+    const jamoGridEl = document.getElementById("jamoGrid");
+    const statusInfoEl = document.getElementById("statusInfo");
+    const statusActionsEl = document.getElementById("statusActions");
+    const vocabGridEl = document.getElementById("vocabGrid");
+    const backToTopBtn = document.getElementById("backToTop");
+
+    function buildTopicSidebar() {
+      topicListEl.innerHTML = "";
+      TOPICS.forEach(t => {
+        const count = t.id === "*" ? DATA.length : DATA.filter(d => d.c === t.id).length;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "side-btn" + (t.id === curTopic ? " active" : "");
+        btn.dataset.id = t.id;
+        btn.innerHTML = '<span class="btn-text"><span>' + t.icon + '</span> ' + t.name + '</span><span class="btn-badge">' + count + '</span>';
+        topicListEl.appendChild(btn);
+      });
+
+      topicListEl.addEventListener("click", e => {
+        const btn = e.target.closest(".side-btn");
+        if (!btn) return;
+        curTopic = btn.dataset.id;
+        render();
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+
+    function buildPosSidebar() {
+      posGroupEl.innerHTML = "";
+      POS_TYPES.forEach(p => {
+        const count = p.id === "*" ? DATA.length : DATA.filter(d => d.pos === p.id).length;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "pos-chip" + (p.id === curPos ? " active" : "");
+        btn.dataset.id = p.id;
+        btn.innerHTML = p.name + ' <span class="num">(' + count + ')</span>';
+        posGroupEl.appendChild(btn);
+      });
+
+      posGroupEl.addEventListener("click", e => {
+        const btn = e.target.closest(".pos-chip");
+        if (!btn) return;
+        curPos = btn.dataset.id;
+        render();
+      });
+    }
+
+    function buildJamoSidebar() {
+      jamoGridEl.innerHTML = "";
+      const allBtn = document.createElement("button");
+      allBtn.type = "button";
+      allBtn.className = "jbtn all-jamo" + (curJamo === "*" ? " active" : "");
+      allBtn.dataset.g = "*";
+      allBtn.innerHTML = 'Tất cả phụ âm (' + DATA.length + ')';
+      jamoGridEl.appendChild(allBtn);
+
+      GROUPS.forEach(g => {
+        const count = DATA.filter(d => d.g === g).length;
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "jbtn" + (g === curJamo ? " active" : "");
+        b.dataset.g = g;
+        b.innerHTML = (GROUP_LABEL[g] || g) + '<span class="jn">' + count + '</span>';
+        jamoGridEl.appendChild(b);
+      });
+
+      jamoGridEl.addEventListener("click", e => {
+        const btn = e.target.closest(".jbtn");
+        if (!btn) return;
+        curJamo = btn.dataset.g;
+        render();
+      });
+    }
+
+    const esc = s => (s || "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+    function hi(text, folded, needle, isKo){
+      const hay = isKo ? text.toLowerCase() : folded;
+      const i = hay.indexOf(needle);
+      if (i < 0 || !needle) return esc(text);
+      return esc(text.slice(0,i)) + "<mark>" + esc(text.slice(i, i+needle.length)) + "</mark>" + esc(text.slice(i+needle.length));
+    }
+
+    function cardHTML(d, nk, needle) {
+      const ko = nk ? hi(d.k, d._k, nk, true) : esc(d.k);
+      const ro = needle ? hi(d.r, d._r, needle, false) : esc(d.r);
+      const vi = needle ? hi(d.v, d._v, needle, false) : esc(d.v);
+      const flag = d.a ? '<span class="flag">(nghĩa tham khảo)</span>' : '';
+      const posBadge = '<span class="badge badge-pos-' + (d.pos || 'khac') + '">' + (POS_LABEL[d.pos] || 'Khác') + '</span>';
+      const topicBadge = '<span class="badge badge-topic">' + (TOPIC_LABEL[d.c] || 'Khác') + '</span>';
+
+      return '<div class="vocab-card">'
+           + '  <div class="card-top">'
+           + '    <div class="card-word-group">'
+           + '      <span class="word-ko">' + ko + '</span>'
+           + '      <span class="word-ro">' + ro + '</span>'
+           + '    </div>'
+           + '    <button type="button" class="btn-speak" title="Nghe phát âm ' + esc(d.k) + '" data-word="' + esc(d.k) + '">🔊</button>'
+           + '  </div>'
+           + '  <div class="card-badges">' + posBadge + topicBadge + '</div>'
+           + '  <div class="word-vi">' + vi + flag + '</div>'
+           + '</div>';
+    }
+
+    function resetAllFilters() {
+      curTopic = "*";
+      curPos = "*";
+      curJamo = "*";
+      qEl.value = "";
+      render();
+    }
+
+    function render() {
+      const raw = qEl.value.trim();
+      const searching = raw.length > 0;
+      const needle = fold(raw);
+      clearEl.hidden = !searching;
+
+      // Update active states
+      [...topicListEl.children].forEach(b => b.classList.toggle("active", b.dataset.id === curTopic));
+      [...posGroupEl.children].forEach(b => b.classList.toggle("active", b.dataset.id === curPos));
+      [...jamoGridEl.children].forEach(b => b.classList.toggle("active", b.dataset.g === curJamo));
+
+      const nk = raw.toLowerCase();
+
+      // Filter
+      const items = DATA.filter(d => {
+        if (curTopic !== "*" && d.c !== curTopic) return false;
+        if (curPos !== "*" && d.pos !== curPos) return false;
+        if (curJamo !== "*" && d.g !== curJamo) return false;
+        if (searching) {
+          if (!d._k.includes(nk) && !d._r.includes(needle) && !d._v.includes(needle)) return false;
+        }
+        return true;
+      });
+
+      // Render
+      let html = "";
+      if (items.length === 0) {
+        html = '<div class="empty-state"><h3>없어요</h3><p>Không tìm thấy từ vựng nào khớp với bộ lọc hiện tại. Thử xóa bớt bộ lọc hoặc gõ từ khóa ngắn hơn.</p></div>';
+      } else {
+        if (curJamo === "*" && !searching && curTopic === "*" && curPos === "*") {
+          let cur = null;
+          html = items.map(d => {
+            let head = "";
+            if (d.g !== cur) {
+              cur = d.g;
+              const gCount = DATA.filter(x => x.g === cur).length;
+              head = '<div class="jamo-divider"><b>' + esc(GROUP_LABEL[cur] || cur) + '</b><span>' + gCount + ' từ</span></div>';
+            }
+            return head + cardHTML(d, "", "");
+          }).join("");
+        } else {
+          html = items.map(d => cardHTML(d, nk, needle)).join("");
+        }
+      }
+      vocabGridEl.innerHTML = html;
+
+      // Status
+      let statusHtml = 'Hiển thị: <strong>' + items.length + '</strong> / ' + DATA.length + ' từ vựng';
+      const filters = [];
+      if (curTopic !== "*") {
+        const t = TOPICS.find(x => x.id === curTopic);
+        if (t) filters.push('<span class="filter-tag-pill">' + t.icon + ' ' + t.name + '</span>');
+      }
+      if (curPos !== "*") {
+        const p = POS_TYPES.find(x => x.id === curPos);
+        if (p) filters.push('<span class="filter-tag-pill">' + p.name + '</span>');
+      }
+      if (curJamo !== "*") {
+        filters.push('<span class="filter-tag-pill">Phụ âm ' + (GROUP_LABEL[curJamo] || curJamo) + '</span>');
+      }
+      if (searching) {
+        filters.push('<span class="filter-tag-pill">Từ khóa: “' + esc(raw) + '”</span>');
+      }
+
+      if (filters.length > 0) {
+        statusHtml += ' <span class="status-filter-tags">' + filters.join("") + '</span>';
+        statusActionsEl.innerHTML = '<button type="button" class="btn-reset-all" onclick="resetAllFilters()">✕ Xóa bộ lọc</button>';
+      } else {
+        statusActionsEl.innerHTML = '';
+      }
+      statusInfoEl.innerHTML = statusHtml;
+    }
+
+    // Audio click handler
+    vocabGridEl.addEventListener("click", e => {
+      const btn = e.target.closest(".btn-speak");
+      if (!btn) return;
+      e.stopPropagation();
+      speakWord(btn.dataset.word);
+    });
+
+    // Events
+    qEl.addEventListener("input", render);
+    clearEl.addEventListener("click", () => {
+      qEl.value = "";
+      clearEl.hidden = true;
+      qEl.focus();
+      render();
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "/" && document.activeElement !== qEl) {
+        e.preventDefault();
+        qEl.focus();
+      }
+      if (e.key === "Escape" && document.activeElement === qEl) {
+        qEl.value = "";
+        render();
+      }
+    });
+
+    // Scroll to Top
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = "flex";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Init
+    buildTopicSidebar();
+    buildPosSidebar();
+    buildJamoSidebar();
+    render();
+  </script>
+</body>
+</html>
