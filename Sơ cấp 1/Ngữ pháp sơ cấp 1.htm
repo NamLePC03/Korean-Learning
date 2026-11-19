@@ -836,7 +836,7 @@
         color: #000000 !important;
         padding-bottom: 0 !important;
       }
-      .hero-header, .controls-bar, .tab-navigation, .speak-btn, .back-to-top, .quiz-card {
+      .hero-header, .controls-bar, .tab-navigation, .speak-btn, .back-to-top, .quiz-card, #searchEmptyState {
         display: none !important;
       }
       .tab-panel {
@@ -920,6 +920,11 @@
 
       <!-- CONTENT AREA (RIGHT COLUMN) -->
       <div class="content-area">
+      <div id="searchEmptyState" style="display: none; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+        <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
+        <div style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">Không tìm thấy kết quả phù hợp</div>
+        <div id="searchEmptyText" style="font-size: 14px; color: var(--text-muted);">Thử nhập từ khóa khác hoặc nhấn ✕ để xóa tìm kiếm.</div>
+      </div>
 
     <!-- ==================== TAB 0: NHẬP MÔN HANGEUL ==================== -->
     <section class="tab-panel active" id="tab-intro">
@@ -936,7 +941,7 @@
         <div class="card-header">
           <div class="grammar-title-group">
             <span class="grammar-badge">Kiến thức 01</span>
-            <span class="grammar-name-ko">모음 và 자음</span>
+            <span class="grammar-name-ko">모음과 자음</span>
             <span class="grammar-meaning-vi">Hệ thống 21 Nguyên âm & 19 Phụ âm tiếng Hàn</span>
           </div>
         </div>
@@ -1122,7 +1127,7 @@
           <div class="section-title">3. Quy tắc Bật hơi hóa (격음화 - Aspiration)</div>
           <div class="explanation-box">
             <p>Khi các phụ âm <strong>ㄱ, ㄷ, ㅂ, ㅈ</strong> đứng trước phụ âm <strong>ㅎ</strong>, hoặc <strong>ㅎ (ㄶ, ㅀ)</strong> đứng trước <strong>ㄱ, ㄷ, ㅈ</strong> thì chúng kết hợp lại thành âm bật hơi tương ứng: <strong>ㅋ, ㅌ, ㅍ, ㅊ</strong> (k, t, p, ch).</p>
-            <p>Ví dụ: 축하하다 ➔ [추카하다 / chukahada], 좋다 ➔ [조타 / jota], 많다 ➔ [만타 / manta], 입학 ➔ [이팍 / ipak], 맞히다 ➔ [마치다 / machida]. <em>(Lưu ý: Theo chuẩn La-tinh hóa viết chữ với danh từ [체언], vẫn giữ <code>h</code> khi bật hơi: chukhahada, iphak).</em></p>
+            <p>Ví dụ: 축하하다 ➔ [추카하다 / chukahada], 좋다 ➔ [조타 / jota], 많다 ➔ [만타 / manta], 입학 ➔ [이팍 / ipak], 맞히다 ➔ [마치다 / machida]. <em>(Lưu ý: Theo chuẩn La-tinh hóa viết chữ với danh từ [체언] và từ phái sinh từ danh từ đó, vẫn giữ <code>h</code> khi bật hơi: 축하 ➔ chukha, 축하하다 ➔ chukhahada, 입학 ➔ iphak).</em></p>
           </div>
 
           <div class="section-title">4. Quy tắc Nhũ âm hóa (유음화 - Liquidization)</div>
@@ -1167,11 +1172,11 @@
 
           <div class="section-title">7. Quy tắc Vòm họng hóa (구개음화 - Palatalization)</div>
           <div class="explanation-box">
-            <p>Khi phụ âm cuối <strong>ㄷ, ㅌ (ㄾ)</strong> gặp <strong>tiểu từ hoặc hậu tố bắt đầu bằng nguyên âm ㅣ</strong> (hoặc dạng rút gọn từ hậu tố -이- như 붙여 [부쳐 / buchyeo]), thì:</p>
+            <p>Khi phụ âm cuối <strong>ㄷ, ㅌ (ㄾ)</strong> gặp <strong>tiểu từ hoặc hậu tố bắt đầu bằng nguyên âm ㅣ</strong> (hoặc dạng rút gọn từ hậu tố -이- như 붙여 [부처 / bucheo]), thì:</p>
             <ul style="margin-left: 20px; margin-top: 6px;">
               <li><strong>ㄷ</strong> chuyển thành phát âm <strong>[ㅈ / j]</strong> (và ㄷ + hậu tố 히 ➔ [치 / chi])</li>
               <li><strong>ㅌ</strong> chuyển thành phát âm <strong>[ㅊ / ch]</strong></li>
-              <li><em>* Không áp dụng trong nội bộ một từ gốc (잔디 [잔디 / jandi]) hay giữa hai từ ghép độc lập (맏형 [마텽 / matyeong]).</em></li>
+              <li><em>* Không áp dụng trong nội bộ một từ gốc (잔디 [잔디 / jandi]) hay giữa hai thực từ ghép độc lập ㄷ, ㅌ + ㅣ (홑이불 [혼니불 / honnibul], 밭이랑 [반니랑 / bannirang]; lưu ý 맏형 [마텽 / madhyeong] là bật hơi hóa ㄷ + ㅎ).</em></li>
             </ul>
           </div>
           <div class="examples-container">
@@ -2003,7 +2008,7 @@
               </div>
             </div>
             <div class="example-item">
-              <button class="speak-btn" onclick="speakText('전화번호가 공일공 에 삼사오육 에 칠팔구공입니다.')">🔊</button>
+              <button class="speak-btn" onclick="speakText('전화번호가 공일공에 삼사오육에 칠팔구공입니다.')">🔊</button>
               <div class="example-content">
                 <div class="example-ko">전화번호: 010-3456-7890 <span class="point">[공일공에 삼사오유게 칠팔구공 / gongilgonge samsaoyuge chilpalgugong]</span></div>
                 <div class="example-vi">Số điện thoại: 010-3456-7890 (Dấu gạch nối thường đọc là 에 [e])</div>
@@ -2423,8 +2428,8 @@
                 </tr>
                 <tr>
                   <td>Gốc kết thúc bằng <strong>하다</strong></td>
-                  <td><span class="rule-highlight">했어요</span></td>
-                  <td><span class="rule-highlight">했습니다</span></td>
+                  <td><span class="rule-highlight">했어요</span><br><small style="color: #64748b;">(하 + 였어요 ➔ 했어요)</small></td>
+                  <td><span class="rule-highlight">했습니다</span><br><small style="color: #64748b;">(하 + 였습니다 ➔ 했습니다)</small></td>
                   <td>• 공부하다 ➔ <strong>공부했어요 / 공부했습니다</strong><br>• 운동하다 ➔ <strong>운동했어요 / 운동했습니다</strong></td>
                 </tr>
               </tbody>
@@ -2558,7 +2563,7 @@
             <div class="quiz-title">✍️ Thử Thách Ôn Tập Nhanh Bài 6</div>
             <div class="quiz-question">Chia động từ "마시다" (uống) ở thì QUÁ KHỨ với đuôi thân mật lịch sự:</div>
             <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa đúng! 마시다 có nguyên âm ㅣ, khi gặp 었 sẽ co âm thành ㅕ.')">A. 마시었어요</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa tối ưu! Trong giao tiếp hiện đại, 마시- + 었어요 thường co âm thành 마셨어요 (dạng 마시었어요 rất ít dùng).')">A. 마시었어요</div>
               <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! 마시- + 었어요 co âm (ㅣ + ㅓ = ㅕ) tạo thành 마셨어요.')">B. 마셨어요</div>
               <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa đúng! 마시다 là nguyên âm âm nên phải kết hợp với -었-, không đi với -았-.')">C. 마셨아요</div>
             </div>
@@ -3155,7 +3160,7 @@
         <div class="lesson-meta">
           <span class="lesson-tag">Bài 10 • 제10과</span>
         </div>
-        <h2 class="lesson-title-ko">가족 <span class="lesson-title-vi">Gia đình (Kính ngữ & Bất quy tắc ㄹ)</span></h2>
+        <h2 class="lesson-title-ko">가족 <span class="lesson-title-vi">Gia đình (Kính ngữ & Quy tắc rụng ㄹ)</span></h2>
         <p class="lesson-desc">Bài học văn hóa nền tảng trong tiếng Hàn: Kính ngữ chủ thể -(으)시-, trợ từ kính ngữ 께서, các từ vựng kính ngữ đặc biệt và quy tắc rụng phụ âm ㄹ.</p>
       </div>
 
@@ -3290,19 +3295,19 @@
         </div>
       </div>
 
-      <!-- NGỮ PHÁP 3: BẤT QUY TẮC PHỤ ÂM CUỐI 'ㄹ' -->
+      <!-- NGỮ PHÁP 3: QUY TẮC RỤNG PHỤ ÂM CUỐI 'ㄹ' -->
       <div class="grammar-card">
         <div class="card-header">
           <div class="grammar-title-group">
-            <span class="grammar-badge">Bất quy tắc</span>
+            <span class="grammar-badge">Quy tắc rụng ㄹ</span>
             <span class="grammar-name-ko">‘ㄹ’ 탈락 (Quy tắc rụng phụ âm cuối ㄹ)</span>
-            <span class="grammar-meaning-vi">Khi gặp các phụ âm ㄴ, ㅂ, ㅅ (và -오, -ㄹ) thì patchim ㄹ của thân từ bị rụng</span>
+            <span class="grammar-meaning-vi">Khi gặp phụ âm đầu đuôi từ ㄴ, ㅂ, ㅅ hoặc vĩ tố -오, -(으)ㄹ... (như -(으)ㄹ까요; lưu ý không rụng trước -(으)려고 như 살려고, 만들려고) thì patchim ㄹ bị rụng</span>
           </div>
         </div>
         <div class="card-body">
           <div class="section-title">1. Quy tắc cốt lõi</div>
           <div class="explanation-box">
-            <p>Khi thân của động từ/tính từ kết thúc bằng phụ âm <strong>ㄹ</strong> gặp các đuôi câu bắt đầu bằng <strong>ㄴ, ㅂ, ㅅ</strong> (như đuôi <strong>-ㅂ니다/습니까, -(으)세요, -(으)시-</strong>):</p>
+            <p>Khi thân của động từ/tính từ kết thúc bằng phụ âm <strong>ㄹ</strong> gặp phụ âm đầu đuôi từ <strong>ㄴ, ㅂ, ㅅ</strong> (như đuôi <strong>-ㅂ니다/습니까, -(으)세요, -(으)시-</strong>) hoặc vĩ tố <strong>-오, -(으)ㄹ...</strong> (như <strong>-(으)ㄹ까요</strong>; lưu ý <em>không</em> rụng trước <strong>-(으)려고</strong> như 살려고, 만들려고) <em>(thường được gọi quen trong giáo trình là "Bất quy tắc ㄹ")</em>:</p>
             <p>➔ <strong>Phụ âm 'ㄹ' sẽ BỊ RỤNG MẤT (biến mất hoàn toàn)</strong>, sau đó coi như gốc từ không có patchim để kết hợp tiếp!</p>
           </div>
           <div class="rule-table-wrapper">
@@ -3363,8 +3368,8 @@
             <div class="quiz-title">✍️ Thử Thách Ôn Tập Nhanh Bài 10</div>
             <div class="quiz-question">Động từ "만들다" (làm, chế tạo) khi chia với đuôi kính ngữ "-(으)시-" dạng hiện tại sẽ là:</div>
             <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa đúng! Theo bất quy tắc ㄹ, patchim ㄹ gặp ㅅ thì patchim ㄹ bị rụng và không cần thêm 으.')">A. 만들으세요</div>
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Bất quy tắc ㄹ: 만들다 gặp ㅅ ➔ rụng ㄹ ➔ 만드세요 (Tuyệt đối không dùng 만들으세요).')">B. 만드세요</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa đúng! Theo quy tắc rụng ㄹ (ㄹ 탈락), patchim ㄹ gặp ㅅ thì patchim ㄹ bị rụng và không cần thêm 으.')">A. 만들으세요</div>
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Quy tắc rụng ㄹ (ㄹ 탈락, thường gọi &quot;Bất quy tắc ㄹ&quot;): 만들다 gặp ㅅ ➔ rụng ㄹ ➔ 만드세요 (Tuyệt đối không dùng 만들으세요).')">B. 만드세요</div>
               <div class="quiz-option" onclick="checkQuiz(this, false, 'Chưa đúng! Thừa patchim ㄹ.')">C. 만들세요</div>
             </div>
             <div class="quiz-feedback"></div>
@@ -4262,7 +4267,327 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 16: BẢNG TRA CỨU TOÀN DIỆN ==================== -->
+    <!-- ==================== TAB 16: BẤT QUY TẮC TIẾNG HÀN ==================== -->
+    <section class="tab-panel" id="tab-batquytac">
+      <div class="lesson-banner" style="border-left-color: #8b5cf6;">
+        <div class="lesson-meta">
+          <span class="lesson-tag" style="background: #ede9fe; color: #6d28d9;">Chuyên Đề Trọng Tâm</span>
+          <span class="lesson-tag" style="background: #fef3c7; color: #b45309;">TOPIK I & II</span>
+        </div>
+        <h2 class="lesson-title-ko">한국어 불규칙 활용 마스터 <span class="lesson-title-vi">Cẩm Nang Toàn Diện Về Bất Quy Tắc Tiếng Hàn</span></h2>
+        <p class="lesson-desc">Hệ thống hóa 7 nhóm biến đổi kinh điển (ㅡ, ㄷ, ㅂ, ㅅ, 르, ㄹ, ㅎ) và 3 bất quy tắc (우, 러, 여). <em>(Lưu ý chuẩn 국립국어원: nhóm ㅡ và ㄹ thực chất là <strong>quy tắc rụng có quy luật</strong> [규칙 탈락], còn ㄷ, ㅂ, ㅅ, 르, ㅎ, 우, 러, 여 là bất quy tắc chính thống [불규칙 활용]).</em></p>
+      </div>
+
+      <!-- CARD 1: MA TRẬN 7 BẤT QUY TẮC KINH ĐIỂN -->
+      <div class="grammar-card">
+        <div class="card-header" style="background: #f5f3ff; border-bottom-color: #ede9fe;">
+          <div class="grammar-title-group">
+            <span class="grammar-badge" style="background: #7c3aed;">Phần 1</span>
+            <span class="grammar-name-ko">불규칙 활용 종합 마스터 테이블</span>
+            <span class="grammar-meaning-vi">Bảng Ma Trận Tổng Hợp 7 Bất Quy Tắc Kinh Điển</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="explanation-box" style="border-left-color: #7c3aed;">
+            <p><strong>💡 Nguyên tắc phân loại khoa học:</strong> Trong tiếng Hàn, biến đổi bất quy tắc không chỉ đơn thuần là "gặp nguyên âm" hay "gặp phụ âm", mà phụ thuộc vào <strong>3 nhóm hình thái đuôi tiếp vĩ</strong>:</p>
+            <p>1. <strong>Nhóm đuôi -아/어:</strong> (-아요/어요, -았/었어요, -아서/어서, -아/어야 하다...)</p>
+            <p>2. <strong>Nhóm đuôi đệm -(으):</strong> (-(으)면, -(으)니까, -(으)세요, -(으)ㄹ 때, -(으)ㄴ/는...)</p>
+            <p>3. <strong>Nhóm đuôi phụ âm thường:</strong> (-고, -지만, -게, -지 않다, -(스)ㅂ니다...)</p>
+          </div>
+
+          <div class="rule-table-wrapper" style="margin-top: 10px;">
+            <table class="rule-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 140px;">Bất quy tắc</th>
+                  <th style="min-width: 170px;">Gặp đuôi -아/어</th>
+                  <th style="min-width: 180px;">Gặp đuôi -(으)...</th>
+                  <th style="min-width: 170px;">Gặp phụ âm thường (-고, -지만, ㅂ니다)</th>
+                  <th style="min-width: 190px;">Ngoại lệ (Chia có quy tắc)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="color: #6d28d9;">1. Quy tắc ㅡ (ㅡ 탈락)</strong><br><small style="color: #64748b;">Gốc tận cùng là nguyên âm ㅡ (Rụng có quy luật)</small></td>
+                  <td><strong>Bỏ ㅡ</strong>, xét nguyên âm âm tiết trước để chọn 아/어:<br>• 예쁘다 ➔ <span class="rule-highlight">예뻐요</span><br>• 바쁘다 ➔ <span class="rule-highlight">바빠요</span><br>• 쓰다 ➔ <span class="rule-highlight">써요</span></td>
+                  <td><strong>Không lấy 으</strong>, gắn trực tiếp đuôi:<br>• 쓰다 + (으)면 ➔ <span class="rule-highlight">쓰면</span><br>• 바쁘다 + (으)니까 ➔ <span class="rule-highlight">바쁘니까</span></td>
+                  <td><strong>Giữ nguyên ㅡ</strong>, chia bình thường:<br>• 쓰다 + -고 ➔ <strong>쓰고</strong><br>• 쓰다 + -ㄴ다 ➔ <strong>쓴다</strong><br>• 예쁘다 + -지만 ➔ <strong>예쁘지만</strong></td>
+                  <td><em>Luôn tuân theo quy tắc này (trừ nhóm biến đổi '르' và '러' tách riêng).</em></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">2. Bất quy tắc ㄷ</strong><br><small style="color: #64748b;">Patchim ㄷ (chỉ ở động từ)</small></td>
+                  <td><strong>ㄷ ➔ ㄹ</strong> khi gặp nguyên âm:<br>• 듣다 ➔ <span class="rule-highlight">들어요</span> (nghe)<br>• 걷다 ➔ <span class="rule-highlight">걸어요</span> (đi bộ)<br>• 묻다 ➔ <span class="rule-highlight">물어요</span> (hỏi)</td>
+                  <td><strong>ㄷ ➔ ㄹ</strong>, nhận đuôi 으 bình thường:<br>• 듣다 + (으)면 ➔ <span class="rule-highlight">들으면</span><br>• 걷다 + (으)세요 ➔ <span class="rule-highlight">걸으세요</span><br>• 묻다 + (으)니까 ➔ <span class="rule-highlight">물으니까</span></td>
+                  <td><strong>Giữ nguyên ㄷ</strong> khi gặp phụ âm:<br>• 듣다 ➔ <strong>듣고, 듣습니다</strong><br>• 걷다 ➔ <strong>걷지만</strong><br>• 묻다 ➔ <strong>묻는</strong></td>
+                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㄷ:</span><br>• <strong>받다</strong> (nhận) ➔ 받아요, 받으면<br>• <strong>닫다</strong> (đóng) ➔ 닫아요, 닫으면<br>• <strong>믿다</strong> (tin) ➔ 믿어요, 믿으면<br>• <strong>묻다</strong> (chôn/dính) ➔ 묻어요<br>• <strong>얻다</strong> (đạt được) ➔ 얻어요</td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">3. Bất quy tắc ㅂ</strong><br><small style="color: #64748b;">Patchim ㅂ (Đa số là tính từ + vài động từ)</small></td>
+                  <td><strong>ㅂ ➔ 우</strong> rồi ghép thành <strong>-워요</strong>:<br>• 춥다 ➔ <span class="rule-highlight">추워요</span><br>• 덥다 ➔ <span class="rule-highlight">더워요</span><br>• 어렵다 ➔ <span class="rule-highlight">어려워요</span><br>• 고맙다 ➔ <span class="rule-highlight">고마워요</span><br><em style="color: #b45309;">(Riêng 돕다, 곱다 ➔ 도와요, 고와요)</em></td>
+                  <td><strong>ㅂ ➔ 우</strong>, nuốt mất nguyên âm 으:<br>• 춥다 + (으)ㄴ ➔ <span class="rule-highlight">추운</span><br>• 어렵다 + (으)면 ➔ <span class="rule-highlight">어려우면</span><br>• 돕다 + (으)면 ➔ <span class="rule-highlight">도우면</span> <em>(vẫn là 우)</em></td>
+                  <td><strong>Giữ nguyên ㅂ</strong> khi gặp phụ âm:<br>• 춥다 ➔ <strong>춥고, 춥습니다</strong><br>• 덥다 ➔ <strong>덥지만</strong><br>• 돕다 ➔ <strong>돕습니다</strong></td>
+                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㅂ:</span><br>• <strong>입다</strong> (mặc) ➔ 입어요, 입으면<br>• <strong>잡다</strong> (bắt) ➔ 잡아요, 잡으면<br>• <strong>좁다</strong> (hẹp) ➔ 좁아요, 좁으면<br>• <strong>업다</strong> (cõng) ➔ 업어요, 업으면<br>• <strong>넓다</strong> <em>(patchim kép ㄼ)</em> ➔ 넓어요, 넓으면<br>• <strong>씹다</strong> (nhai) ➔ 씹어요<br>• <strong>뽑다</strong> (chọn/nhổ) ➔ 뽑아요</td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">4. Bất quy tắc ㅅ</strong><br><small style="color: #64748b;">Patchim ㅅ (chủ yếu động từ + tính từ 낫다)</small></td>
+                  <td><strong>ㅅ BỊ RỤNG</strong> (không co nguyên âm):<br>• 짓다 ➔ <span class="rule-highlight">지어요</span> (xây, nấu)<br>• 낫다 ➔ <span class="rule-highlight">나아요</span> (khỏi bệnh, tốt hơn)<br>• 붓다 ➔ <span class="rule-highlight">부어요</span> (sưng, rót)</td>
+                  <td><strong>ㅅ BỊ RỤNG</strong>, nhưng <strong>VẪN LẤY 으</strong>:<br>• 짓다 + (으)면 ➔ <span class="rule-highlight">지으면</span><br>• 낫다 + (으)니까 ➔ <span class="rule-highlight">나으니까</span><br>• 붓다 + (으)세요 ➔ <span class="rule-highlight">부으세요</span></td>
+                  <td><strong>Giữ nguyên ㅅ</strong> khi gặp phụ âm:<br>• 짓다 ➔ <strong>짓고, 짓습니다</strong><br>• 낫다 ➔ <strong>낫지만</strong><br>• 붓다 ➔ <strong>붓는다</strong></td>
+                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㅅ:</span><br>• <strong>웃다</strong> (cười) ➔ 웃어요, 웃으면<br>• <strong>벗다</strong> (cởi) ➔ 벗어요, 벗으면<br>• <strong>씻다</strong> (rửa) ➔ 씻어요, 씻으면<br>• <strong>빗다</strong> (chải tóc) ➔ 빗어요<br>• <strong>빼앗다</strong> (cướp) ➔ 빼앗아요</td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">5. Bất quy tắc 르</strong><br><small style="color: #64748b;">Âm tiết cuối của thân từ là 르</small></td>
+                  <td><strong>Thêm patchim ㄹ vào âm trước</strong>, 르 đổi thành <strong>라/러</strong>:<br>• 빠르다 ➔ <span class="rule-highlight">빨라요</span> (nhanh)<br>• 모르다 ➔ <span class="rule-highlight">몰라요</span> (không biết)<br>• 부르다 ➔ <span class="rule-highlight">불러요</span> (hát, gọi)</td>
+                  <td>Chia như từ không có patchim:<br>• 빠르다 + (으)ㄴ ➔ <span class="rule-highlight">빠른</span><br>• 모르다 + (으)면 ➔ <span class="rule-highlight">모르면</span><br>• 부르다 + (으)니까 ➔ <span class="rule-highlight">부르니까</span></td>
+                  <td><strong>Giữ nguyên 르</strong> trước phụ âm:<br>• 빠르다 ➔ <strong>빠르고</strong><br>• 부르다 ➔ <strong>부르지만, 부릅니다</strong><br>• 모르다 ➔ <strong>모르는</strong></td>
+                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Ngoại lệ nhóm '러' & 'ㅡ':</span><br>• <strong>이르다</strong> (đạt tới) ➔ 이르러요<br>• <strong>푸르다</strong> (xanh biếc) ➔ 푸르러요<br>• <strong>따르다</strong> (theo/rót) ➔ 따라요 (quy tắc ㅡ)<br>• <strong>치르다</strong> (trải qua) ➔ 치러요</td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">6. Quy tắc ㄹ (ㄹ 탈락)</strong><br><small style="color: #64748b;">Patchim ㄹ (Rụng có quy luật ở TẤT CẢ từ)</small></td>
+                  <td><strong>Giữ nguyên ㄹ</strong>, chia bình thường:<br>• 살다 ➔ <span class="rule-highlight">살아요</span> (sống)<br>• 알다 ➔ <span class="rule-highlight">알아요</span> (biết)<br>• 만들다 ➔ <span class="rule-highlight">만들어요</span> (làm)</td>
+                  <td><strong>Bỏ 으 với -(으)...; bỏ thêm ㄹ nếu gặp phụ âm đầu đuôi từ ㄴ, ㅂ, ㅅ hoặc -(으)ㄹ...:</strong><br>• 살다 + (으)세요 ➔ <span class="rule-highlight">사세요</span><br>• 살다 + (으)니까 ➔ <span class="rule-highlight">사니까</span> <em>(KHÔNG PHẢI 살으니까)</em><br>• 살다 + (으)면 ➔ <span class="rule-highlight">살면</span> <em>(bỏ 으, giữ ㄹ)</em><br>• 살다 + (으)ㄹ까요 ➔ <span class="rule-highlight">살까요</span> <em>(ㄹ gốc rụng trước ㄹ đuôi)</em></td>
+                  <td><strong>Bỏ ㄹ khi gặp ㄴ, ㅂ, ㅅ</strong>:<br>• 살다 + ㅂ니다 ➔ <span class="rule-highlight">삽니다</span><br>• 알다 + 는 ➔ <span class="rule-highlight">아는</span><br><em>Giữ nguyên với phụ âm khác:</em><br>• 살다 + 고 ➔ <strong>살고</strong>, 살지만</td>
+                  <td><em>Mọi động từ &amp; tính từ có patchim ㄹ đều phải rụng khi gặp phụ âm đầu đuôi từ <strong>ㄴ, ㅂ, ㅅ</strong> hoặc vĩ tố <strong>-오, -(으)ㄹ...</strong> (vd: 살다 + -(으)ㄹ까요 ➔ 살까요; lưu ý <strong>không</strong> rụng trước <strong>-(으)려고</strong> như 살려고, 만들려고; không có ngoại lệ).</em></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: #6d28d9;">7. Bất quy tắc ㅎ</strong><br><small style="color: #64748b;">Patchim ㅎ (Chỉ tính từ chỉ màu sắc/tính chất)</small></td>
+                  <td><strong>Bỏ ㅎ</strong>, hòa hợp nguyên âm thành <strong>애/얘</strong> (hoặc <strong>에/예</strong> với gốc ㅓ/ㅕ/ㅜ):<br>• 그렇다 ➔ <span class="rule-highlight">그래요</span> (như thế)<br>• 이렇다 ➔ <span class="rule-highlight">이래요</span> (như thế này)<br>• 하얗다 ➔ <span class="rule-highlight">하얘요</span> (trắng)<br>• 까맣다 ➔ <span class="rule-highlight">까매요</span> (đen)<br>• 허옇다 ➔ <span class="rule-highlight">허예요</span>; 누렇다 ➔ <span class="rule-highlight">누레요</span></td>
+                  <td><strong>Bỏ cả ㅎ lẫn 으</strong> khi gặp đuôi có 으:<br>• 그렇다 + (으)면 ➔ <span class="rule-highlight">그러면</span><br>• 그렇다 + (으)니까 ➔ <span class="rule-highlight">그러니까</span><br>• 하얗다 + (으)ㄴ ➔ <span class="rule-highlight">하얀</span></td>
+                  <td><strong>Giữ nguyên ㅎ</strong> khi gặp -습니다, -고:<br>• 그렇다 ➔ <strong>그렇습니다</strong><br>• 하얗다 ➔ <strong>하얗고</strong></td>
+                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Chia có quy tắc (Giữ nguyên ㅎ):</span><br>• <strong>좋다</strong> (tốt - tính từ): 좋아요, 좋은, 좋으면<br>• <strong>Mọi động từ tận cùng bằng ㅎ</strong>:<br>  - 놓다 (đặt, để) ➔ 놓아요, 놓으면<br>  - 넣다 (bỏ vào) ➔ 넣어요, 넣으면<br>  - 낳다 (sinh con) ➔ 낳아요</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: CÁC BẤT QUY TẮC MỞ RỘNG (우, 러, 여) -->
+      <div class="grammar-card">
+        <div class="card-header" style="background: #eff6ff; border-bottom-color: #dbeafe;">
+          <div class="grammar-title-group">
+            <span class="grammar-badge" style="background: #2563eb;">Phần 2</span>
+            <span class="grammar-name-ko">기타 불규칙 (우, 러, 여)</span>
+            <span class="grammar-meaning-vi">3 Bất Quy Tắc Mở Rộng Quan Trọng Ít Người Chú Ý</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="section-title">Các trường hợp đặc biệt ngoài 7 nhóm kinh điển</div>
+          <div class="rule-table-wrapper">
+            <table class="rule-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Dạng bất quy tắc</th>
+                  <th style="width: 25%;">Từ vựng điển hình</th>
+                  <th style="width: 25%;">Quy tắc biến đổi</th>
+                  <th style="width: 30%;">Ví dụ thực tế & Giải thích</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Bất quy tắc '우' (우 불규칙)</strong></td>
+                  <td><strong>푸다</strong> (múc - múc cơm, múc nước)</td>
+                  <td>Nguyên âm <strong>우 bị mất đi</strong> khi gặp đuôi bắt đầu bằng nguyên âm (-아/어).</td>
+                  <td>• 푸다 + -어요 ➔ <span class="rule-highlight">퍼요</span><br>• 푸다 + -어서 ➔ <span class="rule-highlight">퍼서</span><br><em>(Là từ duy nhất trong tiếng Hàn mang quy tắc này).</em></td>
+                </tr>
+                <tr>
+                  <td><strong>Bất quy tắc '러' (러 불규칙)</strong></td>
+                  <td>• <strong>푸르다</strong> (xanh biếc)<br>• <strong>이르다</strong> (đạt tới, chạm đến)<br>• <strong>누르다</strong> (vàng sẫm)</td>
+                  <td>Thân từ tận cùng bằng 르 nhưng <strong>không biến thành ㄹㄹ</strong> mà <strong>thêm '러'</strong> vào sau khi gặp -아/어.</td>
+                  <td>• 푸르다 + -어 ➔ <span class="rule-highlight">푸르러요</span><br>• 이르다 + -어 ➔ <span class="rule-highlight">이르러요</span><br>• 누르다 (vàng sẫm) + -어 ➔ <span class="rule-highlight">누르러요</span><br><em>(Lưu ý: 이르다 'sớm/mách' ➔ 일러요; 누르다 'ấn/nhấn' ➔ 눌러요 thuộc bất quy tắc 르).</em></td>
+                </tr>
+                <tr>
+                  <td><strong>Bất quy tắc '여' (여 불규칙)</strong></td>
+                  <td>Tất cả động từ &amp; tính từ kết thúc bằng <strong>하다</strong> (공부하다, 일하다, 사랑하다...)</td>
+                  <td>Gốc <strong>하 + -아/어 biến thành 하여</strong>, trong văn nói rút gọn thành <strong>해</strong>.</td>
+                  <td>• 공부하다 ➔ <span class="rule-highlight">공부해요</span> (dạng đầy đủ/văn viết: 공부하여요 / 공부하여)<br>• 사랑하다 ➔ <span class="rule-highlight">사랑해요</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: 4 BẪY NGỮ PHÁP TỐI KỴ -->
+      <div class="grammar-card">
+        <div class="card-header" style="background: #fff7ed; border-bottom-color: #ffedd5;">
+          <div class="grammar-title-group">
+            <span class="grammar-badge" style="background: #ea580c;">Phần 3</span>
+            <span class="grammar-name-ko">시험 필수 함정 주의</span>
+            <span class="grammar-meaning-vi">4 Bẫy Ngữ Pháp Thường Gặp Nhất Trong Kỳ Thi TOPIK</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="examples-container">
+            <div class="example-item" style="border-left: 4px solid #ef4444;">
+              <div class="example-content">
+                <div style="font-weight: 700; color: #b91c1c; margin-bottom: 4px;">❌ Bẫy 1: Sai lầm kinh điển "살으니까" (Patchim ㄹ)</div>
+                <div class="example-vi">Khi từ có patchim <strong>ㄹ</strong> gặp <strong>-(으)니까</strong> hoặc <strong>-(으)세요</strong>, cả <strong>으</strong> và <strong>ㄹ</strong> đều mất. Phải là: <strong style="color: #15803d;">살다 ➔ 사니까, 만드니까, 사세요</strong>. Tuyệt đối không bao giờ dùng <del style="color: #dc2626;">살으니까</del>.</div>
+              </div>
+            </div>
+
+            <div class="example-item" style="border-left: 4px solid #f59e0b;">
+              <div class="example-content">
+                <div style="font-weight: 700; color: #b45309; margin-bottom: 4px;">❌ Bẫy 2: Nhầm lẫn "춥다 + 는 ➔ 추운" (Định ngữ tính từ vs động từ)</div>
+                <div class="example-vi"><strong>춥다</strong> là TÍNH TỪ. Đuôi định ngữ bổ nghĩa danh từ của tính từ là <strong>-(으)ㄴ</strong>, không phải là <strong>-는</strong> (chỉ dùng cho động từ). 춥- biến thành 추우- rồi kết hợp với -ㄴ tạo thành <strong>추운 날씨</strong> (thời tiết lạnh).</div>
+              </div>
+            </div>
+
+            <div class="example-item" style="border-left: 4px solid #8b5cf6;">
+              <div class="example-content">
+                <div style="font-weight: 700; color: #6d28d9; margin-bottom: 4px;">❌ Bẫy 3: Nhầm tưởng "고맙다 ➔ 고마와요" (Bất quy tắc ㅂ)</div>
+                <div class="example-vi">Trong tiếng Hàn hiện đại, <strong>CHỈ DUY NHẤT 2 TỪ</strong> biến thành <strong>오</strong> (kết hợp với 아요 thành -와요) là <strong>돕다 ➔ 도와요</strong> và <strong>곱다 ➔ 고와요</strong>. Tất cả các từ còn lại (kể cả 고맙다) đều biến thành <strong>우</strong>: <strong>고마워요, 아름다워요, 가까워요</strong>.</div>
+              </div>
+            </div>
+
+            <div class="example-item" style="border-left: 4px solid #06b6d4;">
+              <div class="example-content">
+                <div style="font-weight: 700; color: #0e7490; margin-bottom: 4px;">❌ Bẫy 4: Co nguyên âm sai ở bất quy tắc ㅅ</div>
+                <div class="example-vi">Khi bỏ <strong>ㅅ</strong>, hai nguyên âm đứng cạnh nhau <strong>tuyệt đối KHÔNG được ghép tắt lại</strong>:<br>• <strong>낫다 ➔ 나아요</strong> (Không được viết thành <del style="color: #dc2626;">나요</del> vì 나요 là từ 나다 - xuất hiện/ra đời).<br>• <strong>짓다 + (으)면 ➔ 지으면</strong> (Vẫn phải giữ nguyên âm đệm 으, không được viết thành <del style="color: #dc2626;">지면</del>).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: VÍ DỤ CÂU THỰC TẾ CÓ ÂM THANH (TTS) -->
+      <div class="grammar-card">
+        <div class="card-header" style="background: #f0fdf4; border-bottom-color: #dcfce7;">
+          <div class="grammar-title-group">
+            <span class="grammar-badge" style="background: #16a34a;">Phần 4</span>
+            <span class="grammar-name-ko">실전 예문 듣기 연습</span>
+            <span class="grammar-meaning-vi">Luyện Nghe & Nói Câu Thực Tế Chứa Bất Quy Tắc</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="section-title">Bấm vào biểu tượng loa 🔊 để nghe phát âm giọng chuẩn</div>
+          <div class="examples-container">
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('한국 노래를 자주 들어요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국 노래를 자주 <span class="point">들어요</span>.</div>
+                <div class="example-vi">Tôi thường xuyên nghe bài hát tiếng Hàn. (듣다 ➔ 들어요 [Bất quy tắc ㄷ])</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('한국어를 잘 몰라요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">한국어를 잘 <span class="point">몰라요</span>.</div>
+                <div class="example-vi">Tôi không biết rõ tiếng Hàn. (모르다 + -아요 ➔ 몰라요 [Bất quy tắc 르])</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('겨울에는 날씨가 너무 추워요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">겨울에는 날씨가 너무 <span class="point">추워요</span>.</div>
+                <div class="example-vi">Vào mùa đông thời tiết rất lạnh. (춥다 ➔ 추워요 [Bất quy tắc ㅂ])</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('감기가 다 나아서 기분이 좋아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">감기가 다 <span class="point">나아서</span> 기분이 좋아요.</div>
+                <div class="example-vi">Cảm cúm đã khỏi hẳn nên tâm trạng rất tốt. (낫다 + 아서 ➔ 나아서 [Bất quy tắc ㅅ])</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('지금 어디에 사세요? 서울에 살아요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">지금 어디에 <span class="point">사세요</span>? 서울에 <span class="point">살아요</span>.</div>
+                <div class="example-vi">Bây giờ bạn sống ở đâu? Tôi sống ở Seoul. (살다 + (으)세요 ➔ 사세요 [Quy tắc rụng ㄹ (ㄹ 탈락), thường gọi "Bất quy tắc ㄹ"])</div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <button class="speak-btn" onclick="speakText('하늘이 아주 파랗고 푸르러요.')">🔊</button>
+              <div class="example-content">
+                <div class="example-ko">하늘이 아주 파랗고 <span class="point">푸르러요</span>.</div>
+                <div class="example-vi">Bầu trời rất trong xanh và xanh biếc. (파랗다 ➔ 파랗고; 푸르다 ➔ 푸르러요 [Bất quy tắc 러])</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: BÀI TẬP TRẮC NGHIỆM TƯƠNG TÁC -->
+      <div class="grammar-card">
+        <div class="card-header" style="background: #fdf2f8; border-bottom-color: #fce7f3;">
+          <div class="grammar-title-group">
+            <span class="grammar-badge" style="background: #db2777;">Phần 5</span>
+            <span class="grammar-name-ko">실력 점검 퀴즈</span>
+            <span class="grammar-meaning-vi">Thử Thách Trắc Nghiệm Tương Tác: Chinh Phục Bất Quy Tắc</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- CÂU 1 -->
+          <div class="quiz-card" style="margin-bottom: 16px;">
+            <div class="quiz-title">🎯 Câu hỏi 1: Chia động từ 듣다 (nghe)</div>
+            <div class="quiz-question">Chọn cách chia đúng khi kết hợp động từ <strong>듣다</strong> với đuôi điều kiện <strong>-(으)면</strong>:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Động từ 듣다 gặp đuôi bắt đầu bằng nguyên âm (으) thì ㄷ phải đổi thành ㄹ.')">A. 듣으면</div>
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! 듣다 gặp nguyên âm (으)면 biến đổi ㄷ ➔ ㄹ thành 들으면.')">B. 들으면</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Ngữ pháp gốc có patchim nhận (으)면, không được nuốt mất 으 thành 들면.')">C. 들면</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- CÂU 2 -->
+          <div class="quiz-card" style="margin-bottom: 16px;">
+            <div class="quiz-title">🎯 Câu hỏi 2: Chia động từ 살다 (sống)</div>
+            <div class="quiz-question">Câu: &quot;Vì tôi sống ở gần trường nên rất tiện lợi&quot; (근처에 [살다 + -(으)니까] 편해요), chỗ trong ngoặc chia đúng là:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Đây là bẫy kinh điển. Patchim ㄹ gặp đuôi -(으) thì bỏ cả 으 lẫn ㄹ khi gặp ㄴ, ㅂ, ㅅ. Không bao giờ tồn tại từ 살으니까.')">A. 살으니까</div>
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Hoàn toàn chính xác! 살다 + -(으)니까 biến thành 사니까 (bỏ cả 으 lẫn ㄹ).')">B. 사니까</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Không được giữ ㄹ khi đã gặp ㄴ.')">C. 살니까</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- CÂU 3 -->
+          <div class="quiz-card" style="margin-bottom: 16px;">
+            <div class="quiz-title">🎯 Câu hỏi 3: Chia tính từ 춥다 (lạnh)</div>
+            <div class="quiz-question">Cụm từ &quot;Thời tiết lạnh&quot; (춥다 + 날씨) chia theo hình thức định ngữ tính từ đúng là:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! 춥다 là tính từ, nhận đuôi -(으)ㄴ, ㅂ biến thành 우 ghép lại thành 추운 날씨.')">A. 추운 날씨</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 춥다 là tính từ nên không đi với định ngữ thì hiện tại -는 của động từ.')">B. 춥는 날씨</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 추워 là dạng chia đuôi câu -아/어, không phải định ngữ bổ nghĩa cho danh từ 날씨.')">C. 추워 날씨</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- CÂU 4 -->
+          <div class="quiz-card" style="margin-bottom: 16px;">
+            <div class="quiz-title">🎯 Câu hỏi 4: Chia động từ 짓다 (xây, nấu)</div>
+            <div class="quiz-question">Chia đuôi thân mật lịch sự -아요/어요 cho câu: &quot;Chúng tôi đang xây nhà&quot; (우리는 집을 짓다):</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 짓다 là bất quy tắc ㅅ, khi gặp nguyên âm thì patchim ㅅ phải biến mất.')">A. 짓어요</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Bất quy tắc ㅅ khi rụng không được co nguyên âm (지 + 어요 không co thành 져요).')">B. 져요</div>
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Xuất sắc! 짓다 bỏ ㅅ thành 지- rồi cộng -어요 thành 지어요 (tuyệt đối không co âm).')">C. 지어요</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- CÂU 5 -->
+          <div class="quiz-card">
+            <div class="quiz-title">🎯 Câu hỏi 5: Ngoại lệ không đổi patchim</div>
+            <div class="quiz-question">Từ nào dưới đây là NGOẠI LỆ (chia có quy tắc bình thường, không biến đổi patchim khi gặp đuôi -아요/어요)?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 걷다 (đi bộ) là bất quy tắc ㄷ ➔ 걸어요.')">A. 걷다 (đi bộ)</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 낫다 (khỏi bệnh) là bất quy tắc ㅅ ➔ 나아요.')">B. 낫다 (khỏi bệnh)</div>
+              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác 100%! Động từ 입다 (mặc) chia có quy tắc: 입다 + -어요 ➔ 입어요 (không đổi thành 이워요).')">C. 입다 (mặc áo)</div>
+              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 춥다 (lạnh) là bất quy tắc ㅂ ➔ 추워요.')">D. 춥다 (lạnh)</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 17: BẢNG TRA CỨU TOÀN DIỆN ==================== -->
     <section class="tab-panel" id="tab-summary">
       <div class="lesson-banner">
         <div class="lesson-meta">
@@ -4914,326 +5239,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ==================== TAB 17: BẤT QUY TẮC TIẾNG HÀN ==================== -->
-    <section class="tab-panel" id="tab-batquytac">
-      <div class="lesson-banner" style="border-left-color: #8b5cf6;">
-        <div class="lesson-meta">
-          <span class="lesson-tag" style="background: #ede9fe; color: #6d28d9;">Chuyên Đề Trọng Tâm</span>
-          <span class="lesson-tag" style="background: #fef3c7; color: #b45309;">TOPIK I & II</span>
-        </div>
-        <h2 class="lesson-title-ko">한국어 불규칙 활용 마스터 <span class="lesson-title-vi">Cẩm Nang Toàn Diện Về Bất Quy Tắc Tiếng Hàn</span></h2>
-        <p class="lesson-desc">Hệ thống hóa 7 nhóm biến đổi kinh điển (ㅡ, ㄷ, ㅂ, ㅅ, 르, ㄹ, ㅎ) và 3 bất quy tắc (우, 러, 여). <em>(Lưu ý chuẩn 국립국어원: nhóm ㅡ và ㄹ thực chất là <strong>quy tắc rụng có quy luật</strong> [규칙 탈락], còn ㄷ, ㅂ, ㅅ, 르, ㅎ, 우, 러, 여 là bất quy tắc chính thống [불규칙 활용]).</em></p>
-      </div>
-
-      <!-- CARD 1: MA TRẬN 7 BẤT QUY TẮC KINH ĐIỂN -->
-      <div class="grammar-card">
-        <div class="card-header" style="background: #f5f3ff; border-bottom-color: #ede9fe;">
-          <div class="grammar-title-group">
-            <span class="grammar-badge" style="background: #7c3aed;">Phần 1</span>
-            <span class="grammar-name-ko">불규칙 활용 종합 마스터 테이블</span>
-            <span class="grammar-meaning-vi">Bảng Ma Trận Tổng Hợp 7 Bất Quy Tắc Kinh Điển</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="explanation-box" style="border-left-color: #7c3aed;">
-            <p><strong>💡 Nguyên tắc phân loại khoa học:</strong> Trong tiếng Hàn, biến đổi bất quy tắc không chỉ đơn thuần là "gặp nguyên âm" hay "gặp phụ âm", mà phụ thuộc vào <strong>3 nhóm hình thái đuôi tiếp vĩ</strong>:</p>
-            <p>1. <strong>Nhóm đuôi -아/어:</strong> (-아요/어요, -았/었어요, -아서/어서, -아/어야 하다...)</p>
-            <p>2. <strong>Nhóm đuôi đệm -(으):</strong> (-(으)면, -(으)니까, -(으)세요, -(으)ㄹ 때, -(으)ㄴ/는...)</p>
-            <p>3. <strong>Nhóm đuôi phụ âm thường:</strong> (-고, -지만, -게, -지 않다, -(스)ㅂ니다...)</p>
-          </div>
-
-          <div class="rule-table-wrapper" style="margin-top: 10px;">
-            <table class="rule-table">
-              <thead>
-                <tr>
-                  <th style="min-width: 140px;">Bất quy tắc</th>
-                  <th style="min-width: 170px;">Gặp đuôi -아/어</th>
-                  <th style="min-width: 180px;">Gặp đuôi -(으)...</th>
-                  <th style="min-width: 170px;">Gặp phụ âm thường (-고, -지만, ㅂ니다)</th>
-                  <th style="min-width: 190px;">Ngoại lệ (Chia có quy tắc)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong style="color: #6d28d9;">1. Quy tắc ㅡ (ㅡ 탈락)</strong><br><small style="color: #64748b;">Gốc tận cùng là nguyên âm ㅡ (Rụng có quy luật)</small></td>
-                  <td><strong>Bỏ ㅡ</strong>, xét nguyên âm âm tiết trước để chọn 아/어:<br>• 예쁘다 ➔ <span class="rule-highlight">예뻐요</span><br>• 바쁘다 ➔ <span class="rule-highlight">바빠요</span><br>• 쓰다 ➔ <span class="rule-highlight">써요</span></td>
-                  <td><strong>Không lấy 으</strong>, gắn trực tiếp đuôi:<br>• 쓰다 + (으)면 ➔ <span class="rule-highlight">쓰면</span><br>• 바쁘다 + (으)니까 ➔ <span class="rule-highlight">바쁘니까</span></td>
-                  <td><strong>Giữ nguyên ㅡ</strong>, chia bình thường:<br>• 쓰다 + -고 ➔ <strong>쓰고</strong><br>• 쓰다 + -ㄴ다 ➔ <strong>쓴다</strong><br>• 예쁘다 + -지만 ➔ <strong>예쁘지만</strong></td>
-                  <td><em>Luôn tuân theo quy tắc này (trừ nhóm biến đổi '르' và '러' tách riêng).</em></td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">2. Bất quy tắc ㄷ</strong><br><small style="color: #64748b;">Patchim ㄷ (chỉ ở động từ)</small></td>
-                  <td><strong>ㄷ ➔ ㄹ</strong> khi gặp nguyên âm:<br>• 듣다 ➔ <span class="rule-highlight">들어요</span> (nghe)<br>• 걷다 ➔ <span class="rule-highlight">걸어요</span> (đi bộ)<br>• 묻다 ➔ <span class="rule-highlight">물어요</span> (hỏi)</td>
-                  <td><strong>ㄷ ➔ ㄹ</strong>, nhận đuôi 으 bình thường:<br>• 듣다 + (으)면 ➔ <span class="rule-highlight">들으면</span><br>• 걷다 + (으)세요 ➔ <span class="rule-highlight">걸으세요</span><br>• 묻다 + (으)니까 ➔ <span class="rule-highlight">물으니까</span></td>
-                  <td><strong>Giữ nguyên ㄷ</strong> khi gặp phụ âm:<br>• 듣다 ➔ <strong>듣고, 듣습니다</strong><br>• 걷다 ➔ <strong>걷지만</strong><br>• 묻다 ➔ <strong>묻는</strong></td>
-                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㄷ:</span><br>• <strong>받다</strong> (nhận) ➔ 받아요, 받으면<br>• <strong>닫다</strong> (đóng) ➔ 닫아요, 닫으면<br>• <strong>믿다</strong> (tin) ➔ 믿어요, 믿으면<br>• <strong>묻다</strong> (chôn/dính) ➔ 묻어요<br>• <strong>얻다</strong> (đạt được) ➔ 얻어요</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">3. Bất quy tắc ㅂ</strong><br><small style="color: #64748b;">Patchim ㅂ (Đa số là tính từ + vài động từ)</small></td>
-                  <td><strong>ㅂ ➔ 우</strong> rồi ghép thành <strong>-워요</strong>:<br>• 춥다 ➔ <span class="rule-highlight">추워요</span><br>• 덥다 ➔ <span class="rule-highlight">더워요</span><br>• 어렵다 ➔ <span class="rule-highlight">어려워요</span><br>• 고맙다 ➔ <span class="rule-highlight">고마워요</span><br><em style="color: #b45309;">(Riêng 돕다, 곱다 ➔ 도와요, 고와요)</em></td>
-                  <td><strong>ㅂ ➔ 우</strong>, nuốt mất nguyên âm 으:<br>• 춥다 + (으)ㄴ ➔ <span class="rule-highlight">추운</span><br>• 어렵다 + (으)면 ➔ <span class="rule-highlight">어려우면</span><br>• 돕다 + (으)면 ➔ <span class="rule-highlight">도우면</span> <em>(vẫn là 우)</em></td>
-                  <td><strong>Giữ nguyên ㅂ</strong> khi gặp phụ âm:<br>• 춥다 ➔ <strong>춥고, 춥습니다</strong><br>• 덥다 ➔ <strong>덥지만</strong><br>• 돕다 ➔ <strong>돕습니다</strong></td>
-                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㅂ:</span><br>• <strong>입다</strong> (mặc) ➔ 입어요, 입으면<br>• <strong>잡다</strong> (bắt) ➔ 잡아요, 잡으면<br>• <strong>좁다</strong> (hẹp) ➔ 좁아요, 좁으면<br>• <strong>업다</strong> (cõng) ➔ 업어요, 업으면<br>• <strong>넓다</strong> <em>(patchim kép ㄼ)</em> ➔ 넓어요, 넓으면<br>• <strong>씹다</strong> (nhai) ➔ 씹어요<br>• <strong>뽑다</strong> (chọn/nhổ) ➔ 뽑아요</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">4. Bất quy tắc ㅅ</strong><br><small style="color: #64748b;">Patchim ㅅ (chủ yếu động từ + tính từ 낫다)</small></td>
-                  <td><strong>ㅅ BỊ RỤNG</strong> (không co nguyên âm):<br>• 짓다 ➔ <span class="rule-highlight">지어요</span> (xây, nấu)<br>• 낫다 ➔ <span class="rule-highlight">나아요</span> (khỏi bệnh, tốt hơn)<br>• 붓다 ➔ <span class="rule-highlight">부어요</span> (sưng, rót)</td>
-                  <td><strong>ㅅ BỊ RỤNG</strong>, nhưng <strong>VẪN LẤY 으</strong>:<br>• 짓다 + (으)면 ➔ <span class="rule-highlight">지으면</span><br>• 낫다 + (으)니까 ➔ <span class="rule-highlight">나으니까</span><br>• 붓다 + (으)세요 ➔ <span class="rule-highlight">부으세요</span></td>
-                  <td><strong>Giữ nguyên ㅅ</strong> khi gặp phụ âm:<br>• 짓다 ➔ <strong>짓고, 짓습니다</strong><br>• 낫다 ➔ <strong>낫지만</strong><br>• 붓다 ➔ <strong>붓는다</strong></td>
-                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Giữ nguyên ㅅ:</span><br>• <strong>웃다</strong> (cười) ➔ 웃어요, 웃으면<br>• <strong>벗다</strong> (cởi) ➔ 벗어요, 벗으면<br>• <strong>씻다</strong> (rửa) ➔ 씻어요, 씻으면<br>• <strong>빗다</strong> (chải tóc) ➔ 빗어요<br>• <strong>빼앗다</strong> (cướp) ➔ 빼앗아요</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">5. Bất quy tắc 르</strong><br><small style="color: #64748b;">Âm tiết cuối của thân từ là 르</small></td>
-                  <td><strong>Thêm patchim ㄹ vào âm trước</strong>, 르 đổi thành <strong>라/러</strong>:<br>• 빠르다 ➔ <span class="rule-highlight">빨라요</span> (nhanh)<br>• 모르다 ➔ <span class="rule-highlight">몰라요</span> (không biết)<br>• 부르다 ➔ <span class="rule-highlight">불러요</span> (hát, gọi)</td>
-                  <td>Chia như từ không có patchim:<br>• 빠르다 + (으)ㄴ ➔ <span class="rule-highlight">빠른</span><br>• 모르다 + (으)면 ➔ <span class="rule-highlight">모르면</span><br>• 부르다 + (으)니까 ➔ <span class="rule-highlight">부르니까</span></td>
-                  <td><strong>Giữ nguyên 르</strong> trước phụ âm:<br>• 빠르다 ➔ <strong>빠르고</strong><br>• 부르다 ➔ <strong>부르지만, 부릅니다</strong><br>• 모르다 ➔ <strong>모르는</strong></td>
-                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Ngoại lệ nhóm '러' & 'ㅡ':</span><br>• <strong>이르다</strong> (đạt tới) ➔ 이르러요<br>• <strong>푸르다</strong> (xanh biếc) ➔ 푸르러요<br>• <strong>따르다</strong> (theo/rót) ➔ 따라요 (quy tắc ㅡ)<br>• <strong>치르다</strong> (trải qua) ➔ 치러요</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">6. Quy tắc ㄹ (ㄹ 탈락)</strong><br><small style="color: #64748b;">Patchim ㄹ (Rụng có quy luật ở TẤT CẢ từ)</small></td>
-                  <td><strong>Giữ nguyên ㄹ</strong>, chia bình thường:<br>• 살다 ➔ <span class="rule-highlight">살아요</span> (sống)<br>• 알다 ➔ <span class="rule-highlight">알아요</span> (biết)<br>• 만들다 ➔ <span class="rule-highlight">만들어요</span> (làm)</td>
-                  <td><strong>Bỏ 으 với -(으)...; bỏ thêm ㄹ nếu gặp ㄴ, ㅂ, ㅅ, ㄹ:</strong><br>• 살다 + (으)세요 ➔ <span class="rule-highlight">사세요</span><br>• 살다 + (으)니까 ➔ <span class="rule-highlight">사니까</span> <em>(KHÔNG PHẢI 살으니까)</em><br>• 살다 + (으)면 ➔ <span class="rule-highlight">살면</span> <em>(bỏ 으, giữ ㄹ)</em><br>• 살다 + (으)ㄹ까요 ➔ <span class="rule-highlight">살까요</span> <em>(ㄹ gốc rụng trước ㄹ đuôi)</em></td>
-                  <td><strong>Bỏ ㄹ khi gặp ㄴ, ㅂ, ㅅ</strong>:<br>• 살다 + ㅂ니다 ➔ <span class="rule-highlight">삽니다</span><br>• 알다 + 는 ➔ <span class="rule-highlight">아는</span><br><em>Giữ nguyên với phụ âm khác:</em><br>• 살다 + 고 ➔ <strong>살고</strong>, 살지만</td>
-                  <td><em>Mọi động từ &amp; tính từ có patchim ㄹ đều phải rụng khi gặp <strong>ㄴ, ㅂ, ㅅ, 오, ㄹ</strong> (vd: 살다 + -(으)ㄹ까요 ➔ 살까요; không có ngoại lệ).</em></td>
-                </tr>
-                <tr>
-                  <td><strong style="color: #6d28d9;">7. Bất quy tắc ㅎ</strong><br><small style="color: #64748b;">Patchim ㅎ (Chỉ tính từ chỉ màu sắc/tính chất)</small></td>
-                  <td><strong>Bỏ ㅎ</strong>, hòa hợp nguyên âm thành <strong>애/얘</strong> (hoặc <strong>에/예</strong> với gốc ㅓ/ㅕ/ㅜ):<br>• 그렇다 ➔ <span class="rule-highlight">그래요</span> (như thế)<br>• 이렇다 ➔ <span class="rule-highlight">이래요</span> (như thế này)<br>• 하얗다 ➔ <span class="rule-highlight">하얘요</span> (trắng)<br>• 까맣다 ➔ <span class="rule-highlight">까매요</span> (đen)<br>• 허옇다 ➔ <span class="rule-highlight">허예요</span>; 누렇다 ➔ <span class="rule-highlight">누레요</span></td>
-                  <td><strong>Bỏ cả ㅎ lẫn 으</strong> khi gặp đuôi có 으:<br>• 그렇다 + (으)면 ➔ <span class="rule-highlight">그러면</span><br>• 그렇다 + (으)니까 ➔ <span class="rule-highlight">그러니까</span><br>• 하얗다 + (으)ㄴ ➔ <span class="rule-highlight">하얀</span></td>
-                  <td><strong>Giữ nguyên ㅎ</strong> khi gặp -습니다, -고:<br>• 그렇다 ➔ <strong>그렇습니다</strong><br>• 하얗다 ➔ <strong>하얗고</strong></td>
-                  <td><span style="color: #b91c1c; font-weight: 600;">⚠️ Chia có quy tắc (Giữ nguyên ㅎ):</span><br>• <strong>좋다</strong> (tốt - tính từ): 좋아요, 좋은, 좋으면<br>• <strong>Mọi động từ tận cùng bằng ㅎ</strong>:<br>  - 놓다 (đặt, để) ➔ 놓아요, 놓으면<br>  - 넣다 (bỏ vào) ➔ 넣어요, 넣으면<br>  - 낳다 (sinh con) ➔ 낳아요</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 2: CÁC BẤT QUY TẮC MỞ RỘNG (우, 러, 여) -->
-      <div class="grammar-card">
-        <div class="card-header" style="background: #eff6ff; border-bottom-color: #dbeafe;">
-          <div class="grammar-title-group">
-            <span class="grammar-badge" style="background: #2563eb;">Phần 2</span>
-            <span class="grammar-name-ko">기타 불규칙 (우, 러, 여)</span>
-            <span class="grammar-meaning-vi">3 Bất Quy Tắc Mở Rộng Quan Trọng Ít Người Chú Ý</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="section-title">Các trường hợp đặc biệt ngoài 7 nhóm kinh điển</div>
-          <div class="rule-table-wrapper">
-            <table class="rule-table">
-              <thead>
-                <tr>
-                  <th style="width: 20%;">Dạng bất quy tắc</th>
-                  <th style="width: 25%;">Từ vựng điển hình</th>
-                  <th style="width: 25%;">Quy tắc biến đổi</th>
-                  <th style="width: 30%;">Ví dụ thực tế & Giải thích</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Bất quy tắc '우' (우 불규칙)</strong></td>
-                  <td><strong>푸다</strong> (múc - múc cơm, múc nước)</td>
-                  <td>Nguyên âm <strong>우 bị mất đi</strong> khi gặp đuôi bắt đầu bằng nguyên âm (-아/어).</td>
-                  <td>• 푸다 + -어요 ➔ <span class="rule-highlight">퍼요</span><br>• 푸다 + -어서 ➔ <span class="rule-highlight">퍼서</span><br><em>(Là từ duy nhất trong tiếng Hàn mang quy tắc này).</em></td>
-                </tr>
-                <tr>
-                  <td><strong>Bất quy tắc '러' (러 불규칙)</strong></td>
-                  <td>• <strong>푸르다</strong> (xanh biếc)<br>• <strong>이르다</strong> (đạt tới, chạm đến)<br>• <strong>누르다</strong> (vàng sẫm)</td>
-                  <td>Thân từ tận cùng bằng 르 nhưng <strong>không biến thành ㄹㄹ</strong> mà <strong>thêm '러'</strong> vào sau khi gặp -아/어.</td>
-                  <td>• 푸르다 + -어 ➔ <span class="rule-highlight">푸르러요</span><br>• 이르다 + -어 ➔ <span class="rule-highlight">이르러요</span><br>• 누르다 (vàng sẫm) + -어 ➔ <span class="rule-highlight">누르러요</span><br><em>(Lưu ý: 이르다 'sớm/mách' ➔ 일러요; 누르다 'ấn/nhấn' ➔ 눌러요 thuộc bất quy tắc 르).</em></td>
-                </tr>
-                <tr>
-                  <td><strong>Bất quy tắc '여' (여 불규칙)</strong></td>
-                  <td>Tất cả động từ &amp; tính từ kết thúc bằng <strong>하다</strong> (공부하다, 일하다, 사랑하다...)</td>
-                  <td>Gốc <strong>하 + -아/어 biến thành 하여</strong>, trong văn nói rút gọn thành <strong>해</strong>.</td>
-                  <td>• 공부하다 ➔ <span class="rule-highlight">공부해요</span> (dạng đầy đủ/văn viết: 공부하여요 / 공부하여)<br>• 사랑하다 ➔ <span class="rule-highlight">사랑해요</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 3: 4 BẪY NGỮ PHÁP TỐI KỴ -->
-      <div class="grammar-card">
-        <div class="card-header" style="background: #fff7ed; border-bottom-color: #ffedd5;">
-          <div class="grammar-title-group">
-            <span class="grammar-badge" style="background: #ea580c;">Phần 3</span>
-            <span class="grammar-name-ko">시험 필수 함정 주의</span>
-            <span class="grammar-meaning-vi">4 Bẫy Ngữ Pháp Thường Gặp Nhất Trong Kỳ Thi TOPIK</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="examples-container">
-            <div class="example-item" style="border-left: 4px solid #ef4444;">
-              <div class="example-content">
-                <div style="font-weight: 700; color: #b91c1c; margin-bottom: 4px;">❌ Bẫy 1: Sai lầm kinh điển "살으니까" (Patchim ㄹ)</div>
-                <div class="example-vi">Khi từ có patchim <strong>ㄹ</strong> gặp <strong>-(으)니까</strong> hoặc <strong>-(으)세요</strong>, cả <strong>으</strong> và <strong>ㄹ</strong> đều mất. Phải là: <strong style="color: #15803d;">살다 ➔ 사니까, 만드니까, 사세요</strong>. Tuyệt đối không bao giờ dùng <del style="color: #dc2626;">살으니까</del>.</div>
-              </div>
-            </div>
-
-            <div class="example-item" style="border-left: 4px solid #f59e0b;">
-              <div class="example-content">
-                <div style="font-weight: 700; color: #b45309; margin-bottom: 4px;">❌ Bẫy 2: Nhầm lẫn "춥다 + 는 ➔ 추운" (Định ngữ tính từ vs động từ)</div>
-                <div class="example-vi"><strong>춥다</strong> là TÍNH TỪ. Đuôi định ngữ bổ nghĩa danh từ của tính từ là <strong>-(으)ㄴ</strong>, không phải là <strong>-는</strong> (chỉ dùng cho động từ). 춥- biến thành 추우- rồi kết hợp với -ㄴ tạo thành <strong>추운 날씨</strong> (thời tiết lạnh).</div>
-              </div>
-            </div>
-
-            <div class="example-item" style="border-left: 4px solid #8b5cf6;">
-              <div class="example-content">
-                <div style="font-weight: 700; color: #6d28d9; margin-bottom: 4px;">❌ Bẫy 3: Nhầm tưởng "고맙다 ➔ 고마와요" (Bất quy tắc ㅂ)</div>
-                <div class="example-vi">Trong tiếng Hàn hiện đại, <strong>CHỈ DUY NHẤT 2 TỪ</strong> biến thành <strong>오</strong> (kết hợp với 아요 thành -와요) là <strong>돕다 ➔ 도와요</strong> và <strong>곱다 ➔ 고와요</strong>. Tất cả các từ còn lại (kể cả 고맙다) đều biến thành <strong>우</strong>: <strong>고마워요, 아름다워요, 가까워요</strong>.</div>
-              </div>
-            </div>
-
-            <div class="example-item" style="border-left: 4px solid #06b6d4;">
-              <div class="example-content">
-                <div style="font-weight: 700; color: #0e7490; margin-bottom: 4px;">❌ Bẫy 4: Co nguyên âm sai ở bất quy tắc ㅅ</div>
-                <div class="example-vi">Khi bỏ <strong>ㅅ</strong>, hai nguyên âm đứng cạnh nhau <strong>tuyệt đối KHÔNG được ghép tắt lại</strong>:<br>• <strong>낫다 ➔ 나아요</strong> (Không được viết thành <del style="color: #dc2626;">나요</del> vì 나요 là từ 나다 - xuất hiện/ra đời).<br>• <strong>짓다 + (으)면 ➔ 지으면</strong> (Vẫn phải giữ nguyên âm đệm 으, không được viết thành <del style="color: #dc2626;">지면</del>).</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 4: VÍ DỤ CÂU THỰC TẾ CÓ ÂM THANH (TTS) -->
-      <div class="grammar-card">
-        <div class="card-header" style="background: #f0fdf4; border-bottom-color: #dcfce7;">
-          <div class="grammar-title-group">
-            <span class="grammar-badge" style="background: #16a34a;">Phần 4</span>
-            <span class="grammar-name-ko">실전 예문 듣기 연습</span>
-            <span class="grammar-meaning-vi">Luyện Nghe & Nói Câu Thực Tế Chứa Bất Quy Tắc</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="section-title">Bấm vào biểu tượng loa 🔊 để nghe phát âm giọng chuẩn</div>
-          <div class="examples-container">
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('한국 노래를 자주 들어요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">한국 노래를 자주 <span class="point">들어요</span>.</div>
-                <div class="example-vi">Tôi thường xuyên nghe bài hát tiếng Hàn. (듣다 ➔ 들어요 [Bất quy tắc ㄷ])</div>
-              </div>
-            </div>
-
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('한국어를 잘 몰라요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">한국어를 잘 <span class="point">몰라요</span>.</div>
-                <div class="example-vi">Tôi không biết rõ tiếng Hàn. (모르다 + -아요 ➔ 몰라요 [Bất quy tắc 르])</div>
-              </div>
-            </div>
-
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('겨울에는 날씨가 너무 추워요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">겨울에는 날씨가 너무 <span class="point">추워요</span>.</div>
-                <div class="example-vi">Vào mùa đông thời tiết rất lạnh. (춥다 ➔ 추워요 [Bất quy tắc ㅂ])</div>
-              </div>
-            </div>
-
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('감기가 다 나아서 기분이 좋아요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">감기가 다 <span class="point">나아서</span> 기분이 좋아요.</div>
-                <div class="example-vi">Cảm cúm đã khỏi hẳn nên tâm trạng rất tốt. (낫다 + 아서 ➔ 나아서 [Bất quy tắc ㅅ])</div>
-              </div>
-            </div>
-
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('지금 어디에 사세요? 서울에 살아요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">지금 어디에 <span class="point">사세요</span>? 서울에 <span class="point">살아요</span>.</div>
-                <div class="example-vi">Bây giờ bạn sống ở đâu? Tôi sống ở Seoul. (살다 + (으)세요 ➔ 사세요 [Bất quy tắc ㄹ])</div>
-              </div>
-            </div>
-
-            <div class="example-item">
-              <button class="speak-btn" onclick="speakText('하늘이 아주 파랗고 푸르러요.')">🔊</button>
-              <div class="example-content">
-                <div class="example-ko">하늘이 아주 파랗고 <span class="point">푸르러요</span>.</div>
-                <div class="example-vi">Bầu trời rất trong xanh và xanh biếc. (파랗다 ➔ 파랗고; 푸르다 ➔ 푸르러요 [Bất quy tắc 러])</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 5: BÀI TẬP TRẮC NGHIỆM TƯƠNG TÁC -->
-      <div class="grammar-card">
-        <div class="card-header" style="background: #fdf2f8; border-bottom-color: #fce7f3;">
-          <div class="grammar-title-group">
-            <span class="grammar-badge" style="background: #db2777;">Phần 5</span>
-            <span class="grammar-name-ko">실력 점검 퀴즈</span>
-            <span class="grammar-meaning-vi">Thử Thách Trắc Nghiệm Tương Tác: Chinh Phục Bất Quy Tắc</span>
-          </div>
-        </div>
-        <div class="card-body">
-          <!-- CÂU 1 -->
-          <div class="quiz-card" style="margin-bottom: 16px;">
-            <div class="quiz-title">🎯 Câu hỏi 1: Chia động từ 듣다 (nghe)</div>
-            <div class="quiz-question">Chọn cách chia đúng khi kết hợp động từ <strong>듣다</strong> với đuôi điều kiện <strong>-(으)면</strong>:</div>
-            <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Động từ 듣다 gặp đuôi bắt đầu bằng nguyên âm (으) thì ㄷ phải đổi thành ㄹ.')">A. 듣으면</div>
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! 듣다 gặp nguyên âm (으)면 biến đổi ㄷ ➔ ㄹ thành 들으면.')">B. 들으면</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Ngữ pháp gốc có patchim nhận (으)면, không được nuốt mất 으 thành 들면.')">C. 들면</div>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- CÂU 2 -->
-          <div class="quiz-card" style="margin-bottom: 16px;">
-            <div class="quiz-title">🎯 Câu hỏi 2: Chia động từ 살다 (sống)</div>
-            <div class="quiz-question">Câu: &quot;Vì tôi sống ở gần trường nên rất tiện lợi&quot; (근처에 [살다 + -(으)니까] 편해요), chỗ trong ngoặc chia đúng là:</div>
-            <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Đây là bẫy kinh điển. Patchim ㄹ gặp đuôi -(으) thì bỏ cả 으 lẫn ㄹ khi gặp ㄴ, ㅂ, ㅅ. Không bao giờ tồn tại từ 살으니까.')">A. 살으니까</div>
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Hoàn toàn chính xác! 살다 + -(으)니까 biến thành 사니까 (bỏ cả 으 lẫn ㄹ).')">B. 사니까</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Không được giữ ㄹ khi đã gặp ㄴ.')">C. 살니까</div>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- CÂU 3 -->
-          <div class="quiz-card" style="margin-bottom: 16px;">
-            <div class="quiz-title">🎯 Câu hỏi 3: Chia tính từ 춥다 (lạnh)</div>
-            <div class="quiz-question">Cụm từ &quot;Thời tiết lạnh&quot; (춥다 + 날씨) chia theo hình thức định ngữ tính từ đúng là:</div>
-            <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! 춥다 là tính từ, nhận đuôi -(으)ㄴ, ㅂ biến thành 우 ghép lại thành 추운 날씨.')">A. 추운 날씨</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 춥다 là tính từ nên không đi với định ngữ thì hiện tại -는 của động từ.')">B. 춥는 날씨</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 추워 là dạng chia đuôi câu -아/어, không phải định ngữ bổ nghĩa cho danh từ 날씨.')">C. 추워 날씨</div>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- CÂU 4 -->
-          <div class="quiz-card" style="margin-bottom: 16px;">
-            <div class="quiz-title">🎯 Câu hỏi 4: Chia động từ 짓다 (xây, nấu)</div>
-            <div class="quiz-question">Chia đuôi thân mật lịch sự -아요/어요 cho câu: &quot;Chúng tôi đang xây nhà&quot; (우리는 집을 짓다):</div>
-            <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 짓다 là bất quy tắc ㅅ, khi gặp nguyên âm thì patchim ㅅ phải biến mất.')">A. 짓어요</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! Bất quy tắc ㅅ khi rụng không được co nguyên âm (지 + 어요 không co thành 져요).')">B. 져요</div>
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Xuất sắc! 짓다 bỏ ㅅ thành 지- rồi cộng -어요 thành 지어요 (tuyệt đối không co âm).')">C. 지어요</div>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-
-          <!-- CÂU 5 -->
-          <div class="quiz-card">
-            <div class="quiz-title">🎯 Câu hỏi 5: Ngoại lệ không đổi patchim</div>
-            <div class="quiz-question">Từ nào dưới đây là NGOẠI LỆ (chia có quy tắc bình thường, không biến đổi patchim khi gặp đuôi -아요/어요)?</div>
-            <div class="quiz-options">
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 걷다 (đi bộ) là bất quy tắc ㄷ ➔ 걸어요.')">A. 걷다 (đi bộ)</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 낫다 (khỏi bệnh) là bất quy tắc ㅅ ➔ 나아요.')">B. 낫다 (khỏi bệnh)</div>
-              <div class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác 100%! Động từ 입다 (mặc) chia có quy tắc: 입다 + -어요 ➔ 입어요 (không đổi thành 이워요).')">C. 입다 (mặc áo)</div>
-              <div class="quiz-option" onclick="checkQuiz(this, false, 'Sai rồi! 춥다 (lạnh) là bất quy tắc ㅂ ➔ 추워요.')">D. 춥다 (lạnh)</div>
-            </div>
-            <div class="quiz-feedback"></div>
-          </div>
-        </div>
-      </div>
-    </section>
       </div><!-- /.content-area -->
     </div><!-- /.app-layout -->
   </main>
@@ -5254,7 +5259,7 @@
     }
 
     // TAB SWITCHING
-    function switchTab(tabId) {
+    function switchTab(tabId, shouldScroll = true) {
       // Deactivate all tabs
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -5267,6 +5272,8 @@
         const searchInput = document.getElementById('grammarSearch');
         if (!searchInput || !searchInput.value.trim()) {
           targetPanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+          const emptyState = document.getElementById('searchEmptyState');
+          if (emptyState) emptyState.style.display = 'none';
         }
       }
 
@@ -5279,8 +5286,10 @@
         }
       });
 
-      // Scroll top of container smoothly
-      window.scrollTo({ top: 120, behavior: 'smooth' });
+      // Scroll top of container smoothly when triggered by user tab navigation
+      if (shouldScroll) {
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      }
     }
 
     // SPEECH SYNTHESIS (KOREAN TTS)
@@ -5322,31 +5331,42 @@
       }
     }
 
+    const TONE_MAP = { 'oà':'òa','oá':'óa','oả':'ỏa','oã':'õa','oạ':'ọa','oè':'òe','oé':'óe','oẻ':'ỏe','oẽ':'õe','oẹ':'ọe' };
+    const UY_MAP = { 'ỳ':'ùy','ý':'úy','ỷ':'ủy','ỹ':'ũy','ỵ':'ụy' };
+    const normSearch = s => (s || '').normalize('NFC').toLowerCase()
+      .replace(/o[àáảãạèéẻẽẹ]/g, m => TONE_MAP[m])
+      .replace(/(^|[^q])u([ỳýỷỹỵ])(?=$|[^a-z\u00C0-\u1EF9])/g, (_, p, y) => p + UY_MAP[y]);
+
     // SEARCH FUNCTIONALITY
     function handleSearch() {
-      const query = document.getElementById('grammarSearch').value.toLowerCase().trim();
+      const searchInput = document.getElementById('grammarSearch');
+      const rawQuery = searchInput ? searchInput.value.trim() : '';
+      const query = normSearch(rawQuery);
       const allCards = document.querySelectorAll('.grammar-card');
       const clearBtn = document.getElementById('searchClearBtn');
+      const emptyState = document.getElementById('searchEmptyState');
+      const emptyText = document.getElementById('searchEmptyText');
       if (clearBtn) {
         clearBtn.style.display = query ? 'block' : 'none';
       }
 
       if (!query) {
         allCards.forEach(card => card.style.display = 'block');
+        if (emptyState) emptyState.style.display = 'none';
         return;
       }
 
       let firstMatchFound = false;
 
       allCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
+        const text = normSearch(card.textContent);
         if (text.includes(query)) {
           card.style.display = 'block';
           if (!firstMatchFound) {
-            // Find parent panel and switch to it
+            // Find parent panel and switch to it without scrolling the page
             const parentPanel = card.closest('.tab-panel');
             if (parentPanel && !parentPanel.classList.contains('active')) {
-              switchTab(parentPanel.id);
+              switchTab(parentPanel.id, false);
             }
             firstMatchFound = true;
           }
@@ -5354,6 +5374,13 @@
           card.style.display = 'none';
         }
       });
+
+      if (emptyState) {
+        emptyState.style.display = firstMatchFound ? 'none' : 'block';
+        if (!firstMatchFound && emptyText) {
+          emptyText.textContent = 'Không có mục ngữ pháp nào khớp với "' + rawQuery + '". Thử từ khóa khác hoặc nhấn ✕ để xóa tìm kiếm.';
+        }
+      }
     }
 
     // SCROLL TO TOP
@@ -5382,18 +5409,20 @@
         opt.style.pointerEvents = 'none'; // prevent further clicks
       });
 
+      const formattedExplanation = explanation.replace(/^([^!]+!)/, '<strong>$1</strong>');
+
       if (isCorrect) {
         optionElem.classList.add('correct');
         feedbackElem.style.display = 'block';
         feedbackElem.style.backgroundColor = '#dcfce7';
         feedbackElem.style.color = '#15803d';
-        feedbackElem.innerHTML = '🎉 <strong>Chính xác!</strong> ' + explanation;
+        feedbackElem.innerHTML = '🎉 ' + formattedExplanation;
       } else {
         optionElem.classList.add('wrong');
         feedbackElem.style.display = 'block';
         feedbackElem.style.backgroundColor = '#fee2e2';
         feedbackElem.style.color = '#b91c1c';
-        feedbackElem.innerHTML = '❌ <strong>Chưa chính xác:</strong> ' + explanation;
+        feedbackElem.innerHTML = '❌ ' + formattedExplanation;
       }
     }
   </script>

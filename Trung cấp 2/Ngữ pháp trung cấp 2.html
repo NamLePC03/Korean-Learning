@@ -348,6 +348,12 @@
     .tab-panel.active {
       display: block;
     }
+    .app-layout.is-searching .tab-panel {
+      display: none;
+    }
+    .app-layout.is-searching .tab-panel.search-match {
+      display: block;
+    }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
@@ -909,7 +915,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ được dùng để suy đoán một việc dựa trên cơ sở một tình huống hay một sự việc nào đó. Nghĩa tương đương trong tiếng Việt là 'trông có vẻ..., hình như là..., có vẻ như...'. Sau động từ hoặc động từ có <strong>있다, 없다, 았/었다</strong> thì dùng <strong>-나 보다</strong>; sau tính từ kết thúc bằng nguyên âm dùng <strong>-ㄴ가 보다</strong>; sau tính từ kết thúc bằng phụ âm dùng <strong>-은가 보다</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ được dùng để suy đoán một việc dựa trên cơ sở một tình huống hay một sự việc nào đó. Nghĩa tương đương trong tiếng Việt là 'trông có vẻ..., hình như là..., có vẻ như...'. Sau động từ, các từ kết thúc bằng <strong>있다/없다</strong> hoặc dạng quá khứ <strong>-았/었-</strong> (cả động từ lẫn tính từ) thì dùng <strong>-나 보다</strong>; sau tính từ kết thúc bằng nguyên âm (hoặc ㄹ, bỏ ㄹ) dùng <strong>-ㄴ가 보다</strong>; sau tính từ kết thúc bằng phụ âm (trừ ㄹ) dùng <strong>-은가 보다</strong>.</p></div>
     <div class="formula-box"><span>Động từ / 있다 / 없다 / -았/었- + <strong>-나 보다</strong></span></div>
     <div class="formula-box"><span>Tính từ không patchim + <strong>-ㄴ가 보다</strong> / có patchim + <strong>-은가 보다</strong></span></div>
     <div class="formula-box"><span>Danh từ + <strong>인가 보다</strong> (quá khứ: <strong>였나 보다 / 이었나 보다</strong>)</span></div>
@@ -971,9 +977,9 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ và tính từ biểu hiện nghĩa tương đương trong tiếng Việt là '..ấy à?' hoặc 'ấy ...là......?'. Được sử dụng khi dùng lại lời nói của đối phương để hỏi lại; chủ yếu là trong trường hợp người nói không nghe rõ lời của người đối thoại hoặc không đồng ý với nội dung vừa nghe hoặc khi ngạc nhiên. Trường hợp này, cuối câu thường lên giọng. Với động từ kết thúc bằng nguyên âm, sử dụng dạng <strong>-ㄴ다고요?</strong>; với động từ kết thúc bằng phụ âm, sử dụng dạng <strong>-는다고요?</strong>; với tính từ, sử dụng dạng <strong>-다고요?</strong>.</p></div>
-    <div class="formula-box"><span>Động từ không patchim + <strong>-ㄴ다고요?</strong> / có patchim + <strong>-는다고요?</strong></span></div>
-    <div class="formula-box"><span>Tính từ + <strong>-다고요?</strong></span></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ và tính từ biểu hiện nghĩa tương đương trong tiếng Việt là '..ấy à?' hoặc 'ấy ...là......?'. Được sử dụng khi dùng lại lời nói của đối phương để hỏi lại; chủ yếu là trong trường hợp người nói không nghe rõ lời của người đối thoại hoặc không đồng ý với nội dung vừa nghe hoặc khi ngạc nhiên. Trường hợp này, cuối câu thường lên giọng. Với động từ kết thúc bằng nguyên âm hoặc patchim ㄹ (bỏ ㄹ), sử dụng dạng <strong>-ㄴ다고요?</strong>; với động từ kết thúc bằng phụ âm (trừ ㄹ), sử dụng dạng <strong>-는다고요?</strong>; với tính từ và <strong>있다/없다</strong>, sử dụng dạng <strong>-다고요?</strong>.</p></div>
+    <div class="formula-box"><span>Động từ không patchim hoặc patchim ㄹ (bỏ ㄹ) + <strong>-ㄴ다고요?</strong> / có patchim (trừ ㄹ) + <strong>-는다고요?</strong></span></div>
+    <div class="formula-box"><span>Tính từ / 있다 / 없다 + <strong>-다고요?</strong></span></div>
     <div class="formula-box"><span>Danh từ + <strong>(이)라고요?</strong></span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
@@ -1005,9 +1011,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('요즘 파마를 하는 남자들이 많은 것 같아요. 남자가 파마를 한다고요? 말도 안돼요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('요즘 파마를 하는 남자들이 많은 것 같아요. 남자가 파마를 한다고요? 말도 안 돼요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko"><strong>A:</strong> 요즘 파마를 하는 남자들이 많은 것 같아요.<br><strong>B:</strong> 남자가 파마를 <span class="point">한다고요?</span> 말도 안돼요.</div>
+          <div class="example-ko"><strong>A:</strong> 요즘 파마를 하는 남자들이 많은 것 같아요.<br><strong>B:</strong> 남자가 파마를 <span class="point">한다고요?</span> 말도 안 돼요.</div>
           <div class="example-vi">A: Dạo này hình như có nhiều nam giới uốn tóc đấy. / B: Con trai mà uốn tóc ấy à? Vô lý quá.</div>
         </div>
       </div>
@@ -1019,7 +1025,7 @@
         </div>
       </div>
     </div>
-    <div class="tip-box"><strong>Lưu ý:</strong> Cuối câu thường lên giọng để thể hiện sự ngạc nhiên, không tin hoặc muốn xác nhận lại điều đối phương vừa nói. Với động từ có patchim <strong>ㄹ</strong> (như 살다, 만들다), bỏ <strong>ㄹ</strong> rồi gắn <strong>-ㄴ다고요?</strong> (산다고요?, 만든다고요?).</div>
+    <div class="tip-box"><strong>Lưu ý:</strong> Cuối câu thường lên giọng để thể hiện sự ngạc nhiên, không tin hoặc muốn xác nhận lại điều đối phương vừa nói. Với động từ có patchim <strong>ㄹ</strong> (như 살다, 만들다), bỏ <strong>ㄹ</strong> rồi gắn <strong>-ㄴ다고요?</strong> (산다고요?, 만든다고요?). Các từ kết thúc bằng <strong>있다/없다</strong> luôn chia với <strong>-다고요?</strong> (있다고요?, 없다고요?).</div>
   </div>
 </div>
 <div class="grammar-card">
@@ -1546,7 +1552,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Là đuôi biểu hiện nghĩa hồi tưởng lại một sự việc, hành động, trạng thái đã xảy ra trong quá khứ nhưng tình huống đó không được hoàn thành và bị đứt quãng. Trên thực tế, đuôi <strong>-았/었던</strong> và đuôi <strong>-던</strong> không có sự khác biệt lớn về ý nghĩa. Chỉ khi kết hợp với động từ <strong>오다, 가다</strong> thì <strong>-았/었던</strong> biểu hiện ý nghĩa hành động xảy ra một lần còn <strong>-던</strong> biểu hiện nghĩa hành động lặp đi lặp lại.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Là đuôi biểu hiện nghĩa hồi tưởng lại một sự việc, hành động hoặc trạng thái đã xảy ra và kết thúc hoàn toàn trong quá khứ (hiện tại không còn tiếp diễn nữa). Khác với <strong>-던</strong> (thường dùng cho hành động lặp đi lặp lại hoặc đang làm dở chưa xong), <strong>-았/었던</strong> nhấn mạnh sự việc đã hoàn tất và tách rời với hiện tại (khi kết hợp với động từ <strong>오다, 가다</strong> thì <strong>-았/었던</strong> biểu hiện hành động xảy ra một lần còn <strong>-던</strong> biểu hiện nghĩa hành động lặp đi lặp lại).</p></div>
     <div class="formula-box"><span>Động từ / Tính từ + <strong>-았/었던</strong> + Danh từ</span></div>
     <div class="formula-box"><span>Danh từ + <strong>였던 / 이었던</strong> + Danh từ</span></div>
     <div class="comparison-box"><strong>So sánh -았/었던 và -(으)ㄴ:</strong> Khác với <strong>-았/었던</strong>, <strong>-(으)ㄴ</strong> biểu hiện nghĩa một sự việc hoặc hành động nào đó đơn thuần là xảy ra trong quá khứ nhưng trạng thái của hành động đó sau khi được hoàn thành vẫn được duy trì.<br>Ví dụ: 3년 전에 대학생이었던 지원 씨가 이제는 결혼하여 아이 엄마가 되었다. (○) / <s>3년 전에 대학생인 지원 씨가 이제는 결혼하여 아이 엄마가 되었다.</s> (×)</div>
@@ -1717,7 +1723,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ biểu hiện nghĩa tương đương với “ai đó nói là..., nghe nói là...” trong tiếng Việt. Cấu trúc này được sử dụng khi chuyển đổi để nói một cách gián tiếp nội dung nghe được từ người khác. Đây là dạng rút gọn của <strong>-다고 해요</strong>. Với động từ kết thúc bằng nguyên âm hoặc có phụ âm cuối là ㄹ, sử dụng dạng <strong>-ㄴ대요</strong>; với động từ có phụ âm cuối là phụ âm, sử dụng <strong>-는대요</strong>; sau tính từ và 있다, 없다 sử dụng dạng <strong>-대요</strong> và sau 이다, 아니다 dùng dạng <strong>(이)래요</strong>, <strong>아니래요</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ biểu hiện nghĩa tương đương với “ai đó nói là..., nghe nói là...” trong tiếng Việt. Cấu trúc này được sử dụng khi chuyển đổi để nói một cách gián tiếp nội dung nghe được từ người khác. Đây là dạng rút gọn của <strong>-다고 해요</strong>. Với động từ kết thúc bằng nguyên âm hoặc có phụ âm cuối là ㄹ, sử dụng dạng <strong>-ㄴ대요</strong>; với động từ kết thúc bằng phụ âm (trừ ㄹ), sử dụng <strong>-는대요</strong>; sau tính từ và 있다, 없다 sử dụng dạng <strong>-대요</strong> và sau 이다, 아니다 dùng dạng <strong>(이)래요</strong>, <strong>아니래요</strong>.</p></div>
     <div class="formula-box"><span>Động từ (không patchim / patchim ㄹ) + <strong>-ㄴ대요</strong></span></div>
     <div class="formula-box"><span>Động từ (có patchim khác ㄹ) + <strong>-는대요</strong></span></div>
     <div class="formula-box"><span>Tính từ / 있다 / 없다 + <strong>-대요</strong></span></div>
@@ -1725,7 +1731,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ</th><th>현재 (진행, 습관)</th><th>과거 (경험, 완료)</th><th>미래 (의지, 추측)</th></tr></thead>
-              <tbody><tr><td class="col-highlight">동사 (Động từ)</td><td>-ㄴ대요 / -는대요</td><td>-았/었대요</td><td>-(으)ㄹ 거래요 / -겠대요</td></tr><tr><td class="col-highlight">형용사 (Tính từ)</td><td>-대요</td><td>-았/었대요</td><td>-(으)ㄹ 거래요 / -겠대요</td></tr><tr><td class="col-highlight">이다 / 아니다</td><td>(이)래요 / 아니래요</td><td>였대요 / 아니었대요</td><td>-(으)ㄹ 거래요 / -겠대요</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">동사 (Động từ)</td><td>-ㄴ대요 / -는대요</td><td>-았/었대요</td><td>-(으)ㄹ 거래요 / -겠대요</td></tr><tr><td class="col-highlight">형용사 (Tính từ)</td><td>-대요</td><td>-았/었대요</td><td>-(으)ㄹ 거래요 / -겠대요</td></tr><tr><td class="col-highlight">이다 / 아니다</td><td>(이)래요 / 아니래요</td><td>였대요 / 이었대요 / 아니었대요</td><td>일 거래요 / 아닐 거래요 / 이겠대요 / 아니겠대요</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -1745,9 +1751,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('생활 정보지를 봤는데 사용한 지 9개월 된 책상을 8만원에 판대요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('생활 정보지를 봤는데 사용한 지 9개월 된 책상을 8만 원에 판대요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">생활 정보지를 봤는데 사용한 지 9개월 된 책상을 8만원에 <span class="point">판대요</span>.</div>
+          <div class="example-ko">생활 정보지를 봤는데 사용한 지 9개월 된 책상을 8만 원에 <span class="point">판대요</span>.</div>
           <div class="example-vi">Tôi xem báo thông tin sinh hoạt thấy người ta rao bán bàn học đã dùng được 9 tháng với giá 80.000 won.</div>
         </div>
       </div>
@@ -1806,9 +1812,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('지훈 씨가 베트남에 유학가면 어디에서 사는 게 제일 좋냬요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('지훈 씨가 베트남에 유학 가면 어디에서 사는 게 제일 좋냬요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">지훈 씨가 베트남에 유학가면 어디에서 사는 게 제일 <span class="point">좋냬요</span>.</div>
+          <div class="example-ko">지훈 씨가 베트남에 유학 가면 어디에서 사는 게 제일 <span class="point">좋냬요</span>.</div>
           <div class="example-vi">Ji-hoon hỏi là nếu đi du học ở Việt Nam thì sống ở đâu là tốt nhất.</div>
         </div>
       </div>
@@ -2165,9 +2171,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('입사원서를 언제까지 내야하는지 알아요? 네, 아마 다음 주 금요일까지 제출해야 할 거예요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('입사원서를 언제까지 내야 하는지 알아요? 네, 아마 다음 주 금요일까지 제출해야 할 거예요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko"><strong>A:</strong> 입사원서를 언제까지 <span class="point">내야하는지</span> 알아요?<br><strong>B:</strong> 네, 아마 다음 주 금요일까지 제출해야 할 거예요.</div>
+          <div class="example-ko"><strong>A:</strong> 입사원서를 언제까지 <span class="point">내야 하는지</span> 알아요?<br><strong>B:</strong> 네, 아마 다음 주 금요일까지 제출해야 할 거예요.</div>
           <div class="example-vi">A: Bạn có biết hạn cuối nộp đơn xin việc là khi nào không? / B: Có, chắc là phải nộp trước thứ Sáu tuần sau.</div>
         </div>
       </div>
@@ -2307,7 +2313,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm gốc ㅏ, ㅗ</td><td>+ -아지다</td><td>좋다 → 좋아지다 (tính từ biến đổi trạng thái)</td></tr><tr><td class="col-highlight">Nguyên âm gốc khác</td><td>+ -어지다</td><td>켜다 → 켜지다, 끄다 → 꺼지다, 누르다 → 눌러지다</td></tr><tr><td class="col-highlight">Động từ có ㅣ ở cuối</td><td>이 + 어지다 → 여지다 / 깨지다</td><td>깨다 → 깨지다, 이루어지다</td></tr><tr><td class="col-highlight">Kết hợp với tính từ (TIPS)</td><td>Tính từ + -아/어지다 (trở nên...)</td><td>작다 → 작아지다, 크다 → 커지다</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm gốc ㅏ, ㅗ</td><td>+ -아지다</td><td>좋다 → 좋아지다 (tính từ biến đổi trạng thái)</td></tr><tr><td class="col-highlight">Nguyên âm gốc khác</td><td>+ -어지다</td><td>켜다 → 켜지다, 끄다 → 꺼지다, 누르다 → 눌러지다</td></tr><tr><td class="col-highlight">Gốc nguyên âm ㅐ / ㅜ</td><td>ㅐ + 어지다 → ㅐ지다 (rút gọn); ㅜ + 어지다 → 우어지다</td><td>깨다 → 깨어지다 → 깨지다, 이루다 → 이루어지다</td></tr><tr><td class="col-highlight">Kết hợp với tính từ (TIPS)</td><td>Tính từ + -아/어지다 (trở nên...)</td><td>작다 → 작아지다, 크다 → 커지다</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -3218,14 +3224,14 @@
         <button class="speak-btn" onclick="speakText('텔레비전을 볼 때 소리를 크게 할수록 전력 소비가 커진대요. 그래요? 다음부터는 텔레비전 소리를 좀 줄여야겠군요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 텔레비전을 볼 때 소리를 크게 할<span class="point">수록</span> 전력 소비가 커진대요.<br><strong>B:</strong> 그래요? 다음부터는 텔레비전 소리를 좀 줄여야겠군요.</div>
-          <div class="example-vi">A: Nghe nói khi xem tivi, vặn tiếng càng to thì lượng điện tiêu thụ càng lớn đấy.&lt;br&gt;B: Vậy à? Từ lần sau chắc tôi phải vặn nhỏ tiếng tivi lại mới được.</div>
+          <div class="example-vi">A: Nghe nói khi xem tivi, vặn tiếng càng to thì lượng điện tiêu thụ càng lớn đấy.<br>B: Vậy à? Từ lần sau chắc tôi phải vặn nhỏ tiếng tivi lại mới được.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('카드값이 너무 많이 나와서 저축을 하기가 힘들어요. 우선 카드 수부터 줄여 보세요. 카드 수를 줄일수록 쓰는 돈도 줄어든대요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 카드값이 너무 많이 나와서 저축을 하기가 힘들어요.<br><strong>B:</strong> 우선 카드 수부터 줄여 보세요. 카드 수를 줄일<span class="point">수록</span> 쓰는 돈도 줄어든대요.</div>
-          <div class="example-vi">A: Tiền thẻ tín dụng ra nhiều quá nên khó mà tiết kiệm được.&lt;br&gt;B: Trước tiên hãy thử giảm số lượng thẻ xem sao. Nghe nói số thẻ càng giảm thì tiền chi tiêu cũng càng giảm theo đấy.</div>
+          <div class="example-vi">A: Tiền thẻ tín dụng ra nhiều quá nên khó mà tiết kiệm được.<br>B: Trước tiên hãy thử giảm số lượng thẻ xem sao. Nghe nói số thẻ càng giảm thì tiền chi tiêu cũng càng giảm theo đấy.</div>
         </div>
       </div>
     </div>
@@ -3247,11 +3253,11 @@
     <div class="formula-box"><span>Động từ (quá khứ) + <strong>-(으)ㄴ 모양이다</strong></span></div>
     <div class="formula-box"><span>Tính từ + <strong>-(으)ㄴ 모양이다</strong></span></div>
     <div class="formula-box"><span>Danh từ + <strong>인 모양이다</strong></span></div>
-    <div class="formula-box"><span>Tương lai / Phỏng đoán + <strong>-(으)ㄹ 모양이다</strong></span></div>
+    <div class="formula-box"><span>Tương lai / Phỏng đoán + <strong>-(으)ㄹ 모양이다</strong> (Danh từ: <strong>일 모양이다</strong>)</span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ</th><th>Hiện tại (현재: 진행, 습관)</th><th>Quá khứ (과거: 경험, 완료)</th><th>Tương lai (미래: 의지, 추측)</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-ㄴ/는 모양이다</td><td>-(으)ㄴ 모양이다</td><td>-(으)ㄹ 모양이다</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-(으)ㄴ 모양이다</td><td>—</td><td>-(으)ㄹ 모양이다</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>인 모양이다</td><td>—</td><td>-(으)ㄹ 모양이다</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-ㄴ/는 모양이다</td><td>-(으)ㄴ 모양이다</td><td>-(으)ㄹ 모양이다</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-(으)ㄴ 모양이다</td><td>—</td><td>-(으)ㄹ 모양이다</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>인 모양이다</td><td>—</td><td>일 모양이다</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -3260,7 +3266,7 @@
         <button class="speak-btn" onclick="speakText('저축을 많이 하는 걸 보니 흐엉 씨는 알뜰한 모양이에요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko">저축을 많이 하는 걸 보니 흐엉 씨는 알뜰<span class="point">한 모양이에요</span>.</div>
-          <div class="example-vi">Nhìn việc tiết kiệm nhiều tiền thì hình như Hương là người tằn tiện.</div>
+          <div class="example-vi">Nhìn việc tiết kiệm nhiều tiền thì hình như Hương là người biết thu vén, sống tiết kiệm.</div>
         </div>
       </div>
       <div class="example-item">
@@ -3281,14 +3287,14 @@
         <button class="speak-btn" onclick="speakText('기름값이 또 올랐대요. 그래요? 기름값이 오른 걸 보니 물가가 또 오를 모양이네요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 기름값이 또 올랐대요.<br><strong>B:</strong> 그래요? 기름값이 오른 걸 보니 물가가 또 오<span class="point">를 모양이네요</span>.</div>
-          <div class="example-vi">A: Nghe nói giá xăng dầu lại tăng nữa rồi.&lt;br&gt;B: Vậy à? Thấy giá xăng tăng thì hình như vật giá lại sắp tăng nữa rồi đấy.</div>
+          <div class="example-vi">A: Nghe nói giá xăng dầu lại tăng nữa rồi.<br>B: Vậy à? Thấy giá xăng tăng thì hình như vật giá lại sắp tăng nữa rồi đấy.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('유진 씨가 걱정이 있는 모양이에요. 안색이 안 좋네요. 학비를 내야 하는데 아직 못 내서 그런 것 같아요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 유진 씨가 걱정이 있<span class="point">는 모양이에요</span>. 안색이 안 좋네요.<br><strong>B:</strong> 학비를 내야 하는데 아직 못 내서 그런 것 같아요.</div>
-          <div class="example-vi">A: Hình như Yoo-jin đang có chuyện lo lắng. Sắc mặt trông không được tốt.&lt;br&gt;B: Chắc là vì phải đóng học phí mà vẫn chưa đóng được nên mới thế.</div>
+          <div class="example-vi">A: Hình như Yoo-jin đang có chuyện lo lắng. Sắc mặt trông không được tốt.<br>B: Chắc là vì phải đóng học phí mà vẫn chưa đóng được nên mới thế.</div>
         </div>
       </div>
     </div>
@@ -3340,14 +3346,14 @@
         <button class="speak-btn" onclick="speakText('왜 이렇게 거실이 어두워요? 전기가 나갔어요? 아, 절약하느라고 불을 하나만 켜서 그래요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 왜 이렇게 거실이 어두워요? 전기가 나갔어요?<br><strong>B:</strong> 아, 절약하<span class="point">느라고</span> 불을 하나만 켜서 그래요.</div>
-          <div class="example-vi">A: Sao phòng khách tối thế này? Bị mất điện à?&lt;br&gt;B: À, vì tiết kiệm nên tôi chỉ bật có một bóng đèn thôi.</div>
+          <div class="example-vi">A: Sao phòng khách tối thế này? Bị mất điện à?<br>B: À, vì tiết kiệm nên tôi chỉ bật có một bóng đèn thôi.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('오늘까지 동아리 회비를 내야 한대요. 그래요? 급하게 나오느라고 지갑을 집에 놓고 왔는데…….')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 오늘까지 동아리 회비를 내야 한대요.<br><strong>B:</strong> 그래요? 급하게 나오<span class="point">느라고</span> 지갑을 집에 놓고 왔는데…….</div>
-          <div class="example-vi">A: Nghe nói đến hôm nay phải nộp hội phí câu lạc bộ đấy.&lt;br&gt;B: Vậy à? Vì vội vàng đi ra ngoài nên tôi lại để quên ví ở nhà mất rồi…….</div>
+          <div class="example-vi">A: Nghe nói đến hôm nay phải nộp hội phí câu lạc bộ đấy.<br>B: Vậy à? Vì vội vàng đi ra ngoài nên tôi lại để quên ví ở nhà mất rồi…….</div>
         </div>
       </div>
     </div>
@@ -3417,11 +3423,11 @@
     <div class="formula-box"><span>Tính từ (hiện tại) + <strong>-다면</strong></span></div>
     <div class="formula-box"><span>Danh từ + <strong>(이)라면</strong></span></div>
     <div class="formula-box"><span>Quá khứ + <strong>-았/었다면</strong> (Danh từ: <strong>였다면 / 이었다면</strong>)</span></div>
-    <div class="formula-box"><span>Tương lai / Phỏng đoán + <strong>-(으)ㄹ 거라면 / -겠다면</strong></span></div>
+    <div class="formula-box"><span>Tương lai / Phỏng đoán + <strong>-(으)ㄹ 거라면 / -겠다면</strong> (Danh từ: <strong>일 거라면 / 이겠다면</strong>)</span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ</th><th>Hiện tại (현재: 진행, 습관)</th><th>Quá khứ (과거: 경험, 완료)</th><th>Tương lai (미래: 의지, 추측)</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-ㄴ다면 / -는다면</td><td>-았/었다면</td><td>-(으)ㄹ 거라면 / -겠다면</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-다면</td><td>-았/었다면</td><td>-(으)ㄹ 거라면 / -겠다면</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>라면 / 이라면</td><td>였다면 / 이었다면</td><td>-(으)ㄹ 거라면 / -겠다면</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-ㄴ다면 / -는다면</td><td>-았/었다면</td><td>-(으)ㄹ 거라면 / -겠다면</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-다면</td><td>-았/었다면</td><td>-(으)ㄹ 거라면 / -겠다면</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>라면 / 이라면</td><td>였다면 / 이었다면</td><td>일 거라면 / 이겠다면</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -3451,14 +3457,14 @@
         <button class="speak-btn" onclick="speakText('유진 씨는 언제 결혼할 생각이에요? 아직 생각해 보지 않았는데 사랑하는 사람이 생긴다면 빨리 결혼하고 싶어요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 유진 씨는 언제 결혼할 생각이에요?<br><strong>B:</strong> 아직 생각해 보지 않았는데 사랑하는 사람이 생긴<span class="point">다면</span> 빨리 결혼하고 싶어요.</div>
-          <div class="example-vi">A: Yoo-jin định bao giờ sẽ kết hôn?&lt;br&gt;B: Tôi vẫn chưa nghĩ tới nhưng nếu có người mình yêu thì tôi muốn kết hôn sớm.</div>
+          <div class="example-vi">A: Yoo-jin định bao giờ sẽ kết hôn?<br>B: Tôi vẫn chưa nghĩ tới nhưng nếu có người mình yêu thì tôi muốn kết hôn sớm.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('중매결혼을 한다면 어떨 것 같아요? 글쎄요, 중매결혼한다면 처음엔 좀 어색할 것 같아요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 중매결혼을 <span class="point">한다면</span> 어떨 것 같아요?<br><strong>B:</strong> 글쎄요, 중매결혼<span class="point">한다면</span> 처음엔 좀 어색할 것 같아요.</div>
-          <div class="example-vi">A: Nếu kết hôn qua mai mối thì bạn thấy sao?&lt;br&gt;B: Chà, nếu kết hôn qua mai mối thì lúc đầu chắc sẽ hơi ngại ngùng một chút.</div>
+          <div class="example-vi">A: Nếu kết hôn qua mai mối thì bạn thấy sao?<br>B: Chà, nếu kết hôn qua mai mối thì lúc đầu chắc sẽ hơi ngại ngùng một chút.</div>
         </div>
       </div>
     </div>
@@ -3512,14 +3518,14 @@
         <button class="speak-btn" onclick="speakText('민수 씨, 결혼 축하드려요. 시험 준비로 바쁠 텐데 이렇게 와 주셔서 고맙습니다.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 민수 씨, 결혼 축하드려요.<br><strong>B:</strong> 시험 준비로 바<span class="point">쁠 텐데</span> 이렇게 와 주셔서 고맙습니다.</div>
-          <div class="example-vi">A: Anh Min-soo, chúc mừng đám cưới nhé.&lt;br&gt;B: Chắc bạn đang bận ôn thi mà vẫn đến dự như thế này, cảm ơn bạn nhiều.</div>
+          <div class="example-vi">A: Anh Min-soo, chúc mừng đám cưới nhé.<br>B: Chắc bạn đang bận ôn thi mà vẫn đến dự như thế này, cảm ơn bạn nhiều.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('결혼 후에도 계속 직장 생활을 할 거죠? 물론이에요. 하지만 아기를 낳으면 얼마 동안 일할 수 없을 텐데 그게 걱정이에요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 결혼 후에도 계속 직장 생활을 할 거죠?<br><strong>B:</strong> 물론이에요. 하지만 아기를 낳으면 얼마 동안 일할 수 없<span class="point">을 텐데</span> 그게 걱정이에요.</div>
-          <div class="example-vi">A: Sau khi kết hôn bạn vẫn sẽ tiếp tục đi làm chứ?&lt;br&gt;B: Tất nhiên rồi. Nhưng nếu sinh con thì chắc là trong một khoảng thời gian sẽ không thể làm việc được, tôi đang lo điều đó.</div>
+          <div class="example-vi">A: Sau khi kết hôn bạn vẫn sẽ tiếp tục đi làm chứ?<br>B: Tất nhiên rồi. Nhưng nếu sinh con thì chắc là trong một khoảng thời gian sẽ không thể làm việc được, tôi đang lo điều đó.</div>
         </div>
       </div>
     </div>
@@ -3572,14 +3578,14 @@
         <button class="speak-btn" onclick="speakText('왜 이렇게 음식을 못 먹어요? 결혼식 날 웨딩드레스가 맞지 않을까 봐 못 먹겠어요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 왜 이렇게 음식을 못 먹어요?<br><strong>B:</strong> 결혼식 날 웨딩드레스가 맞지 않<span class="point">을까 봐</span> 못 먹겠어요.</div>
-          <div class="example-vi">A: Sao bạn ăn ít đồ ăn thế?&lt;br&gt;B: Sợ đến ngày cưới mặc váy cưới không vừa nên tôi không ăn nổi.</div>
+          <div class="example-vi">A: Sao bạn ăn ít đồ ăn thế?<br>B: Sợ đến ngày cưới mặc váy cưới không vừa nên tôi không ăn nổi.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('이번 행사 때 사람들은 많이 왔어요? 네, 사람들이 많이 안 올까 봐 걱정했는데 생각보다 많이 왔어요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 이번 행사 때 사람들은 많이 왔어요?<br><strong>B:</strong> 네, 사람들이 많이 안 <span class="point">올까 봐</span> 걱정했는데 생각보다 많이 왔어요.</div>
-          <div class="example-vi">A: Sự kiện lần này mọi người đến đông không?&lt;br&gt;B: Vâng, tôi đã lo sợ mọi người không đến nhiều nhưng hóa ra đông hơn tôi nghĩ.</div>
+          <div class="example-vi">A: Sự kiện lần này mọi người đến đông không?<br>B: Vâng, tôi đã lo sợ mọi người không đến nhiều nhưng hóa ra đông hơn tôi nghĩ.</div>
         </div>
       </div>
     </div>
@@ -3600,7 +3606,7 @@
         <div class="quiz-question">Hoàn thành hội thoại sau (SBT Bài 11, mục 어휘 및 표현 4-(3)):<br>A: 예식장을 벌써 예약했다면서요?<br>B: <strong>________________________</strong>.</div>
         <div class="quiz-options">
           <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai. \'예식장이 남을까 봐\' (sợ còn thừa hội trường cưới) không hợp logic cho việc đặt chỗ sớm.')">A. 네, 예식장이 남을까 봐 일찍 예약했어요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Đúng! \'Vâng, sợ không tìm đặt được hội trường cưới nên tôi đã đặt trước sớm\' rất logic với ngữ cảnh.')">B. 네, 예식장을 구하지 못 할까 봐 일찍 예약했어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Đúng! \'Vâng, sợ không tìm đặt được hội trường cưới nên tôi đã đặt trước sớm\' rất logic với ngữ cảnh.')">B. 네, 예식장을 구하지 못할까 봐 일찍 예약했어요</button>
           <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai. Câu hỏi nói về việc đã đặt trước (예약했다면서요), không phải hủy.')">C. 네, 예식장이 너무 비쌀까 봐 취소했어요</button>
         </div>
         <div class="quiz-feedback"></div>
@@ -3681,14 +3687,14 @@
         <button class="speak-btn" onclick="speakText('뉴스를 들어 보니까 남부지방에 큰 홍수가 났다고 하던데요. 저도 들었는데 실종자도 생겼대요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 뉴스를 <span class="point">들어 보니까</span> 남부지방에 큰 홍수가 났다고 하던데요.<br><strong>B:</strong> 저도 들었는데 실종자도 생겼대요.</div>
-          <div class="example-vi">A: Nghe tin tức thì thấy bảo ở vùng phía Nam xảy ra lũ lụt lớn đấy.&lt;br&gt;B: Tôi cũng nghe nói vậy, nghe bảo có cả người mất tích nữa.</div>
+          <div class="example-vi">A: Nghe tin tức thì thấy bảo ở vùng phía Nam xảy ra lũ lụt lớn đấy.<br>B: Tôi cũng nghe nói vậy, nghe bảo có cả người mất tích nữa.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('혼자 생활해 보니까 어때요? 요리가 좀 힘들기는 하지만 다른 것은 다 괜찮아요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 혼자 <span class="point">생활해 보니까</span> 어때요?<br><strong>B:</strong> 요리가 좀 힘들기는 하지만 다른 것은 다 괜찮아요.</div>
-          <div class="example-vi">A: Thử sống một mình rồi bạn thấy thế nào?&lt;br&gt;B: Chuyện nấu ăn thì hơi vất vả một chút nhưng những thứ khác đều ổn.</div>
+          <div class="example-vi">A: Thử sống một mình rồi bạn thấy thế nào?<br>B: Chuyện nấu ăn thì hơi vất vả một chút nhưng những thứ khác đều ổn.</div>
         </div>
       </div>
     </div>
@@ -3741,14 +3747,14 @@
         <button class="speak-btn" onclick="speakText('눈이 너무 많이 오지요? 네, 걸어오다가 눈길에 미끄러질 뻔했어요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 눈이 너무 많이 오지요?<br><strong>B:</strong> 네, 걸어오다가 눈길에 미끄러<span class="point">질 뻔했어요</span>.</div>
-          <div class="example-vi">A: Tuyết rơi nhiều quá phải không?&lt;br&gt;B: Vâng, lúc đi bộ đến đây suýt nữa thì bị trượt ngã trên đường tuyết.</div>
+          <div class="example-vi">A: Tuyết rơi nhiều quá phải không?<br>B: Vâng, lúc đi bộ đến đây suýt nữa thì bị trượt ngã trên đường tuyết.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('풍 씨는 왜 그렇게 수영을 싫어하세요? 어렸을 때 수영하다가 물에 빠질 뻔했거든요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 풍 씨는 왜 그렇게 수영을 싫어하세요?<br><strong>B:</strong> 어렸을 때 수영하다가 물에 빠<span class="point">질 뻔했거든요</span>.</div>
-          <div class="example-vi">A: Sao Phong lại ghét bơi lội thế?&lt;br&gt;B: Vì hồi nhỏ lúc đi bơi suýt chút nữa thì bị đuối nước đấy ạ.</div>
+          <div class="example-vi">A: Sao Phong lại ghét bơi lội thế?<br>B: Vì hồi nhỏ lúc đi bơi suýt chút nữa thì bị đuối nước đấy ạ.</div>
         </div>
       </div>
     </div>
@@ -3803,14 +3809,14 @@
         <button class="speak-btn" onclick="speakText('왜 이렇게 사람들이 많이 모여 있어요? 물에 빠진 사람을 구해서 응급처치를 하고 있대요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 왜 이렇게 사람들이 많이 <span class="point">모여 있어요</span>?<br><strong>B:</strong> 물에 빠진 사람을 구해서 응급처치를 하고 있대요.</div>
-          <div class="example-vi">A: Sao mọi người lại tụ tập đông thế này?&lt;br&gt;B: Nghe nói họ vừa cứu người bị rơi xuống nước và đang sơ cứu đấy.</div>
+          <div class="example-vi">A: Sao mọi người lại tụ tập đông thế này?<br>B: Nghe nói họ vừa cứu người bị rơi xuống nước và đang sơ cứu đấy.</div>
         </div>
       </div>
       <div class="example-item">
         <button class="speak-btn" onclick="speakText('그렇게 서 있지 말고 앉으세요. 아니에요, 금방 갈 거니까 괜찮아요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko"><strong>A:</strong> 그렇게 <span class="point">서 있지</span> 말고 앉으세요.<br><strong>B:</strong> 아니에요, 금방 갈 거니까 괜찮아요.</div>
-          <div class="example-vi">A: Đừng đứng mãi như thế, ngồi xuống đi.&lt;br&gt;B: Không sao đâu ạ, tôi sắp đi ngay đây rồi.</div>
+          <div class="example-vi">A: Đừng đứng mãi như thế, ngồi xuống đi.<br>B: Không sao đâu ạ, tôi sắp đi ngay đây rồi.</div>
         </div>
       </div>
     </div>
@@ -3955,7 +3961,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ & Thì</th><th>Quy tắc kết hợp</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ (hiện tại)</td><td>V + -는 데다가</td><td>공부하다 → 공부하는 데다가</td></tr><tr><td class="col-highlight">Động từ (quá khứ - nguyên âm/ㄹ)</td><td>V + -ㄴ 데다가</td><td>일어나다 → 일어난 데다가</td></tr><tr><td class="col-highlight">Động từ (quá khứ - có patchim)</td><td>V + -은 데다가</td><td>먹다 → 먹은 데다가</td></tr><tr><td class="col-highlight">Tính từ (không patchim/ㄹ)</td><td>A + -ㄴ 데다가</td><td>예쁘다 → 예쁜 데다가, 멀다 → 먼 데다가</td></tr><tr><td class="col-highlight">Tính từ (có patchim)</td><td>A + -은 데다가</td><td>치열하다 → 치열한 데다가, 넓다 → 넓은 데다가</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>N + -인 데다가</td><td>학생 → 학생인 데다가</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ (hiện tại)</td><td>V + -는 데다가</td><td>공부하다 → 공부하는 데다가</td></tr><tr><td class="col-highlight">Động từ (quá khứ - nguyên âm/ㄹ)</td><td>V + -ㄴ 데다가</td><td>일어나다 → 일어난 데다가</td></tr><tr><td class="col-highlight">Động từ (quá khứ - có patchim)</td><td>V + -은 데다가</td><td>먹다 → 먹은 데다가</td></tr><tr><td class="col-highlight">Tính từ (không patchim/ㄹ)</td><td>A + -ㄴ 데다가</td><td>예쁘다 → 예쁜 데다가, 치열하다 → 치열한 데다가, 멀다 → 먼 데다가</td></tr><tr><td class="col-highlight">Tính từ (có patchim)</td><td>A + -은 데다가</td><td>넓다 → 넓은 데다가, 많다 → 많은 데다가</td></tr><tr><td class="col-highlight">Danh từ + 이다</td><td>N + -인 데다가</td><td>학생 → 학생인 데다가</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4025,11 +4031,11 @@
     <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ và danh từ, có nghĩa tương đương trong tiếng Việt là <em>'và'</em>, dùng để liệt kê một cách đối xứng hai hành vi hoặc hai trạng thái trở lên. Thường dùng trong văn viết.</p></div>
     <div class="formula-box"><span>Tận cùng là nguyên âm hoặc phụ âm ㄹ + <strong>-며</strong></span></div>
     <div class="formula-box"><span>Tận cùng là phụ âm (trừ ㄹ) + <strong>-으며</strong></span></div>
-    <div class="formula-box"><span>Danh từ + <strong>-(이)며</strong></span></div>
+    <div class="formula-box"><span>Danh từ + <strong>-(이)며</strong> (không patchim: <strong>-며 / -이며</strong>; có patchim: <strong>-이며</strong>)</span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc kết hợp</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm hoặc phụ âm ㄹ</td><td>Thân V/A + -며</td><td>편리하다 → 편리하며, 빠르다 → 빠르며</td></tr><tr><td class="col-highlight">Phụ âm (trừ ㄹ)</td><td>Thân V/A + -으며</td><td>있다 → 있으며, 맑다 → 맑으며</td></tr><tr><td class="col-highlight">Danh từ</td><td>N + -(이)며</td><td>9월 20일 → 9월 20일이며, 수도 → 수도이며</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm hoặc phụ âm ㄹ</td><td>Thân V/A + -며</td><td>편리하다 → 편리하며, 빠르다 → 빠르며</td></tr><tr><td class="col-highlight">Phụ âm (trừ ㄹ)</td><td>Thân V/A + -으며</td><td>있다 → 있으며, 맑다 → 맑으며</td></tr><tr><td class="col-highlight">Danh từ</td><td>N + -(이)며</td><td>9월 20일 → 9월 20일이며, 수도 → 수도며 / 수도이며 (trang trọng)</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4220,13 +4226,13 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ và có nghĩa là <em>'đến mức'</em>, biểu hiện sự tương ứng phù hợp với giá trị hoặc tính chất ở hành động phía trước. Có thể dùng ở giữa câu với cấu trúc <strong>-(으)ㄹ 정도로</strong>.</p></div>
-    <div class="formula-box"><span>Động từ + <strong>-(으)ㄹ 정도이다</strong> (kết thúc câu)</span></div>
-    <div class="formula-box"><span>Động từ + <strong>-(으)ㄹ 정도로</strong> + Mệnh đề sau</span></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ hoặc tính từ và có nghĩa là <em>'đến mức'</em>, biểu hiện sự tương ứng phù hợp với giá trị hoặc tính chất ở hành động/trạng thái phía trước. Có thể dùng ở giữa câu với cấu trúc <strong>-(으)ㄹ 정도로</strong>.</p></div>
+    <div class="formula-box"><span>Động từ / Tính từ + <strong>-(으)ㄹ 정도이다</strong> (kết thúc câu)</span></div>
+    <div class="formula-box"><span>Động từ / Tính từ + <strong>-(으)ㄹ 정도로</strong> + Mệnh đề sau</span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc kết hợp</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Không có patchim hoặc ㄹ</td><td>Thân V + -ㄹ 정도이다</td><td>쓰다 → 써야 할 정도이다, 보이다 → 보일 정도로</td></tr><tr><td class="col-highlight">Có patchim (trừ ㄹ)</td><td>Thân V + -을 정도이다</td><td>없다 → 없을 정도였어요</td></tr><tr><td class="col-highlight">Chia thì quá khứ</td><td>-(으)ㄹ 정도였다</td><td>치워야 하다 → 치워야 할 정도였어요</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Không có patchim hoặc ㄹ</td><td>Thân V/A + -ㄹ 정도이다</td><td>쓰다 → 써야 할 정도이다, 보이다 → 보일 정도로, 아프다 → 아플 정도이다</td></tr><tr><td class="col-highlight">Có patchim (trừ ㄹ)</td><td>Thân V/A + -을 정도이다</td><td>없다 → 없을 정도였어요, 많다 → 많을 정도이다</td></tr><tr><td class="col-highlight">Chia thì quá khứ</td><td>-(으)ㄹ 정도였다</td><td>치워야 하다 → 치워야 할 정도였어요</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4481,12 +4487,12 @@
     <div class="grammar-title-group">
       <span class="grammar-badge">Ngữ pháp 02</span>
       <span class="grammar-name-ko">-다 보니까</span>
-      <span class="grammar-meaning-vi">Thử làm / cứ làm gì đó mãi thì (phát hiện ra sự thật mới hoặc chuyển trạng thái)</span>
+      <span class="grammar-meaning-vi">Cứ làm... mãi thì / Trong quá trình làm... thì (phát hiện ra sự thật mới hoặc chuyển trạng thái)</span>
     </div>
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ và có nghĩa tương đương trong tiếng Việt là <em>'thử làm gì đó thì'</em>. Trong quá trình làm một việc gì đó thì phát hiện ra một sự thật mới hoặc chuyển sang một trạng thái khác. Có thể dùng cấu trúc <strong>-다 보니까</strong> hoặc rút gọn <strong>-다 보니</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ và có nghĩa tương đương trong tiếng Việt là <em>'cứ làm... mãi thì / trong quá trình làm... thì'</em>. Trong quá trình làm một việc gì đó liên tục hoặc trong một khoảng thời gian thì phát hiện ra một sự thật mới hoặc chuyển sang một trạng thái khác. Có thể dùng cấu trúc <strong>-다 보니까</strong> hoặc rút gọn <strong>-다 보니</strong>.</p></div>
     <div class="formula-box"><span>Động từ + <strong>-다 보니까</strong> / <strong>-다 보니</strong></span></div>
     <div class="comparison-box"><strong>So sánh -다 보니까 và -다 보면:</strong> <strong>-다 보니까</strong> mang tính kết quả (thường dùng với kết quả đã xảy ra/quá khứ), còn <strong>-다 보면</strong> mang tính phỏng đoán/giả định nên không dùng ở dạng quá khứ.</div>
     <div class="rule-table-wrapper">
@@ -4719,7 +4725,7 @@
     <div class="rule-table-wrapper">
       <table class="rule-table">
         <thead><tr><th>Ngữ pháp</th><th>Ý nghĩa cốt lõi</th><th>Bài</th><th>Ví dụ tiêu biểu</th></tr></thead>
-        <tbody><tr><td class="col-highlight">Động từ / Tính từ + -다면</td><td>Nếu mà..., giả sử...</td><td>Bài 11 (결혼)</td><td>서로 사랑한다면 국제결혼도 할 수 있다고 생각해요. (Tôi nghĩ nếu yêu nhau thì kết hôn quốc tế cũng có thể làm được.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄹ 텐데</td><td>Chắc là..., đáng ra là...</td><td>Bài 11 (결혼)</td><td>결혼식이 끝나면 신혼여행도 가야 할 텐데 어디로 가고 싶어요? (Kết thúc lễ cưới chắc là cũng phải đi tuần trăng mật nữa, bạn muốn đi đâu?)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄹ까 봐</td><td>Sợ rằng..., e rằng...</td><td>Bài 11 (결혼)</td><td>친구 결혼식에 늦을까 봐 지하철을 탔어요. (Sợ bị muộn lễ cưới của bạn nên tôi đã đi tàu điện ngầm.)</td></tr><tr><td class="col-highlight">Động từ + -아/어 보니까</td><td>Thử làm... rồi mới thấy (thì ra là...)</td><td>Bài 12 (사건과 사고)</td><td>밖에 나가 보니까 경찰들이 있었어요. (Ra ngoài xem thì thấy có các cảnh sát ở đó.)</td></tr><tr><td class="col-highlight">Động từ + -(으)ㄹ 뻔하다</td><td>Suýt chút nữa...</td><td>Bài 12 (사건과 사고)</td><td>학교에 오다가 교통사고가 날 뻔했어요. (Đang trên đường đến trường thì suýt chút nữa bị tai nạn giao thông.)</td></tr><tr><td class="col-highlight">Động từ + -아/어 있다</td><td>Đã... (trạng thái/kết quả vẫn đang duy trì)</td><td>Bài 12 (사건과 사고)</td><td>내가 갔을 때는 이미 사고가 나 있었어요. (Khi tôi đến thì tai nạn đã xảy ra sẵn rồi.)</td></tr><tr><td class="col-highlight">-도록</td><td>Để mà, đến mức, đến (mức độ, tiêu chuẩn, phương thức, giới hạn thời gian)</td><td>Bài 13 (교육제도)</td><td>좋은 대학에 입학할 수 있도록 열심히 공부하겠습니다. (Tôi sẽ học tập chăm chỉ để có thể đỗ vào trường đại học tốt.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 데다가</td><td>Cộng thêm, thêm vào đó</td><td>Bài 13 (교육제도)</td><td>한국은 입시 경쟁이 치열한 데다가 교육열도 높아서 사교육을 많이 받아요. (Hàn Quốc cạnh tranh thi cử gay gắt, thêm vào đó nhiệt huyết giáo dục cũng cao nên học sinh học thêm tư nhân rất nhiều.)</td></tr><tr><td class="col-highlight">-(으)며</td><td>Và (liệt kê đối xứng hành vi hoặc trạng thái, thường dùng trong văn viết)</td><td>Bài 13 (교육제도)</td><td>올해 대학수학능력시험 원서 마감은 9월 20일이며, 시험은 11월에 시행된다. (Hạn chót nộp hồ sơ thi đại học năm nay là ngày 20 tháng 9, và kỳ thi được tổ chức vào tháng 11.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 반면(에)</td><td>Đối ngược với, ngược lại, trái lại</td><td>Bài 14 (생활과 환경)</td><td>대기오염은 심해진 반면에 수질오염은 좀 줄었다. (Ô nhiễm không khí trở nên nghiêm trọng hơn, ngược lại ô nhiễm nguồn nước đã giảm bớt.)</td></tr><tr><td class="col-highlight">-(으)ㄹ 정도이다</td><td>Đến mức</td><td>Bài 14 (생활과 환경)</td><td>요즘은 황사가 아주 심해져서 마스크를 써야 할 정도이다. (Dạo này bão cát vàng trở nên rất nghiêm trọng đến mức phải đeo khẩu trang.)</td></tr><tr><td class="col-highlight">에 따르면</td><td>Theo như..., nếu theo... thì</td><td>Bài 14 (생활과 환경)</td><td>조사 결과에 따르면 최근 서울의 대기오염이 줄었다고 한다. (Theo kết quả điều tra, gần đây ô nhiễm không khí ở Seoul đã giảm.)</td></tr><tr><td class="col-highlight">-자</td><td>Mới vừa ... thì (hành động nối tiếp ngay sau)</td><td>Bài 15 (옛날이야기)</td><td>영화 ‘춘향전’의 상영이 끝나자 관객들은 모두 박수를 쳤다. (Buổi chiếu phim ‘Xuân Hương truyện’ vừa kết thúc thì toàn bộ khán giả đều vỗ tay.)</td></tr><tr><td class="col-highlight">-다 보니까</td><td>Thử làm / cứ làm gì đó mãi thì (phát hiện ra sự thật mới hoặc chuyển trạng thái)</td><td>Bài 15 (옛날이야기)</td><td>한국 동화를 읽다 보니까 한국어 공부가 더 재미있어졌어요. (Càng đọc truyện cổ tích Hàn Quốc thì việc học tiếng Hàn càng trở nên thú vị hơn.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 척하다</td><td>Làm như, giả vờ</td><td>Bài 15 (옛날이야기)</td><td>호랑이 울음소리에 소년은 죽은 척했습니다. (Nghe tiếng hổ gầm, cậu bé đã giả vờ chết.)</td></tr></tbody>
+        <tbody><tr><td class="col-highlight">Động từ / Tính từ + -다면</td><td>Nếu mà..., giả sử...</td><td>Bài 11 (결혼)</td><td>서로 사랑한다면 국제결혼도 할 수 있다고 생각해요. (Tôi nghĩ nếu yêu nhau thì kết hôn quốc tế cũng có thể làm được.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄹ 텐데</td><td>Chắc là..., đáng ra là...</td><td>Bài 11 (결혼)</td><td>결혼식이 끝나면 신혼여행도 가야 할 텐데 어디로 가고 싶어요? (Kết thúc lễ cưới chắc là cũng phải đi tuần trăng mật nữa, bạn muốn đi đâu?)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄹ까 봐</td><td>Sợ rằng..., e rằng...</td><td>Bài 11 (결혼)</td><td>친구 결혼식에 늦을까 봐 지하철을 탔어요. (Sợ bị muộn lễ cưới của bạn nên tôi đã đi tàu điện ngầm.)</td></tr><tr><td class="col-highlight">Động từ + -아/어 보니까</td><td>Thử làm... rồi mới thấy (thì ra là...)</td><td>Bài 12 (사건과 사고)</td><td>밖에 나가 보니까 경찰들이 있었어요. (Ra ngoài xem thì thấy có các cảnh sát ở đó.)</td></tr><tr><td class="col-highlight">Động từ + -(으)ㄹ 뻔하다</td><td>Suýt chút nữa...</td><td>Bài 12 (사건과 사고)</td><td>학교에 오다가 교통사고가 날 뻔했어요. (Đang trên đường đến trường thì suýt chút nữa bị tai nạn giao thông.)</td></tr><tr><td class="col-highlight">Động từ + -아/어 있다</td><td>Đã... (trạng thái/kết quả vẫn đang duy trì)</td><td>Bài 12 (사건과 사고)</td><td>내가 갔을 때는 이미 사고가 나 있었어요. (Khi tôi đến thì tai nạn đã xảy ra sẵn rồi.)</td></tr><tr><td class="col-highlight">-도록</td><td>Để mà, đến mức, đến (mức độ, tiêu chuẩn, phương thức, giới hạn thời gian)</td><td>Bài 13 (교육제도)</td><td>좋은 대학에 입학할 수 있도록 열심히 공부하겠습니다. (Tôi sẽ học tập chăm chỉ để có thể đỗ vào trường đại học tốt.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 데다가</td><td>Cộng thêm, thêm vào đó</td><td>Bài 13 (교육제도)</td><td>한국은 입시 경쟁이 치열한 데다가 교육열도 높아서 사교육을 많이 받아요. (Hàn Quốc cạnh tranh thi cử gay gắt, thêm vào đó nhiệt huyết giáo dục cũng cao nên học sinh học thêm tư nhân rất nhiều.)</td></tr><tr><td class="col-highlight">-(으)며</td><td>Và (liệt kê đối xứng hành vi hoặc trạng thái, thường dùng trong văn viết)</td><td>Bài 13 (교육제도)</td><td>올해 대학수학능력시험 원서 마감은 9월 20일이며, 시험은 11월에 시행된다. (Hạn chót nộp hồ sơ thi đại học năm nay là ngày 20 tháng 9, và kỳ thi được tổ chức vào tháng 11.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 반면(에)</td><td>Đối ngược với, ngược lại, trái lại</td><td>Bài 14 (생활과 환경)</td><td>대기오염은 심해진 반면에 수질오염은 좀 줄었다. (Ô nhiễm không khí trở nên nghiêm trọng hơn, ngược lại ô nhiễm nguồn nước đã giảm bớt.)</td></tr><tr><td class="col-highlight">-(으)ㄹ 정도이다</td><td>Đến mức</td><td>Bài 14 (생활과 환경)</td><td>요즘은 황사가 아주 심해져서 마스크를 써야 할 정도이다. (Dạo này bão cát vàng trở nên rất nghiêm trọng đến mức phải đeo khẩu trang.)</td></tr><tr><td class="col-highlight">에 따르면</td><td>Theo như..., nếu theo... thì</td><td>Bài 14 (생활과 환경)</td><td>조사 결과에 따르면 최근 서울의 대기오염이 줄었다고 한다. (Theo kết quả điều tra, gần đây ô nhiễm không khí ở Seoul đã giảm.)</td></tr><tr><td class="col-highlight">-자</td><td>Mới vừa ... thì (hành động nối tiếp ngay sau)</td><td>Bài 15 (옛날이야기)</td><td>영화 ‘춘향전’의 상영이 끝나자 관객들은 모두 박수를 쳤다. (Buổi chiếu phim ‘Xuân Hương truyện’ vừa kết thúc thì toàn bộ khán giả đều vỗ tay.)</td></tr><tr><td class="col-highlight">-다 보니까</td><td>Cứ làm... mãi thì / Trong quá trình làm... thì (phát hiện ra sự thật mới hoặc chuyển trạng thái)</td><td>Bài 15 (옛날이야기)</td><td>한국 동화를 읽다 보니까 한국어 공부가 더 재미있어졌어요. (Càng đọc truyện cổ tích Hàn Quốc thì việc học tiếng Hàn càng trở nên thú vị hơn.)</td></tr><tr><td class="col-highlight">-(으)ㄴ/는 척하다</td><td>Làm như, giả vờ</td><td>Bài 15 (옛날이야기)</td><td>호랑이 울음소리에 소년은 죽은 척했습니다. (Nghe tiếng hổ gầm, cậu bé đã giả vờ chết.)</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -4749,16 +4755,22 @@
 
     // TAB SWITCHING
     function switchTab(tabId) {
+      const appLayout = document.querySelector('.app-layout');
+      if (appLayout) appLayout.classList.remove('is-searching');
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active', 'search-match'));
+
+      const searchInput = document.getElementById('grammarSearch');
+      const clearBtn = document.getElementById('searchClearBtn');
+      if (searchInput && searchInput.value.trim()) {
+        searchInput.value = '';
+        if (clearBtn) clearBtn.style.display = 'none';
+      }
 
       const targetPanel = document.getElementById(tabId);
       if (targetPanel) {
         targetPanel.classList.add('active');
-        const searchInput = document.getElementById('grammarSearch');
-        if (!searchInput || !searchInput.value.trim()) {
-          targetPanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
-        }
+        targetPanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
       }
 
       const buttons = document.querySelectorAll('.tab-btn');
@@ -4778,7 +4790,7 @@
         window.speechSynthesis.cancel();
         const cleanText = text.replace(/\[.*?\]/g, '')
                               .replace(/➔.*$/g, '')
-                              .replace(/[^\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\s0-9,.?!]/g, ' ')
+                              .replace(/[^\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\sa-zA-Z0-9,.?!]/g, ' ')
                               .trim();
         const utterance = new SpeechSynthesisUtterance(cleanText || text);
         utterance.lang = 'ko-KR';
@@ -4802,39 +4814,43 @@
       }
     }
 
+    const TONE_MAP = { 'oà':'òa','oá':'óa','oả':'ỏa','oã':'õa','oạ':'ọa','oè':'òe','oé':'óe','oẻ':'ỏe','oẽ':'õe','oẹ':'ọe' };
+    const UY_MAP = { 'ỳ':'ùy','ý':'úy','ỷ':'ủy','ỹ':'ũy','ỵ':'ụy' };
+    const normSearch = s => (s || '').normalize('NFC').toLowerCase()
+      .replace(/o[àáảãạèéẻẽẹ]/g, m => TONE_MAP[m])
+      .replace(/(^|[^q])u([ỳýỷỹỵ])(?=$|[^a-z\u00C0-\u1EF9])/g, (_, p, y) => p + UY_MAP[y]);
+
     // SEARCH FUNCTIONALITY
     function handleSearch() {
       const searchInput = document.getElementById('grammarSearch');
       const clearBtn = document.getElementById('searchClearBtn');
-      const query = (searchInput.value || '').trim().toLowerCase();
+      const appLayout = document.querySelector('.app-layout');
+      const query = normSearch((searchInput.value || '').trim());
 
       if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
 
-      const allCards = document.querySelectorAll('.grammar-card');
-
       if (!query) {
-        const activePanel = document.querySelector('.tab-panel.active');
-        if (activePanel) {
-          activePanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
-        }
+        if (appLayout) appLayout.classList.remove('is-searching');
+        document.querySelectorAll('.tab-panel').forEach(panel => {
+          panel.classList.remove('search-match');
+          panel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+        });
         return;
       }
 
-      let firstMatchFound = false;
-      allCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        if (text.includes(query)) {
-          card.style.display = 'block';
-          if (!firstMatchFound) {
-            const parentPanel = card.closest('.tab-panel');
-            if (parentPanel && !parentPanel.classList.contains('active')) {
-              switchTab(parentPanel.id);
-            }
-            firstMatchFound = true;
+      if (appLayout) appLayout.classList.add('is-searching');
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        let hasMatch = false;
+        panel.querySelectorAll('.grammar-card').forEach(card => {
+          const text = normSearch(card.textContent);
+          if (text.includes(query)) {
+            card.style.display = 'block';
+            hasMatch = true;
+          } else {
+            card.style.display = 'none';
           }
-        } else {
-          card.style.display = 'none';
-        }
+        });
+        panel.classList.toggle('search-match', hasMatch);
       });
     }
 

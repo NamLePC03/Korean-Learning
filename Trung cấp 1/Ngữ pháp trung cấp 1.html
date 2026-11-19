@@ -334,10 +334,56 @@
       background: rgba(255, 255, 255, 0.25);
       color: #ffffff;
     }
+    .tab-match-count {
+      margin-left: auto;
+      background: #e0e7ff;
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      flex-shrink: 0;
+    }
+    .tab-btn.active .tab-match-count {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
 
     /* RIGHT CONTENT AREA */
     .content-area {
       min-width: 0;
+    }
+    .empty-search-state {
+      display: none;
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .empty-search-state strong {
+      display: block;
+      font-size: 16px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .empty-search-state button {
+      margin-top: 14px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .empty-search-state button:hover {
+      background: var(--primary-dark);
     }
 
     /* TAB CONTENT PANELS */
@@ -639,6 +685,9 @@
       border-radius: 4px;
       font-weight: 700;
     }
+    .speaker {
+      font-weight: 700;
+    }
     .example-vi {
       font-size: 14px;
       color: #475569;
@@ -893,6 +942,11 @@
 
       <!-- RIGHT MAIN CONTENT AREA -->
       <div class="content-area">
+        <div id="searchEmptyState" class="empty-search-state" role="status" aria-live="polite">
+          <strong>Không tìm thấy kết quả phù hợp</strong>
+          <p id="searchEmptyDesc">Không có thẻ ngữ pháp nào khớp với từ khóa tìm kiếm.</p>
+          <button type="button" onclick="clearSearch()">Xóa tìm kiếm</button>
+        </div>
     <section class="tab-panel active" id="tab-bai01">
       <div class="lesson-banner">
         <div class="lesson-meta"><span class="lesson-tag">Bài 01</span></div>
@@ -1047,9 +1101,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('컴퓨터게임을 시작하면 계속하게 돼요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('컴퓨터 게임을 시작하면 계속하게 돼요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">컴퓨터게임을 시작하면 계속하<span class="point">게 돼요</span>.</div>
+          <div class="example-ko">컴퓨터 게임을 시작하면 계속하<span class="point">게 돼요</span>.</div>
           <div class="example-vi">Hễ bắt đầu chơi game máy tính là lại cứ chơi mãi.</div>
         </div>
       </div>
@@ -1135,7 +1189,7 @@
         </div>
       </div>
     </div>
-    <div class="tip-box"><strong>Lưu ý:</strong> Dạng phủ định dùng <strong>-지 않을 생각이다</strong> (Ví dụ: <em>가지 않을 생각이에요</em> - Tôi định sẽ không đi).</div>
+    <div class="tip-box"><strong>Lưu ý:</strong> Chủ ngữ ở câu trần thuật thường là ngôi thứ nhất (<em>저/우리</em>), ở câu hỏi là ngôi thứ hai; khi nói về ý định của ngôi thứ ba cần dùng dạng trích dẫn hoặc phỏng đoán (<em>-(으)ㄹ 생각인 것 같아요 / -(으)ㄹ 생각이라고 해요</em>). Dạng phủ định dùng <strong>-지 않을 생각이다</strong> (Ví dụ: <em>가지 않을 생각이에요</em> - Tôi định sẽ không đi).</div>
   </div>
 </div>
 <div class="grammar-card">
@@ -1196,7 +1250,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Chủ yếu được dùng gắn vào động từ <strong>가다</strong> hay <strong>오다</strong> để biểu hiện ý nghĩa 'đang làm việc gì'. Ngoài ra còn được dùng với các động từ có gốc 가다, 오다 như <strong>나가다, 나오다, 들어가다, 들어오다, 내려가다, 내려오다, 올라가다, 올라오다</strong> và <strong>출근하다, 퇴근하다</strong>. Khi được dùng dưới dạng <strong>-는 길에</strong> thì có nghĩa là 'trong khi đang đi, đang đến hoặc trong dịp'.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Chủ yếu được dùng gắn vào động từ <strong>가다</strong> hay <strong>오다</strong> để biểu hiện ý nghĩa 'đang trên đường đi/đến (hoặc nhân tiện lúc đi)'. Ngoài ra còn được dùng với các động từ có gốc 가다, 오다 như <strong>나가다, 나오다, 들어가다, 들어오다, 내려가다, 내려오다, 올라가다, 올라오다</strong> và <strong>출근하다, 퇴근하다</strong>. Khi được dùng dưới dạng <strong>-는 길에</strong> thì có nghĩa là 'trong khi đang đi, đang đến hoặc trong dịp'.</p></div>
     <div class="formula-box"><span>Thân động từ di chuyển (가다/오다/출근하다/퇴근하다...) + <strong>-는 길이다</strong></span></div>
     <div class="formula-box"><span>Thân động từ di chuyển + <strong>-는 길에</strong> + Vế sau (hành động thực hiện nhân tiện trên đường)</span></div>
     <div class="rule-table-wrapper">
@@ -1250,21 +1304,21 @@
   <div class="card-header">
     <div class="grammar-title-group">
       <span class="grammar-badge">Ngữ pháp 02</span>
-      <span class="grammar-name-ko">Động từ / Danh từ + -(으)ㄴ 덕분에</span>
+      <span class="grammar-name-ko">Động từ / Tính từ / Danh từ + -(으)ㄴ 덕분에</span>
       <span class="grammar-meaning-vi">Nhờ vào..., nhờ có...</span>
     </div>
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ với nghĩa 'nhờ vào..., nhờ có...' nhằm thể hiện hành vi vế trước chính là nguyên nhân hay lý do của tình huống tích cực ở vế sau. Khi kết hợp với động từ tận cùng bằng <strong>ㄹ</strong> và nguyên âm dùng <strong>-ㄴ 덕분에</strong>, với động từ kết thúc bằng các phụ âm khác dùng <strong>-은 덕분에</strong>, với các danh từ thì dùng <strong>덕분에</strong>.</p></div>
-    <div class="formula-box"><span>Động từ không patchim hoặc patchim ㄹ + <strong>-ㄴ 덕분에</strong></span></div>
-    <div class="formula-box"><span>Động từ có patchim (khác ㄹ) + <strong>-은 덕분에</strong></span></div>
-    <div class="formula-box"><span>Danh từ + <strong>덕분에</strong></span></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ hoặc danh từ với nghĩa 'nhờ vào..., nhờ có...' nhằm thể hiện hành vi/trạng thái ở vế trước chính là nguyên nhân hay lý do của tình huống tích cực ở vế sau. Khi kết hợp với động từ/tính từ tận cùng bằng <strong>ㄹ</strong> (bỏ ㄹ) và nguyên âm dùng <strong>-ㄴ 덕분에</strong>, với động từ/tính từ kết thúc bằng các phụ âm khác dùng <strong>-은 덕분에</strong>, với động từ ở thì hiện tại hoặc <strong>있다·없다</strong> dùng <strong>-는 덕분에</strong>, và với các danh từ dùng <strong>덕분에</strong>.</p></div>
+    <div class="formula-box"><span>Động từ / Tính từ không patchim hoặc patchim ㄹ + <strong>-ㄴ 덕분에</strong></span></div>
+    <div class="formula-box"><span>Động từ / Tính từ có patchim (khác ㄹ) + <strong>-은 덕분에</strong></span></div>
+    <div class="formula-box"><span>Động từ (hiện tại) / 있다·없다 + <strong>-는 덕분에</strong> | Danh từ + <strong>덕분에</strong></span></div>
     <div class="comparison-box"><strong>So sánh 덕분에 và 때문에:</strong> <strong>덕분에</strong> được dùng khi diễn đạt nguyên nhân mang lại <strong>kết quả tốt</strong>, trong khi <strong>때문에</strong> cũng được sử dụng khi diễn đạt nguyên nhân mang lại <strong>kết quả không tốt</strong>.<br>Ví dụ: 친구 <strong>때문에</strong> 숙제를 못 했어요. (O) / 친구 <strong>덕분에</strong> 숙제를 못 했어요. (X)</div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ không patchim</td><td>+ -ㄴ 덕분에</td><td>도와주다 → 도와준 덕분에 (Nhờ giúp đỡ)</td></tr><tr><td class="col-highlight">Động từ patchim ㄹ</td><td>Bỏ ㄹ + -ㄴ 덕분에</td><td>살다 → 산 덕분에 (Nhờ sống...)</td></tr><tr><td class="col-highlight">Động từ có patchim</td><td>+ -은 덕분에</td><td>먹다 → 먹은 덕분에 (Nhờ ăn...)</td></tr><tr><td class="col-highlight">Danh từ</td><td>+ 덕분에</td><td>선생님 덕분에 (Nhờ thầy/cô giáo)</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ không patchim</td><td>+ -ㄴ 덕분에</td><td>도와주다 → 도와준 덕분에 (Nhờ giúp đỡ)</td></tr><tr><td class="col-highlight">Động từ patchim ㄹ</td><td>Bỏ ㄹ + -ㄴ 덕분에</td><td>살다 → 산 덕분에 (Nhờ sống...)</td></tr><tr><td class="col-highlight">Động từ có patchim</td><td>+ -은 덕분에</td><td>약을 먹다 → 약을 먹은 덕분에 (Nhờ uống thuốc...)</td></tr><tr><td class="col-highlight">Tính từ</td><td>+ -(으)ㄴ 덕분에</td><td>날씨가 좋다 → 날씨가 좋은 덕분에 (Nhờ thời tiết đẹp)</td></tr><tr><td class="col-highlight">Động từ (hiện tại) / 있다·없다</td><td>+ -는 덕분에</td><td>열심히 일하다 → 열심히 일하는 덕분에 (Nhờ chăm chỉ làm việc)</td></tr><tr><td class="col-highlight">Danh từ</td><td>+ 덕분에</td><td>선생님 덕분에 (Nhờ thầy/cô giáo)</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -1318,14 +1372,14 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Được gắn vào sau động từ hoặc tính từ, là mẫu câu hỏi lịch sự, tôn trọng người nghe. Với động từ dùng <strong>-나요?</strong>, với tính từ dùng <strong>-(으)ㄴ가요?</strong>. Đối với thì hiện tại dùng <strong>-나요?</strong> cho động từ, <strong>-(으)ㄴ가요?</strong> cho tính từ, <strong>인가요?</strong> cho danh từ. Đối với thì quá khứ dùng <strong>-았/었나요?</strong> cho cả động từ và tính từ (<strong>이었/였나요?</strong> cho danh từ). Đối với thì tương lai dùng <strong>-(으)ㄹ 건가요?</strong> cho cả động từ và tính từ.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Được gắn vào sau động từ hoặc tính từ, là mẫu câu hỏi lịch sự, tôn trọng người nghe. Với động từ dùng <strong>-나요?</strong>, với tính từ dùng <strong>-(으)ㄴ가요?</strong>. Đối với thì hiện tại dùng <strong>-나요?</strong> cho động từ, <strong>-(으)ㄴ가요?</strong> cho tính từ, <strong>인가요?</strong> cho danh từ. Đối với thì quá khứ dùng <strong>-았/었나요?</strong> cho cả động từ và tính từ (<strong>이었/였나요?</strong> cho danh từ). Đối với thì tương lai, động từ dùng <strong>-(으)ㄹ 건가요?</strong> (hỏi kế hoạch/ý định), còn tính từ dùng <strong>-(으)ㄹ까요? / -겠나요?</strong> (hỏi phỏng đoán).</p></div>
     <div class="formula-box"><span>Động từ: Hiện tại <strong>-나요?</strong> / Quá khứ <strong>-았/었나요?</strong> / Tương lai <strong>-(으)ㄹ 건가요?</strong></span></div>
-    <div class="formula-box"><span>Tính từ: Hiện tại <strong>-(으)ㄴ가요?</strong> / Quá khứ <strong>-았/었나요?</strong> / Tương lai <strong>-(으)ㄹ 건가요?</strong></span></div>
+    <div class="formula-box"><span>Tính từ: Hiện tại <strong>-(으)ㄴ가요?</strong> / Quá khứ <strong>-았/었나요?</strong> / Tương lai (phỏng đoán) <strong>-(으)ㄹ까요? / -겠나요?</strong></span></div>
     <div class="formula-box"><span>Danh từ: Hiện tại <strong>인가요?</strong> / Quá khứ <strong>이었/였나요?</strong></span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Từ loại</th><th>Hiện tại (현재)</th><th>Quá khứ (과거)</th><th>Tương lai (미래)</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-나요?</td><td>-았/었나요?</td><td>-(으)ㄹ 건가요?</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-(으)ㄴ가요?</td><td>-았/었나요?</td><td>-(으)ㄹ 건가요?</td></tr><tr><td class="col-highlight">Danh từ (명사)</td><td>인가요?</td><td>이었/였나요?</td><td>—</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ (동사)</td><td>-나요?</td><td>-았/었나요?</td><td>-(으)ㄹ 건가요?</td></tr><tr><td class="col-highlight">Tính từ (형용사)</td><td>-(으)ㄴ가요?</td><td>-았/었나요?</td><td>-(으)ㄹ까요? / -겠나요?</td></tr><tr><td class="col-highlight">Danh từ (명사)</td><td>인가요?</td><td>이었/였나요?</td><td>—</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -1489,13 +1543,13 @@
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
     <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau tính từ và thể hiện ý phán đoán về một hiện tượng nào đó, có nghĩa là 'trông có vẻ...'.</p></div>
-    <div class="formula-box"><span>Tính từ có nguyên âm gốc ㅏ, ㅗ + <strong>-아 보이다</strong></span></div>
-    <div class="formula-box"><span>Tính từ có nguyên âm gốc khác + <strong>-어 보이다</strong></span></div>
+    <div class="formula-box"><span>Tính từ có nguyên âm cuối của thân từ là ㅏ, ㅗ + <strong>-아 보이다</strong></span></div>
+    <div class="formula-box"><span>Tính từ có nguyên âm cuối của thân từ khác + <strong>-어 보이다</strong></span></div>
     <div class="formula-box"><span>Tính từ đuôi 하다 → <strong>해 보이다</strong></span></div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại tính từ</th><th>Quy tắc chia</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm ㅏ, ㅗ</td><td>+ -아 보이다</td><td>좋다 → 좋아 보이다 (Trông có vẻ tốt)</td></tr><tr><td class="col-highlight">Nguyên âm khác (ㅓ, ㅜ, ㅣ...)</td><td>+ -어 보이다</td><td>어렵다 → 어려워 보이다 (ㅂ bất quy tắc)</td></tr><tr><td class="col-highlight">Đuôi 하다</td><td>하다 → 해 보이다</td><td>피곤하다 → 피곤해 보이다 (Trông có vẻ mệt)</td></tr><tr><td class="col-highlight">Bất quy tắc ㅂ (춥다, 덥다...)</td><td>ㅂ → 우 + -어 보이다</td><td>춥다 → 추워 보이다 (Trông có vẻ lạnh)</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm ㅏ, ㅗ</td><td>+ -아 보이다</td><td>좋다 → 좋아 보이다 (Trông có vẻ tốt)</td></tr><tr><td class="col-highlight">Nguyên âm khác (ㅓ, ㅜ, ㅣ...)</td><td>+ -어 보이다</td><td>맛있다 → 맛있어 보이다, 길다 → 길어 보이다</td></tr><tr><td class="col-highlight">Đuôi 하다</td><td>하다 → 해 보이다</td><td>피곤하다 → 피곤해 보이다 (Trông có vẻ mệt)</td></tr><tr><td class="col-highlight">Bất quy tắc ㅂ (춥다, 덥다...)</td><td>ㅂ → 우 + -어 보이다</td><td>춥다 → 추워 보이다 (Trông có vẻ lạnh)</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -1697,9 +1751,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('등산갈 때 청바지를 입어도 돼요? 아니요, 청바지는 불편하니까 청바지 대신에 등산복을 입으세요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('등산 갈 때 청바지를 입어도 돼요? 아니요, 청바지는 불편하니까 청바지 대신에 등산복을 입으세요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko"><strong>A:</strong> 등산갈 때 청바지를 입어도 돼요?<br><strong>B:</strong> 아니요, 청바지는 불편하니까 청바지 <span class="point">대신(에)</span> 등산복을 입으세요.</div>
+          <div class="example-ko"><strong>A:</strong> 등산 갈 때 청바지를 입어도 돼요?<br><strong>B:</strong> 아니요, 청바지는 불편하니까 청바지 <span class="point">대신(에)</span> 등산복을 입으세요.</div>
           <div class="example-vi">A: Khi đi leo núi mặc quần jean có được không? — B: Không, vì quần jean bất tiện nên hãy mặc trang phục leo núi thay cho quần jean.</div>
         </div>
       </div>
@@ -1724,7 +1778,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ / Thì</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Động từ (Hiện tại)</td><td>Thân động từ + -는 대신(에) (bỏ ㄹ nếu kết thúc bằng ㄹ)</td><td>가다 → 가는 대신(에) / 돕다 → 도와주는 대신(에)</td></tr><tr><td class="col-highlight">Động từ (Quá khứ)</td><td>Không patchim / ㄹ: -ㄴ 대신(에) | Có patchim: -은 대신(에)</td><td>늦다 → 늦은 대신(에)</td></tr><tr><td class="col-highlight">Tính từ (Hiện tại)</td><td>Không patchim / ㄹ: -ㄴ 대신(에) | Có patchim: -은 대신(에) (bất quy tắc ㅂ → 우+ㄴ)</td><td>싸다 → 싼 대신(에) / 가깝다 → 가까운 대신(에)</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Động từ (Hiện tại)</td><td>Thân động từ + -는 대신(에) (bỏ ㄹ nếu kết thúc bằng ㄹ)</td><td>가다 → 가는 대신(에) / 돕다 → 돕는 대신(에)</td></tr><tr><td class="col-highlight">Động từ (Quá khứ)</td><td>Không patchim / ㄹ: -ㄴ 대신(에) | Có patchim: -은 대신(에)</td><td>늦다 → 늦은 대신(에)</td></tr><tr><td class="col-highlight">Tính từ (Hiện tại)</td><td>Không patchim / ㄹ: -ㄴ 대신(에) | Có patchim: -은 대신(에) (bất quy tắc ㅂ → 우+ㄴ)</td><td>싸다 → 싼 대신(에) / 가깝다 → 가까운 대신(에)</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -1758,9 +1812,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('화 씨, 이 일 좀 도와주세요. 그럼 제가 도와주는 대신에 커피 한잔 사세요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('화 씨, 이 일 좀 도와주세요. 그럼 제가 도와주는 대신에 커피 한 잔 사세요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko"><strong>A:</strong> 화 씨, 이 일 좀 도와주세요.<br><strong>B:</strong> 그럼 제가 <span class="point">도와주는 대신(에)</span> 커피 한잔 사세요.</div>
+          <div class="example-ko"><strong>A:</strong> 화 씨, 이 일 좀 도와주세요.<br><strong>B:</strong> 그럼 제가 <span class="point">도와주는 대신(에)</span> 커피 한 잔 사세요.</div>
           <div class="example-vi">A: Hoa ơi, giúp tôi việc này một chút nhé. — B: Vậy đổi lại việc tôi giúp thì anh/chị mua cho tôi một ly cà phê nhé.</div>
         </div>
       </div>
@@ -2494,7 +2548,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại từ</th><th>현재 (진행, 습관)</th><th>과거 (경험, 완료)</th><th>미래 (의지, 추측)</th></tr></thead>
-              <tbody><tr><td class="col-highlight">동사 (Động từ)</td><td>-는군요 (먹는군요)</td><td>-았/었군요 (공부했군요)</td><td>-ㄹ 거군요 / -을 거군요 / -겠군요</td></tr><tr><td class="col-highlight">형용사 (Tính từ)</td><td>-군요 (많군요, 성실하군요)</td><td>-았/었군요 (귀여웠군요)</td><td>-겠군요 (피곤하겠군요)</td></tr><tr><td class="col-highlight">이다 (Là)</td><td>군요 / 이군요</td><td>였군요 / 이었군요</td><td>-겠군요</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">동사 (Động từ)</td><td>-는군요 (먹는군요)</td><td>-았/었군요 (공부했군요)</td><td>-ㄹ 거군요 / -을 거군요 / -겠군요</td></tr><tr><td class="col-highlight">형용사 (Tính từ)</td><td>-군요 (많군요, 성실하군요)</td><td>-았/었군요 (귀여웠군요)</td><td>-겠군요 (피곤하겠군요)</td></tr><tr><td class="col-highlight">이다 (Là)</td><td>-(이)군요 (군요 / 이군요)</td><td>-(이)었군요 (였군요 / 이었군요)</td><td>-(이)겠군요 / -(이)ㄹ 거군요</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -3147,7 +3201,7 @@
     <div class="formula-box"><span>Người: <strong>아무나</strong></span></div>
     <div class="formula-box"><span>Vật / Sự việc: <strong>아무거나 / 아무 + Danh từ + (이)나</strong></span></div>
     <div class="formula-box"><span>Địa điểm: <strong>아무 데나</strong> | Thời gian: <strong>아무 때나</strong></span></div>
-    <div class="comparison-box"><strong>Chú thích (TIPS) - Phân biệt 아무 (이)나 và 아무도:</strong> Cấu trúc <code>아무 (이)나</code> có thể dùng thể khẳng định, khác với cấu trúc <code>아무도</code> chỉ dùng thể phủ định ở vế sau. Ví dụ: <code>아무도 오지 마세요. (O)</code> / <code>아무도 오세요. (×)</code>; <code>아무나 오면 안돼요. (O)</code> / <code>아무나 오세요. (O)</code>.</div>
+    <div class="comparison-box"><strong>Chú thích (TIPS) - Phân biệt 아무 (이)나 và 아무도:</strong> Cấu trúc <code>아무 (이)나</code> có thể dùng thể khẳng định, khác với cấu trúc <code>아무도</code> chỉ dùng thể phủ định ở vế sau. Ví dụ: <code>아무도 오지 마세요. (O)</code> / <code>아무도 오세요. (×)</code>; <code>아무나 오면 안 돼요. (O)</code> / <code>아무나 오세요. (O)</code>.</div>
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Loại đối tượng</th><th>Hình thức</th><th>Ví dụ</th></tr></thead>
@@ -3253,7 +3307,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ biểu hiện ý nghĩa 'nói là, nói rằng'. Được dùng để tường thuật gián tiếp một nội dung được nghe từ người khác.</p><p>Sau nguyên âm và ㄹ dùng <strong>-ㄴ다고 하다</strong>, sau phụ âm dùng <strong>-는다고 하다</strong>, sau <strong>있다, 없다</strong> và 'tính từ' dùng <strong>-다고 하다</strong>, sau <strong>이다, 아니다</strong> dùng <strong>-(이)라고 하다</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ, tính từ biểu hiện ý nghĩa 'nói là, nói rằng'. Được dùng để tường thuật gián tiếp một nội dung được nghe từ người khác.</p><p>Sau nguyên âm và ㄹ dùng <strong>-ㄴ다고 하다</strong>, sau phụ âm dùng <strong>-는다고 하다</strong>, sau <strong>있다, 없다</strong> và 'tính từ' dùng <strong>-다고 하다</strong>, sau danh từ + <strong>이다</strong> dùng <strong>-(이)라고 하다</strong>, còn sau <strong>아니다</strong> dùng <strong>아니라고 하다</strong>.</p></div>
     <div class="formula-box"><span>Động từ (hiện tại): V + <strong>-ㄴ/는다고 하다</strong></span></div>
     <div class="formula-box"><span>Tính từ / 있다 / 없다 (hiện tại): A + <strong>-다고 하다</strong></span></div>
     <div class="formula-box"><span>Danh từ (hiện tại): N + <strong>-(이)라고 하다</strong></span></div>
@@ -3570,9 +3624,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('한국말을 정말 잘 하는구나!')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('한국말을 정말 잘하는구나!')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">한국말을 정말 잘 <span class="point">하는구나</span>!</div>
+          <div class="example-ko">한국말을 정말 잘<span class="point">하는구나</span>!</div>
           <div class="example-vi">Cậu nói tiếng Hàn giỏi thật đấy!</div>
         </div>
       </div>
@@ -3637,9 +3691,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('화, 이따 5시에 영화 보러 가자.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('화야, 이따 5시에 영화 보러 가자.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko"><span class="point">화</span>, 이따 5시에 영화 보러 가자.</div>
+          <div class="example-ko">화<span class="point">야</span>, 이따 5시에 영화 보러 가자.</div>
           <div class="example-vi">Hoa ơi, lát nữa 5 giờ đi xem phim nhé.</div>
         </div>
       </div>
@@ -3703,7 +3757,7 @@
     <div class="section-title">2. Ví dụ minh họa</div>
     <div class="examples-container">
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('친구들과 이야기하다(가) 보면 스트레스가 풀려요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('친구들과 이야기하다 보면 스트레스가 풀려요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
           <div class="example-ko">친구들과 이야기<span class="point">하다(가) 보면</span> 스트레스가 풀려요.</div>
           <div class="example-vi">Nếu cứ trò chuyện với bạn bè thì căng thẳng sẽ được giải tỏa.</div>
@@ -3769,7 +3823,7 @@
         <div class="quiz-question">Hoàn thành đoạn hội thoại sau:<br><strong>A:</strong> 수진 씨, _______________? 안색이 안 좋네요.<br><strong>B:</strong> 별일 아니에요. 너무 걱정하지 마세요.</div>
         <div class="quiz-options">
           <button class="quiz-option" onclick="checkQuiz(this, true, 'Đúng! Thấy sắc mặt bạn không tốt nên hỏi \'Có chuyện gì lo lắng à?\' rất hợp ngữ cảnh (đáp án ⓐ sách bài tập).')">A. 무슨 걱정이 있어요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai. \'Đã giải quyết được nỗi lo rồi à?\' không phù hợp khi thấy sắc mặt đối phương đang kém.')">B. 고민이 해결 됐어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai. \'Đã giải quyết được nỗi lo rồi à?\' không phù hợp khi thấy sắc mặt đối phương đang kém.')">B. 고민이 해결됐어요</button>
           <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai. Không phù hợp với ngữ cảnh hỏi thăm bạn bè có sắc mặt không tốt.')">C. 상담을 받으러 왔어요</button>
         </div>
         <div class="quiz-feedback"></div>
@@ -3820,7 +3874,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Không patchim</td><td>Thân V/A + -ㅁ</td><td>가다 → 감, 크다 → 큼, 중(이다) → 중임</td></tr><tr><td class="col-highlight">Patchim ㄹ</td><td>Thân V/A (giữ ㄹ) + -ㅁ</td><td>알다 → 앎, 길다 → 김 (hoặc 삶)</td></tr><tr><td class="col-highlight">Có patchim khác</td><td>Thân V/A + -음</td><td>있다 → 있음, 좋다 → 좋음, 작다 → 작음</td></tr><tr><td class="col-highlight">Thì quá khứ / tương lai</td><td>-았/었음, -겠음, -(으)ㄹ 것임</td><td>보냈음, 왔음, 도착했음, 오겠음</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Không patchim</td><td>Thân V/A + -ㅁ</td><td>가다 → 감, 크다 → 큼, 중(이다) → 중임</td></tr><tr><td class="col-highlight">Patchim ㄹ</td><td>Thân V/A (giữ ㄹ) + -ㅁ</td><td>알다 → 앎, 길다 → 긺, 살다 → 삶</td></tr><tr><td class="col-highlight">Có patchim khác</td><td>Thân V/A + -음</td><td>있다 → 있음, 좋다 → 좋음, 작다 → 작음</td></tr><tr><td class="col-highlight">Thì quá khứ / tương lai</td><td>-았/었음, -겠음, -(으)ㄹ 것임</td><td>보냈음, 왔음, 도착했음, 오겠음</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -3881,7 +3935,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau thân động từ để truyền đạt gián tiếp lại mệnh lệnh hay yêu cầu của người khác. Sau những thân động từ có tận cùng là nguyên âm hoặc ㄹ thì dùng <strong>-라고 하다</strong>, sau những thân động từ khác thì dùng <strong>-(으)라고 하다</strong>.</p><p>Trong trường hợp động từ có thành phần cuối là <strong>주다</strong> với ý nghĩa làm điều gì đó cho người nói ở dạng “động từ + 아/어 주다”, khi chuyển sang cách nói gián tiếp hoặc lặp lại lời đã nói thì dùng <strong>-달라고 하다</strong>, nhưng nếu câu nói có ý nghĩa là làm gì đó cho người khác thì dùng <strong>-주라고 하다</strong>.</p><p>Ngoài ra, khi tường thuật lại <strong>-지 마세요</strong> thì sẽ dùng <strong>-지 말라고 하다</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau thân động từ để truyền đạt gián tiếp lại mệnh lệnh hay yêu cầu của người khác. Sau những thân động từ có tận cùng là nguyên âm hoặc ㄹ thì dùng <strong>-라고 하다</strong>, sau những thân động từ khác thì dùng <strong>-으라고 하다</strong>.</p><p>Trong trường hợp động từ có thành phần cuối là <strong>주다</strong> với ý nghĩa làm điều gì đó cho người nói ở dạng “động từ + 아/어 주다”, khi chuyển sang cách nói gián tiếp hoặc lặp lại lời đã nói thì dùng <strong>-달라고 하다</strong>, nhưng nếu câu nói có ý nghĩa là làm gì đó cho người khác thì dùng <strong>-주라고 하다</strong>.</p><p>Ngoài ra, khi tường thuật lại <strong>-지 마세요</strong> thì sẽ dùng <strong>-지 말라고 하다</strong>.</p></div>
     <div class="formula-box"><span>Động từ (không patchim hoặc ㄹ): V + <strong>-라고 하다</strong></span></div>
     <div class="formula-box"><span>Động từ (có patchim): V + <strong>-으라고 하다</strong></span></div>
     <div class="formula-box"><span>Phủ định mệnh lệnh (-지 마세요): V + <strong>-지 말라고 하다</strong></span></div>
@@ -3998,9 +4052,9 @@
         </div>
       </div>
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('선생님께서 사무실에서 만나자고 했어요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('선생님께서 사무실에서 만나자고 하셨어요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">선생님께서 사무실에서 <span class="point">만나자고 했어요</span>.</div>
+          <div class="example-ko">선생님께서 사무실에서 <span class="point">만나자고 하셨어요</span>.</div>
           <div class="example-vi">Thầy/Cô giáo đã hẹn gặp ở văn phòng.</div>
         </div>
       </div>
@@ -4101,7 +4155,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm cuối là ㅏ, ㅗ</td><td>Gốc từ + -아 가다</td><td>끝나다 → 끝나 가다, 쌓다 → 쌓아 가다</td></tr><tr><td class="col-highlight">Nguyên âm cuối khác (ㅓ, ㅜ, ㅣ...)</td><td>Gốc từ + -어 가다</td><td>먹다 → 먹어 가다, 쉬다 → 쉬어 가다</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해 가다</td><td>정리하다 → 정리해 가다, 회복되다 → 회복되어 가다</td></tr><tr><td class="col-highlight">Hành động song song</td><td>Gốc từ + -아/어 가며(서)</td><td>쉬어 가면서 일합시다</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm cuối là ㅏ, ㅗ</td><td>Gốc từ + -아 가다</td><td>끝나다 → 끝나 가다, 쌓다 → 쌓아 가다</td></tr><tr><td class="col-highlight">Nguyên âm cuối khác (ㅓ, ㅜ, ㅣ...)</td><td>Gốc từ + -어 가다</td><td>먹다 → 먹어 가다, 쉬다 → 쉬어 가다, 회복되다 → 회복되어 가다</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해 가다</td><td>정리하다 → 정리해 가다, 공부하다 → 공부해 가다</td></tr><tr><td class="col-highlight">Hành động song song</td><td>Gốc từ + -아/어 가며(서)</td><td>쉬어 가면서 일합시다</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4220,7 +4274,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm cuối là ㅏ, ㅗ</td><td>Gốc từ + -아야겠다</td><td>가다 → 가야겠어요, 보다 → 봐야겠어요</td></tr><tr><td class="col-highlight">Nguyên âm cuối khác (ㅓ, ㅜ, ㅣ...)</td><td>Gốc từ + -어야겠다</td><td>받다 → 받아야겠어요 (nguyên âm ㅏ nên dùng -아), 읽다 → 읽어야겠어요</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해야겠다</td><td>성공하다 → 성공해야겠어요, 공부하다 → 공부해야겠어요</td></tr><tr><td class="col-highlight">Bất quy tắc (ㄷ, 르...)</td><td>Chia -아/어 rồi + 야겠다</td><td>듣다 → 들어야겠어요, 자르다 → 잘라야겠어요</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm cuối là ㅏ, ㅗ</td><td>Gốc từ + -아야겠다</td><td>가다 → 가야겠어요, 보다 → 봐야겠어요, 받다 → 받아야겠어요</td></tr><tr><td class="col-highlight">Nguyên âm cuối khác (ㅓ, ㅜ, ㅣ...)</td><td>Gốc từ + -어야겠다</td><td>먹다 → 먹어야겠어요, 읽다 → 읽어야겠어요</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해야겠다</td><td>성공하다 → 성공해야겠어요, 공부하다 → 공부해야겠어요</td></tr><tr><td class="col-highlight">Bất quy tắc (ㄷ, 르...)</td><td>Chia -아/어 rồi + 야겠다</td><td>듣다 → 들어야겠어요, 자르다 → 잘라야겠어요</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4273,7 +4327,7 @@
   </div>
   <div class="card-body">
     <div class="section-title">1. Ý nghĩa &amp; Quy tắc kết hợp</div>
-    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ hoặc tính từ, có nghĩa là <em>"nếu được như thế thì tốt biết mấy", "ước gì", "giá mà"</em>, được dùng để thể hiện sự mong đợi đối với một tình trạng nào đó hoặc giả định cho một trường hợp trái ngược lại với hiện tại hay quá khứ. <strong>하다 싶다</strong> có thể dùng để thay thế cho <strong>좋다</strong>.</p></div>
+    <div class="explanation-box"><p><strong>Ý nghĩa &amp; Cách dùng:</strong> Đứng sau động từ hoặc tính từ, có nghĩa là <em>"nếu được như thế thì tốt biết mấy", "ước gì", "giá mà"</em>, được dùng để thể hiện sự mong đợi đối với một tình trạng nào đó hoặc giả định cho một trường hợp trái ngược lại với hiện tại hay quá khứ. Có thể thay <strong>좋겠다</strong> bằng <strong>하다</strong> hoặc <strong>싶다</strong> (ví dụ: <em>성공했으면 하다 / 성공했으면 싶다</em>).</p></div>
     <div class="formula-box"><span>Động từ / Tính từ + <strong>-았/었으면 좋겠다</strong></span></div>
     <div class="formula-box"><span>Danh từ + <strong>(이)었으면 좋겠다</strong></span></div>
     <div class="rule-table-wrapper">
@@ -4320,7 +4374,7 @@
         </div>
       </div>
     </div>
-    <div class="tip-box"><strong>Lưu ý:</strong> Có thể thay <code>좋다</code> bằng <code>하다 싶다</code> (ví dụ: <code>성공했으면 하다/싶다</code>). Mặc dù dùng đuôi quá khứ <code>-았/었-</code> nhưng cấu trúc này thường diễn tả ước muốn cho hiện tại hoặc tương lai.</div>
+    <div class="tip-box"><strong>Lưu ý:</strong> Có thể thay <code>좋겠다</code> bằng <code>하다</code> hoặc <code>싶다</code> (ví dụ: <code>성공했으면 하다 / 성공했으면 싶다</code>). Mặc dù dùng đuôi quá khứ <code>-았/었-</code> nhưng cấu trúc này thường diễn tả ước muốn cho hiện tại hoặc tương lai.</div>
   </div>
 </div>
 <div class="grammar-card">
@@ -4389,7 +4443,7 @@
     <div class="rule-table-wrapper">
             <table class="rule-table">
               <thead><tr><th>Trường hợp</th><th>Quy tắc</th><th>Ví dụ</th></tr></thead>
-              <tbody><tr><td class="col-highlight">Nguyên âm âm tiết cuối là ㅏ, ㅗ</td><td>Gốc từ + -아도</td><td>바쁘다 → 바빠도, 오다 → 와도</td></tr><tr><td class="col-highlight">Nguyên âm âm tiết cuối khác</td><td>Gốc từ + -어도</td><td>힘들다 → 힘들어도, 기다리다 → 기다려도</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해도</td><td>생각하다 → 생각해도, 운동하다 → 운동해도</td></tr><tr><td class="col-highlight">Bất quy tắc 르 / ㄷ</td><td>르 → ㄹ라/ㄹ러도, ㄷ → ㄹ어도</td><td>배부르다 → 배불러도, 듣다 → 들어도</td></tr></tbody>
+              <tbody><tr><td class="col-highlight">Nguyên âm âm tiết cuối là ㅏ, ㅗ</td><td>Gốc từ + -아도</td><td>가다 → 가도, 오다 → 와도</td></tr><tr><td class="col-highlight">Nguyên âm âm tiết cuối khác</td><td>Gốc từ + -어도</td><td>힘들다 → 힘들어도, 기다리다 → 기다려도</td></tr><tr><td class="col-highlight">Kết thúc bằng 하다</td><td>하다 → 해도</td><td>생각하다 → 생각해도, 운동하다 → 운동해도</td></tr><tr><td class="col-highlight">Bất quy tắc ㅡ</td><td>Bỏ ㅡ rồi chia -아/어도</td><td>바쁘다 → 바빠도, 쓰다 → 써도</td></tr><tr><td class="col-highlight">Bất quy tắc 르 / ㄷ</td><td>르 → ㄹ라/ㄹ러도, ㄷ → ㄹ어도</td><td>배부르다 → 배불러도, 듣다 → 들어도</td></tr></tbody>
             </table>
           </div>
     <div class="section-title">2. Ví dụ minh họa</div>
@@ -4701,9 +4755,9 @@
     <div class="section-title">2. Ví dụ minh họa</div>
     <div class="examples-container">
       <div class="example-item">
-        <button class="speak-btn" onclick="speakText('순서 표를 뽑고 기다리지 않으면 안 돼요.')" title="Nghe phát âm">🔊</button>
+        <button class="speak-btn" onclick="speakText('순서표를 뽑고 기다리지 않으면 안 돼요.')" title="Nghe phát âm">🔊</button>
         <div class="example-content">
-          <div class="example-ko">순서 표를 뽑고 <span class="point">기다리지 않으면 안 돼요</span>.</div>
+          <div class="example-ko">순서표를 뽑고 <span class="point">기다리지 않으면 안 돼요</span>.</div>
           <div class="example-vi">Phải rút phiếu thứ tự rồi chờ đợi chứ không thể không chờ được.</div>
         </div>
       </div>
@@ -4862,7 +4916,7 @@
     <div class="rule-table-wrapper">
       <table class="rule-table">
         <thead><tr><th>Ngữ pháp</th><th>Ý nghĩa cốt lõi</th><th>Bài</th><th>Ví dụ tiêu biểu</th></tr></thead>
-        <tbody><tr><td class="col-highlight">Danh từ / Phó từ + 밖에</td><td>Chỉ..., ngoài ... ra không còn</td><td>Bài 1 (학교생활)</td><td>시험 시간이 5분밖에 안 남았어요. (Thời gian thi chỉ còn lại 5 phút thôi.)</td></tr><tr><td class="col-highlight">Danh từ + (이)라고 하다</td><td>Là..., được gọi là...</td><td>Bài 1 (학교생활)</td><td>처음 뵙겠습니다. 저는 흐엉이라고 합니다. (Rất hân hạnh được gặp anh/chị lần đầu. Tôi tên là Hương.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -게 되다</td><td>Được, bị, trở nên...</td><td>Bài 1 (학교생활)</td><td>이번 학기에는 장학금을 받게 됐어요. (Học kỳ này tôi đã được nhận học bổng.)</td></tr><tr><td class="col-highlight">Động từ + -(으)ㄹ 생각이다</td><td>Định, có ý định, muốn...</td><td>Bài 1 (학교생활)</td><td>책을 찾으러 도서관에 갈 생각이에요. (Tôi định đến thư viện để tìm sách.)</td></tr><tr><td class="col-highlight">Động từ di chuyển + -는 길이다</td><td>Đang trên đường..., nhân tiện lúc đi...</td><td>Bài 2 (대인 관계)</td><td>지금 모임에 가는 길이에요. (Bây giờ tôi đang trên đường đến buổi họp mặt.)</td></tr><tr><td class="col-highlight">Động từ / Danh từ + -(으)ㄴ 덕분에</td><td>Nhờ vào..., nhờ có...</td><td>Bài 2 (대인 관계)</td><td>흐엉 씨가 도와준 덕분에 일이 잘 끝났습니다. (Nhờ chị Hương giúp đỡ mà công việc đã kết thúc tốt đẹp.)</td></tr><tr><td class="col-highlight">-나요 / -(으)ㄴ가요?</td><td>Có... không ạ? / ... phải không ạ?</td><td>Bài 2 (대인 관계)</td><td>이번 모임에 오시나요? (Lần họp mặt này anh/chị có đến không ạ?)</td></tr><tr><td class="col-highlight">Động từ + -는 게 좋다</td><td>Nên..., làm ... thì tốt</td><td>Bài 3 (건강)</td><td>지금 가는 게 좋겠어요. (Bây giờ đi thì tốt hơn đấy.)</td></tr><tr><td class="col-highlight">Tính từ + -아/어 보이다</td><td>Trông có vẻ...</td><td>Bài 3 (건강)</td><td>이 책은 아주 어려워 보여요. (Quyển sách này trông có vẻ rất khó.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ / Danh từ + -(으)ㄴ/는 것 같다</td><td>Hình như, có vẻ, dường như...</td><td>Bài 3 (건강)</td><td>최정우 씨가 많이 아픈 것 같아요. (Anh Choi Jeong-woo hình như bị ốm nặng.)</td></tr><tr><td class="col-highlight">Danh từ + 대신(에)</td><td>Thay vì..., thay cho..., thay vào đó...</td><td>Bài 4 (쇼핑)</td><td>커피 대신에 우유로 주세요. (Cho tôi sữa thay vì cà phê.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄴ/는 대신(에)</td><td>Thay vì..., thay bởi..., bù lại...</td><td>Bài 4 (쇼핑)</td><td>음악회에 가는 대신에 영화를 보는 게 좋겠어요. (Thay vì đi buổi hòa nhạc thì xem phim sẽ tốt hơn đấy.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -기는 하다</td><td>... thì cũng có... nhưng...</td><td>Bài 4 (쇼핑)</td><td>마음에 들기는 하지만 좀 비싸요. (Vừa lòng thì cũng vừa lòng đấy nhưng hơi đắt.)</td></tr><tr><td class="col-highlight">Động từ + -고 나서</td><td>Xong rồi thì..., sau khi... rồi thì...</td><td>Bài 5 (요리)</td><td>국을 끓이고 나서 밥을 지으세요. (Đun canh xong rồi hãy nấu cơm.)</td></tr><tr><td class="col-highlight">Danh từ + (으)로</td><td>Bằng... (phương tiện, dụng cụ, nguyên liệu)</td><td>Bài 5 (요리)</td><td>삼계탕은 닭과 인삼으로 만듭니다. (Món gà tần sâm được làm bằng gà và nhân sâm.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -다가</td><td>Đang... thì (dừng lại chuyển sang hành động/trạng thái khác)</td><td>Bài 5 (요리)</td><td>쇠고기를 볶다가 야채를 넣으세요. (Đang xào thịt bò thì hãy cho rau vào.)</td></tr><tr><td class="col-highlight">Tính từ / Động từ + -게</td><td>Một cách... (làm trạng ngữ bổ nghĩa cho động từ)</td><td>Bài 5 (요리)</td><td>맛있게 드세요. (Chúc ngon miệng (Hãy ăn một cách ngon miệng).)</td></tr></tbody>
+        <tbody><tr><td class="col-highlight">Danh từ / Phó từ + 밖에</td><td>Chỉ..., ngoài ... ra không còn</td><td>Bài 1 (학교생활)</td><td>시험 시간이 5분밖에 안 남았어요. (Thời gian thi chỉ còn lại 5 phút thôi.)</td></tr><tr><td class="col-highlight">Danh từ + (이)라고 하다</td><td>Là..., được gọi là...</td><td>Bài 1 (학교생활)</td><td>처음 뵙겠습니다. 저는 흐엉이라고 합니다. (Rất hân hạnh được gặp anh/chị lần đầu. Tôi tên là Hương.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -게 되다</td><td>Được, bị, trở nên...</td><td>Bài 1 (학교생활)</td><td>이번 학기에는 장학금을 받게 됐어요. (Học kỳ này tôi đã được nhận học bổng.)</td></tr><tr><td class="col-highlight">Động từ + -(으)ㄹ 생각이다</td><td>Định, có ý định, muốn...</td><td>Bài 1 (학교생활)</td><td>책을 찾으러 도서관에 갈 생각이에요. (Tôi định đến thư viện để tìm sách.)</td></tr><tr><td class="col-highlight">Động từ di chuyển + -는 길이다</td><td>Đang trên đường..., nhân tiện lúc đi...</td><td>Bài 2 (대인 관계)</td><td>지금 모임에 가는 길이에요. (Bây giờ tôi đang trên đường đến buổi họp mặt.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ / Danh từ + -(으)ㄴ 덕분에</td><td>Nhờ vào..., nhờ có...</td><td>Bài 2 (대인 관계)</td><td>흐엉 씨가 도와준 덕분에 일이 잘 끝났습니다. (Nhờ chị Hương giúp đỡ mà công việc đã kết thúc tốt đẹp.)</td></tr><tr><td class="col-highlight">-나요 / -(으)ㄴ가요?</td><td>Có... không ạ? / ... phải không ạ?</td><td>Bài 2 (대인 관계)</td><td>이번 모임에 오시나요? (Lần họp mặt này anh/chị có đến không ạ?)</td></tr><tr><td class="col-highlight">Động từ + -는 게 좋다</td><td>Nên..., làm ... thì tốt</td><td>Bài 3 (건강)</td><td>지금 가는 게 좋겠어요. (Bây giờ đi thì tốt hơn đấy.)</td></tr><tr><td class="col-highlight">Tính từ + -아/어 보이다</td><td>Trông có vẻ...</td><td>Bài 3 (건강)</td><td>이 책은 아주 어려워 보여요. (Quyển sách này trông có vẻ rất khó.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ / Danh từ + -(으)ㄴ/는 것 같다</td><td>Hình như, có vẻ, dường như...</td><td>Bài 3 (건강)</td><td>최정우 씨가 많이 아픈 것 같아요. (Anh Choi Jeong-woo hình như bị ốm nặng.)</td></tr><tr><td class="col-highlight">Danh từ + 대신(에)</td><td>Thay vì..., thay cho..., thay vào đó...</td><td>Bài 4 (쇼핑)</td><td>커피 대신에 우유로 주세요. (Cho tôi sữa thay vì cà phê.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -(으)ㄴ/는 대신(에)</td><td>Thay vì..., thay bởi..., bù lại...</td><td>Bài 4 (쇼핑)</td><td>음악회에 가는 대신에 영화를 보는 게 좋겠어요. (Thay vì đi buổi hòa nhạc thì xem phim sẽ tốt hơn đấy.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -기는 하다</td><td>... thì cũng có... nhưng...</td><td>Bài 4 (쇼핑)</td><td>마음에 들기는 하지만 좀 비싸요. (Vừa lòng thì cũng vừa lòng đấy nhưng hơi đắt.)</td></tr><tr><td class="col-highlight">Động từ + -고 나서</td><td>Xong rồi thì..., sau khi... rồi thì...</td><td>Bài 5 (요리)</td><td>국을 끓이고 나서 밥을 지으세요. (Đun canh xong rồi hãy nấu cơm.)</td></tr><tr><td class="col-highlight">Danh từ + (으)로</td><td>Bằng... (phương tiện, dụng cụ, nguyên liệu)</td><td>Bài 5 (요리)</td><td>삼계탕은 닭과 인삼으로 만듭니다. (Món gà tần sâm được làm bằng gà và nhân sâm.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -다가</td><td>Đang... thì (dừng lại chuyển sang hành động/trạng thái khác)</td><td>Bài 5 (요리)</td><td>쇠고기를 볶다가 야채를 넣으세요. (Đang xào thịt bò thì hãy cho rau vào.)</td></tr><tr><td class="col-highlight">Tính từ / Động từ + -게</td><td>Một cách... (làm trạng ngữ bổ nghĩa cho động từ)</td><td>Bài 5 (요리)</td><td>맛있게 드세요. (Chúc ngon miệng (Hãy ăn một cách ngon miệng).)</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -4896,7 +4950,7 @@
     <div class="rule-table-wrapper">
       <table class="rule-table">
         <thead><tr><th>Ngữ pháp</th><th>Ý nghĩa cốt lõi</th><th>Bài</th><th>Ví dụ tiêu biểu</th></tr></thead>
-        <tbody><tr><td class="col-highlight">반말</td><td>Lối nói rút ngắn (nói ngang hàng, thân mật)</td><td>Bài 11 (고민)</td><td>요즘 고민이 많아서 잠이 안 와. (Dạo này có nhiều nỗi lo nên không ngủ được.)</td></tr><tr><td class="col-highlight">아/야</td><td>...ơi / ...à (hô ngữ gọi thân mật)</td><td>Bài 11 (고민)</td><td>유진아, 무슨 고민 있어? (Yujin à, cậu có nỗi lo gì thế?)</td></tr><tr><td class="col-highlight">-다(가) 보면</td><td>Nếu cứ tiếp tục... thì...</td><td>Bài 11 (고민)</td><td>친구들과 이야기하다(가) 보면 스트레스가 풀려요. (Nếu cứ trò chuyện với bạn bè thì căng thẳng sẽ được giải tỏa.)</td></tr><tr><td class="col-highlight">-(으)ㅁ</td><td>Dạng danh từ hóa kết thúc câu ghi chú, thông báo ngắn gọn</td><td>Bài 12 (인터넷)</td><td>파일을 이메일로 보냈음. (Đã gửi tệp qua email.)</td></tr><tr><td class="col-highlight">-(으)라고 하다</td><td>Bảo là, yêu cầu là (tường thuật gián tiếp câu mệnh lệnh)</td><td>Bài 12 (인터넷)</td><td>자료는 바탕 화면에 저장해 두라고 하세요. (Hãy bảo lưu tài liệu sẵn ở màn hình nền.)</td></tr><tr><td class="col-highlight">-자고 하다</td><td>Rủ là, đề nghị cùng làm (tường thuật gián tiếp câu thỉnh dụ)</td><td>Bài 12 (인터넷)</td><td>지원 씨가 메신저로 연락하자고 했어요. (Jiwon đã rủ liên lạc qua Messenger.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어 가다</td><td>Sắp..., dần..., tiếp tục... (hướng tới tương lai)</td><td>Bài 13 (희망)</td><td>이제 숙제가 다 끝나 가요. (Bây giờ bài tập sắp làm xong hết rồi.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어 오다</td><td>Làm đến, làm tới (liên tục từ quá khứ đến lúc nói)</td><td>Bài 13 (희망)</td><td>취업 준비 때문에 컴퓨터와 외국어를 계속 공부해 왔어요. (Vì chuẩn bị xin việc nên tôi đã liên tục học máy tính và ngoại ngữ suốt thời gian qua.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어야겠다</td><td>Sẽ phải..., chắc phải...</td><td>Bài 13 (희망)</td><td>이번 도전에서는 꼭 성공해야겠어요. (Trong thử thách lần này nhất định tôi sẽ phải thành công.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -았/었으면 좋겠다</td><td>Nếu được như thế thì tốt biết mấy, ước gì, giá mà</td><td>Bài 13 (희망)</td><td>졸업 후에 공무원이 됐으면 좋겠어요. (Ước gì sau khi tốt nghiệp tôi sẽ trở thành công chức.)</td></tr><tr><td class="col-highlight">(아무리) Động từ / Tính từ + -아/어도</td><td>Cho dù... nhưng..., dù có... đi nữa thì...</td><td>Bài 14 (영화와 드라마)</td><td>저는 아무리 바빠도 일주일에 한 번씩 한국 영화를 봐요. (Tôi dù có bận đến mấy thì mỗi tuần vẫn xem phim Hàn Quốc một lần.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -거든(요)</td><td>Vì..., do... (giải thích lý do hoặc dẫn dắt câu chuyện)</td><td>Bài 14 (영화와 드라마)</td><td>이 드라마 한번 보세요. 남자 주인공이 정말 멋있거든요. (Bạn hãy xem thử bộ phim truyền hình này đi. Vì nam chính thật sự rất ngầu đấy.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -던데요</td><td>Thật là... rất (hồi tưởng &amp; cảm thán điều đã chứng kiến)</td><td>Bài 14 (영화와 드라마)</td><td>그 영화 보셨어요? 지난 주말에 봤는데 정말 재미있던데요. (Bạn đã xem bộ phim đó chưa? Cuối tuần trước tôi xem mà thấy hay thật đấy.)</td></tr><tr><td class="col-highlight">Danh từ + 대로</td><td>Theo, như</td><td>Bài 15 (예절과 규칙)</td><td>순서대로 해 드리겠습니다. (Tôi sẽ làm cho bạn theo đúng thứ tự.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -지 않으면 안 되다</td><td>Nếu không... thì không được (phải...)</td><td>Bài 15 (예절과 규칙)</td><td>순서 표를 뽑고 기다리지 않으면 안 돼요. (Phải rút phiếu thứ tự rồi chờ đợi chứ không thể không chờ được.)</td></tr><tr><td class="col-highlight">Động từ + -(으)려던 참이다</td><td>Vừa mới có ý định..., đúng lúc đang định...</td><td>Bài 15 (예절과 규칙)</td><td>지금 막 자려던 참이에요. (Ngay lúc này tôi vừa mới định đi ngủ đây.)</td></tr></tbody>
+        <tbody><tr><td class="col-highlight">반말</td><td>Lối nói rút ngắn (nói ngang hàng, thân mật)</td><td>Bài 11 (고민)</td><td>요즘 고민이 많아서 잠이 안 와. (Dạo này có nhiều nỗi lo nên không ngủ được.)</td></tr><tr><td class="col-highlight">아/야</td><td>...ơi / ...à (hô ngữ gọi thân mật)</td><td>Bài 11 (고민)</td><td>유진아, 무슨 고민 있어? (Yujin à, cậu có nỗi lo gì thế?)</td></tr><tr><td class="col-highlight">-다(가) 보면</td><td>Nếu cứ tiếp tục... thì...</td><td>Bài 11 (고민)</td><td>친구들과 이야기하다(가) 보면 스트레스가 풀려요. (Nếu cứ trò chuyện với bạn bè thì căng thẳng sẽ được giải tỏa.)</td></tr><tr><td class="col-highlight">-(으)ㅁ</td><td>Dạng danh từ hóa kết thúc câu ghi chú, thông báo ngắn gọn</td><td>Bài 12 (인터넷)</td><td>파일을 이메일로 보냈음. (Đã gửi tệp qua email.)</td></tr><tr><td class="col-highlight">-(으)라고 하다</td><td>Bảo là, yêu cầu là (tường thuật gián tiếp câu mệnh lệnh)</td><td>Bài 12 (인터넷)</td><td>자료는 바탕 화면에 저장해 두라고 하세요. (Hãy bảo lưu tài liệu sẵn ở màn hình nền.)</td></tr><tr><td class="col-highlight">-자고 하다</td><td>Rủ là, đề nghị cùng làm (tường thuật gián tiếp câu thỉnh dụ)</td><td>Bài 12 (인터넷)</td><td>지원 씨가 메신저로 연락하자고 했어요. (Jiwon đã rủ liên lạc qua Messenger.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어 가다</td><td>Sắp..., dần..., tiếp tục... (hướng tới tương lai)</td><td>Bài 13 (희망)</td><td>이제 숙제가 다 끝나 가요. (Bây giờ bài tập sắp làm xong hết rồi.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어 오다</td><td>Làm đến, làm tới (liên tục từ quá khứ đến lúc nói)</td><td>Bài 13 (희망)</td><td>취업 준비 때문에 컴퓨터와 외국어를 계속 공부해 왔어요. (Vì chuẩn bị xin việc nên tôi đã liên tục học máy tính và ngoại ngữ suốt thời gian qua.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -아/어야겠다</td><td>Sẽ phải..., chắc phải...</td><td>Bài 13 (희망)</td><td>이번 도전에서는 꼭 성공해야겠어요. (Trong thử thách lần này nhất định tôi sẽ phải thành công.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -았/었으면 좋겠다</td><td>Nếu được như thế thì tốt biết mấy, ước gì, giá mà</td><td>Bài 13 (희망)</td><td>졸업 후에 공무원이 됐으면 좋겠어요. (Ước gì sau khi tốt nghiệp tôi sẽ trở thành công chức.)</td></tr><tr><td class="col-highlight">(아무리) Động từ / Tính từ + -아/어도</td><td>Cho dù... nhưng..., dù có... đi nữa thì...</td><td>Bài 14 (영화와 드라마)</td><td>저는 아무리 바빠도 일주일에 한 번씩 한국 영화를 봐요. (Tôi dù có bận đến mấy thì mỗi tuần vẫn xem phim Hàn Quốc một lần.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -거든(요)</td><td>Vì..., do... (giải thích lý do hoặc dẫn dắt câu chuyện)</td><td>Bài 14 (영화와 드라마)</td><td>이 드라마 한번 보세요. 남자 주인공이 정말 멋있거든요. (Bạn hãy xem thử bộ phim truyền hình này đi. Vì nam chính thật sự rất ngầu đấy.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -던데요</td><td>Thật là... rất (hồi tưởng &amp; cảm thán điều đã chứng kiến)</td><td>Bài 14 (영화와 드라마)</td><td>그 영화 보셨어요? 지난 주말에 봤는데 정말 재미있던데요. (Bạn đã xem bộ phim đó chưa? Cuối tuần trước tôi xem mà thấy hay thật đấy.)</td></tr><tr><td class="col-highlight">Danh từ + 대로</td><td>Theo, như</td><td>Bài 15 (예절과 규칙)</td><td>순서대로 해 드리겠습니다. (Tôi sẽ làm cho bạn theo đúng thứ tự.)</td></tr><tr><td class="col-highlight">Động từ / Tính từ + -지 않으면 안 되다</td><td>Nếu không... thì không được (phải...)</td><td>Bài 15 (예절과 규칙)</td><td>순서표를 뽑고 기다리지 않으면 안 돼요. (Phải rút phiếu thứ tự rồi chờ đợi chứ không thể không chờ được.)</td></tr><tr><td class="col-highlight">Động từ + -(으)려던 참이다</td><td>Vừa mới có ý định..., đúng lúc đang định...</td><td>Bài 15 (예절과 규칙)</td><td>지금 막 자려던 참이에요. (Ngay lúc này tôi vừa mới định đi ngủ đây.)</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -4930,11 +4984,21 @@
       document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
 
       const targetPanel = document.getElementById(tabId);
+      const searchInput = document.getElementById('grammarSearch');
+      const hasQuery = Boolean(searchInput && searchInput.value.trim());
       if (targetPanel) {
         targetPanel.classList.add('active');
-        const searchInput = document.getElementById('grammarSearch');
-        if (!searchInput || !searchInput.value.trim()) {
+        if (!hasQuery) {
           targetPanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+        }
+        const emptyState = document.getElementById('searchEmptyState');
+        if (emptyState) {
+          if (!hasQuery) {
+            emptyState.style.display = 'none';
+          } else {
+            const hasVisibleCard = Array.from(targetPanel.querySelectorAll('.grammar-card')).some(card => card.style.display !== 'none');
+            emptyState.style.display = hasVisibleCard ? 'none' : 'block';
+          }
         }
       }
 
@@ -4955,7 +5019,7 @@
         window.speechSynthesis.cancel();
         const cleanText = text.replace(/\[.*?\]/g, '')
                               .replace(/➔.*$/g, '')
-                              .replace(/[^\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\s0-9,.?!]/g, ' ')
+                              .replace(/[^\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318FA-Za-z\s0-9,.?!]/g, ' ')
                               .trim();
         const utterance = new SpeechSynthesisUtterance(cleanText || text);
         utterance.lang = 'ko-KR';
@@ -4979,17 +5043,47 @@
       }
     }
 
+    const TONE_MAP = { 'oà':'òa','oá':'óa','oả':'ỏa','oã':'õa','oạ':'ọa','oè':'òe','oé':'óe','oẻ':'ỏe','oẽ':'õe','oẹ':'ọe' };
+    const UY_MAP = { 'ỳ':'ùy','ý':'úy','ỷ':'ủy','ỹ':'ũy','ỵ':'ụy' };
+    const normSearch = s => (s || '').normalize('NFC').toLowerCase()
+      .replace(/o[àáảãạèéẻẽẹ]/g, m => TONE_MAP[m])
+      .replace(/(^|[^q])u([ỳýỷỹỵ])(?=$|[^a-z\u00C0-\u1EF9])/g, (_, p, y) => p + UY_MAP[y]);
+
+    function updateTabMatchCounts(matchCountsByTab) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const existingBadge = btn.querySelector('.tab-match-count');
+        const onclickAttr = btn.getAttribute('onclick') || '';
+        const match = onclickAttr.match(/switchTab\('([^']+)'\)/);
+        const tabId = match ? match[1] : null;
+        const count = tabId && matchCountsByTab ? (matchCountsByTab[tabId] || 0) : 0;
+
+        if (count > 0) {
+          const badge = existingBadge || document.createElement('span');
+          badge.className = 'tab-match-count';
+          badge.textContent = String(count);
+          if (!existingBadge) btn.appendChild(badge);
+        } else if (existingBadge) {
+          existingBadge.remove();
+        }
+      });
+    }
+
     // SEARCH FUNCTIONALITY
     function handleSearch() {
       const searchInput = document.getElementById('grammarSearch');
       const clearBtn = document.getElementById('searchClearBtn');
-      const query = (searchInput.value || '').trim().toLowerCase();
+      const emptyState = document.getElementById('searchEmptyState');
+      const emptyDesc = document.getElementById('searchEmptyDesc');
+      const rawQuery = (searchInput.value || '').trim();
+      const query = normSearch(rawQuery);
 
       if (clearBtn) clearBtn.style.display = query ? 'block' : 'none';
 
       const allCards = document.querySelectorAll('.grammar-card');
 
       if (!query) {
+        updateTabMatchCounts(null);
+        if (emptyState) emptyState.style.display = 'none';
         const activePanel = document.querySelector('.tab-panel.active');
         if (activePanel) {
           activePanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
@@ -4998,21 +5092,38 @@
       }
 
       let firstMatchFound = false;
+      const matchCountsByTab = {};
       allCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
+        const text = normSearch(card.textContent);
         if (text.includes(query)) {
           card.style.display = 'block';
-          if (!firstMatchFound) {
-            const parentPanel = card.closest('.tab-panel');
-            if (parentPanel && !parentPanel.classList.contains('active')) {
-              switchTab(parentPanel.id);
+          const parentPanel = card.closest('.tab-panel');
+          if (parentPanel) {
+            matchCountsByTab[parentPanel.id] = (matchCountsByTab[parentPanel.id] || 0) + 1;
+            if (!firstMatchFound) {
+              if (!parentPanel.classList.contains('active')) {
+                switchTab(parentPanel.id);
+              }
+              firstMatchFound = true;
             }
-            firstMatchFound = true;
           }
         } else {
           card.style.display = 'none';
         }
       });
+
+      updateTabMatchCounts(matchCountsByTab);
+
+      if (emptyState) {
+        if (!firstMatchFound) {
+          if (emptyDesc) {
+            emptyDesc.textContent = 'Không có thẻ ngữ pháp nào khớp với "' + rawQuery + '".';
+          }
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+        }
+      }
     }
 
     // SCROLL TO TOP

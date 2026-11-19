@@ -145,7 +145,7 @@
 
     .search-wrapper input {
       width: 100%;
-      padding: 10px 16px 10px 42px;
+      padding: 10px 38px 10px 42px;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       background: rgba(255, 255, 255, 0.95);
@@ -338,6 +338,36 @@
     /* RIGHT CONTENT AREA */
     .content-area {
       min-width: 0;
+    }
+
+    .search-status {
+      display: none;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: 1px solid #c7d2fe;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 13.5px;
+    }
+    .search-tab-chip {
+      border: 1px solid #a5b4fc;
+      background: #ffffff;
+      color: var(--primary-dark);
+      border-radius: 9999px;
+      padding: 3px 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .search-tab-chip:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
     }
 
     /* TAB CONTENT PANELS */
@@ -838,7 +868,7 @@
         <div>
           <div class="badge-book">📘 GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP • SƠ CẤP 2</div>
           <h1 class="hero-title">Bách Khoa <span>Ngữ Pháp Tiếng Hàn</span> Sơ Cấp 2</h1>
-          <p class="hero-subtitle">Toàn bộ 15 bài học ngữ pháp sơ cấp 2, 52 cấu trúc cốt lõi, chuyên đề 3 bất quy tắc trọng tâm (ㅎ, ㅅ, 르), 15 bài trắc nghiệm tương tác &amp; bảng tra cứu toàn diện.</p>
+          <p class="hero-subtitle">Toàn bộ 15 bài học ngữ pháp sơ cấp 2, 52 thẻ nội dung (46 mục ngữ pháp cốt lõi), chuyên đề bất quy tắc trọng tâm, 15 bài trắc nghiệm tương tác &amp; bảng tra cứu toàn diện.</p>
         </div>
       </div>
 
@@ -894,6 +924,7 @@
 
       <!-- RIGHT MAIN CONTENT AREA -->
       <div class="content-area">
+        <div id="searchStatus" class="search-status"></div>
 
     <!-- ==================== TAB 1: BÀI 1 ==================== -->
     <section class="tab-panel active" id="tab-bai01">
@@ -972,9 +1003,9 @@
               </div>
             </div>
             <div class="example-item">
-              <button class="speak-btn" onclick="speakText('제 이름은 흐엉입니다. 그 사람은 내 동생이에요.')">🔊</button>
+              <button class="speak-btn" onclick="speakText('제 이름은 흐엉입니다. 그 사람은 제 동생이에요.')">🔊</button>
               <div class="example-content">
-                <div class="example-ko">제 이름은 흐엉입니다. 그 사람은 내 동생이에요.</div>
+                <div class="example-ko">제 이름은 흐엉입니다. 그 사람은 제 동생이에요.</div>
                 <div class="example-vi">Tên của tôi là Hương. Người đó là em của tôi.</div>
               </div>
             </div>
@@ -998,7 +1029,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p><strong>Ý nghĩa &amp; Cách dùng:</strong> Gắn vào sau thân động từ hoặc tính từ để biểu thị thời điểm hoặc khoảng thời gian mà một hành động hoặc trạng thái diễn ra (nghĩa là <em>"khi...", "lúc..."</em>).</p>
-            <p>Nếu đi kèm với danh từ chỉ thời gian thì dùng trực tiếp <code>Danh từ + 때</code> (vd: <em>방학 때 - lúc nghỉ hè, 점심 때 - lúc ăn trưa</em>).</p>
+            <p>Nếu đi kèm với danh từ chỉ thời gian thì dùng trực tiếp <code>Danh từ + 때</code> (vd: <em>방학 때 - lúc nghỉ hè, 점심때 - lúc ăn trưa</em>).</p>
           </div>
           <div class="section-title">2. Quy tắc kết hợp</div>
           <div class="rule-table-wrapper">
@@ -1016,16 +1047,16 @@
                 <tr>
                   <td>Có patchim (trừ ㄹ)</td>
                   <td class="col-highlight">-을 때</td>
-                  <td>먹다, 읽다, 아프다</td>
-                  <td>먹을 때, 읽을 때</td>
-                  <td>Khi ăn, khi đọc</td>
+                  <td>먹다, 읽다, 작다</td>
+                  <td>먹을 때, 읽을 때, 작을 때</td>
+                  <td>Khi ăn, khi đọc, khi nhỏ</td>
                 </tr>
                 <tr>
                   <td>Không patchim</td>
                   <td class="col-highlight">-ㄹ 때</td>
-                  <td>가다, 보다, 만나다</td>
-                  <td>갈 때, 볼 때, 만날 때</td>
-                  <td>Khi đi, khi xem, khi gặp</td>
+                  <td>가다, 보다, 만나다, 아프다</td>
+                  <td>갈 때, 볼 때, 만날 때, 아플 때</td>
+                  <td>Khi đi, khi xem, khi gặp, khi đau</td>
                 </tr>
                 <tr>
                   <td>Patchim 'ㄹ'</td>
@@ -1102,15 +1133,15 @@
                 <tr>
                   <td>Nguyên âm 'ㅏ, ㅗ'</td>
                   <td class="col-highlight">-아 주다</td>
-                  <td>닫다, 도와주다, 사다</td>
-                  <td>닫아 주다, 사 주다</td>
-                  <td>Đóng giúp, mua cho</td>
+                  <td>닫다, 돕다, 사다</td>
+                  <td>닫아 주다, 도와 주다, 사 주다</td>
+                  <td>Đóng giúp, giúp đỡ, mua cho</td>
                 </tr>
                 <tr>
                   <td>Các nguyên âm khác</td>
                   <td class="col-highlight">-어 주다</td>
                   <td>빌리다, 가르치다, 읽다</td>
-                  <td>빌려 주다, 가르쳐 주다</td>
+                  <td>빌려 주다, 가르쳐 주다, 읽어 주다</td>
                   <td>Cho mượn, dạy cho, đọc cho</td>
                 </tr>
                 <tr>
@@ -1124,7 +1155,7 @@
                   <td>Dành cho người bề trên</td>
                   <td class="col-highlight">-아/어 드리다</td>
                   <td>사진을 찍다, 돕다</td>
-                  <td>찍어 드리다, 도와 드리다</td>
+                  <td>찍어 드리다, 도와드리다</td>
                   <td>Chụp ảnh cho (bác/thầy), giúp đỡ (ông/bà)</td>
                 </tr>
               </tbody>
@@ -1160,12 +1191,12 @@
       <!-- QUIZ 1 -->
       <div class="quiz-card">
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 1</div>
-        <div class="quiz-question">Chọn phương án đúng điền vào chỗ trống: "너무 바빠서 친구에게 부탁했어요: '이 서류를 좀 (...)주세요'."</div>
+        <div class="quiz-question">Chọn phương án đúng điền vào chỗ trống: "너무 바빠서 친구에게 부탁했어요: '이 서류를 좀 (...) 주세요'."</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '보내다' (gửi) + '-어 주다' -> '보내 주세요' (Hãy gửi giúp tôi).')">보내</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''보내고' mang ý nghĩa liên kết nối tiếp, không dùng trực tiếp trước trợ động từ '주세요'.')">보내고</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''보낼 때' diễn tả thời điểm 'khi gửi', không phù hợp với lời nhờ vả.')">보낼 때</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''보내지' dùng trong câu phủ định hoặc xác nhận, không dùng với '주세요'.')">보내지</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'보내다\' (gửi) + \'-어 주다\' -> \'보내 주세요\' (Hãy gửi giúp tôi).')">보내</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'보내고\' mang ý nghĩa liên kết nối tiếp, không dùng trực tiếp trước trợ động từ \'주세요\'.')">보내고</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'보낼 때\' diễn tả thời điểm \'khi gửi\', không phù hợp với lời nhờ vả.')">보낼 때</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'보내지\' dùng trong câu phủ định hoặc xác nhận, không dùng với \'주세요\'.')">보내지</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1231,7 +1262,7 @@
           <div class="section-title">2. Quy tắc kết hợp &amp; Phân biệt</div>
           <div class="comparison-box">
             <strong>So sánh quan trọng: -(으)니까 vs -아/어서</strong>
-            <p>• <code>-아/어서</code> <strong>KHÔNG</strong> được đi cùng câu mệnh lệnh (-(으)세요) hay rủ rê (-(으)ㅂ시다, -(으)ㄹ까요?).</p>
+            <p>• <code>-아/어서</code> (<strong>chỉ lý do/nguyên nhân</strong>) <strong>KHÔNG</strong> được đi cùng câu mệnh lệnh (-(으)세요) hay rủ rê (-(으)ㅂ시다, -(으)ㄹ까요?).</p>
             <p>• <code>-(으)니까</code> <strong>CHUYÊN DÙNG</strong> cho câu mệnh lệnh, rủ rê, khuyên nhủ: <em>날씨가 추우니까 따뜻하게 입으세요 (Đúng).</em></p>
           </div>
           <div class="rule-table-wrapper">
@@ -1248,8 +1279,8 @@
                 <tr>
                   <td>Có patchim (trừ ㄹ)</td>
                   <td class="col-highlight">-으니까</td>
-                  <td>좋다, 바쁘다(X), 춥다</td>
-                  <td>좋으니까, 추우니까 (ㅂ-&gt;우)</td>
+                  <td>좋다, 먹다, 춥다</td>
+                  <td>좋으니까, 먹으니까, 추우니까 (ㅂ-&gt;우)</td>
                 </tr>
                 <tr>
                   <td>Không patchim hoặc patchim 'ㄹ'</td>
@@ -1341,7 +1372,7 @@
               <button class="speak-btn" onclick="speakText('사진을 찍어도 돼요.')">🔊</button>
               <div class="example-content">
                 <div class="example-ko">사진을 찍어도 돼요.</div>
-                <div class="example-vi">Bạn có thể chụp ảnh ở đây được.</div>
+                <div class="example-vi">Bạn chụp ảnh cũng được.</div>
               </div>
             </div>
           </div>
@@ -1353,10 +1384,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 2</div>
         <div class="quiz-question">Chọn câu đúng nhất khi muốn khuyên bạn: "Trời đang lạnh đấy, đừng đi ra ngoài nhé":</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '날씨가 추우니까' (vì trời lạnh - lý do dẫn đến khuyên nhủ) + '나가지 마세요' (xin đừng đi ra ngoài).')">날씨가 추우니까 나가지 마세요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai ngữ pháp: Đuôi mệnh lệnh phủ định '-지 마세요' không đi với '-아/어서'.')">날씨가 추워서 나가지 마세요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어도 돼요' là biểu hiện xin phép/cho phép (được phép ra ngoài).')">날씨가 추우니까 나가도 돼요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''나가지 않아요' là câu trần thuật phủ định, không phải lời khuyên nhủ mệnh lệnh.')">날씨가 추워서 나가지 않아요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'날씨가 추우니까\' (vì trời lạnh - lý do dẫn đến khuyên nhủ) + \'나가지 마세요\' (xin đừng đi ra ngoài).')">날씨가 추우니까 나가지 마세요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, 'Sai ngữ pháp: Đuôi mệnh lệnh phủ định \'-지 마세요\' không đi với \'-아/어서\'.')">날씨가 추워서 나가지 마세요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'-아/어도 돼요\' là biểu hiện xin phép/cho phép (được phép ra ngoài).')">날씨가 추우니까 나가도 돼요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'나가지 않아요\' là câu trần thuật phủ định, không phải lời khuyên nhủ mệnh lệnh.')">날씨가 추워서 나가지 않아요.</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1437,8 +1468,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Có patchim (trừ ㅂ)</td>
-                  <td class="col-highlight">-(으)ㄴ</td>
+                  <td>Có patchim (trừ ㄹ, ㅂ, ㅎ)</td>
+                  <td class="col-highlight">-은</td>
                   <td>작다, 좋다, 많다</td>
                   <td>작은 가방, 좋은 사람</td>
                   <td>Cái túi nhỏ, người tốt</td>
@@ -1449,6 +1480,13 @@
                   <td>크다, 예쁘다, 비싸다</td>
                   <td>큰 방, 예쁜 옷, 비싼 물건</td>
                   <td>Phòng lớn, áo đẹp, đồ đắt</td>
+                </tr>
+                <tr>
+                  <td>Patchim 'ㄹ'</td>
+                  <td class="col-highlight">-ㄴ (ㄹ rụng)</td>
+                  <td>길다, 멀다, 달다</td>
+                  <td>긴 머리, 먼 곳, 단 과일</td>
+                  <td>Tóc dài, nơi xa, trái cây ngọt</td>
                 </tr>
                 <tr>
                   <td>Đuôi 있다/없다</td>
@@ -1463,6 +1501,13 @@
                   <td>춥다, 맵다, 가볍다</td>
                   <td>추운 날씨, 매운 음식</td>
                   <td>Thời tiết lạnh, đồ ăn cay</td>
+                </tr>
+                <tr>
+                  <td>Bất quy tắc ㅎ</td>
+                  <td class="col-highlight">ㅎ rụng + -ㄴ</td>
+                  <td>하얗다, 노랗다, 빨갛다</td>
+                  <td>하얀 눈, 노란 꽃</td>
+                  <td>Tuyết trắng, hoa vàng</td>
                 </tr>
               </tbody>
             </table>
@@ -1527,10 +1572,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 3</div>
         <div class="quiz-question">Điền dạng định ngữ thích hợp: "저기에서 커피를 (...) 사람이 누구예요?" (người đang uống cà phê)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '마시다' ở thì hiện tại tạo định ngữ bằng cách thêm '-는' -> '마시는'.')">마시는</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''마신' là định ngữ thì quá khứ (người đã uống).')">마신</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''마실' là định ngữ thì tương lai (người sẽ uống).')">마실</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''마시다' là động từ nguyên thể chưa chia định ngữ.')">마시다</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Động từ \'마시다\' ở thì hiện tại tạo định ngữ bằng cách thêm \'-는\' -> \'마시는\'.')">마시는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'마신\' là định ngữ thì quá khứ (người đã uống).')">마신</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'마실\' là định ngữ thì tương lai (người sẽ uống).')">마실</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'마시다\' là động từ nguyên thể chưa chia định ngữ.')">마시다</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1653,10 +1698,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 4</div>
         <div class="quiz-question">Chọn từ chia đúng: "어제 시장에서 (...) 과일이 아주 달아요." (trái cây đã mua hôm qua)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '사다' chia thì quá khứ định ngữ thành '산' (đã mua).')">산</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''사는' diễn tả hành động đang mua ở hiện tại.')">사는</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''살' diễn tả hành động sẽ mua trong tương lai.')">살</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''샀는' là dạng sai ngữ pháp trong tiếng Hàn.')">샀는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Động từ \'사다\' chia thì quá khứ định ngữ thành \'산\' (đã mua).')">산</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'사는\' diễn tả hành động đang mua ở hiện tại.')">사는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'살\' diễn tả hành động sẽ mua trong tương lai.')">살</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'샀는\' là dạng sai ngữ pháp trong tiếng Hàn.')">샀는</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1731,7 +1776,7 @@
               <button class="speak-btn" onclick="speakText('날씨가 좋으면 한강 공원에 가요.')">🔊</button>
               <div class="example-content">
                 <div class="example-ko">날씨가 좋으면 한강 공원에 가요.</div>
-                <div class="example-vi">Nếu thời tiết đẹp thì chúng mình hãy đến công viên sông Hàn.</div>
+                <div class="example-vi">Nếu thời tiết đẹp thì tôi đi công viên sông Hàn.</div>
               </div>
             </div>
           </div>
@@ -1777,10 +1822,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 5</div>
         <div class="quiz-question">Chọn liên kết thích hợp: "한국에 (...) 꼭 연락해 주세요." (Nếu bạn đến Hàn Quốc...)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '오다' kết thúc bằng nguyên âm nên gắn '-면' -> '오면' (Nếu đến).')">오면</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''오으니까' sai vì '오다' không có patchim.')">오으니까</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어서' không dùng được trước câu cầu khiến '-아/어 주세요'.')">와서</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''올 때' mang nghĩa 'vào lúc đến', tự nhiên nhất vẫn là câu giả định điều kiện '-면'.')">올 때</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'오다\' kết thúc bằng nguyên âm nên gắn \'-면\' -> \'오면\' (Nếu đến).')">오면</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'오으니까\' sai vì \'오다\' không có patchim.')">오으니까</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'-아/어서\' không dùng được trước câu cầu khiến \'-아/어 주세요\'.')">와서</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'올 때\' mang nghĩa \'vào lúc đến\', tự nhiên nhất vẫn là câu giả định điều kiện \'-면\'.')">올 때</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1813,6 +1858,7 @@
             <strong>Phân biệt: -아/어서 (thời gian) vs -고</strong>
             <p>• <code>-고</code>: Nối hai hành động độc lập, không nhất thiết có quan hệ lệ thuộc (<em>Tôi ăn cơm và tôi xem tivi</em>).</p>
             <p>• <code>-아/어서</code>: Hai hành động có tính liên kết chặt chẽ về không gian và địa điểm: <em>가게에 가서 빵을 샀어요 (Đi đến tiệm rồi mua bánh ở tiệm đó)</em>. Các động từ di chuyển <strong>가다, 오다, 일어나다</strong> bắt buộc phải dùng <code>-아/어서</code>.</p>
+            <p>• <strong>Lưu ý về câu mệnh lệnh / rủ rê:</strong> Khác với <code>-아/어서</code> chỉ nguyên nhân (Bài 2), <code>-아/어서</code> <strong>chỉ trình tự thời gian</strong> CÓ thể đi kèm câu mệnh lệnh hoặc rủ rê ở vế sau (vd: <em>사과를 깎아서 드세요 - Hãy gọt táo rồi ăn nhé</em>).</p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
           <div class="examples-container">
@@ -1839,7 +1885,7 @@
         <div class="card-header">
           <div class="grammar-title-group">
             <span class="grammar-badge">Ngữ pháp 02</span>
-            <span class="grammar-name-ko">Động/Tính từ + -지요? [-죠?]</span>
+            <span class="grammar-name-ko">Động/Tính từ + -지요? / Danh từ + (이)지요? [-죠?]</span>
             <span class="grammar-meaning-vi">...phải không?, ...đúng không?</span>
           </div>
         </div>
@@ -1847,6 +1893,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p>Dùng khi người nói muốn <strong>xác nhận lại một sự thật</strong> mà mình đã biết trước hoặc tin rằng người nghe cũng biết và đồng tình với mình. Trong văn nói thường rút gọn thành <code>-죠?</code>.</p>
+            <p>Với danh từ dùng <code>Danh từ + (이)지요?</code> (có patchim dùng <em>이지요?</em>, không patchim dùng <em>지요?</em>).</p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
           <div class="examples-container">
@@ -1881,6 +1928,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p>Dùng số thuần Hàn kết hợp với hậu tố <code>번째</code> để chỉ số thứ tự. Riêng vị trí đầu tiên dùng <strong>첫 번째</strong> (thứ nhất).</p>
+            <p><strong>Quy tắc rút gọn trước danh từ / hậu tố <code>번째</code>:</strong> <code>하나 -&gt; 첫</code> (thứ nhất), <code>둘 -&gt; 두</code>, <code>셋 -&gt; 세</code>, <code>넷 -&gt; 네</code>, <code>스물 -&gt; 스무</code> (vd: <em>스무 번째</em>).</p>
             <p>• <em>첫 번째 (thứ nhất), 두 번째 (thứ hai), 세 번째 (thứ ba), 네 번째 (thứ tư), 다섯 번째 (thứ năm)...</em></p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
@@ -1908,10 +1956,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 6</div>
         <div class="quiz-question">Chọn từ điền vào chỗ trống: "사과를 (...) 드세요." (Hãy gọt táo rồi ăn nhé)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '깎다' (gọt) + '-아/어서' -> '깎아서 드세요' biểu thị gọt xong rồi mới ăn.')">깎아서</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎으니까' biểu thị lý do nguyên nhân, không diễn tả thứ tự thời gian.')">깎으니까</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎으면' mang tính giả định điều kiện.')">깎으면</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''깎을 때' mang nghĩa lúc đang gọt.')">깎을 때</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'깎다\' (gọt) + \'-아/어서\' -> \'깎아서 드세요\' biểu thị gọt xong rồi mới ăn.')">깎아서</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'깎으니까\' biểu thị lý do nguyên nhân, không diễn tả thứ tự thời gian.')">깎으니까</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'깎으면\' mang tính giả định điều kiện.')">깎으면</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'깎을 때\' mang nghĩa lúc đang gọt.')">깎을 때</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -1938,6 +1986,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p><strong>Ý nghĩa:</strong> Gắn vào thân động từ để chỉ ý định hoặc mục đích thực hiện hành động ở vế sau (<em>"để làm gì..."</em>). Khi kết hợp thành <code>-(으)려고 하다</code>, nó mang nghĩa <em>"dự định làm gì..."</em>.</p>
+            <p><strong>Quy tắc &amp; Ràng buộc:</strong> Không patchim hoặc patchim <code>ㄹ</code> gắn <code>-려고</code> (<em>가려고, 만들려고</em> — giữ nguyên <code>ㄹ</code>); có patchim (trừ <code>ㄹ</code>) gắn <code>-으려고</code> (<em>먹으려고</em>). Vế sau <strong>không</strong> dùng câu mệnh lệnh hay rủ rê (<code>-(으)세요 / -(으)ㅂ시다</code>).</p>
           </div>
           <div class="section-title">2. Quy tắc kết hợp &amp; Phân biệt</div>
           <div class="comparison-box">
@@ -2012,6 +2061,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p>Chỉ dùng cho <strong>ngôi thứ nhất (tôi/chúng tôi)</strong> trong câu trần thuật để biểu thị ý chí, sự cam kết hoặc lời hứa hẹn sẽ thực hiện một việc gì đó cho người nghe.</p>
+            <p><strong>Cách chia:</strong> Không patchim hoặc patchim <code>ㄹ</code> gắn <code>-ㄹ게요</code> (<em>갈게요, 만들게요</em> — giữ nguyên <code>ㄹ</code>); có patchim (trừ <code>ㄹ</code>) gắn <code>-을게요</code> (<em>먹을게요</em>).</p>
             <p><strong>Lưu ý:</strong> Không dùng trong câu hỏi, không dùng cho ngôi thứ 2 hoặc ngôi thứ 3.</p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
@@ -2039,10 +2089,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 7</div>
         <div class="quiz-question">Chọn câu trả lời đúng khi đồng nghiệp nhờ vả: "이 서류 좀 확인해 주세요" (Xin xem giúp tài liệu này):</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '제가 지금 확인할게요' thể hiện lời hứa hẹn/nhận lời của người nói ở ngôi thứ nhất.')">네, 제가 지금 확인할게요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인할래요' dùng để hỏi ý định hoặc thể hiện nguyện vọng, không tự nhiên khi nhận lời.')">네, 제가 지금 확인할래요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인하려고 해요' là nói về dự định cá nhân, không mang tính cam kết trực tiếp với người nhờ.')">네, 제가 지금 확인하려고 해요.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''확인하세요' là câu mệnh lệnh (bạn hãy xem đi), ngược ý nhờ vả.')">네, 지금 확인하세요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'제가 지금 확인할게요\' thể hiện lời hứa hẹn/nhận lời của người nói ở ngôi thứ nhất.')">네, 제가 지금 확인할게요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'확인할래요\' dùng để hỏi ý định hoặc thể hiện nguyện vọng, không tự nhiên khi nhận lời.')">네, 제가 지금 확인할래요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'확인하려고 해요\' là nói về dự định cá nhân, không mang tính cam kết trực tiếp với người nhờ.')">네, 제가 지금 확인하려고 해요.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'확인하세요\' là câu mệnh lệnh (bạn hãy xem đi), ngược ý nhờ vả.')">네, 지금 확인하세요.</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2096,7 +2146,7 @@
         <div class="card-header">
           <div class="grammar-title-group">
             <span class="grammar-badge">Ngữ pháp 02</span>
-            <span class="grammar-name-ko">Động/Tính từ + -네요</span>
+            <span class="grammar-name-ko">Động/Tính từ + -네요 / Danh từ + (이)네요</span>
             <span class="grammar-meaning-vi">Đuôi câu cảm thán: ...quá!, ...thế!</span>
           </div>
         </div>
@@ -2104,6 +2154,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p>Gắn vào thân động/tính từ để thể hiện sự <strong>ngạc nhiên, cảm thán trước một sự việc, hiện tượng mà người nói vừa mới trực tiếp trải nghiệm hoặc nhìn thấy</strong>.</p>
+            <p>Với danh từ dùng <code>Danh từ + (이)네요</code> (có patchim: <em>학생이네요</em>, không patchim: <em>12시네요</em>).</p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
           <div class="examples-container">
@@ -2165,10 +2216,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 8</div>
         <div class="quiz-question">Khi vừa bước vào một căn phòng ấm áp vào mùa đông và thốt lên cảm thán, bạn nói:</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Đuôi cảm thán '-네요' gắn trực tiếp vào thân tính từ '따뜻하다' -> '따뜻하네요!'.')">방이 아주 따뜻하네요!</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻하겠어요' là phỏng đoán từ xa (chắc là ấm), không phải cảm nhận trực tiếp khi đã ở trong phòng.')">방이 아주 따뜻하겠어요!</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻해 보세요' là câu cầu khiến (hãy thử ấm đi), sai nghĩa.')">방이 아주 따뜻해 보세요!</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''따뜻할게요' dùng cho ý chí ngôi thứ nhất, không dùng cho tính từ căn phòng.')">방이 아주 따뜻할게요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Đuôi cảm thán \'-네요\' gắn trực tiếp vào thân tính từ \'따뜻하다\' -> \'따뜻하네요!\'.')">방이 아주 따뜻하네요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'따뜻하겠어요\' là phỏng đoán từ xa (chắc là ấm), không phải cảm nhận trực tiếp khi đã ở trong phòng.')">방이 아주 따뜻하겠어요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'따뜻해 보세요\' là câu cầu khiến (hãy thử ấm đi), sai nghĩa.')">방이 아주 따뜻해 보세요!</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'따뜻할게요\' dùng cho ý chí ngôi thứ nhất, không dùng cho tính từ căn phòng.')">방이 아주 따뜻할게요!</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2289,10 +2340,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 9</div>
         <div class="quiz-question">Chọn từ liên kết danh từ: "아침에 보통 빵(...) 우유를 먹어요." (bánh mì hoặc sữa)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '빵' có patchim nên dùng '이나' -> '빵이나 우유'.')">이나</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''나' chỉ dùng cho danh từ không có patchim.')">나</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''거나' dùng để nối hai động từ/tính từ, không nối trực tiếp hai danh từ.')">거나</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''마다' mang nghĩa mỗi (mỗi bánh mì), không phù hợp ngữ nghĩa.')">마다</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'빵\' có patchim nên dùng \'이나\' -> \'빵이나 우유\'.')">이나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'나\' chỉ dùng cho danh từ không có patchim.')">나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'거나\' dùng để nối hai động từ/tính từ, không nối trực tiếp hai danh từ.')">거나</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'마다\' mang nghĩa mỗi (mỗi bánh mì), không phù hợp ngữ nghĩa.')">마다</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2336,7 +2387,7 @@
                   <td>Nguyên âm 'ㅏ, ㅗ'</td>
                   <td class="col-highlight">-아지다</td>
                   <td>좋다, 맑다, 작다</td>
-                  <td>좋아지다 (tốt lên), 작아지다 (nhỏ đi)</td>
+                  <td>좋아지다 (tốt lên), 맑아지다 (trong lành lên), 작아지다 (nhỏ đi)</td>
                 </tr>
                 <tr>
                   <td>Các nguyên âm khác</td>
@@ -2460,10 +2511,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 10</div>
         <div class="quiz-question">Chia đúng tính từ '노랗다' (màu vàng) khi bổ nghĩa danh từ: "(...) 꽃을 샀어요." (Tôi đã mua bông hoa màu vàng)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '노랗다' gặp định ngữ '-은' thì 'ㅎ' và '으' đều rụng, trở thành '노란 꽃'.')">노란</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''노랗은' là dạng sai do chưa rụng phụ âm bất quy tắc 'ㅎ'.')">노랗은</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''노래' là dạng chia đuôi câu thân mật '-아/어요', không phải dạng định ngữ.')">노래</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''노랗는' sai vì định ngữ tính từ không dùng '-는'.')">노랗는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'노랗다\' gặp định ngữ \'-은\' thì \'ㅎ\' và \'으\' đều rụng, trở thành \'노란 꽃\'.')">노란</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'노랗은\' là dạng sai do chưa rụng phụ âm bất quy tắc \'ㅎ\'.')">노랗은</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'노래\' là dạng chia đuôi câu thân mật \'-아/어요\', không phải dạng định ngữ.')">노래</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'노랗는\' sai vì định ngữ tính từ không dùng \'-는\'.')">노랗는</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2586,10 +2637,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 11</div>
         <div class="quiz-question">Chọn phương án đúng: "저는 비행기를 (...) 적이 없어서 조금 긴장돼요." (chưa từng đi máy bay)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! Động từ '타다' (đi xe/máy bay) không có patchim nên chia thành '탄 적이 없다'.')">탄</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''타는' diễn tả định ngữ hiện tại, không kết hợp với '적이 없다'.')">타는</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''탈' diễn tả định ngữ tương lai.')">탈</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''타은' sai quy tắc chia định ngữ vì '타다' không có patchim.')">타은</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, 'Động từ \'타다\' (đi xe/máy bay) không có patchim nên chia thành \'탄 적이 없다\'.')">탄</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'타는\' diễn tả định ngữ hiện tại, không kết hợp với \'적이 없다\'.')">타는</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'탈\' diễn tả định ngữ tương lai.')">탈</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'타은\' sai quy tắc chia định ngữ vì \'타다\' không có patchim.')">타은</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2616,6 +2667,7 @@
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
             <p>Biểu thị <strong>hai hành động cùng diễn ra đồng thời</strong> do một chủ ngữ thực hiện (nghĩa là <em>"vừa làm A vừa làm B"</em>).</p>
+            <p><strong>Cách chia:</strong> Không patchim hoặc patchim <code>ㄹ</code> gắn <code>-면서</code> (<em>가면서, 만들면서</em> — giữ nguyên <code>ㄹ</code>); có patchim (trừ <code>ㄹ</code>) gắn <code>-으면서</code> (<em>먹으면서</em>).</p>
             <p><strong>Điều kiện:</strong> Hai vế bắt buộc phải <strong>cùng một chủ ngữ</strong>.</p>
           </div>
           <div class="section-title">3. Ví dụ mẫu &amp; Phân tích</div>
@@ -2711,10 +2763,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 12</div>
         <div class="quiz-question">Tại trạm xăng dầu có biển báo cấm lửa, câu quy định đúng là:</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '담배를 피우면 안 됩니다' thể hiện rõ ràng quy định cấm đoán.')">여기에서 담배를 피우면 안 됩니다.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''-아/어도 됩니다' thể hiện sự cho phép (được hút thuốc), nguy hiểm và sai quy tắc.')">여기에서 담배를 피워도 됩니다.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''-으면서' là liên từ chỉ hai hành động song song.')">여기에서 담배를 피우면서 안 됩니다.</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''-기 때문에' diễn đạt nguyên nhân.')">여기에서 담배를 피우기 때문에 안 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'담배를 피우면 안 됩니다\' thể hiện rõ ràng quy định cấm đoán.')">여기에서 담배를 피우면 안 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'-아/어도 됩니다\' thể hiện sự cho phép (được hút thuốc), nguy hiểm và sai quy tắc.')">여기에서 담배를 피워도 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'-(으)면서\' là liên từ chỉ hai hành động song song.')">여기에서 담배를 피우면서 안 됩니다.</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'-기 때문에\' diễn đạt nguyên nhân.')">여기에서 담배를 피우기 때문에 안 됩니다.</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2808,11 +2860,12 @@
         <div class="card-body">
           <div class="section-title">1. Ý nghĩa &amp; Chức năng</div>
           <div class="explanation-box">
-            <p>Một số động từ kết thúc bằng patchim <code>ㅅ</code> (như <em>낫다 - khỏi bệnh/tốt hơn, 짓다 - xây dựng/nấu cơm/đặt tên, 붓다 - sưng lên/rót nước, 잇다 - nối liền</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm</strong> thì phụ âm <code>ㅅ</code> sẽ bị rụng đi:</p>
-            <p>• <em>낫다 + 아요 -&gt; 나아요 (Khỏi bệnh)</em></p>
+            <p>Một số động từ và tính từ kết thúc bằng patchim <code>ㅅ</code> (như <em>낫다 - khỏi bệnh/tốt hơn, 짓다 - xây dựng/nấu cơm/đặt tên, 붓다 - sưng lên/rót nước, 잇다 - nối liền</em>) khi <strong>gặp đuôi bắt đầu bằng nguyên âm</strong> thì phụ âm <code>ㅅ</code> sẽ bị rụng đi:</p>
+            <p>• <em>낫다 + 아요 -&gt; 나아요 (Khỏi bệnh / tốt hơn)</em></p>
             <p>• <em>짓다 + 어요 -&gt; 지어요 (Xây nhà, nấu cơm)</em></p>
             <p>• <em>붓다 + 어요 -&gt; 부어요 (Bị sưng)</em></p>
             <p>• <em>낫다 + (으)면 -&gt; 나으면 (Nếu khỏi bệnh)</em></p>
+            <p><strong>Lưu ý quan trọng:</strong> Sau khi <code>ㅅ</code> rụng, <strong>không gộp 2 nguyên âm</strong> lại với nhau (<em>나아요</em> ≠ <em>나요</em>, <em>지어요</em> ≠ <em>져요</em>).</p>
           </div>
           <div class="section-title">4. Lưu ý &amp; Mở rộng</div>
           <div class="tip-box">
@@ -2841,12 +2894,12 @@
       <!-- QUIZ 13 -->
       <div class="quiz-card">
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 13</div>
-        <div class="quiz-question">Chia đúng động từ '짓다' trong câu: "할머니께서 밥을 (...)." (Bà đang nấu cơm)</div>
+        <div class="quiz-question">Chia đúng động từ '짓다' trong câu: "엄마가 밥을 (...)." (Mẹ nấu cơm)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '짓다' là bất quy tắc 'ㅅ', khi gặp '-어요' thì 'ㅅ' biến mất -> '지어요'.')">지어요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''짓어요' sai vì chưa lược bỏ phụ âm bất quy tắc 'ㅅ'.')">짓어요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''지워요' là dạng chia của bất quy tắc 'ㅂ' (như 춥다 -> 추워요).')">지워요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''지나요' là một từ khác mang nghĩa trôi qua.')">지나요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'짓다\' là bất quy tắc \'ㅅ\', khi gặp \'-어요\' thì \'ㅅ\' biến mất -> \'지어요\'.')">지어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'짓어요\' sai vì chưa lược bỏ phụ âm bất quy tắc \'ㅅ\'.')">짓어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'지워요\' là dạng chia của bất quy tắc \'ㅂ\' (như 춥다 -> 추워요).')">지워요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'지나요\' là một từ khác mang nghĩa trôi qua.')">지나요</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -2967,10 +3020,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 14</div>
         <div class="quiz-question">Chọn từ điền vào chỗ trống: "수업이 (...) 도서관에서 만나요." (Sau khi tiết học kết thúc...)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '끝나다' không có patchim nên chia thành '끝난 후에' (Sau khi kết thúc).')">끝난 후에</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝나기 전에' mang nghĩa trước khi kết thúc.')">끝나기 전에</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝난 지' dùng với thời gian chỉ thời lượng đã trôi qua.')">끝난 지</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''끝나면 안 되다' là cấu trúc cấm đoán.')">끝나면 안 돼서</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'끝나다\' không có patchim nên chia thành \'끝난 후에\' (Sau khi kết thúc).')">끝난 후에</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'끝나기 전에\' mang nghĩa trước khi kết thúc.')">끝나기 전에</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'끝난 지\' dùng với thời gian chỉ thời lượng đã trôi qua.')">끝난 지</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'끝나면 안 되다\' là cấu trúc cấm đoán.')">끝나면 안 돼서</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -3056,8 +3109,14 @@
                 <tr>
                   <td>Tính từ (Hiện tại)</td>
                   <td class="col-highlight">-(으)ㄴ데</td>
-                  <td>예쁘다, 좋다, 바쁘다</td>
-                  <td>예쁜데, 좋은데, 바쁜데</td>
+                  <td>예쁘다, 좋다, 바쁘다, 춥다</td>
+                  <td>예쁜데, 좋은데, 바쁜데, 추운데 (ㅂ-&gt;우)</td>
+                </tr>
+                <tr>
+                  <td>Tính từ đuôi 있다 / 없다</td>
+                  <td class="col-highlight">-는데 (Đặc biệt!)</td>
+                  <td>맛있다, 재미있다, 없다</td>
+                  <td>맛있는데, 재미있는데, 없는데</td>
                 </tr>
                 <tr>
                   <td>Danh từ + 이다</td>
@@ -3140,10 +3199,10 @@
         <div class="quiz-title"><span>✍️</span> Luyện tập nhanh Bài 15</div>
         <div class="quiz-question">Chia đúng động từ '모르다' trong câu: "저는 그 사람의 전화번호를 (...)." (Tôi không biết số điện thoại người đó)</div>
         <div class="quiz-options">
-          <button class="quiz-option" onclick="checkQuiz(this, true, 'Chính xác! '모르다' là bất quy tắc '르', khi chia đuôi '-아요' biến đổi thành '몰라요'.')">몰라요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''모라요' sai do chưa thêm phụ âm 'ㄹ' vào làm patchim của âm tiết đứng trước.')">모라요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''모르어요' là dạng chia sai có quy tắc thông thường.')">모르어요</button>
-          <button class="quiz-option" onclick="checkQuiz(this, false, ''몰러요' sai vì nguyên âm đứng trước là 'ㅗ' nên phải gắn '-라요', không gắn '-러요'.')">몰러요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, true, '\'모르다\' là bất quy tắc \'르\', khi chia đuôi \'-아요\' biến đổi thành \'몰라요\'.')">몰라요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'모라요\' sai do chưa thêm phụ âm \'ㄹ\' vào làm patchim của âm tiết đứng trước.')">모라요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'모르어요\' là dạng chia sai có quy tắc thông thường.')">모르어요</button>
+          <button class="quiz-option" onclick="checkQuiz(this, false, '\'몰러요\' sai vì nguyên âm đứng trước là \'ㅗ\' nên phải gắn \'-라요\', không gắn \'-러요\'.')">몰러요</button>
         </div>
         <div class="quiz-feedback"></div>
       </div>
@@ -3265,10 +3324,10 @@
                 <tr>
                   <td>4</td>
                   <td class="col-highlight">'ㄹ' 탈락</td>
-                  <td>'ㄹ' bị rụng khi gặp ㄴ, ㅂ, ㅅ, (으)ㄹ, (으)ㄴ</td>
+                  <td>'ㄹ' rụng khi gặp ㄴ, ㅂ, ㅅ, -(으)ㄴ; gặp -(으)ㄹ thì lược '으' và giữ lại 1 'ㄹ' (살 때, 만들 사람)</td>
                   <td>살다 (sống), 알다 (biết), 만들다 (làm)</td>
-                  <td>삽니다, 아는 사람, 만듭니다</td>
-                  <td>Gặp nguyên âm -아/어 thì giữ nguyên (살아요)</td>
+                  <td>살아요, 알아요, 만들어요 (giữ nguyên ㄹ) &bull; Biến đổi: 삽니다, 아는 사람, 만듭니다</td>
+                  <td>Áp dụng nhất quán cho mọi từ có patchim 'ㄹ' (gặp nguyên âm giữ nguyên 'ㄹ')</td>
                 </tr>
                 <tr>
                   <td>5</td>
@@ -3467,7 +3526,7 @@
           <div class="grammar-title-group">
             <span class="grammar-badge">Nhóm 3</span>
             <span class="grammar-name-ko">Cấu trúc Chia Động/Tính từ theo Ý định, Trạng thái &amp; Cảm xúc</span>
-            <span class="grammar-meaning-vi">18 cấu trúc quan trọng</span>
+            <span class="grammar-meaning-vi">20 cấu trúc quan trọng</span>
           </div>
         </div>
         <div class="card-body">
@@ -3553,7 +3612,7 @@
                   <td class="col-highlight">V + -아/어 보다</td>
                   <td>Thử làm gì... / Từng làm gì...</td>
                   <td>Bài 8</td>
-                  <td>입어 보세요 (Hãy mặc thử chiếc áo này)</td>
+                  <td>입어 보세요 (Hãy mặc thử xem)</td>
                 </tr>
                 <tr>
                   <td class="col-highlight">V/A + -(으)면 좋겠다</td>
@@ -3631,7 +3690,7 @@
                   <th>Thời gian / Loại từ</th>
                   <th>Công thức</th>
                   <th>Có patchim</th>
-                  <th>Không patchim</th>
+                  <th>Không patchim / Patchim ㄹ</th>
                   <th>Ví dụ kết hợp</th>
                 </tr>
               </thead>
@@ -3640,7 +3699,7 @@
                   <td class="col-highlight">Tính từ (Đặc điểm tính chất)</td>
                   <td><strong>A + -(으)ㄴ</strong></td>
                   <td>작은, 좋은</td>
-                  <td>예쁜, 큰</td>
+                  <td>예쁜, 큰, 긴 (ㄹ rụng)</td>
                   <td>예쁜 꽃 (bông hoa đẹp), 큰 방 (căn phòng to)</td>
                 </tr>
                 <tr>
@@ -3654,14 +3713,14 @@
                   <td class="col-highlight">Động từ - Quá khứ (Đã làm)</td>
                   <td><strong>V + -(으)ㄴ</strong></td>
                   <td>먹은, 읽은</td>
-                  <td>간, 본, 산, 만든</td>
+                  <td>간, 본, 산, 만든 (ㄹ rụng)</td>
                   <td>어제 만난 친구 (bạn đã gặp hôm qua)</td>
                 </tr>
                 <tr>
                   <td class="col-highlight">Động từ - Tương lai (Sẽ làm)</td>
                   <td><strong>V + -(으)ㄹ</strong></td>
                   <td>먹을, 읽을</td>
-                  <td>갈, 볼, 살, 만들</td>
+                  <td>갈, 볼, 살, 만들 (giữ 1 ㄹ)</td>
                   <td>내일 할 일 (việc sẽ làm vào ngày mai)</td>
                 </tr>
               </tbody>
@@ -3746,40 +3805,79 @@
       }
     }
 
+    const TONE_MAP = { 'oà':'òa','oá':'óa','oả':'ỏa','oã':'õa','oạ':'ọa','oè':'òe','oé':'óe','oẻ':'ỏe','oẽ':'õe','oẹ':'ọe' };
+    const UY_MAP = { 'ỳ':'ùy','ý':'úy','ỷ':'ủy','ỹ':'ũy','ỵ':'ụy' };
+    const normSearch = s => (s || '').normalize('NFC').toLowerCase()
+      .replace(/o[àáảãạèéẻẽẹ]/g, m => TONE_MAP[m])
+      .replace(/(^|[^q])u([ỳýỷỹỵ])(?=$|[^a-z\u00C0-\u1EF9])/g, (_, p, y) => p + UY_MAP[y]);
+
     // SEARCH FUNCTIONALITY
     function handleSearch() {
       const searchInput = document.getElementById('grammarSearch');
-      const clearBtn = document.getElementById('clearSearchBtn');
-      const query = (searchInput.value || '').trim().toLowerCase();
+      const clearBtn = document.getElementById('searchClearBtn');
+      const statusEl = document.getElementById('searchStatus');
+      const rawQuery = (searchInput.value || '').trim();
+      const query = normSearch(rawQuery);
 
-      if (clearBtn) clearBtn.hidden = (query.length === 0);
+      if (clearBtn) clearBtn.style.display = rawQuery ? 'inline-block' : 'none';
 
       const allCards = document.querySelectorAll('.grammar-card');
 
       if (!query) {
-        const activePanel = document.querySelector('.tab-panel.active');
-        if (activePanel) {
-          activePanel.querySelectorAll('.grammar-card').forEach(card => card.style.display = 'block');
+        if (statusEl) {
+          statusEl.style.display = 'none';
+          statusEl.innerHTML = '';
         }
+        document.querySelectorAll('.tab-panel .grammar-card').forEach(card => card.style.display = 'block');
         return;
       }
 
-      let firstMatchFound = false;
+      const tabMatches = new Map();
+      let totalMatches = 0;
+      let firstMatchPanel = null;
+
       allCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
+        const text = normSearch(card.textContent);
         if (text.includes(query)) {
           card.style.display = 'block';
-          if (!firstMatchFound) {
-            const parentPanel = card.closest('.tab-panel');
-            if (parentPanel && !parentPanel.classList.contains('active')) {
-              switchTab(parentPanel.id);
-            }
-            firstMatchFound = true;
+          totalMatches++;
+          const parentPanel = card.closest('.tab-panel');
+          if (parentPanel) {
+            tabMatches.set(parentPanel.id, (tabMatches.get(parentPanel.id) || 0) + 1);
+            if (!firstMatchPanel) firstMatchPanel = parentPanel;
           }
         } else {
           card.style.display = 'none';
         }
       });
+
+      const activePanel = document.querySelector('.tab-panel.active');
+      if (firstMatchPanel && (!activePanel || !tabMatches.has(activePanel.id))) {
+        switchTab(firstMatchPanel.id);
+      }
+
+      if (statusEl) {
+        statusEl.style.display = 'flex';
+        statusEl.innerHTML = '';
+        const summary = document.createElement('span');
+        if (totalMatches === 0) {
+          summary.textContent = 'Không tìm thấy kết quả phù hợp.';
+          statusEl.appendChild(summary);
+        } else {
+          summary.textContent = `Tìm thấy ${totalMatches} kết quả ở ${tabMatches.size} mục:`;
+          statusEl.appendChild(summary);
+          tabMatches.forEach((count, tabId) => {
+            const btn = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
+            const label = btn ? btn.textContent.trim().replace(/\s+/g, ' ') : tabId;
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'search-tab-chip';
+            chip.textContent = `${label} (${count})`;
+            chip.onclick = () => switchTab(tabId);
+            statusEl.appendChild(chip);
+          });
+        }
+      }
     }
 
     // SCROLL TO TOP
