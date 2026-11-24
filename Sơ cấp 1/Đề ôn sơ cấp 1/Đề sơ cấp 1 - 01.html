@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề sơ cấp 1 - 01 | Kiểm tra tổng hợp Tiếng Hàn Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const EXAM_DATA = {
+      id: "de-01",
+      badge: "ĐỀ SỐ 01 • BÀI 1–15",
+      title: "Đề Kiểm Tra Sơ Cấp 1 — Đề 01",
+      subtitle: "Ôn tập toàn diện từ vựng, tiểu từ, chia thì, bất quy tắc, đọc hiểu và ghép câu tiếng Hàn (100% ngữ pháp Sơ cấp 1).",
+      durationMinutes: 45,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Từ vựng", title: "Phần A: Từ vựng & Nền tảng (Câu 1–10)", desc: "Kiểm tra nghĩa từ theo ngữ cảnh, từ trái nghĩa, quy tắc phát âm và hai hệ số đếm (20 điểm)." },
+        { id: "B", shortTitle: "Phần B: Ngữ pháp", title: "Phần B: Ngữ pháp, Tiểu từ & Bất quy tắc (Câu 11–24)", desc: "Kiểm tra phân biệt tiểu từ, sắc thái cấu trúc câu và chia động/tính từ bất quy tắc (32 điểm)." },
+        { id: "C", shortTitle: "Phần C: Đọc hiểu", title: "Phần C: Đọc hiểu (Câu 25–32)", desc: "Đọc tin nhắn, thông báo ngắn và 2 đoạn văn tiếng Hàn Sơ cấp 1 (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Viết câu", title: "Phần D: Viết câu bằng Ghép thẻ & Sửa lỗi (Câu 33–40)", desc: "Sắp xếp trật tự câu, tìm và sửa lỗi sai, dịch Việt–Hàn từ ngân hàng thẻ (24 điểm)." }
+      ],
+      passages: {
+        p1: {
+          label: "Đoạn văn 1 (Câu 28–29)",
+          text: "저는 한국 회사에 다닙니다. 집에서 회사까지 버스로 40분쯤 걸립니다. 회사 근처에 식당이 많습니다. 그리고 값이 싸고 음식이 아주 맛있습니다. (   ㉠   ) 저는 매일 회사 근처 식당에서 점심을 먹습니다. 토요일과 일요일에는 회사에 안 갑니다. 주말에는 보통 집에서 쉬고 싶습니다. 가끔 친구를 만나고 싶습니다."
+        },
+        p2: {
+          label: "Đoạn văn 2 (Câu 30–32)",
+          text: "내일은 어머니의 생신입니다. 그래서 오늘 오후에 저는 동생하고 백화점에 갔습니다. 어머니께 선물을 사 드리고 싶었습니다. 동생은 예쁜 가방을 골랐습니다. 저는 모자를 샀습니다. 집에 와서 어머니께 선물을 드렸습니다. 어머니께서 아주 기뻐하셨습니다. 내일은 가족이 모두 함께 식당에서 저녁을 먹을 거예요."
+        }
+      },
+      questions: [
+        // PHẦN A (1-10) - 2đ/câu
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn từ thích hợp nhất điền vào chỗ trống:",
+          koStem: "머리가 너무 아파요. 그래서 (      )에 가려고 해요.",
+          options: ["약국", "서점", "우체국", "은행"],
+          answer: 0,
+          explanation: "Đau đầu (머리가 아프다) nên định đi hiệu thuốc (약국). 서점: hiệu sách, 우체국: bưu điện, 은행: ngân hàng."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn động từ đúng nhất điền vào chỗ trống:",
+          koStem: "방이 너무 더워요. 창문을 좀 (      ).",
+          options: ["닫으세요", "여세요", "입으세요", "타세요"],
+          answer: 1,
+          explanation: "Phòng quá nóng (더워요) nên hãy mở cửa sổ (창문을 열다 → 여세요, rụng ㄹ). 닫다: đóng, 입다: mặc, 타다: đi/lên xe."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn đơn vị đếm đúng với danh từ đi kèm:",
+          koStem: "교실에 한국어 선생님이 한 (      ) 계십니다.",
+          options: ["명", "개", "분", "권"],
+          answer: 2,
+          explanation: "Đếm người cần kính trọng (선생님) dùng đơn vị 분 (vị) kèm kính ngữ 계십니다. 명 dùng cho người thông thường, 개 cho đồ vật, 권 cho sách."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn từ thích hợp nhất điền vào chỗ trống:",
+          koStem: "동생은 아직 숙제를 안 했어요. 지금 (      ) 공부해요.",
+          options: ["열심히", "조용히", "일찍", "보통"],
+          answer: 0,
+          explanation: "열심히: chăm chỉ. Em chưa làm bài tập nên bây giờ đang học chăm chỉ. 조용히: yên tĩnh, 일찍: sớm, 보통: thông thường."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn tính từ thích hợp nhất với nghĩa của câu:",
+          koStem: "이 구두는 너무 (      ). 다른 구두를 보여 주세요.",
+          options: ["맛있어요", "가까워요", "작아요", "추워요"],
+          answer: 2,
+          explanation: "Đôi giày này quá nhỏ (작아요), vui lòng cho xem đôi khác. 맛있다: ngon, 가깝다: gần, 춥다: lạnh."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Từ trái nghĩa",
+          prompt: "Chọn cặp từ KHÔNG phải là từ trái nghĩa:",
+          koStem: "다음 중 반대말 관계가 아닌 것을 고르세요.",
+          options: ["크다 ↔ 작다", "비싸다 ↔ 싸다", "어렵다 ↔ 쉽다", "기쁘다 ↔ 좋다"],
+          answer: 3,
+          explanation: "기쁘다 (vui) và 좋다 (tốt/thích) gần nghĩa tích cực, trái nghĩa của 기쁘다 là 슬프다 (buồn), trái nghĩa của 좋다 là 나쁘다 (xấu)."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Quy tắc phát âm",
+          prompt: "Chọn cách phát âm đúng của từ sau (áp dụng quy tắc nối âm & biến âm):",
+          koStem: "한국어",
+          options: ["[한구거]", "[한국어]", "[한궁어]", "[한꾸거]"],
+          answer: 0,
+          explanation: "Theo quy tắc nối âm (연음화), phụ âm cuối ㄱ nối sang nguyên âm 어 phía sau nên đọc là [한구거]."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Quy tắc phát âm",
+          prompt: "Chọn cách phát âm đúng của từ sau (áp dụng biến âm mũi 비음화):",
+          koStem: "작년",
+          options: ["[작년]", "[장년]", "[잔년]", "[자년]"],
+          answer: 1,
+          explanation: "Phụ âm cuối ㄱ đứng trước ㄴ bị mũi âm hóa thành ㅇ ([장년])."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 3 • Số thuần Hàn & Hán Hàn",
+          prompt: "Chọn cách đọc đúng cho thời gian: \"8 giờ 35 phút\"",
+          koStem: "오전 8시 35분",
+          options: ["팔 시 삼십오 분", "여덟 시 서른다섯 분", "여덟 시 삼십오 분", "팔 시 서른다섯 분"],
+          answer: 2,
+          explanation: "Giờ dùng số thuần Hàn (여덟 시), phút dùng số Hán Hàn (삼십오 분) → 여덟 시 삼십오 분."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 3 • Số thuần Hàn & Hán Hàn",
+          prompt: "Chọn cách đọc đúng cho ngày tháng: \"Ngày 24 tháng 10\"",
+          koStem: "10월 24일",
+          options: ["십월 이십사일", "시월 이십사일", "십월 스물네일", "시월 스물사일"],
+          answer: 1,
+          explanation: "Ngày và tháng dùng số Hán Hàn; lưu ý đặc biệt tháng 10 đọc là 시월 (không đọc là 십월) → 시월 이십사일."
+        },
+
+        // PHẦN B (11-24)
+        {
+          id: "q11", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng điền vào chỗ trống:",
+          koStem: "친구는 백화점(      ) 일해요. 저는 은행에 있어요.",
+          options: ["에", "에서", "로", "에게"],
+          answer: 1,
+          explanation: "일하다 (làm việc) là động từ hành động diễn ra tại địa điểm → dùng 에서. (Câu sau dùng 있다 chỉ sự tồn tại nên mới dùng 에)."
+        },
+        {
+          id: "q12", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng điền vào chỗ trống:",
+          koStem: "동생은 과일(      ) 좋아해요. 하지만 우유(      ) 안 마셔요.",
+          options: ["이 / 가", "을 / 는", "을 / 가", "은 / 를"],
+          answer: 1,
+          explanation: "좋아하다 là ngoại động từ cần tân ngữ 을 (과일을). Vế sau đối chiếu với vế trước hoặc nhấn mạnh chủ đề/tân ngữ đối lập dùng 는 (우유는 안 마셔요)."
+        },
+        {
+          id: "q13", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn cặp tiểu từ đúng chỉ điểm xuất phát và điểm đến:",
+          koStem: "우리 집(      ) 지하철역(      ) 걸어서 10분 걸려요.",
+          options: ["부터 / 까지", "에서 / 까지", "에 / 에서", "에서 / 로"],
+          answer: 1,
+          explanation: "Từ địa điểm A đến địa điểm B dùng N(địa điểm)+에서 ~ N(địa điểm)+까지 (Bài 15). 부터~까지 dùng cho thời gian/thứ tự."
+        },
+        {
+          id: "q14", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng khi chủ ngữ là bậc bề trên (ông/bà):",
+          koStem: "할아버지(      ) 지금 거실에서 신문을 읽으세요.",
+          options: ["에게", "께서", "께", "한테"],
+          answer: 1,
+          explanation: "할아버지 là chủ ngữ cần tôn kính nên dùng tiểu từ chủ ngữ kính ngữ 께서 (hoặc 께서는). 께 là 'gửi tới/cho ai'."
+        },
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ chỉ phương tiện giao thông:",
+          koStem: "주말에 부산에 기차(      ) 갈 거예요.",
+          options: ["에서", "에", "로", "를"],
+          answer: 2,
+          explanation: "Đi bằng phương tiện gì dùng N+(으)로 (Bài 15). 기차 không có patchim nên dùng 기차로."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu ĐÚNG ngữ pháp tiếng Hàn Sơ cấp 1:",
+          koStem: "A: 왜 어제 학교에 안 왔어요?\nB: (                                ).",
+          options: [
+            "머리가 아팠어서 안 왔어요.",
+            "머리가 아파서 안 왔어요.",
+            "머리가 아파서 안 오세요.",
+            "머리가 아파지만 안 왔어요."
+          ],
+          answer: 1,
+          explanation: "Quy tắc vàng của -아/어서 (Bài 13): KHÔNG chia thì quá khứ -았/었- ở vế trước -아/어서! Vì vậy phải dùng 아파서 (không dùng 아팠어서)."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu trả lời phù hợp nhất với tình huống (phân biệt 안 và 못):",
+          koStem: "A: 수영할 수 있어요?\nB: 아니요, 수영을 안 배웠어요. 그래서 수영을 (      ).",
+          options: ["안 해요", "못 해요", "하고 싶어요", "할래요"],
+          answer: 1,
+          explanation: "Không biết bơi (vấn đề năng lực/kỹ năng) phải dùng phủ định khả năng 못 해요 (hoặc 할 수 없어요), không dùng 안 해요."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn cấu trúc đúng cho câu chỉ mục đích đi với động từ di chuyển:",
+          koStem: "배가 고파요. 같이 점심을 (      ) 갑시다.",
+          options: ["먹으려고", "먹고", "먹으러", "먹어서"],
+          answer: 2,
+          explanation: "Đi đâu ĐỂ làm gì (đi kèm 가다/오다) dùng V+(으)러 가다/오다 (Bài 15). -(으)려고 đi với 하다 (먹으려고 해요)."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu hỏi đề nghị/rủ rê hợp tự nhiên nhất:",
+          koStem: "날씨가 아주 좋아요. 오늘 오후에 공원에서 같이 자전거를 (      )?",
+          options: ["타겠어요", "탈까요", "타고 싶어요", "타세요"],
+          answer: 1,
+          explanation: "Hỏi ý kiến, rủ người khác cùng làm gì ('chúng ta cùng... nhé?') dùng V+(으)ㄹ까요? (Bài 13)."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu kính ngữ ĐÚNG dành cho bố mẹ:",
+          koStem: "지금 부모님께서 방에서 (      ).",
+          options: ["자요", "있으세요", "주무세요", "먹으세요"],
+          answer: 2,
+          explanation: "Động từ ngủ (자다) có dạng kính ngữ đặc biệt là 주무시다 → 주무세요 (Bài 10). Tương tự, 있다 có dạng kính ngữ 계시다."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia động từ 듣다 (nghe) sang đuôi -아/어요:",
+          koStem: "저는 매일 아침 한국 노래를 (      ).",
+          options: ["듣어요", "들어요", "들러요", "듣아요"],
+          answer: 1,
+          explanation: "듣다 thuộc bất quy tắc ㄷ (Bài 14): ㄷ biến thành ㄹ khi gặp nguyên âm → 들 + 어요 = 들어요."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia tính từ 바쁘다 (bận) sang thì quá khứ -았/었어요:",
+          koStem: "지난주에 일이 많아서 정말 (      ).",
+          options: ["바쁘았어요", "바뻤어요", "바빴어요", "바쁘었어요"],
+          answer: 2,
+          explanation: "바쁘다 thuộc quy tắc rụng ㅡ (Bài 7): bỏ ㅡ, nhìn âm tiết trước là ㅏ nên cộng -았어요 → 바빴어요."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia động từ 살다 (sống) với đuôi câu trang trọng -ㅂ니다/습니다:",
+          koStem: "저는 지금 서울에서 (      ).",
+          options: ["살습니다", "삽니다", "살ㅂ니다", "사습니다"],
+          answer: 1,
+          explanation: "살다 có patchim ㄹ: khi gặp ㄴ, ㅂ, ㅅ thì ㄹ bị rụng (Bài 10) → 사 + ㅂ니다 = 삽니다."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia tính từ 춥다 (lạnh) sang đuôi -아/어요:",
+          koStem: "오늘 바람이 많이 불어서 날씨가 아주 (      ).",
+          options: ["춥어요", "추워요", "추와요", "춥아요"],
+          answer: 1,
+          explanation: "춥다 thuộc bất quy tắc ㅂ: ㅂ chuyển thành 우 rồi cộng 어요 → 추 + 우 + 어요 = 추워요."
+        },
+
+        // PHẦN C (25-32) - 3đ/câu
+        {
+          id: "q25", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Tin nhắn ngắn",
+          prompt: "Đọc tin nhắn sau và chọn câu ĐÚNG với nội dung:",
+          noticeBox: "민수 씨, 저 수진이에요.\n오늘 3시에 같이 영화를 보려고 했어요.\n그런데 지금 회사에 일이 너무 많아요.\n미안해요. 내일 오후 4시에 만날까요?",
+          options: [
+            "수진 씨는 오늘 3시에 영화를 볼 거예요.",
+            "민수 씨는 지금 회사에 일이 많아요.",
+            "두 사람은 내일 오후 4시에 만나려고 해요.",
+            "수진 씨는 오늘 영화를 이미 봤어요."
+          ],
+          answer: 2,
+          explanation: "Sujin bận việc công ty nên xin lỗi và đề nghị ngày mai gặp lúc 4 giờ (내일 4시에 만날까요?)."
+        },
+        {
+          id: "q26", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Bảng thông báo",
+          prompt: "Đọc thông báo của thư viện và chọn thông tin ĐÚNG:",
+          noticeBox: "[도서관 안내]\n• 월요일 ~ 금요일: 08:00 ~ 21:00\n• 토요일: 09:00 ~ 17:00\n• 일요일: 문을 열지 않습니다.\n※ 도서관 안에서 음식을 먹을 수 없습니다.",
+          options: [
+            "토요일에는 밤 9시까지 도서관에 있을 수 있어요.",
+            "일요일에는 도서관에서 책을 읽을 수 없어요.",
+            "금요일에 도서관은 아침 9시에 문을 열어요.",
+            "도서관 안에서 빵하고 우유를 먹을 수 있어요."
+          ],
+          answer: 1,
+          explanation: "Chủ nhật thư viện không mở cửa (문을 열지 않습니다) nên không thể vào đọc sách."
+        },
+        {
+          id: "q27", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Ghi chú lịch trình",
+          prompt: "Đọc ghi chú sau và chọn câu KHÔNG ĐÚNG:",
+          noticeBox: "<지영이의 토요일 계획>\n• 오전 10시: 집 청소하기\n• 오후 1시: 백화점에서 친구 생일 선물 사기\n• 오후 6시: 한국어 수업\n• 오후 8시: 가족하고 저녁 식사",
+          options: [
+            "지영이는 오전에 집을 청소할 거예요.",
+            "지영이는 오후에 백화점에 갈 거예요.",
+            "지영이는 저녁 6시에 한국어를 공부해요.",
+            "지영이는 오후 8시에 친구와 저녁을 먹어요."
+          ],
+          answer: 3,
+          explanation: "Lúc 8 giờ tối Jiyoung ăn tối cùng gia đình (가족하고 저녁 식사), không phải với bạn."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 1",
+          passageId: "p1",
+          prompt: "Chọn từ nối thích hợp nhất điền vào chỗ ( ㉠ ) trong Đoạn văn 1:",
+          options: ["하지만", "그래서", "그런데", "그리고"],
+          answer: 1,
+          explanation: "Vế trước nói 'Gần công ty có nhiều quán ăn, giá rẻ và món ăn rất ngon', vế sau nói 'Vì thế (그래서) mỗi ngày tôi ăn trưa ở quán ăn gần công ty'."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 1",
+          passageId: "p1",
+          prompt: "Nội dung nào ĐÚNG với Đoạn văn 1?",
+          options: [
+            "이 사람은 지하철로 회사에 갑니다.",
+            "이 사람은 집에서 회사까지 1시간 걸립니다.",
+            "이 사람은 주말에도 회사에 갑니다.",
+            "이 사람은 평일에 회사 근처 식당에서 점심을 먹습니다."
+          ],
+          answer: 3,
+          explanation: "Thứ 7 và Chủ nhật không đi làm (주말에는 안 감) → ngày thường ăn trưa ở quán ăn gần công ty (매일 회사 근처 식당에서 점심을 먹습니다). Sai ở: đi xe buýt (không phải tàu điện), 40 phút (không phải 1 tiếng)."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Ai là người đã mua mũ tặng mẹ trong Đoạn văn 2?",
+          options: ["동생", "어머니", "글쓴이 (나)", "아버지"],
+          answer: 2,
+          explanation: "Đoạn văn viết: '동생은 예쁜 가방을 골랐습니다. 저는 모자를 샀습니다.' → Người viết (저는 / 나) đã mua mũ."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Theo Đoạn văn 2, hôm nay hai anh em đã làm gì?",
+          options: [
+            "식당에서 저녁을 먹었습니다.",
+            "백화점에서 선물을 샀습니다.",
+            "집에서 생신 케이크를 만들었습니다.",
+            "어머니와 같이 백화점에 갔습니다."
+          ],
+          answer: 1,
+          explanation: "Hôm nay buổi chiều 'Tôi' và em đi bách hóa (백화점) mua quà cho mẹ. Ngày mai cả nhà mới ăn tối ở nhà hàng."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Chủ đề chính của Đoạn văn 2 là gì?",
+          options: [
+            "어머니의 생신 선물",
+            "백화점 쇼핑 방법",
+            "동생의 취미",
+            "맛있는 한국 음식"
+          ],
+          answer: 0,
+          explanation: "Toàn đoạn văn kể về việc chuẩn bị quà sinh nhật cho mẹ (어머니의 생신 선물)."
+        },
+
+        // PHẦN D (33-40) - 3đ/câu
+        {
+          id: "q33", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ sau thành câu hoàn chỉnh (\"Tôi thường uống cà phê ở quán cà phê.\"):",
+          tiles: ["보통", "커피를", "마셔요.", "저는", "카페에서"],
+          acceptedAnswers: [
+            "저는 보통 카페에서 커피를 마셔요.",
+            "보통 저는 카페에서 커피를 마셔요.",
+            "저는 카페에서 보통 커피를 마셔요."
+          ],
+          answerText: "저는 보통 카페에서 커피를 마셔요.",
+          explanation: "Trật tự chuẩn: Chủ ngữ (저는) + Trạng từ tần suất (보통) + Địa điểm hành động (카페에서) + Tân ngữ (커피를) + Vị ngữ (마셔요)."
+        },
+        {
+          id: "q34", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ sau thành câu hoàn chỉnh (\"Cuối tuần trước tôi đã xem phim cùng bạn.\"):",
+          tiles: ["봤어요.", "영화를", "지난 주말에", "친구하고", "저는"],
+          acceptedAnswers: [
+            "지난 주말에 저는 친구하고 영화를 봤어요.",
+            "저는 지난 주말에 친구하고 영화를 봤어요.",
+            "저는 친구하고 지난 주말에 영화를 봤어요."
+          ],
+          answerText: "지난 주말에 저는 친구하고 영화를 봤어요.",
+          explanation: "Thời gian (지난 주말에) và Chủ ngữ (저는) đứng đầu câu, sau đó đến đối tượng đi cùng (친구하고), tân ngữ (영화를) và động từ quá khứ (봤어요)."
+        },
+        {
+          id: "q35", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ sau thành câu hoàn chỉnh (\"Bố tôi không thể lái xe.\"):",
+          tiles: ["운전할", "우리", "없어요.", "수", "아버지께서는"],
+          acceptedAnswers: [
+            "우리 아버지께서는 운전할 수 없어요."
+          ],
+          answerText: "우리 아버지께서는 운전할 수 없어요.",
+          explanation: "Cấu trúc V + -(으)ㄹ 수 없다 (Bài 14) kết hợp chủ ngữ kính ngữ 아버지께서는."
+        },
+        {
+          id: "q36", section: "D", type: "error-fix", points: 3, typeLabel: "Dạng 10 • Tìm & Sửa lỗi sai",
+          prompt: "Tìm phần bị sai ngữ pháp trong câu và chọn cách sửa đúng (\"Mẹ tôi đang ở trong bếp.\"):",
+          segments: ["어머니께서", "지금", "부엌에서", "계세요."],
+          errorSegIndex: 2,
+          fixOptions: ["부엌에", "부엌을", "부엌로", "부엌부터"],
+          correctFixIndex: 0,
+          explanation: "계시다 là kính ngữ của 있다 (chỉ sự tồn tại ở một vị trí), nên địa điểm phải đi với tiểu từ 에 (부엌에), không dùng 에서."
+        },
+        {
+          id: "q37", section: "D", type: "error-fix", points: 3, typeLabel: "Dạng 10 • Tìm & Sửa lỗi sai",
+          prompt: "Tìm phần bị sai ngữ pháp trong câu và chọn cách sửa đúng (\"Vì trời mưa nên tôi đã không đi công viên.\"):",
+          segments: ["비가", "왔어서", "공원에", "안 갔어요."],
+          errorSegIndex: 1,
+          fixOptions: ["와서", "오면", "오러", "오지만"],
+          correctFixIndex: 0,
+          explanation: "Trước -아/어서 tuyệt đối không chia thì quá khứ -았/었-. Phải dùng 와서 (오다 + 아서 → 와서)."
+        },
+        {
+          id: "q38", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Hôm qua tôi đã đi đến thư viện để đọc sách.\"",
+          tiles: ["어제", "내일", "저는", "도서관에", "도서관에서", "책을", "책이", "읽으러", "읽기", "갔어요.", "가요."],
+          acceptedAnswers: [
+            "어제 저는 도서관에 책을 읽으러 갔어요.",
+            "저는 어제 도서관에 책을 읽으러 갔어요.",
+            "어제 저는 책을 읽으러 도서관에 갔어요.",
+            "저는 어제 책을 읽으러 도서관에 갔어요."
+          ],
+          answerText: "어제 저는 도서관에 책을 읽으러 갔어요.",
+          explanation: "Dùng 도서관에 (đích đến của 가다, không dùng 에서), 책을 (tân ngữ của 읽다), 읽으러 (đi để làm gì, không dùng 읽기 trước 갔어요), và thì quá khứ 갔어요 (vì có 어제)."
+        },
+        {
+          id: "q39", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Từ tháng sau tôi dự định sẽ học tiếng Hàn.\"",
+          tiles: ["다음 달부터", "다음 달에서", "저는", "한국어를", "한국어가", "배우러", "배우려고", "해요.", "했어요."],
+          acceptedAnswers: [
+            "다음 달부터 저는 한국어를 배우려고 해요.",
+            "저는 다음 달부터 한국어를 배우려고 해요."
+          ],
+          answerText: "다음 달부터 저는 한국어를 배우려고 해요.",
+          explanation: "Mốc thời gian 'từ...' dùng 부터 (다음 달부터, không dùng 에서); 'dự định làm gì' dùng -(으)려고 해요 (Bài 12)."
+        },
+        {
+          id: "q40", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Sở thích của tôi là nghe nhạc.\"",
+          tiles: ["제", "저를", "취미는", "취미를", "음악을", "듣는", "듣기", "것이에요.", "수 있어요."],
+          acceptedAnswers: [
+            "제 취미는 음악을 듣는 것이에요."
+          ],
+          answerText: "제 취미는 음악을 듣는 것이에요.",
+          explanation: "제 취미는 (sở thích của tôi là...) dùng cấu trúc danh từ hóa V + -는 것 + 이에요 (Bài 14): 음악을 듣는 것이에요."
+        }
+      ]
+    };
+
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>

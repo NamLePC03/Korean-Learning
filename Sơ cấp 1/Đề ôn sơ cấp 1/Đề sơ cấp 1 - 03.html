@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề sơ cấp 1 - 03 | Kiểm tra tổng hợp Tiếng Hàn Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const EXAM_DATA = {
+      id: "de-03",
+      badge: "ĐỀ SỐ 03 • BÀI 1–15",
+      title: "Đề Kiểm Tra Sơ Cấp 1 — Đề 03",
+      subtitle: "Trọng tâm Chia động/tính từ Bất quy tắc (ㅡ, ㄹ, ㄷ, ㅂ, ㅅ, 르), Phủ định (안 vs 못) và Thời tiết – Sức khỏe – Sở thích.",
+      durationMinutes: 45,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Từ vựng", title: "Phần A: Từ vựng & Nền tảng (Câu 1–10)", desc: "Kiểm tra từ vựng thời tiết, sức khỏe, sở thích, trái nghĩa, phát âm và số đếm (20 điểm)." },
+        { id: "B", shortTitle: "Phần B: Ngữ pháp", title: "Phần B: Ngữ pháp, Tiểu từ & Bất quy tắc (Câu 11–24)", desc: "Kiểm tra phủ định, chia bất quy tắc và tiểu từ Sơ cấp 1 (32 điểm)." },
+        { id: "C", shortTitle: "Phần C: Đọc hiểu", title: "Phần C: Đọc hiểu (Câu 25–32)", desc: "Đọc thông báo thời tiết, lời nhắn và 2 đoạn văn ngắn (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Viết câu", title: "Phần D: Viết câu bằng Ghép thẻ & Sửa lỗi (Câu 33–40)", desc: "Sắp xếp câu, sửa lỗi bất quy tắc/phủ định và ghép câu Việt–Hàn (24 điểm)." }
+      ],
+      passages: {
+        p1: {
+          label: "Đoạn văn 1 (Câu 28–29)",
+          text: "우리 고향은 사계절이 있습니다. 봄에는 꽃이 많이 피고 날씨가 따뜻합니다. 여름에는 날씨가 덥고 비가 자주 옵니다. (   ㉠   ) 여름에 수영을 하러 바다에 사람들이 많이 갑니다. 가을에는 하늘이 맑고 경치가 아주 아름답습니다. 겨울에는 눈이 많이 오고 아주 춥습니다. 저는 가을을 제일 좋아합니다."
+        },
+        p2: {
+          label: "Đoạn văn 2 (Câu 30–32)",
+          text: "오늘 아침에 저는 감기에 걸렸습니다. 목이 아프고 열도 조금 있었습니다. 그래서 오전 수업에 못 갔습니다. 아침 9시에 집 근처 병원에 갔습니다. 의사 선생님께서 저에게 약을 주셨습니다. 그리고 저에게 친절하게 말씀하셨습니다. 저는 약국에서 약을 샀습니다. 지금은 약을 먹고 집에서 쉽니다."
+        }
+      },
+      questions: [
+        // PHẦN A (1-10)
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn từ thích hợp nhất điền vào chỗ trống:",
+          koStem: "밖에 눈이 많이 와요. 장갑을 (      ).",
+          options: ["마시세요", "쓰세요", "끼세요", "신으세요"],
+          answer: 2,
+          explanation: "Đeo găng tay (장갑) dùng động từ 끼다 → 끼세요. 쓰다 dùng cho mũ/kính/ô, 신다 dùng cho giày/tất."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn từ thích hợp nhất điền vào chỗ trống:",
+          koStem: "내일은 친구의 생일이에요. 그래서 오늘 백화점에서 (      )을 고르고 싶어요.",
+          options: ["선물", "숙제", "약속", "질문"],
+          answer: 0,
+          explanation: "Sinh nhật bạn nên muốn chọn quà (선물) ở cửa hàng bách hóa."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn động từ thích hợp khi nói về giao thông:",
+          koStem: "시청에 가려고 해요. 2호선으로 (      ) 가세요.",
+          options: ["내려서", "갈아타고", "걸어서", "건너서"],
+          answer: 1,
+          explanation: "갈아타다 (chuyển tuyến/đổi xe) → 2호선으로 갈아타고 가세요 (hãy chuyển sang tuyến số 2 rồi đi)."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn danh từ thích hợp nhất với tình huống:",
+          koStem: "수업이 다 끝났어요. 그런데 오늘 오후에 약속이 없어서 (      )이 아주 많아요.",
+          options: ["시간", "날씨", "장소", "요일"],
+          answer: 0,
+          explanation: "시간이 많다: có nhiều thời gian (rảnh rỗi)."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 1 • Từ vựng ngữ cảnh",
+          prompt: "Chọn tính từ miêu tả phù hợp:",
+          koStem: "이 운동화는 발에 딱 맞고 아주 (      ).",
+          options: ["편해요", "달라요", "복잡해요", "위험해요"],
+          answer: 0,
+          explanation: "Giày thể thao vừa chân và rất thoải mái/tiện (편해요). 다르다: khác, 복잡하다: đông đúc/phức tạp, 위험하다: nguy hiểm."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Từ trái nghĩa",
+          prompt: "Chọn từ trái nghĩa với từ '가깝다' (gần):",
+          koStem: "가깝다 ↔ (      )",
+          options: ["많다", "멀다", "높다", "길다"],
+          answer: 1,
+          explanation: "가깝다 (gần) ↔ 멀다 (xa). 많다 (nhiều), 높다 (cao), 길다 (dài)."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Quy tắc phát âm",
+          prompt: "Chọn cách phát âm đúng của từ sau (bật hơi hóa 거센소리되기):",
+          koStem: "좋다",
+          options: ["[좋다]", "[조다]", "[조타]", "[졷타]"],
+          answer: 2,
+          explanation: "ㅎ gặp ㄷ kết hợp thành âm bật hơi ㅌ → đọc là [조타]."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 2 • Quy tắc phát âm",
+          prompt: "Chọn cách phát âm đúng của từ sau (vòm họng hóa 구개음화):",
+          koStem: "같이",
+          options: ["[가티]", "[가치]", "[갖이]", "[간니]"],
+          answer: 1,
+          explanation: "Phụ âm cuối ㅌ khi gặp nguyên âm 이 sẽ biến thành ㅊ → đọc là [가치]."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 3 • Số thuần Hàn & Hán Hàn",
+          prompt: "Chọn cách đọc đúng cho số tuổi và số lượng sách: \"22 tuổi, 5 quyển sách\"",
+          koStem: "22살, 책 5권",
+          options: ["이십이 살, 책 오 권", "스물두 살, 책 다섯 권", "스물둘 살, 책 다섯 권", "이십이 살, 책 다섯 권"],
+          answer: 1,
+          explanation: "Tuổi và đơn vị đếm 권 đều dùng số thuần Hàn; trước 살 thì 둘 → 두 (스물두 살, 책 다섯 권)."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Dạng 3 • Số thuần Hàn & Hán Hàn",
+          prompt: "Chọn cách đọc đúng cho thời lượng và số phút: \"3 tiếng 20 phút\"",
+          koStem: "3시간 20분",
+          options: ["삼 시간 이십 분", "세 시간 스무 분", "세 시간 이십 분", "삼 시간 스무 분"],
+          answer: 2,
+          explanation: "Số tiếng (시간) dùng số thuần Hàn (세 시간), số phút (분) dùng số Hán Hàn (이십 분)."
+        },
+
+        // PHẦN B (11-24)
+        {
+          id: "q11", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng điền vào chỗ trống:",
+          koStem: "학생이 교실(      ) 한국어 책을 읽어요.",
+          options: ["에", "에서", "로", "부터"],
+          answer: 1,
+          explanation: "읽다 (đọc) là hành động diễn ra tại phòng học → dùng 에서."
+        },
+        {
+          id: "q12", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng điền vào chỗ trống:",
+          koStem: "어제 저녁 8시(      ) 밤 11시(      ) 집에서 숙제를 했어요.",
+          options: ["에서 / 까지", "부터 / 까지", "에 / 에", "부터 / 에"],
+          answer: 1,
+          explanation: "Khoảng thời gian 'từ 8 giờ tối đến 11 giờ đêm' dùng N(thời gian)+부터 ~ N(thời gian)+까지 (Bài 11)."
+        },
+        {
+          id: "q13", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng cho phương tiện/công cụ:",
+          koStem: "이 편지를 한국어(      ) 썼어요.",
+          options: ["를", "에", "로", "하고"],
+          answer: 2,
+          explanation: "Bằng ngôn ngữ gì / công cụ gì dùng N+(으)로 (Bài 15): 한국어로 (bằng tiếng Hàn)."
+        },
+        {
+          id: "q14", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng cho câu phủ định danh từ:",
+          koStem: "저는 일본 사람이 아니에요. 베트남 사람(      ).",
+          options: ["이 아니에요", "이에요", "예요", "입니다요"],
+          answer: 1,
+          explanation: "사람 có phụ âm cuối ㅁ nên đi với 이에요 (베트남 사람이에요)."
+        },
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 4 • Tiểu từ",
+          prompt: "Chọn tiểu từ đúng điền vào chỗ trống:",
+          koStem: "누구(      ) 전화를 걸었어요? — 고향 친구한테 걸었어요.",
+          options: ["께서", "한테", "에서", "를"],
+          answer: 1,
+          explanation: "Câu trả lời dùng 한테 (친구한테) nên câu hỏi tương ứng là 누구한테 / 누구에게."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn phương án phù hợp nhất với sắc thái phủ định:",
+          koStem: "저는 매운 음식을 먹을 수 있어요. 하지만 오늘은 배가 아파서 김치찌개를 (      ).",
+          options: ["안 먹어요", "못 먹어요", "먹고 싶지 않아요", "먹고 싶어요"],
+          answer: 1,
+          explanation: "Có thể ăn cay, nhưng hôm nay vì đau bụng nên không thể ăn (lý do sức khỏe khách quan) → 못 먹어요."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn cấu trúc đúng thể hiện ý chí/dự định tương lai:",
+          koStem: "이번 방학에 제주도에 여행을 (      ).",
+          options: ["가려고 해요", "가러 해요", "갔어요", "갈 수 없어요"],
+          answer: 0,
+          explanation: "Dự định làm gì dùng V+(으)려고 하다 → 가려고 해요 (Bài 12). -(으)러 chỉ đi với 가다/오다, không đi với 하다."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu ĐÚNG với cấu trúc -(으)ㄹ까요?:",
+          koStem: "A: 날씨가 너무 더워요. 에어컨을 (      )?\nB: 네, 켜 주세요.",
+          options: ["켤까요", "켜러 갈까요", "켰어요", "켜세요"],
+          answer: 0,
+          explanation: "Hỏi ý kiến đối phương xem mình làm gì cho họ ('Tôi bật điều hòa nhé?') dùng V+(으)ㄹ까요? (Bài 13)."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu ĐÚNG ngữ pháp khi danh từ hóa động từ (-기 / -는 것):",
+          koStem: "저는 주말에 한국 영화 (      )을 좋아해요.",
+          options: ["보다", "보기", "보는 것", "볼 수"],
+          answer: 2,
+          explanation: "Trước tiểu từ tân ngữ 을 phù hợp nhất là 보는 것 (영화 보는 것을 좋아해요 - Bài 14)."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Dạng 5 • Bẫy ngữ pháp",
+          prompt: "Chọn câu ĐÚNG khi dùng với động từ 고프다 (đói) / 아프다 (đau):",
+          koStem: "아침을 못 먹어서 지금 배가 너무 (      ).",
+          options: ["고파요", "고프어요", "고팠어요", "고프겠어요"],
+          answer: 0,
+          explanation: "지금 (bây giờ) dùng thì hiện tại; 고프다 rụng ㅡ, âm trước là ㅗ → 고파요."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia tính từ 덥다 (nóng) sang thì quá khứ -았/었어요:",
+          koStem: "지난여름에는 비가 안 와서 날씨가 정말 (      ).",
+          options: ["덥었어요", "더웠어요", "더왔어요", "덥았어요"],
+          answer: 1,
+          explanation: "덥다 thuộc bất quy tắc ㅂ: ㅂ → 우, cộng 었어요 → 더웠어요."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia động từ 묻다 (hỏi) sang đuôi -아/어요:",
+          koStem: "선생님께 한국어 질문을 (      ).",
+          options: ["묻어요", "물어요", "물러요", "묻아요"],
+          answer: 1,
+          explanation: "묻다 (hỏi) thuộc bất quy tắc ㄷ (Bài 14): ㄷ → ㄹ khi gặp nguyên âm → 물어요. (Chú ý: 묻다 nghĩa 'chôn' mới chia thường, còn 'hỏi' biến thành 물어요)."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia động từ 낫다 (khỏi bệnh) sang thì quá khứ -았/었어요:",
+          koStem: "약을 먹고 푹 쉬어서 감기가 다 (      ).",
+          options: ["낫았어요", "나았어요", "났어요", "낫었어요"],
+          answer: 1,
+          explanation: "낫다 thuộc bất quy tắc ㅅ: khi gặp nguyên âm thì ㅅ rụng đi (không nhập âm!) → 나 + 았어요 = 나았어요."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 3, typeLabel: "Dạng 6 • Chia từ & Bất quy tắc",
+          prompt: "Chia tính từ 빠르다 (nhanh) sang đuôi -아/어요:",
+          koStem: "KTX는 정말 (      ).",
+          options: ["빠르어요", "빨라요", "빠러요", "빨러요"],
+          answer: 1,
+          explanation: "빠르다 thuộc bất quy tắc 르: rụng ㅡ, thêm ㄹ vào âm trước (빠 → 빨), vì có ㅏ nên cộng 아요 → 빨라요."
+        },
+
+        // PHẦN C (25-32)
+        {
+          id: "q25", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Dự báo thời tiết",
+          prompt: "Đọc bản tin thời tiết ngắn và chọn câu ĐÚNG:",
+          noticeBox: "[오늘의 날씨]\n• 서울: 맑음, 최고 18도 (바람이 조금 붑니다)\n• 부산: 비가 옵니다, 최고 20도\n• 제주: 구름이 많고 바람이 강합니다",
+          options: [
+            "오늘 서울에 비가 옵니다.",
+            "부산에서는 오늘 우산이 필요합니다.",
+            "제주도는 하늘이 아주 맑습니다.",
+            "오늘 서울과 부산은 모두 눈이 옵니다."
+          ],
+          answer: 1,
+          explanation: "Ở Busan trời đang mưa (비가 옵니다) nên ở Busan cần ô (우산이 필요합니다)."
+        },
+        {
+          id: "q26", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Tin nhắn",
+          prompt: "Đọc tin nhắn và chọn việc Lan sẽ làm chiều nay:",
+          noticeBox: "하영 씨, 저 란이에요.\n오늘 오후에 같이 도서관에 가려고 했어요.\n그런데 동생이 학교에서 다쳤어요.\n그래서 오늘 오후에 동생하고 병원에 갈 거예요.\n내일 학교에서 만나요!",
+          options: [
+            "란 씨는 오후에 도서관에 갈 거예요.",
+            "하영 씨가 학교에서 다쳤어요.",
+            "란 씨는 동생과 병원에 갈 거예요.",
+            "두 사람은 오늘 밤에 만날 거예요."
+          ],
+          answer: 2,
+          explanation: "Em của Lan bị thương nên chiều nay Lan sẽ đi bệnh viện cùng em (동생하고 병원에 갈 거예요)."
+        },
+        {
+          id: "q27", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 7 • Nội quy",
+          prompt: "Đọc thông báo phòng tập thể dục và chọn câu KHÔNG ĐÚNG:",
+          noticeBox: "<체육관 이용 안내>\n1. 운동복과 운동화를 꼭 가져오세요.\n2. 월요일에는 쉬지만 화요일부터 일요일까지 문을 엽니다.\n3. 아침 6시부터 밤 10시까지 운동할 수 있습니다.",
+          options: [
+            "월요일에는 체육관에 갈 수 없어요.",
+            "밤 9시에 체육관에서 운동할 수 있어요.",
+            "체육관에 운동복하고 운동화를 가져가세요.",
+            "일요일에는 체육관 문을 안 열어요."
+          ],
+          answer: 3,
+          explanation: "Thông báo ghi thứ Ba đến Chủ nhật đều mở cửa (화요일부터 일요일까지 문을 엽니다), chỉ nghỉ thứ Hai."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 1",
+          passageId: "p1",
+          prompt: "Chọn từ nối thích hợp nhất điền vào chỗ ( ㉠ ) trong Đoạn văn 1:",
+          options: ["그래서", "하지만", "그리고", "그런데"],
+          answer: 0,
+          explanation: "Mùa hè trời nóng (날씨가 덥고) → VÌ THẾ (그래서) có nhiều người đi biển bơi lội."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 1",
+          passageId: "p1",
+          prompt: "Người viết thích mùa nào nhất trong Đoạn văn 1?",
+          options: ["봄", "여름", "가을", "겨울"],
+          answer: 2,
+          explanation: "Câu cuối viết: '저는 가을을 제일 좋아합니다' → Thích mùa thu (가을) nhất."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Vì sao người viết không thể đi học buổi sáng?",
+          options: [
+            "늦게 일어나서 못 갔습니다.",
+            "감기에 걸려서 못 갔습니다.",
+            "비가 너무 많이 와서 못 갔습니다.",
+            "약국에 아르바이트가 있어서 못 갔습니다."
+          ],
+          answer: 1,
+          explanation: "Đoạn văn nêu rõ bị cảm (감기에 걸렸습니다), đau họng và hơi sốt nên không thể đi học buổi sáng."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Người viết đã đi đâu vào lúc 9 giờ sáng?",
+          options: ["학교", "약국", "집 근처 병원", "도서관"],
+          answer: 2,
+          explanation: "'아침 9시에 집 근처 병원에 갔습니다' → Đã đi bệnh viện gần nhà lúc 9 giờ sáng."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 3, typeLabel: "Dạng 8 • Đọc hiểu Đoạn 2",
+          passageId: "p2",
+          prompt: "Câu nào ĐÚNG với nội dung Đoạn văn 2?",
+          options: [
+            "의사 선생님은 저에게 책을 주셨습니다.",
+            "저는 병원에서 약을 샀습니다.",
+            "지금 저는 약을 먹고 집에서 쉽니다.",
+            "저는 오후에 학교에 갈 것입니다."
+          ],
+          answer: 2,
+          explanation: "Mua thuốc ở hiệu thuốc (약국), và hiện tại uống thuốc rồi nghỉ ngơi ở nhà."
+        },
+
+        // PHẦN D (33-40)
+        {
+          id: "q33", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ thành câu đúng (\"Chiều nay trời có thể sẽ mưa.\"):",
+          tiles: ["올", "비가", "오늘", "거예요.", "오후에"],
+          acceptedAnswers: [
+            "오늘 오후에 비가 올 거예요."
+          ],
+          answerText: "오늘 오후에 비가 올 거예요.",
+          explanation: "Thời gian (오늘 오후에) + Chủ ngữ (비가) + Thì tương lai/phỏng đoán (올 거예요)."
+        },
+        {
+          id: "q34", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ thành câu đúng (\"Tôi thích đá bóng cùng bạn bè.\"):",
+          tiles: ["좋아해요.", "친구들하고", "축구를", "저는", "하는 것을"],
+          acceptedAnswers: [
+            "저는 친구들하고 축구를 하는 것을 좋아해요."
+          ],
+          answerText: "저는 친구들하고 축구를 하는 것을 좋아해요.",
+          explanation: "Cấu trúc danh từ hóa V + -는 것을 좋아해요 (Bài 14)."
+        },
+        {
+          id: "q35", section: "D", type: "tile-order", points: 3, typeLabel: "Dạng 9 • Sắp xếp câu",
+          prompt: "Sắp xếp các thẻ từ thành câu đúng (\"Vì bài tập nhiều nên tối nay tôi không thể gặp bạn.\"):",
+          tiles: ["못", "숙제가", "만나요.", "친구를", "많아서", "오늘 밤에"],
+          acceptedAnswers: [
+            "숙제가 많아서 오늘 밤에 친구를 못 만나요.",
+            "오늘 밤에 숙제가 많아서 친구를 못 만나요."
+          ],
+          answerText: "숙제가 많아서 오늘 밤에 친구를 못 만나요.",
+          explanation: "Mệnh đề nguyên nhân (숙제가 많아서) + Thời gian + Tân ngữ + 못 만나요."
+        },
+        {
+          id: "q36", section: "D", type: "error-fix", points: 3, typeLabel: "Dạng 10 • Tìm & Sửa lỗi sai",
+          prompt: "Tìm phần bị sai trong câu và chọn cách sửa đúng (\"Mùa đông ở Hà Nội không lạnh lắm.\"):",
+          segments: ["하노이의", "겨울은", "별로", "춥어요."],
+          errorSegIndex: 3,
+          fixOptions: ["추워요.", "안 추워요.", "추와요.", "안 춥어요."],
+          correctFixIndex: 1,
+          explanation: "Thứ nhất, phó từ 별로 luôn đi với phủ định (안 / -지 않다). Thứ hai, 춥다 bất quy tắc ㅂ chia thành 추워요 → phải sửa thành 안 추워요."
+        },
+        {
+          id: "q37", section: "D", type: "error-fix", points: 3, typeLabel: "Dạng 10 • Tìm & Sửa lỗi sai",
+          prompt: "Tìm phần bị sai trong câu và chọn cách sửa đúng (\"Hãy nghe kỹ lời cô giáo nhé.\"):",
+          segments: ["선생님", "말씀을", "잘", "듣으세요."],
+          errorSegIndex: 3,
+          fixOptions: ["들으세요.", "들세요.", "듣세요.", "들었어요."],
+          correctFixIndex: 0,
+          explanation: "듣다 thuộc bất quy tắc ㄷ: khi gặp -(으)세요 (bắt đầu bằng nguyên âm 으), ㄷ chuyển thành ㄹ → 들으세요."
+        },
+        {
+          id: "q38", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Tôi không thể nấu món ăn Hàn Quốc.\"",
+          tiles: ["저는", "한국 음식을", "한국 음식에", "안", "만들", "만들을", "수", "없어요.", "있어요."],
+          acceptedAnswers: [
+            "저는 한국 음식을 만들 수 없어요."
+          ],
+          answerText: "저는 한국 음식을 만들 수 없어요.",
+          explanation: "만들다 kết thúc bằng ㄹ nên với -(으)ㄹ 수 없다 giữ nguyên 만들 수 없어요 (không viết 만들을)."
+        },
+        {
+          id: "q39", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Hôm nay thời tiết rất ấm áp.\"",
+          tiles: ["오늘", "날씨가", "날씨를", "아주", "따뜻해요.", "따뜻하요.", "따뜻했어요."],
+          acceptedAnswers: [
+            "오늘 날씨가 아주 따뜻해요."
+          ],
+          answerText: "오늘 날씨가 아주 따뜻해요.",
+          explanation: "따뜻하다 chia hiện tại là 따뜻해요 (không phải 따뜻하요), chủ ngữ 날씨가."
+        },
+        {
+          id: "q40", section: "D", type: "tile-build", points: 3, typeLabel: "Dạng 11 • Dịch Việt–Hàn (Ngân hàng thẻ)",
+          prompt: "Ghép câu tiếng Hàn đúng nghĩa: \"Cuối tuần này bạn muốn làm gì?\"",
+          tiles: ["이번 주말에", "이번 주말에서", "뭐", "하고", "싶어요?", "싶었어요?", "할래요?"],
+          acceptedAnswers: [
+            "이번 주말에 뭐 하고 싶어요?"
+          ],
+          answerText: "이번 주말에 뭐 하고 싶어요?",
+          explanation: "Thời gian dùng 에 (이번 주말에); 'muốn làm gì' dùng 뭐 하고 싶어요? (Bài 7)."
+        }
+      ]
+    };
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>
