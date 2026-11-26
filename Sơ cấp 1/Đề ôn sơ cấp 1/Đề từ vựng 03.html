@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề từ vựng 03 | Kiểm tra Từ vựng Tiếng Hàn Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./assets/vocab-suite.js"></script>
+  <script>
+    const EXAM_DATA = {
+      id: "tv-03",
+      suite: window.VOCAB_SUITE,
+      badge: "ĐỀ TỪ VỰNG 03 • HỌC TẬP, GIAO THÔNG, GIẢI TRÍ & THỜI TIẾT",
+      title: "Đề Kiểm Tra Từ Vựng Sơ Cấp 1 — Đề 03",
+      subtitle: "Tập trung nhóm chủ đề: Trường học & Công việc, Giao thông, Giải trí, Thời tiết & Tự nhiên, Giao tiếp xã hội (50 câu — 0% bẫy ngữ pháp).",
+      durationMinutes: 30,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Hàn ↔ Việt", title: "Phần A: Nhận diện & Truy xuất nghĩa (Câu 1–14)", desc: "Kiểm tra nghĩa trực tiếp Hàn → Việt và Việt → Hàn ở dạng nguyên thể (28 điểm)." },
+        { id: "B", shortTitle: "Phần B: Trái nghĩa & Nhóm", title: "Phần B: Trái nghĩa & Phân loại nhóm từ (Câu 15–26)", desc: "Tìm từ trái nghĩa và tìm 1 từ khác nhóm chủ đề trong 4 từ (24 điểm)." },
+        { id: "C", shortTitle: "Phần C: Cụm từ & Đơn vị", title: "Phần C: Cụm từ cố định & Đơn vị đếm (Câu 27–38)", desc: "Chọn từ kết hợp đúng nghĩa trong học tập, giao thông, thời tiết và đơn vị đếm (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Nghe, Đọc & Nối", title: "Phần D: Nghe phát âm, Quy tắc đọc & Ghép cặp (Câu 39–50)", desc: "Nghe âm thanh 🔊 chọn nghĩa, đọc nối âm/biến âm từ đơn và nối cặp Hàn↔Việt (24 điểm)." }
+      ],
+      questions: [
+        // PHẦN A (1-14)
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "횡단보도", speakText: "횡단보도",
+          options: ["Cầu vượt", "Đường hầm", "Vạch qua đường cho người đi bộ", "Đèn tín hiệu giao thông"],
+          answer: 2,
+          explanation: "횡단보도 là vạch sang đường cho người đi bộ. 육교: cầu vượt, 지하도: đường hầm, 신호등: đèn giao thông."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của động từ sau:",
+          koStem: "복습하다", speakText: "복습하다",
+          options: ["Chuẩn bị trước bài mới", "Ôn tập lại bài cũ", "Luyện tập, rèn luyện", "Học chuyên ngành"],
+          answer: 1,
+          explanation: "복습하다 (phục tập) là ôn lại bài cũ. 예습하다 (dự tập): chuẩn bị trước bài mới, 연습하다: luyện tập, 전공하다: học chuyên ngành."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "우체국", speakText: "우체국",
+          options: ["Ngân hàng", "Đại sứ quán", "Bưu điện", "Sở cảnh sát"],
+          answer: 2,
+          explanation: "우체국 là bưu điện. 은행: ngân hàng, 대사관: đại sứ quán, 경찰서: sở cảnh sát."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của tính từ sau:",
+          koStem: "쌀쌀하다", speakText: "쌀쌀하다",
+          options: ["Ấm áp", "Se se lạnh", "Âm u, nhiều mây", "Trong xanh, quang đãng"],
+          answer: 1,
+          explanation: "쌀쌀하다 là thời tiết se se lạnh. 따뜻하다: ấm áp, 흐리다: âm u, 맑다: quang đãng."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "장학금", speakText: "장학금",
+          options: ["Điểm số", "Thành tích học tập", "Học bổng", "Ký túc xá"],
+          answer: 2,
+          explanation: "장학금 là học bổng. 점수: điểm số, 성적: thành tích, 기숙사: ký túc xá."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "건너편", speakText: "건너편",
+          options: ["Bên cạnh", "Phía đối diện, bên kia đường", "Vùng lân cận", "Khoảng giữa"],
+          answer: 1,
+          explanation: "건너편 (cũng dùng 맞은편) là phía đối diện. 옆: bên cạnh, 근처: gần đây, 사이: khoảng giữa."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của động từ sau:",
+          koStem: "퇴근하다", speakText: "퇴근하다",
+          options: ["Đi làm", "Đi công tác", "Tan tầm, tan làm", "Họp hội nghị"],
+          answer: 2,
+          explanation: "퇴근하다 là tan tầm. 출근하다: đi làm, 출장을 가다: đi công tác, 회의하다: họp."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"đổi xe, chuyển tuyến\":",
+          koStem: "Nghĩa: \"Đổi xe, chuyển tuyến\"",
+          options: ["출발하다", "갈아타다", "운전하다", "내리다"],
+          answer: 1,
+          explanation: "갈아타다 là đổi xe/chuyển tuyến (xe buýt, tàu điện). 출발하다: xuất phát, 운전하다: lái xe, 내리다: xuống xe."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"cục tẩy, gôm\":",
+          koStem: "Nghĩa: \"Cục tẩy, gôm\"",
+          options: ["연필", "지우개", "필통", "공책"],
+          answer: 1,
+          explanation: "지우개 là cục tẩy/gôm. 연필: bút chì, 필통: hộp bút, 공책: vở."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"nhiệt độ âm (dưới 0 độ)\":",
+          koStem: "Nghĩa: \"Dưới 0 độ, độ âm\"",
+          options: ["영상", "영하", "기온", "단풍"],
+          answer: 1,
+          explanation: "영하 (lĩnh hạ) là độ âm (dưới 0°C). 영상: độ dương (trên 0°C), 기온: nhiệt độ, 단풍: lá phong."
+        },
+        {
+          id: "q11", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"sạc pin, dây sạc\":",
+          koStem: "Nghĩa: \"Cục sạc, dây sạc pin\"",
+          options: ["배터리", "화면", "충전기", "비밀번호"],
+          answer: 2,
+          explanation: "충전기 là cục sạc/dây sạc. 배터리: pin, 화면: màn hình, 비밀번호: mật khẩu."
+        },
+        {
+          id: "q12", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"bãi đỗ xe\":",
+          koStem: "Nghĩa: \"Bãi đỗ xe\"",
+          options: ["주유소", "주차장", "기차역", "버스 터미널"],
+          answer: 1,
+          explanation: "주차장 là bãi đỗ xe. 주유소: trạm xăng, 기차역: ga tàu hỏa, 버스 터미널: bến xe khách."
+        },
+        {
+          id: "q13", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"nhờ cậy, yêu cầu\":",
+          koStem: "Nghĩa: \"Nhờ cậy, yêu cầu\"",
+          options: ["대답하다", "질문하다", "부탁하다", "축하하다"],
+          answer: 2,
+          explanation: "부탁하다 là nhờ vả, nhờ cậy. 대답하다: trả lời, 질문하다: đặt câu hỏi, 축하하다: chúc mừng."
+        },
+        {
+          id: "q14", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"nhà thi đấu thể thao\":",
+          koStem: "Nghĩa: \"Nhà thi đấu thể thao\"",
+          options: ["운동장", "체육관", "박물관", "극장"],
+          answer: 1,
+          explanation: "체육관 là nhà thi đấu thể thao (trong nhà). 운동장: sân vận động, 박물관: bảo tàng, 극장: rạp phim/nhà hát."
+        },
+
+        // PHẦN B (15-26)
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "가깝다 (gần) ↔ ?",
+          options: ["빠르다", "멀다", "느리다", "길다"],
+          answer: 1,
+          explanation: "가깝다 (gần) trái nghĩa với 멀다 (xa). 빠르다 ↔ 느리다 (nhanh ↔ chậm), 길다: dài."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "덥다 (nóng) ↔ ?",
+          options: ["따뜻하다", "춥다", "맑다", "밝다"],
+          answer: 1,
+          explanation: "덥다 (nóng - thời tiết) trái nghĩa với 춥다 (lạnh). 따뜻하다: ấm áp, 맑다: quang đãng, 밝다: sáng sủa."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "두껍다 (dày - sách/áo) ↔ ?",
+          options: ["쉽다", "얇다", "좁다", "짧다"],
+          answer: 1,
+          explanation: "두껍다 (dày) trái nghĩa với 얇다 (mỏng). 쉽다: dễ, 좁다: hẹp, 짧다: ngắn."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "밝다 (sáng sủa) ↔ ?",
+          options: ["흐리다", "어둡다", "무겁다", "낮다"],
+          answer: 1,
+          explanation: "밝다 (sáng sủa) trái nghĩa với 어둡다 (tối tăm). 흐리다: âm u, 무겁다: nặng, 낮다: thấp."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn động từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "빌리다 (mượn) ↔ ?",
+          options: ["돌려주다", "준비하다", "졸업하다", "질문하다"],
+          answer: 0,
+          explanation: "빌리다 (mượn/thuê) đối lập với 돌려주다 (trả lại). (Cũng có cặp 빌려주다: cho mượn)."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn động từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "타다 (lên xe) ↔ ?",
+          options: ["걷다", "내리다", "오다", "들어가다"],
+          answer: 1,
+          explanation: "타다 (lên xe) trái nghĩa với 내리다 (xuống xe). 걷다: đi bộ, 오다: đến."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ dụng cụ học tập",
+          options: ["볼펜", "가위", "자", "칠판"],
+          answer: 3,
+          explanation: "볼펜 (bút bi), 가위 (kéo), 자 (thước kẻ) là đồ dùng học tập cá nhân; 칠판 là cái bảng (trang bị lớp học)."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ môn thể thao dùng bóng",
+          options: ["축구", "야구", "농구", "수영"],
+          answer: 3,
+          explanation: "축구 (bóng đá), 야구 (bóng chày), 농구 (bóng rổ) đều dùng bóng; 수영 là môn bơi lội."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ phương hướng",
+          options: ["동", "서", "남", "밖"],
+          answer: 3,
+          explanation: "동 (đông), 서 (tây), 남 (nam) là 4 hướng Đông-Tây-Nam-Bắc; 밖 là bên ngoài."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ động vật",
+          options: ["호랑이", "고양이", "물고기", "단풍"],
+          answer: 3,
+          explanation: "호랑이 (hổ), 고양이 (mèo), 물고기 (cá) là động vật; 단풍 là lá phong/lá mùa thu."
+        },
+        {
+          id: "q25", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về phương tiện giao thông đường bộ",
+          options: ["자전거", "오토바이", "자동차", "비행기"],
+          answer: 3,
+          explanation: "자전거 (xe đạp), 오토바이 (xe máy), 자동차 (ô tô) đi đường bộ; 비행기 là máy bay."
+        },
+        {
+          id: "q26", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về công nghệ / internet",
+          options: ["와이파이", "아이디", "노트북", "우체국"],
+          answer: 3,
+          explanation: "와이파이 (wifi), 아이디 (ID), 노트북 (laptop) thuộc chủ đề công nghệ; 우체국 là bưu điện."
+        },
+
+        // PHẦN C (27-38)
+        {
+          id: "q27", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp đi với 사진 (ảnh):",
+          koStem: "카메라 → 사진을 (      ) — \"Chụp ảnh\"",
+          options: ["찍다", "치다", "추다", "모으다"],
+          answer: 0,
+          explanation: "사진을 찍다 là chụp ảnh. 치다: đánh/chơi (tennis, piano), 추다: nhảy múa (춤을 추다), 모으다: sưu tầm."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp đi với 춤 (điệu nhảy):",
+          koStem: "음악 → 춤을 (      ) — \"Nhảy múa\"",
+          options: ["찍다", "추다", "부르다", "치다"],
+          answer: 1,
+          explanation: "춤을 추다 là nhảy múa. 노래를 부르다: hát, 사진을 찍다: chụp ảnh, 테니스를 치다: đánh tennis."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp hoàn thành cụm về thời tiết:",
+          koStem: "태풍/가을 → 바람이 (      ) — \"Gió thổi\"",
+          options: ["그치다", "불다", "막히다", "나다"],
+          answer: 1,
+          explanation: "바람이 불다 là gió thổi. 비가 그치다: mưa tạnh, 길이 막히다: tắc đường, 사고가 나다: xảy ra tai nạn."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"nghe máy / nhận cuộc gọi\":",
+          koStem: "전화를 (      ) — \"Nghe điện thoại\"",
+          options: ["끊다", "받다", "걸다", "바꾸다"],
+          answer: 1,
+          explanation: "전화를 받다 là nhận/nghe điện thoại. 걸다: gọi, 끊다: cúp máy, 바꾸다: chuyển máy."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"tạnh (mưa) / ngừng rơi (tuyết)\":",
+          koStem: "우산 접기 → 비가 (      ) — \"Mưa tạnh\"",
+          options: ["그치다", "내리다", "불다", "출발하다"],
+          answer: 0,
+          explanation: "비가 그치다 là mưa tạnh. 비가 오다/내리다: trời mưa."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng đi với 시험 (kỳ thi):",
+          koStem: "공부하다 → 시험을 (      ) — \"Thi, làm bài kiểm tra\"",
+          options: ["보다", "듣다", "읽다", "쓰다"],
+          answer: 0,
+          explanation: "시험을 보다 là cụm cố định nghĩa là thi / làm bài kiểm tra."
+        },
+        {
+          id: "q33", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng hoàn thành cụm chỉ tình trạng giao thông:",
+          koStem: "자동차 많음 → 길이 (      ) — \"Tắc đường\"",
+          options: ["막히다", "걸리다", "나오다", "들어가다"],
+          answer: 0,
+          explanation: "길이 막히다 là tắc đường/kẹt xe. 시간이 걸리다: mất thời gian."
+        },
+        {
+          id: "q34", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"gửi (tin nhắn/hồi âm)\":",
+          koStem: "답장을 (      ) — \"Gửi tin nhắn trả lời\"",
+          options: ["보내다", "묻다", "누르다", "검색하다"],
+          answer: 0,
+          explanation: "답장을 보내다 là gửi tin trả lời. 묻다: hỏi, 누르다: bấm nút, 검색하다: tìm kiếm trên mạng."
+        },
+        {
+          id: "q35", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho sách / vở / từ điển:",
+          koStem: "사전 두 (      ) — \"Hai quyển từ điển\"",
+          options: ["장", "권", "대", "마리"],
+          answer: 1,
+          explanation: "권 là đơn vị đếm sách, vở, từ điển. 장: tờ/trang, 대: xe cộ/máy móc, 마리: động vật."
+        },
+        {
+          id: "q36", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho xe cộ / máy móc:",
+          koStem: "자동차 한 (      ) — \"Một chiếc ô tô\"",
+          options: ["대", "마리", "권", "개"],
+          answer: 0,
+          explanation: "대 là đơn vị đếm xe cộ và máy móc (ô tô, máy tính, máy ảnh). 마리: con vật, 권: quyển, 개: cái chung."
+        },
+        {
+          id: "q37", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho động vật:",
+          koStem: "고양이 세 (      ) — \"Ba con mèo\"",
+          options: ["명", "분", "마리", "대"],
+          answer: 2,
+          explanation: "마리 là đơn vị đếm động vật. 명/분: đếm người, 대: đếm xe/máy."
+        },
+        {
+          id: "q38", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho giấy tờ / vé / ảnh:",
+          koStem: "지도 한 (      ) — \"Một tờ bản đồ\"",
+          options: ["장", "권", "병", "켤레"],
+          answer: 0,
+          explanation: "장 dùng để đếm vật mỏng phẳng như tờ giấy, vé, ảnh, bản đồ."
+        },
+
+        // PHẦN D (39-50)
+        {
+          id: "q39", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "지하철역", hideStemText: true,
+          options: ["Ga tàu hỏa", "Ga tàu điện ngầm", "Trạm xe buýt", "Sân bay"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 지하철역 (ga tàu điện ngầm). 기차역: ga tàu hỏa, 버스 정류장: trạm xe buýt, 공항: sân bay."
+        },
+        {
+          id: "q40", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "아르바이트", hideStemText: true,
+          options: ["Việc làm thêm (part-time)", "Đi công tác", "Hội quán sinh viên", "Kỳ nghỉ hè"],
+          answer: 0,
+          explanation: "Từ vừa nghe là 아르바이트 (việc làm thêm). 출장: công tác, 학생회관: hội quán SV, 방학: kỳ nghỉ."
+        },
+        {
+          id: "q41", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "배드민턴", hideStemText: true,
+          options: ["Bóng chuyền", "Bóng bàn", "Cầu lông", "Quần vợt (tennis)"],
+          answer: 2,
+          explanation: "Từ vừa nghe là 배드민턴 (cầu lông). 배구: bóng chuyền, 탁구: bóng bàn, 테니스: tennis."
+        },
+        {
+          id: "q42", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "대사관", hideStemText: true,
+          options: ["Sở cảnh sát", "Đại sứ quán", "Tòa thị chính", "Bưu điện"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 대사관 (đại sứ quán). 경찰서: sở cảnh sát, 시청: tòa thị chính, 우체국: bưu điện."
+        },
+        {
+          id: "q43", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc biến âm / mũi âm hóa):",
+          koStem: "박물관 (viện bảo tàng)", speakText: "박물관",
+          options: ["[박물관]", "[방물관]", "[반물관]", "[바물관]"],
+          answer: 1,
+          explanation: "Phụ âm cuối ㄱ đứng trước ㅁ bị mũi âm hóa thành ㅇ → đọc là [방물관]."
+        },
+        {
+          id: "q44", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc nhũ âm hóa ㄹ):",
+          koStem: "편리하다 (tiện lợi)", speakText: "편리하다",
+          options: ["[편리하다]", "[펼리하다]", "[편니하다]", "[펴리하다]"],
+          answer: 1,
+          explanation: "Khi ㄴ đứng trước ㄹ, ㄴ biến thành ㄹ → đọc là [펼리하다]."
+        },
+        {
+          id: "q45", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc căng âm hóa):",
+          koStem: "책상 (bàn học, bàn làm việc)", speakText: "책상",
+          options: ["[책쌍]", "[책상]", "[챙상]", "[채쌍]"],
+          answer: 0,
+          explanation: "Sau phụ âm cuối ㄱ, phụ âm ㅅ ở âm tiết kế tiếp bị căng âm hóa thành ㅆ → đọc là [책쌍]."
+        },
+        {
+          id: "q46", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc nối âm & bật hơi hóa):",
+          koStem: "졸업하다 (tốt nghiệp)", speakText: "졸업하다",
+          options: ["[조러파다]", "[졸업하다]", "[조럽하다]", "[졸어파다]"],
+          answer: 0,
+          explanation: "Âm ㄹ nối sang 어 thành 조러, sau đó patchim ㅂ gặp ㅎ bật hơi hóa thành ㅍ → đọc chuẩn là [조러파다]."
+        },
+        {
+          id: "q47", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về trường học & học tập với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "교과서", vi: "Sách giáo khoa" },
+            { ko: "성적", vi: "Thành tích, kết quả học tập" },
+            { ko: "도서관", vi: "Thư viện" },
+            { ko: "필통", vi: "Hộp bút" }
+          ],
+          rightOrder: [2, 3, 0, 1],
+          explanation: "교과서: sách giáo khoa, 성적: thành tích, 도서관: thư viện, 필통: hộp bút."
+        },
+        {
+          id: "q48", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về giao thông & địa điểm với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "육교", vi: "Cầu vượt" },
+            { ko: "지하도", vi: "Đường hầm" },
+            { ko: "신호등", vi: "Đèn tín hiệu giao thông" },
+            { ko: "주유소", vi: "Trạm xăng" }
+          ],
+          rightOrder: [3, 0, 2, 1],
+          explanation: "육교: cầu vượt, 지하도: đường hầm, 신호등: đèn giao thông, 주유소: trạm xăng."
+        },
+        {
+          id: "q49", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về thiên nhiên & thời tiết với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "태양", vi: "Mặt trời" },
+            { ko: "달", vi: "Mặt trăng" },
+            { ko: "별", vi: "Ngôi sao" },
+            { ko: "호수", vi: "Hồ" }
+          ],
+          rightOrder: [1, 2, 3, 0],
+          explanation: "태양: mặt trời, 달: mặt trăng, 별: ngôi sao, 호수: hồ."
+        },
+        {
+          id: "q50", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 cụm từ giao tiếp thông dụng với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "죄송합니다", vi: "Xin lỗi (trang trọng)" },
+            { ko: "천만에요", vi: "Không có chi, không dám" },
+            { ko: "수고하셨습니다", vi: "Bạn đã vất vả rồi" },
+            { ko: "잠깐만요", vi: "Chờ một chút ạ" }
+          ],
+          rightOrder: [2, 0, 3, 1],
+          explanation: "죄송합니다: xin lỗi, 천만에요: không có chi, 수고하셨습니다: bạn đã vất vả rồi, 잠깐만요: chờ chút ạ."
+        }
+      ]
+    };
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>

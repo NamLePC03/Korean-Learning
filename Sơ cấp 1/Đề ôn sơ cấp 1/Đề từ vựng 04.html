@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề từ vựng 04 | Tổng ôn & Phân biệt từ dễ nhầm Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./assets/vocab-suite.js"></script>
+  <script>
+    const EXAM_DATA = {
+      id: "tv-04",
+      suite: window.VOCAB_SUITE,
+      badge: "ĐỀ TỪ VỰNG 04 • TỔNG ÔN & TỪ DỄ NHẦM",
+      title: "Đề Kiểm Tra Từ Vựng Sơ Cấp 1 — Đề 04 (Tổng hợp)",
+      subtitle: "Tổng ôn toàn bộ 12 chủ đề, xoáy sâu vào các cặp từ gần mặt chữ, gần âm đọc, từ đa nghĩa và các cặp trái nghĩa hay nhầm nhất (50 câu — 0% bẫy ngữ pháp).",
+      durationMinutes: 30,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Dễ nhầm & Đa nghĩa", title: "Phần A: Phân biệt từ dễ nhầm & Từ đa nghĩa (Câu 1–14)", desc: "Phân biệt các cặp chữ Hàn gần giống nhau và các từ đa nghĩa quan trọng (28 điểm)." },
+        { id: "B", shortTitle: "Phần B: Trái nghĩa & Nhóm", title: "Phần B: Trái nghĩa & Phân loại nhóm từ (Câu 15–26)", desc: "Kiểm tra phản xạ trái nghĩa tính/động từ và loại trừ từ khác nhóm (24 điểm)." },
+        { id: "C", shortTitle: "Phần C: Cụm từ & Phó từ", title: "Phần C: Cụm từ, Phó từ & Đơn vị đếm tổng hợp (Câu 27–38)", desc: "Phân biệt phó từ mức độ/tần suất và chọn đúng động từ kết hợp (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Nghe, Đọc & Nối", title: "Phần D: Nghe phát âm, Quy tắc đọc & Ghép cặp (Câu 39–50)", desc: "Nghe phân biệt từ gần âm 🔊, quy tắc phát âm từ đơn và nối 4 cặp Hàn↔Việt (24 điểm)." }
+      ],
+      questions: [
+        // PHẦN A (1-14)
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Phân biệt từ dễ nhầm",
+          prompt: "Phân biệt cặp động từ chỉ khác 1 phụ âm: \"잊어버리다\" nghĩa là gì?",
+          koStem: "잊어버리다  vs.  잃어버리다", speakText: "잊어버리다",
+          options: ["Làm mất, đánh rơi đồ vật", "Quên mất, quên đi", "Bỏ vào, cho vào", "Lấy ra, rút ra"],
+          answer: 1,
+          explanation: "잊어버리다 là quên mất (trong trí nhớ). 잃어버리다 là làm mất, đánh rơi đồ. 넣다: bỏ vào, 꺼내다: lấy ra."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Phân biệt từ dễ nhầm",
+          prompt: "Phân biệt bộ 3 động từ gần âm: \"사다 / 자다 / 타다\" — Chọn nghĩa của \"타다\":",
+          koStem: "타다", speakText: "타다",
+          options: ["Mua", "Ngủ", "Lên xe, đi phương tiện", "Bật đèn"],
+          answer: 2,
+          explanation: "타다 là lên/đi xe. 사다: mua, 자다: ngủ, 켜다: bật đèn."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Phân biệt từ dễ nhầm",
+          prompt: "Phân biệt cặp từ: \"치약\" và \"칫솔\" — Chọn nghĩa của \"치약\":",
+          koStem: "치약", speakText: "치약",
+          options: ["Bàn chải đánh răng", "Kem đánh răng", "Răng", "Đau răng"],
+          answer: 1,
+          explanation: "치약 (xỉ dược) là kem đánh răng. 칫솔: bàn chải đánh răng, 치아: răng, 치통: đau răng."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Phân biệt từ dễ nhầm",
+          prompt: "Phân biệt từ vựng: \"모자 / 바지 / 반지\" — Chọn nghĩa của \"반지\":",
+          koStem: "반지", speakText: "반지",
+          options: ["Mũ, nón", "Quần", "Nhẫn", "Dây chuyền"],
+          answer: 2,
+          explanation: "반지 là nhẫn. 모자: mũ/nón, 바지: quần, 목걸이: dây chuyền."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Từ đa nghĩa",
+          prompt: "Từ \"배\" trong Sơ cấp 1 có nhiều nghĩa — Chọn cặp nghĩa ĐÚNG của \"배\":",
+          koStem: "배 (danh từ)", speakText: "배",
+          options: ["Quả lê / Tàu thủy / Bụng", "Quả táo / Xe buýt / Đầu", "Quả quýt / Máy bay / Tay", "Quả nho / Tàu hỏa / Chân"],
+          answer: 0,
+          explanation: "배 là từ đồng âm đa nghĩa kinh điển trong tiếng Hàn: quả lê, tàu thủy/thuyền, và bụng (배고프다 = đói bụng)."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Từ đa nghĩa",
+          prompt: "Từ \"눈\" có hai nghĩa cơ bản nào trong Sơ cấp 1?",
+          koStem: "눈 (danh từ)", speakText: "눈",
+          options: ["Mưa / Tai", "Tuyết / Mắt", "Gió / Mũi", "Mây / Miệng"],
+          answer: 1,
+          explanation: "눈 vừa có nghĩa là tuyết (눈이 오다) vừa có nghĩa là đôi mắt."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Phân biệt từ dễ nhầm",
+          prompt: "Phân biệt 2 từ dễ nhầm về đồ dùng bếp: \"숟가락\" vs. \"젓가락\":",
+          koStem: "젓가락", speakText: "젓가락",
+          options: ["Thìa, muỗng", "Đũa", "Cái bát", "Bàn ăn"],
+          answer: 1,
+          explanation: "젓가락 là đôi đũa; 숟가락 là cái thìa/muỗng."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"tủ sách\" (phân biệt với 책상 / 책방):",
+          koStem: "Nghĩa: \"Tủ sách\"",
+          options: ["책상", "책장", "공책", "수첩"],
+          answer: 1,
+          explanation: "책장 là tủ sách/giá sách. 책상: bàn học, 공책: vở."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"chân (cẳng chân)\" (phân biệt với 발):",
+          koStem: "Nghĩa: \"Chân (cẳng chân)\"",
+          options: ["발", "다리", "발가락", "팔"],
+          answer: 1,
+          explanation: "다리 là cẳng chân (cũng có nghĩa là cây cầu). 발: bàn chân, 발가락: ngón chân."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"nguy hiểm\":",
+          koStem: "Nghĩa: \"Nguy hiểm\"",
+          options: ["안전하다", "위험하다", "중요하다", "유명하다"],
+          answer: 1,
+          explanation: "위험하다 là nguy hiểm. 안전하다: an toàn, 중요하다: quan trọng, 유명하다: nổi tiếng."
+        },
+        {
+          id: "q11", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"đặt xuống, buông ra\" (phân biệt với 넣다):",
+          koStem: "Nghĩa: \"Đặt xuống, buông ra\"",
+          options: ["넣다", "놓다", "던지다", "잡다"],
+          answer: 1,
+          explanation: "놓다 là đặt xuống/buông ra. 넣다: bỏ vào trong, 던지다: ném, 잡다: nắm/bắt lấy."
+        },
+        {
+          id: "q12", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"sâu (nước, kiến thức)\":",
+          koStem: "Nghĩa: \"Sâu\"",
+          options: ["높다", "낮다", "깊다", "넓다"],
+          answer: 2,
+          explanation: "깊다 là sâu. 높다: cao, 낮다: thấp."
+        },
+        {
+          id: "q13", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"gửi (thư, quà, thời gian)\":",
+          koStem: "Nghĩa: \"Gửi / trải qua (thời gian)\"",
+          options: ["받다", "보내다", "부치다", "주다"],
+          answer: 1,
+          explanation: "보내다 nghĩa là gửi (tin nhắn, quà) hoặc trải qua (thời gian). 받다: nhận, 주다: cho."
+        },
+        {
+          id: "q14", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn đúng nghĩa \"đột nhiên, bất ngờ\":",
+          koStem: "Nghĩa: \"Đột nhiên, bất ngờ\"",
+          options: ["직접", "갑자기", "당연히", "특히"],
+          answer: 1,
+          explanation: "갑자기 là đột nhiên, bất ngờ. 직접: trực tiếp, 당연히: đương nhiên, 특히: đặc biệt là."
+        },
+
+        // PHẦN B (15-26)
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "가볍다 (nhẹ) ↔ ?",
+          options: ["무겁다", "좁다", "짧다", "적다"],
+          answer: 0,
+          explanation: "가볍다 (nhẹ) trái nghĩa với 무겁다 (nặng). 좁다: hẹp, 짧다: ngắn, 적다: ít."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "위험하다 (nguy hiểm) ↔ ?",
+          options: ["중요하다", "안전하다", "복잡하다", "불편하다"],
+          answer: 1,
+          explanation: "위험하다 (nguy hiểm) trái nghĩa với 안전하다 (an toàn). 중요하다: quan trọng, 복잡하다: phức tạp, 불편하다: bất tiện."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn động từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "넣다 (bỏ vào) ↔ ?",
+          options: ["잡다", "던지다", "꺼내다", "놓다"],
+          answer: 2,
+          explanation: "넣다 (bỏ vào trong) trái nghĩa với 꺼내다 (lấy ra khỏi bên trong)."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn cặp từ KHÔNG phải là cặp trái nghĩa:",
+          koStem: "Tìm cặp KHÔNG trái nghĩa",
+          options: ["높다 ↔ 낮다", "길다 ↔ 짧다", "많다 ↔ 적다", "비슷하다 ↔ 같다"],
+          answer: 3,
+          explanation: "비슷하다 (tương tự, giống) và 같다 (giống nhau) là gần nghĩa, không phải trái nghĩa."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "편리하다 (tiện lợi) ↔ ?",
+          options: ["불편하다", "친절하다", "피곤하다", "필요하다"],
+          answer: 0,
+          explanation: "편리하다 (tiện lợi) trái nghĩa với 불편하다 (bất tiện). 친절하다: thân thiện, 피곤하다: mệt, 필요하다: cần thiết."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "조용하다 (yên tĩnh) ↔ ?",
+          options: ["아름답다", "시끄럽다", "어렵다", "심심하다"],
+          answer: 1,
+          explanation: "조용하다 (yên tĩnh) trái nghĩa với 시끄럽다 (ồn ào, ầm ĩ)."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm phó từ chỉ mức độ cao (Rất / Vô cùng)",
+          options: ["아주", "매우", "참", "전혀"],
+          answer: 3,
+          explanation: "아주, 매우, 참 đều mang nghĩa 'rất, vô cùng'; 전혀 đi với phủ định mang nghĩa 'hoàn toàn không'."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ địa điểm công cộng / dịch vụ",
+          options: ["우체국", "은행", "경찰서", "비밀번호"],
+          answer: 3,
+          explanation: "우체국 (bưu điện), 은행 (ngân hàng), 경찰서 (sở cảnh sát) là địa điểm; 비밀번호 là mật khẩu."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ món ăn mặn / canh truyền thống Hàn Quốc",
+          options: ["김치찌개", "된장찌개", "갈비탕", "아이스크림"],
+          answer: 3,
+          explanation: "김치찌개, 된장찌개, 갈비탕 là các món canh/súp Hàn Quốc; 아이스크림 là kem."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm tính từ chỉ màu sắc",
+          options: ["빨갛다", "노랗다", "파랗다", "달콤하다"],
+          answer: 3,
+          explanation: "빨갛다 (đỏ), 노랗다 (vàng), 파랗다 (xanh da trời) là tính từ màu sắc; 달콤하다 là ngọt ngào (vị)."
+        },
+        {
+          id: "q25", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ tên các quốc gia",
+          options: ["베트남", "한국", "일본", "유럽"],
+          answer: 3,
+          explanation: "베트남 (Việt Nam), 한국 (Hàn Quốc), 일본 (Nhật Bản) là quốc gia; 유럽 là châu Âu (châu lục)."
+        },
+        {
+          id: "q26", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ các mùa trong năm",
+          options: ["봄", "여름", "가을", "야경"],
+          answer: 3,
+          explanation: "봄 (xuân), 여름 (hè), 가을 (thu) là tên mùa; 야경 là cảnh đêm."
+        },
+
+        // PHẦN C (27-38)
+        {
+          id: "q27", section: "C", type: "mcq", points: 2, typeLabel: "Phó từ thông dụng",
+          prompt: "Chọn phó từ có nghĩa \"cùng nhau\":",
+          koStem: "친구 + (      ) (= 같이)",
+          options: ["혼자", "함께", "직접", "아마"],
+          answer: 1,
+          explanation: "함께 (cùng nhau) đồng nghĩa với 같이. 혼자: một mình, 직접: trực tiếp, 아마: có lẽ."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 2, typeLabel: "Phó từ thông dụng",
+          prompt: "Chọn phó từ có nghĩa \"hầu như, gần như\":",
+          koStem: "95% 정도 → (      )",
+          options: ["거의", "전혀", "특히", "주로"],
+          answer: 0,
+          explanation: "거의 là hầu như, gần như. 전혀: hoàn toàn (không), 특히: đặc biệt là, 주로: chủ yếu."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp hoàn thành cụm về mất đồ:",
+          koStem: "지갑을 (      ) — \"Làm mất ví\"",
+          options: ["잊어버리다", "잃어버리다", "기억하다", "빌리다"],
+          answer: 1,
+          explanation: "Làm mất đồ vật (ví, điện thoại...) dùng 잃어버리다. 잊어버리다 dùng cho việc quên trí nhớ (quên tên, quên hẹn)."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp đi với 공 (quả bóng) / 가방:",
+          koStem: "공을 (      ) — \"Ném quả bóng\"",
+          options: ["던지다", "잡다", "믿다", "정하다"],
+          answer: 0,
+          explanation: "던지다 là ném, quăng. 잡다: bắt lấy/nắm lấy, 믿다: tin tưởng, 정하다: quyết định."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"nhận (quà, tin nhắn, cuộc gọi)\":",
+          koStem: "선물 / 문자 / 전화 → (      )",
+          options: ["보내다", "받다", "내다", "쓰다"],
+          answer: 1,
+          explanation: "받다 là nhận (nhận quà, nhận tin nhắn, nghe máy). 보내다: gửi, 내다: nộp/trả tiền."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"tìm kiếm trên mạng\":",
+          koStem: "인터넷 / 와이파이 → (      )",
+          options: ["검색하다", "채팅하다", "통화하다", "연습하다"],
+          answer: 0,
+          explanation: "검색하다 là tra cứu, tìm kiếm thông tin trên mạng. 채팅하다: chat, 통화하다: nghe gọi điện thoại."
+        },
+        {
+          id: "q33", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"thu thập, gom góp, tiết kiệm\":",
+          koStem: "우표 / 돈 / 추억 → (      )",
+          options: ["모으다", "던지다", "꺼내다", "사용하다"],
+          answer: 0,
+          explanation: "모으다 là sưu tầm, gom góp, tiết kiệm (우표 모으기 = sưu tập tem)."
+        },
+        {
+          id: "q34", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn tính từ đúng nghĩa \"lịch sự, tử tế, thân thiện\":",
+          koStem: "선생님 / 은행원 → (      )",
+          options: ["친절하다", "유명하다", "복잡하다", "불편하다"],
+          answer: 0,
+          explanation: "친절하다 là thân thiện, tử tế (trái nghĩa: 불친절하다)."
+        },
+        {
+          id: "q35", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho từ \"개\" (đơn vị chung cho đồ vật):",
+          koStem: "사과 다섯 (      ) — \"Năm quả táo\"",
+          options: ["개", "권", "병", "명"],
+          answer: 0,
+          explanation: "개 dùng để đếm phần lớn đồ vật, trái cây, cái/chiếc nói chung."
+        },
+        {
+          id: "q36", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn cặp đơn vị đếm ĐÚNG cho \"hai đôi tất — ba cái ô tô\":",
+          koStem: "양말 2 (   ) — 자동차 3 (   )",
+          options: ["켤레 — 대", "대 — 켤레", "개 — 명", "장 — 권"],
+          answer: 0,
+          explanation: "Tất/giày đi theo đôi dùng 켤레; ô tô/máy móc dùng 대."
+        },
+        {
+          id: "q37", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn từ chỉ số thứ tự (\"lần thứ... / thứ...\"):",
+          koStem: "첫 (      ) — \"Lần đầu tiên / Thứ nhất\"",
+          options: ["번째", "호", "층", "살"],
+          answer: 0,
+          explanation: "번째 đứng sau số thuần Hàn để chỉ thứ tự/lần thứ (첫 번째 = thứ nhất/lần đầu tiên)."
+        },
+        {
+          id: "q38", section: "C", type: "mcq", points: 2, typeLabel: "Phó từ thông dụng",
+          prompt: "Chọn phó từ đúng nghĩa \"đặc biệt là, nhất là\":",
+          koStem: "과일 다 좋아함 → (      ) 망고",
+          options: ["특히", "보통", "대부분", "아마"],
+          answer: 0,
+          explanation: "특히 là đặc biệt là, nhất là. 보통: thông thường, 아마: có lẽ."
+        },
+
+        // PHẦN D (39-50)
+        {
+          id: "q39", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "부끄럽다", hideStemText: true,
+          options: ["Buồn chán", "Ngại ngùng, xấu hổ", "Đáng sợ", "Cô đơn"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 부끄럽다 (ngại ngùng, xấu hổ). 심심하다: buồn chán, 무섭다: đáng sợ, 외롭다: cô đơn."
+        },
+        {
+          id: "q40", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "지하철 노선도", hideStemText: true,
+          options: ["Thẻ giao thông", "Bản đồ tuyến tàu điện ngầm", "Ga tàu điện ngầm", "Đèn tín hiệu giao thông"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 지하철 노선도 (bản đồ tuyến tàu điện ngầm)."
+        },
+        {
+          id: "q41", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "불편하다", hideStemText: true,
+          options: ["Tiện lợi", "Bất tiện", "Phức tạp", "An toàn"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 불편하다 (bất tiện). 편리하다: tiện lợi, 복잡하다: phức tạp, 안전하다: an toàn."
+        },
+        {
+          id: "q42", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "비밀번호", hideStemText: true,
+          options: ["Số điện thoại", "Mã số quốc gia", "Mật khẩu, password", "Tên tài khoản"],
+          answer: 2,
+          explanation: "Từ vừa nghe là 비밀번호 (mật khẩu). 전화번호: số điện thoại, 국가 번호: mã quốc gia, 아이디: tài khoản."
+        },
+        {
+          id: "q43", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc mũi âm hóa):",
+          koStem: "한국말 (tiếng Hàn)", speakText: "한국말",
+          options: ["[한국말]", "[한궁말]", "[한군말]", "[하국말]"],
+          answer: 1,
+          explanation: "Phụ âm cuối ㄱ đứng trước ㅁ bị mũi âm hóa thành ㅇ → đọc là [한궁말]."
+        },
+        {
+          id: "q44", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc bật hơi hóa):",
+          koStem: "많다 (nhiều)", speakText: "많다",
+          options: ["[만타]", "[만다]", "[맏따]", "[마타]"],
+          answer: 0,
+          explanation: "Phụ âm cuối kép ㄶ có ㅎ gặp ㄷ bật hơi thành ㅌ → đọc là [만타]."
+        },
+        {
+          id: "q45", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc vòm âm hóa):",
+          koStem: "같이 (cùng nhau)", speakText: "같이",
+          options: ["[가티]", "[가치]", "[갇이]", "[까지]"],
+          answer: 1,
+          explanation: "Quy tắc vòm âm hóa (구개음화): patchim ㅌ gặp nguyên âm 이 biến thành ㅊ → đọc là [가치]."
+        },
+        {
+          id: "q46", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc căng âm hóa):",
+          koStem: "학번 (mã số sinh viên)", speakText: "학번",
+          options: ["[학뻔]", "[학번]", "[항번]", "[하뻔]"],
+          answer: 0,
+          explanation: "Sau phụ âm cuối ㄱ, phụ âm ㅂ ở âm tiết kế tiếp bị căng âm hóa thành ㅃ → đọc là [학뻔]."
+        },
+        {
+          id: "q47", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 động từ thường dùng với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "믿다", vi: "Tin, tin tưởng" },
+            { ko: "남기다", vi: "Để lại, chừa lại" },
+            { ko: "정하다", vi: "Quyết định" },
+            { ko: "사용하다", vi: "Sử dụng, dùng" }
+          ],
+          rightOrder: [1, 3, 0, 2],
+          explanation: "믿다: tin tưởng, 남기다: để lại, 정하다: quyết định, 사용하다: sử dụng."
+        },
+        {
+          id: "q48", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 tính từ quan trọng Sơ cấp 1 với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "중요하다", vi: "Quan trọng" },
+            { ko: "유명하다", vi: "Nổi tiếng" },
+            { ko: "안전하다", vi: "An toàn" },
+            { ko: "비슷하다", vi: "Tương tự, giống" }
+          ],
+          rightOrder: [2, 0, 3, 1],
+          explanation: "중요하다: quan trọng, 유명하다: nổi tiếng, 안전하다: an toàn, 비슷하다: tương tự."
+        },
+        {
+          id: "q49", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 động từ giao tiếp & sinh hoạt với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "빌리다", vi: "Mượn, thuê" },
+            { ko: "돌려주다", vi: "Trả lại" },
+            { ko: "부탁하다", vi: "Nhờ cậy, yêu cầu" },
+            { ko: "기다리다", vi: "Chờ đợi" }
+          ],
+          rightOrder: [3, 1, 0, 2],
+          explanation: "빌리다: mượn, 돌려주다: trả lại, 부탁하다: nhờ cậy, 기다리다: chờ đợi."
+        },
+        {
+          id: "q50", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 cặp phó từ hay gặp với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "갑자기", vi: "Đột nhiên, bất ngờ" },
+            { ko: "직접", vi: "Trực tiếp, tự tay" },
+            { ko: "당연히", vi: "Đương nhiên, tất nhiên" },
+            { ko: "혹시", vi: "Liệu có phải, có khi nào" }
+          ],
+          rightOrder: [2, 3, 1, 0],
+          explanation: "갑자기: đột nhiên, 직접: trực tiếp, 당연히: đương nhiên, 혹시: liệu có phải."
+        }
+      ]
+    };
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>

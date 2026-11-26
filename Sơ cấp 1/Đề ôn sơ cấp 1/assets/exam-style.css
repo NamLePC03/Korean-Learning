@@ -992,3 +992,143 @@ body {
 .hidden {
   display: none !important;
 }
+
+/* TTS & MATCH VOCABULARY */
+.q-ko-stem-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.q-tts-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-tts {
+  font-family: var(--vi-font);
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-tts:hover {
+  background: var(--primary-dark);
+}
+
+.btn-tts-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btn-tts-icon:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.tts-hint {
+  font-family: var(--vi-font);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.match-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.match-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: #ffffff;
+  color: var(--text-main);
+  font-family: var(--vi-font);
+  font-size: 14.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.14s ease;
+}
+
+.match-item:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: #f8fafc;
+}
+
+.match-item.active-pick {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.18);
+}
+
+.match-item.paired {
+  border-color: var(--secondary);
+  background: #f0f9ff;
+}
+
+.match-item.correct-ans {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: #064e3b;
+}
+
+.match-item.wrong-ans {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+  color: #7f1d1d;
+}
+
+.match-tag {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-tag.empty {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+@media (max-width: 640px) {
+  .match-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề từ vựng 02 | Kiểm tra Từ vựng Tiếng Hàn Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./assets/vocab-suite.js"></script>
+  <script>
+    const EXAM_DATA = {
+      id: "tv-02",
+      suite: window.VOCAB_SUITE,
+      badge: "ĐỀ TỪ VỰNG 02 • ẨM THỰC, MUA SẮM & SỨC KHỎE",
+      title: "Đề Kiểm Tra Từ Vựng Sơ Cấp 1 — Đề 02",
+      subtitle: "Tập trung 3 chủ đề thiết thực: Ẩm thực & Món ăn, Mua sắm & Trang phục, Sức khỏe & Y tế (50 câu — 0% bẫy ngữ pháp).",
+      durationMinutes: 30,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Hàn ↔ Việt", title: "Phần A: Nhận diện & Truy xuất nghĩa (Câu 1–14)", desc: "Kiểm tra nghĩa trực tiếp Hàn → Việt và Việt → Hàn ở dạng nguyên thể (28 điểm)." },
+        { id: "B", shortTitle: "Phần B: Trái nghĩa & Nhóm", title: "Phần B: Trái nghĩa & Phân loại nhóm từ (Câu 15–26)", desc: "Tìm từ trái nghĩa và tìm 1 từ khác nhóm chủ đề trong 4 từ (24 điểm)." },
+        { id: "C", shortTitle: "Phần C: Cụm từ & Đơn vị", title: "Phần C: Cụm từ cố định & Đơn vị đếm (Câu 27–38)", desc: "Chọn từ kết hợp đúng nghĩa trong cụm ăn uống/mua sắm/y tế và đơn vị đếm (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Nghe, Đọc & Nối", title: "Phần D: Nghe phát âm, Quy tắc đọc & Ghép cặp (Câu 39–50)", desc: "Nghe âm thanh 🔊 chọn nghĩa, đọc nối âm/biến âm từ đơn và nối cặp Hàn↔Việt (24 điểm)." }
+      ],
+      questions: [
+        // PHẦN A (1-14)
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "영수증", speakText: "영수증",
+          options: ["Phiếu tính tiền", "Hóa đơn", "Tiền xu", "Giảm giá"],
+          answer: 1,
+          explanation: "영수증 là hóa đơn (nhận sau khi thanh toán). 계산서: phiếu tính tiền, 동전: tiền xu, 할인: giảm giá."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của động từ sau:",
+          koStem: "환불하다", speakText: "환불하다",
+          options: ["Đổi hàng lấy cái khác", "Hoàn tiền, trả lại hàng", "Đóng gói mang về", "Tính tiền"],
+          answer: 1,
+          explanation: "환불하다 là hoàn tiền, trả lại hàng. 교환하다: đổi hàng, 포장하다: đóng gói, 계산하다: tính tiền."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của tính từ sau:",
+          koStem: "싱겁다", speakText: "싱겁다",
+          options: ["Mặn", "Chua", "Nhạt", "Đắng"],
+          answer: 2,
+          explanation: "싱겁다 là nhạt (thiếu muối/gia vị). 짜다: mặn, 시다: chua, 쓰다: đắng."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "숟가락", speakText: "숟가락",
+          options: ["Đũa", "Thìa, muỗng", "Bàn ăn", "Món ăn phụ"],
+          answer: 1,
+          explanation: "숟가락 là thìa/muỗng. 젓가락: đũa, 식탁: bàn ăn, 반찬: món ăn phụ."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "진통제", speakText: "진통제",
+          options: ["Thuốc cảm", "Thuốc giảm đau", "Băng dán cá nhân", "Mũi tiêm"],
+          answer: 1,
+          explanation: "진통제 là thuốc giảm đau. 감기약: thuốc cảm, 반창고: băng dán cá nhân (urgo), 주사: mũi tiêm."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của động từ sau:",
+          koStem: "끓이다", speakText: "끓이다",
+          options: ["Nướng (thịt, cá)", "Xào, rang", "Nấu, đun sôi (nước, canh)", "Chiên, rán ngập dầu"],
+          answer: 2,
+          explanation: "끓이다 là đun sôi, nấu (canh/mì/nước). 굽다: nướng, 볶다: xào/rang, 튀기다: chiên rán."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "목걸이", speakText: "목걸이",
+          options: ["Hoa tai, bông tai", "Dây chuyền", "Khăn quàng cổ", "Nhẫn"],
+          answer: 1,
+          explanation: "목걸이 là dây chuyền (đeo cổ). 귀걸이: hoa tai, 목도리: khăn quàng cổ, 반지: nhẫn."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"tiền mặt\":",
+          koStem: "Nghĩa: \"Tiền mặt\"",
+          options: ["지폐", "동전", "현금", "신용카드"],
+          answer: 2,
+          explanation: "현금 là tiền mặt nói chung. 지폐: tiền giấy, 동전: tiền xu, 신용카드: thẻ tín dụng."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"bánh gạo cay\":",
+          koStem: "Nghĩa: \"Bánh gạo cay (tteokbokki)\"",
+          options: ["떡", "떡볶이", "김밥", "볶음밥"],
+          answer: 1,
+          explanation: "떡볶이 là bánh gạo cay. 떡: bánh gạo, 김밥: cơm cuộn lá kim, 볶음밥: cơm chiên."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"đau bụng\":",
+          koStem: "Nghĩa: \"Chứng đau bụng\"",
+          options: ["두통", "복통", "치통", "감기"],
+          answer: 1,
+          explanation: "복통 (phúc thống) là đau bụng. 두통: đau đầu, 치통: đau răng, 감기: cảm cúm."
+        },
+        {
+          id: "q11", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"cửa hàng tiện lợi\":",
+          koStem: "Nghĩa: \"Cửa hàng tiện lợi\"",
+          options: ["백화점", "편의점", "문구점", "슈퍼마켓"],
+          answer: 1,
+          explanation: "편의점 là cửa hàng tiện lợi (mở 24h). 백화점: trung tâm thương mại/bách hóa, 문구점: cửa hàng VPP, 슈퍼마켓: siêu thị."
+        },
+        {
+          id: "q12", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"găng tay\":",
+          koStem: "Nghĩa: \"Găng tay, bao tay\"",
+          options: ["양말", "장갑", "손수건", "안경"],
+          answer: 1,
+          explanation: "장갑 là găng tay. 양말: tất/vớ, 손수건: khăn tay, 안경: kính mắt."
+        },
+        {
+          id: "q13", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn động từ tiếng Hàn có nghĩa là \"gọi món (ở nhà hàng)\":",
+          koStem: "Nghĩa: \"Gọi món\"",
+          options: ["요리하다", "주문하다", "배달하다", "식사하다"],
+          answer: 1,
+          explanation: "주문하다 là đặt/gọi món. 요리하다: nấu ăn, 배달하다: giao hàng, 식사하다: dùng bữa."
+        },
+        {
+          id: "q14", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn động từ tiếng Hàn có nghĩa là \"bị thương\":",
+          koStem: "Nghĩa: \"Bị thương\"",
+          options: ["치료하다", "다치다", "낫다", "입원하다"],
+          answer: 1,
+          explanation: "다치다 là bị thương. 치료하다: điều trị, 낫다: khỏi bệnh, 입원하다: nhập viện."
+        },
+
+        // PHẦN B (15-26)
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "비싸다 (đắt tiền) ↔ ?",
+          options: ["달다", "싸다", "짜다", "많다"],
+          answer: 1,
+          explanation: "비싸다 (đắt) trái nghĩa với 싸다 (rẻ). 달다: ngọt, 짜다: mặn, 많다: nhiều."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "배고프다 (đói bụng) ↔ ?",
+          options: ["목마르다", "배부르다", "맛없다", "싱겁다"],
+          answer: 1,
+          explanation: "배고프다 (đói bụng) trái nghĩa với 배부르다 (no bụng). 목마르다: khát nước, 맛없다: không ngon, 싱겁다: nhạt."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "무료 (miễn phí) ↔ ?",
+          options: ["할인", "유료", "세일", "환불"],
+          answer: 1,
+          explanation: "무료 (miễn phí) trái nghĩa với 유료 (có thu phí). 할인/세일: giảm giá, 환불: hoàn tiền."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn động từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "입원하다 (nhập viện) ↔ ?",
+          options: ["치료하다", "퇴원하다", "다치다", "낫다"],
+          answer: 1,
+          explanation: "입원하다 (nhập viện) trái nghĩa với 퇴원하다 (xuất viện). 치료하다: điều trị, 다치다: bị thương, 낫다: khỏi bệnh."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "금연석 (chỗ cấm hút thuốc) ↔ ?",
+          options: ["계산대", "흡연석", "매표소", "카페"],
+          answer: 1,
+          explanation: "금연석 (cấm hút thuốc) trái nghĩa với 흡연석 (khu vực được hút thuốc)."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "달다 (ngọt) ↔ ?",
+          options: ["쓰다(맛)", "고소하다", "달콤하다", "맛있다"],
+          answer: 0,
+          explanation: "달다 (ngọt) đối lập vị với 쓰다 (đắng). 고소하다: bùi/thơm ngậy, 달콤하다: ngọt ngào, 맛있다: ngon."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về hoa quả",
+          options: ["사과", "수박", "귤", "가지"],
+          answer: 3,
+          explanation: "사과 (táo), 수박 (dưa hấu), 귤 (quýt) là hoa quả; 가지 là cà tím (rau củ)."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về đồ uống",
+          options: ["우유", "녹차", "주스", "만두"],
+          answer: 3,
+          explanation: "우유 (sữa), 녹차 (trà xanh), 주스 (nước ép) là đồ uống; 만두 là há cảo/bánh xếp (món ăn)."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về trang phục / giày dép",
+          options: ["코트", "스웨터", "치마", "지갑"],
+          answer: 3,
+          explanation: "코트 (áo khoác), 스웨터 (áo len), 치마 (váy) là quần áo; 지갑 là cái ví."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về phương pháp chế biến món ăn",
+          options: ["굽다", "볶다", "썰다", "포장하다"],
+          answer: 3,
+          explanation: "굽다 (nướng), 볶다 (xào), 썰다 (thái/xắt) là thao tác nấu ăn; 포장하다 là đóng gói hàng/đồ ăn mang về."
+        },
+        {
+          id: "q25", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về triệu chứng / bệnh tật",
+          options: ["감기", "열", "두통", "약국"],
+          answer: 3,
+          explanation: "감기 (cảm cúm), 열 (sốt), 두통 (đau đầu) là bệnh/triệu chứng; 약국 là hiệu thuốc (địa điểm)."
+        },
+        {
+          id: "q26", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về món mì / cơm Hàn Quốc",
+          options: ["짜장면", "냉면", "비빔밥", "소금"],
+          answer: 3,
+          explanation: "짜장면 (mì tương đen), 냉면 (mì lạnh), 비빔밥 (cơm trộn) là tên món ăn; 소금 là muối (gia vị)."
+        },
+
+        // PHẦN C (27-38)
+        {
+          id: "q27", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp hoàn thành cụm từ y tế:",
+          koStem: "병원 → 주사를 (      ) — \"Tiêm thuốc\"",
+          options: ["맞다", "먹다", "사다", "입다"],
+          answer: 0,
+          explanation: "주사를 맞다 là cụm cố định nghĩa là tiêm thuốc (chịu mũi tiêm). Không dùng 먹다 hay 사다."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp hoàn thành cụm mua sắm:",
+          koStem: "선물을 (      ) — \"Chọn quà\"",
+          options: ["고르다", "마시다", "썰다", "끓이다"],
+          answer: 0,
+          explanation: "선물을 고르다 là chọn quà. 마시다: uống, 썰다: thái, 끓이다: đun sôi."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ kính ngữ đi với từ 진지 (cơm - kính ngữ):",
+          koStem: "진지를 (      ) — \"Dùng cơm (kính ngữ)\"",
+          options: ["먹다", "마시다", "잡수시다", "주문하다"],
+          answer: 2,
+          explanation: "진지를 잡수시다 (hoặc 드시다) là cụm kính ngữ ăn cơm dành cho người lớn tuổi/bề trên."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp đi với quần áo (옷):",
+          koStem: "옷을 (      ) — \"Mặc quần áo\"",
+          options: ["입다", "먹다", "굽다", "타다"],
+          answer: 0,
+          explanation: "입다 là mặc (quần, áo, váy). 타다: đi xe, 먹다: ăn, 굽다: nướng."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn danh từ thích hợp đi với động từ 쓰다 (đeo):",
+          koStem: "(      )을/를 쓰다 — \"Đeo kính mắt\"",
+          options: ["안경", "목도리", "지갑", "반지"],
+          answer: 0,
+          explanation: "안경을 쓰다 là đeo kính mắt. 목도리: khăn quàng cổ, 지갑: cái ví, 반지: nhẫn."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn danh từ đúng nghĩa \"bữa ăn phụ / đồ ăn vặt\" giữa buổi:",
+          koStem: "아침 + 점심 + 저녁 + (      )",
+          options: ["간식", "반찬", "식탁", "종업원"],
+          answer: 0,
+          explanation: "간식 là bữa phụ / quà vặt. 반찬: món ăn kèm cơm, 식탁: bàn ăn, 종업원: nhân viên phục vụ."
+        },
+        {
+          id: "q33", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"ăn ngoài (đi hàng quán)\":",
+          koStem: "집 X / 식당 O → (      )",
+          options: ["요리하다", "외식하다", "환불하다", "장사를 하다"],
+          answer: 1,
+          explanation: "외식하다 (ngoại thực) là ăn ngoài tiệm. 요리하다: nấu ăn, 환불하다: hoàn tiền, 장사를 하다: buôn bán."
+        },
+        {
+          id: "q34", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn danh từ đúng điền vào cụm gọi đồ ở quán ăn:",
+          koStem: "종업원 + (      )을/를 보다 → 주문하다",
+          options: ["메뉴", "봉투", "지폐", "하숙비"],
+          answer: 0,
+          explanation: "메뉴를 보다 là xem thực đơn rồi gọi món (주문하다). 봉투: túi đựng, 지폐: tiền giấy, 하숙비: tiền trọ."
+        },
+        {
+          id: "q35", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho giày dép / tất:",
+          koStem: "운동화 한 (      ) — \"Một đôi giày thể thao\"",
+          options: ["켤레", "병", "잔", "개"],
+          answer: 0,
+          explanation: "켤레 là đơn vị đếm theo đôi (giày, dép, tất, găng tay). 병: chai, 잔: cốc/ly, 개: cái."
+        },
+        {
+          id: "q36", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho đồ uống pha chế theo ly/tách:",
+          koStem: "커피 두 (      ) — \"Hai ly cà phê\"",
+          options: ["켤레", "잔", "병", "마리"],
+          answer: 1,
+          explanation: "잔 là đơn vị đếm ly, cốc, tách (cà phê, trà, nước ép). 병: chai, 켤레: đôi, 마리: con (động vật)."
+        },
+        {
+          id: "q37", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm đúng cho đồ uống đóng chai:",
+          koStem: "콜라 세 (      ) — \"Ba chai Coca\"",
+          options: ["병", "잔", "권", "장"],
+          answer: 0,
+          explanation: "병 là chai, bình (bia, nước ngọt đóng chai). 잔: ly/cốc, 권: quyển sách, 장: tờ/tấm."
+        },
+        {
+          id: "q38", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn danh từ thích hợp chỉ nơi mua sắm \"khu bán hàng điện tử\":",
+          koStem: "노트북 / 스마트폰 / 카메라 → (      )",
+          options: ["꽃집", "빵집", "전자상가", "한식당"],
+          answer: 2,
+          explanation: "전자상가 là khu thương mại/cửa hàng điện tử. 꽃집: tiệm hoa, 빵집: tiệm bánh, 한식당: nhà hàng Hàn."
+        },
+
+        // PHẦN D (39-50)
+        {
+          id: "q39", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "계산대", hideStemText: true,
+          options: ["Quầy vé", "Quầy thu ngân, thanh toán", "Cửa hàng bách hóa", "Hiệu thuốc"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 계산대 (quầy thanh toán, quầy thu ngân). 매표소: quầy vé, 백화점: bách hóa, 약국: hiệu thuốc."
+        },
+        {
+          id: "q40", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "삼계탕", hideStemText: true,
+          options: ["Súp sườn bò", "Canh kim chi", "Gà tần sâm", "Thịt ba chỉ nướng"],
+          answer: 2,
+          explanation: "Từ vừa nghe là 삼계탕 (gà tần sâm). 갈비탕: súp sườn bò, 김치찌개: canh kim chi, 삼겹살: thịt ba chỉ."
+        },
+        {
+          id: "q41", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "운동화", hideStemText: true,
+          options: ["Giày da", "Giày bốt", "Giày thể thao", "Áo khoác dài"],
+          answer: 2,
+          explanation: "Từ vừa nghe là 운동화 (giày thể thao). 구두: giày da, 부츠: giày bốt, 코트: áo khoác dài."
+        },
+        {
+          id: "q42", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "배달하다", hideStemText: true,
+          options: ["Gọi món", "Giao hàng, ship đồ ăn", "Đổi hàng", "Ăn ngoài"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 배달하다 (giao hàng). 주문하다: gọi món, 교환하다: đổi hàng, 외식하다: ăn ngoài."
+        },
+        {
+          id: "q43", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc nối âm):",
+          koStem: "볶음밥 (cơm chiên, cơm rang)", speakText: "볶음밥",
+          options: ["[보끔밥]", "[복음밥]", "[봉음밥]", "[보금밥]"],
+          answer: 0,
+          explanation: "Phụ âm cuối đôi/kép ㄲ nối sang nguyên âm 음 phía sau → đọc là [보끔밥]."
+        },
+        {
+          id: "q44", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc căng âm hóa):",
+          koStem: "식당 (nhà ăn, nhà hàng)", speakText: "식당",
+          options: ["[식땅]", "[식당]", "[싱당]", "[시땅]"],
+          answer: 0,
+          explanation: "Sau phụ âm cuối ㄱ, phụ âm ㄷ ở âm tiết kế tiếp bị căng âm hóa thành ㄸ → đọc là [식땅]."
+        },
+        {
+          id: "q45", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc bật hơi hóa):",
+          koStem: "백화점 (cửa hàng bách hóa)", speakText: "백화점",
+          options: ["[배콰점]", "[백화점]", "[배과점]", "[뱅화점]"],
+          answer: 0,
+          explanation: "ㄱ gặp ㅎ kết hợp thành âm bật hơi ㅋ → đọc là [배콰점]."
+        },
+        {
+          id: "q46", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc căng âm hóa):",
+          koStem: "약국 (hiệu thuốc)", speakText: "약국",
+          options: ["[약꾹]", "[약국]", "[양국]", "[야꾹]"],
+          answer: 0,
+          explanation: "Khi patchim ㄱ đứng trước ㄱ, âm sau đọc căng lên thành ㄲ → [약꾹]."
+        },
+        {
+          id: "q47", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về hương vị món ăn với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "맵다", vi: "Cay" },
+            { ko: "짜다", vi: "Mặn" },
+            { ko: "시다", vi: "Chua" },
+            { ko: "고소하다", vi: "Bùi, béo ngậy thơm" }
+          ],
+          rightOrder: [2, 0, 3, 1],
+          explanation: "맵다: cay, 짜다: mặn, 시다: chua, 고소하다: bùi/thơm ngậy."
+        },
+        {
+          id: "q48", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 trang phục / phụ kiện với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "넥타이", vi: "Cà vạt" },
+            { ko: "원피스", vi: "Váy liền thân, đầm" },
+            { ko: "반바지", vi: "Quần short, quần đùi" },
+            { ko: "귀걸이", vi: "Hoa tai, bông tai" }
+          ],
+          rightOrder: [1, 3, 0, 2],
+          explanation: "넥타이: cà vạt, 원피스: đầm/váy liền, 반바지: quần short, 귀걸이: hoa tai."
+        },
+        {
+          id: "q49", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về mua sắm & thanh toán với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "가격", vi: "Giá cả" },
+            { ko: "할인", vi: "Giảm giá, chiết khấu" },
+            { ko: "교환", vi: "Sự đổi hàng" },
+            { ko: "봉투", vi: "Túi đựng đồ, phong bì" }
+          ],
+          rightOrder: [3, 0, 1, 2],
+          explanation: "가격: giá cả, 할인: giảm giá, 교환: đổi hàng, 봉투: túi đựng đồ."
+        },
+        {
+          id: "q50", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ về sức khỏe & y tế với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "건강", vi: "Sức khỏe" },
+            { ko: "감기약", vi: "Thuốc cảm" },
+            { ko: "반창고", vi: "Băng dán cá nhân" },
+            { ko: "치료하다", vi: "Điều trị, chữa bệnh" }
+          ],
+          rightOrder: [2, 3, 1, 0],
+          explanation: "건강: sức khỏe, 감기약: thuốc cảm, 반창고: băng dán cá nhân, 치료하다: điều trị."
+        }
+      ]
+    };
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>

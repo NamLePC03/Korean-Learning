@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề từ vựng 01 | Kiểm tra Từ vựng Tiếng Hàn Sơ cấp 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./assets/vocab-suite.js"></script>
+  <script>
+    const EXAM_DATA = {
+      id: "tv-01",
+      suite: window.VOCAB_SUITE,
+      badge: "ĐỀ TỪ VỰNG 01 • CON NGƯỜI, NHÀ CỬA & THỜI GIAN",
+      title: "Đề Kiểm Tra Từ Vựng Sơ Cấp 1 — Đề 01",
+      subtitle: "Tập trung 3 chủ đề đời sống nền tảng: Con người & Gia đình, Nhà cửa & Đồ dùng, Thời gian & Lịch trình (50 câu — 0% bẫy ngữ pháp).",
+      durationMinutes: 30,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Hàn ↔ Việt", title: "Phần A: Nhận diện & Truy xuất nghĩa (Câu 1–14)", desc: "Kiểm tra nghĩa trực tiếp Hàn → Việt và Việt → Hàn ở dạng nguyên thể (28 điểm)." },
+        { id: "B", shortTitle: "Phần B: Trái nghĩa & Nhóm", title: "Phần B: Trái nghĩa & Phân loại nhóm từ (Câu 15–26)", desc: "Tìm từ trái nghĩa và tìm 1 từ khác nhóm chủ đề trong 4 từ (24 điểm)." },
+        { id: "C", shortTitle: "Phần C: Cụm từ & Đơn vị", title: "Phần C: Cụm từ cố định & Đơn vị đếm (Câu 27–38)", desc: "Chọn từ kết hợp đúng nghĩa trong cụm sinh hoạt hằng ngày và đơn vị đếm (24 điểm)." },
+        { id: "D", shortTitle: "Phần D: Nghe, Đọc & Nối", title: "Phần D: Nghe phát âm, Quy tắc đọc & Ghép cặp (Câu 39–50)", desc: "Nghe âm thanh 🔊 chọn nghĩa, đọc nối âm/biến âm từ đơn và nối cặp Hàn↔Việt (24 điểm)." }
+      ],
+      questions: [
+        // PHẦN A (1-14): 7 Hàn->Việt + 7 Việt->Hàn
+        {
+          id: "q1", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "외할머니", speakText: "외할머니",
+          options: ["Bà nội", "Bà ngoại", "Bác gái (bên nội)", "Cô (chị/em gái của bố)"],
+          answer: 1,
+          explanation: "외할머니 là bà ngoại (có tiền tố 외- chỉ bên ngoại). 할머니 là bà nội, 큰어머니 là bác gái, 고모 là cô."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "동료", speakText: "동료",
+          options: ["Hàng xóm", "Họ hàng", "Đồng nghiệp", "Tiền bối"],
+          answer: 2,
+          explanation: "동료 (đồng liêu) nghĩa là đồng nghiệp. 이웃: hàng xóm, 친척: họ hàng, 선배: tiền bối."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "세탁소", speakText: "세탁소",
+          options: ["Máy giặt", "Phòng giặt đồ", "Tiệm giặt ủi", "Phòng nghỉ"],
+          answer: 2,
+          explanation: "세탁소 là tiệm giặt ủi (hậu tố -소 chỉ cơ sở dịch vụ). 세탁기: máy giặt, 세탁실: phòng giặt đồ, 휴게실: phòng nghỉ."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "그저께", speakText: "그저께",
+          options: ["Hôm qua", "Hôm kia (2 ngày trước)", "Ngày kia (2 ngày sau)", "Ngày mai"],
+          answer: 1,
+          explanation: "그저께 là hôm kia. 어제: hôm qua, 내일: ngày mai, 모레: ngày kia."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của tính từ sau:",
+          koStem: "외롭다", speakText: "외롭다",
+          options: ["Buồn chán (rảnh rỗi)", "Cô đơn, lẻ loi", "Ngại ngùng, xấu hổ", "Đáng sợ"],
+          answer: 1,
+          explanation: "외롭다 là cô đơn, lẻ loi. 심심하다: buồn chán, 부끄럽다: ngại ngùng, 무섭다: đáng sợ."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "현관", speakText: "현관",
+          options: ["Ban công", "Tiền sảnh, lối vào nhà", "Phòng ngủ chính", "Tầng nhà"],
+          answer: 1,
+          explanation: "현관 là tiền sảnh, cửa ra vào nhà. 베란다: ban công, 안방: phòng ngủ chính, 층: tầng."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 2, typeLabel: "Hàn → Việt",
+          prompt: "Chọn nghĩa tiếng Việt đúng của từ sau:",
+          koStem: "통역사", speakText: "통역사",
+          options: ["Luật sư", "Nghiên cứu viên", "Thông dịch viên", "Dược sĩ"],
+          answer: 2,
+          explanation: "통역사 là thông dịch viên, phiên dịch viên. 변호사: luật sư, 연구원: nghiên cứu viên, 약사: dược sĩ."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"em gái\":",
+          koStem: "Nghĩa: \"Em gái\"",
+          options: ["남동생", "여동생", "여자친구", "언니"],
+          answer: 1,
+          explanation: "여동생 là em gái. 남동생: em trai, 여자친구: bạn gái (người yêu), 언니: chị gái (của nữ)."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"sáng sớm\":",
+          koStem: "Nghĩa: \"Sáng sớm\"",
+          options: ["새벽", "오후", "낮", "밤"],
+          answer: 0,
+          explanation: "새벽 là sáng sớm (tầm rạng sáng). 오후: buổi chiều, 낮: ban ngày, 밤: ban đêm."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"tủ lạnh\":",
+          koStem: "Nghĩa: \"Tủ lạnh\"",
+          options: ["세탁기", "청소기", "냉장고", "선풍기"],
+          answer: 2,
+          explanation: "냉장고 là tủ lạnh. 세탁기: máy giặt, 청소기: máy hút bụi, 선풍기: quạt máy."
+        },
+        {
+          id: "q11", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"ngày thường (trong tuần)\":",
+          koStem: "Nghĩa: \"Ngày thường (trong tuần)\"",
+          options: ["주말", "평일", "명절", "설날"],
+          answer: 1,
+          explanation: "평일 (cũng gọi 주중) là ngày thường trong tuần (Thứ 2–Thứ 6). 주말: cuối tuần, 명절: ngày lễ, 설날: ngày Tết."
+        },
+        {
+          id: "q12", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"chăn, mền\":",
+          koStem: "Nghĩa: \"Chăn, mền\"",
+          options: ["베개", "이불", "수건", "거울"],
+          answer: 1,
+          explanation: "이불 là chăn, mền. 베개: cái gối, 수건: khăn lau/khăn tắm, 거울: gương soi."
+        },
+        {
+          id: "q13", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"con trai\" (trong gia đình):",
+          koStem: "Nghĩa: \"Con trai (của bố mẹ)\"",
+          options: ["아들", "딸", "남자", "아기"],
+          answer: 0,
+          explanation: "아들 là con trai. 딸: con gái, 남자: nam giới nói chung, 아기: em bé."
+        },
+        {
+          id: "q14", section: "A", type: "mcq", points: 2, typeLabel: "Việt → Hàn",
+          prompt: "Chọn từ tiếng Hàn có nghĩa là \"bàn chải đánh răng\":",
+          koStem: "Nghĩa: \"Bàn chải đánh răng\"",
+          options: ["치약", "칫솔", "치아", "비누"],
+          answer: 1,
+          explanation: "칫솔 là bàn chải đánh răng. 치약: kem đánh răng, 치아: răng, 비누: xà phòng."
+        },
+
+        // PHẦN B (15-26): 6 Trái nghĩa + 6 Odd-one-out
+        {
+          id: "q15", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "일찍 (sớm) ↔ ?",
+          options: ["자주", "늦게", "항상", "먼저"],
+          answer: 1,
+          explanation: "일찍 (sớm) trái nghĩa với 늦게 (muộn, trễ). 자주: thường xuyên, 항상: luôn luôn, 먼저: trước tiên."
+        },
+        {
+          id: "q16", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "깨끗하다 (sạch sẽ) ↔ ?",
+          options: ["조용하다", "더럽다", "편하다", "시끄럽다"],
+          answer: 1,
+          explanation: "깨끗하다 (sạch sẽ) trái nghĩa với 더럽다 (bẩn thỉu). 조용하다 ↔ 시끄럽다 (yên tĩnh ↔ ồn ào), 편하다: thoải mái."
+        },
+        {
+          id: "q17", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn động từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "켜다 (bật đèn/máy) ↔ ?",
+          options: ["열다", "닫다", "끄다", "씻다"],
+          answer: 2,
+          explanation: "켜다 (bật thiết bị điện) trái nghĩa với 끄다 (tắt). 열다 ↔ 닫다 (mở ↔ đóng cửa/sách), 씻다: rửa."
+        },
+        {
+          id: "q18", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn tính từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "기쁘다 (vui mừng) ↔ ?",
+          options: ["행복하다", "슬프다", "심심하다", "외롭다"],
+          answer: 1,
+          explanation: "기쁘다 (vui mừng) trái nghĩa với 슬프다 (buồn bã). 행복하다: hạnh phúc, 심심하다: buồn chán, 외롭다: cô đơn."
+        },
+        {
+          id: "q19", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn danh từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "선배 (tiền bối) ↔ ?",
+          options: ["동료", "후배", "이웃", "친척"],
+          answer: 1,
+          explanation: "선배 (đàn anh/chị, tiền bối) trái nghĩa với 후배 (đàn em, hậu bối). 동료: đồng nghiệp, 이웃: hàng xóm, 친척: họ hàng."
+        },
+        {
+          id: "q20", section: "B", type: "mcq", points: 2, typeLabel: "Từ trái nghĩa",
+          prompt: "Chọn từ TRÁI NGHĨA với từ cho sẵn:",
+          koStem: "어린이 (trẻ em) ↔ ?",
+          options: ["아기", "어른", "가족", "손님"],
+          answer: 1,
+          explanation: "어린이 (trẻ em) đối lập với 어른 (người lớn). 아기: em bé sơ sinh, 가족: gia đình, 손님: khách."
+        },
+        {
+          id: "q21", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ về bộ phận cơ thể / con người",
+          options: ["손가락", "발가락", "어깨", "목도리"],
+          answer: 3,
+          explanation: "손가락 (ngón tay), 발가락 (ngón chân), 어깨 (bờ vai) là bộ phận cơ thể; 목도리 là khăn quàng cổ (đồ vật)."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ không gian trong nhà",
+          options: ["거실", "부엌", "침실", "소파"],
+          answer: 3,
+          explanation: "거실 (phòng khách), 부엌 (bếp), 침실 (phòng ngủ) là tên các phòng; 소파 (ghế sofa) là đồ nội thất."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ nghề nghiệp",
+          options: ["변호사", "경찰관", "농부", "결혼식"],
+          answer: 3,
+          explanation: "변호사 (luật sư), 경찰관 (cảnh sát), 농부 (nông dân) là nghề nghiệp; 결혼식 là lễ cưới."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ thiết bị điện gia dụng",
+          options: ["에어컨", "전자레인지", "세탁기", "쓰레기통"],
+          answer: 3,
+          explanation: "에어컨 (điều hòa), 전자레인지 (lò vi sóng), 세탁기 (máy giặt) là thiết bị điện; 쓰레기통 là thùng rác."
+        },
+        {
+          id: "q25", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ chỉ khoảng thời gian quá khứ",
+          options: ["어제", "그저께", "지난해", "모레"],
+          answer: 3,
+          explanation: "어제 (hôm qua), 그저께 (hôm kia), 지난해 (năm ngoái) chỉ quá khứ; 모레 là ngày kia (tương lai)."
+        },
+        {
+          id: "q26", section: "B", type: "mcq", points: 2, typeLabel: "Tìm từ khác nhóm",
+          prompt: "Chọn 1 từ KHÔNG cùng nhóm với 3 từ còn lại:",
+          koStem: "Nhóm từ kính ngữ dành cho người bề trên",
+          options: ["성함", "연세", "생신", "취미"],
+          answer: 3,
+          explanation: "성함 (tên), 연세 (tuổi), 생신 (sinh nhật) là từ kính ngữ; 취미 (sở thích) là từ thông thường."
+        },
+
+        // PHẦN C (27-38): Cụm từ cố định & Đơn vị đếm
+        {
+          id: "q27", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ thích hợp nhất hoàn thành cụm việc nhà:",
+          koStem: "밥을 먹은 후에 (      ) — \"Sau khi ăn cơm: rửa bát chén\"",
+          options: ["빨래하다", "설거지하다", "청소하다", "세수하다"],
+          answer: 1,
+          explanation: "설거지하다 là rửa bát chén. 빨래하다: giặt đồ, 청소하다: dọn vệ sinh, 세수하다: rửa mặt."
+        },
+        {
+          id: "q28", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"đánh (răng) / lau chùi\":",
+          koStem: "치약 + 칫솔 → 이를 (      )",
+          options: ["빗다", "닦다", "끄다", "깨우다"],
+          answer: 1,
+          explanation: "닦다 là lau, chùi, đánh răng (이를 닦다). 빗다: chải tóc, 끄다: tắt, 깨우다: đánh thức."
+        },
+        {
+          id: "q29", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ kính ngữ đúng tương ứng với 자다 (ngủ):",
+          koStem: "할아버지 — 자다 (kính ngữ) → (      )",
+          options: ["주시다", "드시다", "주무시다", "계시다"],
+          answer: 2,
+          explanation: "주무시다 là kính ngữ của 자다 (ngủ). 드시다: ăn/uống, 계시다: ở/có, 주시다: cho."
+        },
+        {
+          id: "q30", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"chải (tóc)\":",
+          koStem: "거울 + 머리 → 머리를 (      )",
+          options: ["씻다", "빗다", "지내다", "가지다"],
+          answer: 1,
+          explanation: "빗다 là chải (tóc/đầu). 씻다: rửa/gội, 지내다: sống/trải qua, 가지다: mang/có."
+        },
+        {
+          id: "q31", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng nghĩa \"đến muộn, đi trễ (giờ học/giờ làm)\":",
+          koStem: "수업 시간 09:00 → 09:20 도착 = (      )",
+          options: ["일어나다", "끝나다", "지각하다", "기억하다"],
+          answer: 2,
+          explanation: "지각하다 là đi muộn, đến trễ. 일어나다: thức dậy, 끝나다: kết thúc, 기억하다: ghi nhớ."
+        },
+        {
+          id: "q32", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn động từ đúng hoàn thành cụm \"tổ chức tiệc\":",
+          koStem: "생일 + (      ) — \"Tổ chức tiệc sinh nhật\"",
+          options: ["파티를 하다", "사업을 하다", "통역하다", "화장하다"],
+          answer: 0,
+          explanation: "파티를 하다 là tổ chức tiệc. 사업을 하다: kinh doanh, 통역하다: phiên dịch, 화장하다: trang điểm."
+        },
+        {
+          id: "q33", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn danh từ đúng nghĩa \"khuôn mặt\" đi với động từ 씻다 (rửa):",
+          koStem: "아침에 (      )을/를 씻다 (= 세수하다)",
+          options: ["허리", "얼굴", "어깨", "피부"],
+          answer: 1,
+          explanation: "얼굴 là khuôn mặt (세수하다 = rửa mặt). 허리: eo/thắt lưng, 어깨: vai, 피부: làn da."
+        },
+        {
+          id: "q34", section: "C", type: "mcq", points: 2, typeLabel: "Cụm từ cố định",
+          prompt: "Chọn từ đúng nghĩa \"thu dọn, sắp xếp ngăn nắp\":",
+          koStem: "방 + 이불 + 책상 → (      )",
+          options: ["정리하다", "걱정하다", "놀라다", "느끼다"],
+          answer: 0,
+          explanation: "정리하다 là thu dọn, sắp xếp gọn gàng. 걱정하다: lo lắng, 놀라다: ngạc nhiên, 느끼다: cảm thấy."
+        },
+        {
+          id: "q35", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm người (dạng KÍNH NGỮ) đi với 선생님 / 할머니:",
+          koStem: "선생님 두 (      ) — \"Hai vị giáo viên\"",
+          options: ["명", "개", "분", "살"],
+          answer: 2,
+          explanation: "분 là đơn vị đếm người ở dạng kính ngữ (선생님, 할머니). 명 đếm người thông thường, 개 đếm đồ vật, 살 đếm tuổi."
+        },
+        {
+          id: "q36", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị đếm TUỔI đi với số thuần Hàn (스무...):",
+          koStem: "스무 (      ) — \"20 tuổi\"",
+          options: ["살", "년", "호", "층"],
+          answer: 0,
+          explanation: "살 đi với số thuần Hàn để đếm tuổi (스무 살 = 20 tuổi). 년: năm, 호: số phòng, 층: tầng nhà."
+        },
+        {
+          id: "q37", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn đơn vị chỉ TẦNG NHÀ:",
+          koStem: "아파트 5(      ) — \"Tầng 5 chung cư\"",
+          options: ["호", "층", "번째", "초"],
+          answer: 1,
+          explanation: "층 là tầng nhà. 호: số phòng/căn hộ, 번째: lần thứ/thứ tự, 초: giây."
+        },
+        {
+          id: "q38", section: "C", type: "mcq", points: 2, typeLabel: "Đơn vị đếm",
+          prompt: "Chọn tên tháng đúng cho \"Tháng 6\" (lưu ý biến âm/rút gọn đặc biệt):",
+          koStem: "6월 = (      )",
+          options: ["육월", "유월", "시월", "이월"],
+          answer: 1,
+          explanation: "Tháng 6 viết và đọc là 유월 (rụng ㄱ của 육), tháng 10 là 시월. 이월: tháng 2."
+        },
+
+        // PHẦN D (39-50): 4 Nghe phát âm + 4 Quy tắc đọc + 4 Match
+        {
+          id: "q39", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "미용실", hideStemText: true,
+          options: ["Tiệm giặt ủi", "Tiệm làm tóc, salon làm đẹp", "Phòng nghỉ", "Phòng giặt đồ"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 미용실 (tiệm làm tóc, salon làm đẹp). 세탁소: tiệm giặt ủi, 휴게실: phòng nghỉ, 세탁실: phòng giặt đồ."
+        },
+        {
+          id: "q40", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "깨우다", hideStemText: true,
+          options: ["Thức dậy", "Đánh thức", "Kết thúc", "Nghỉ ngơi"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 깨우다 (đánh thức). 일어나다: thức dậy, 끝나다: kết thúc, 쉬다: nghỉ ngơi."
+        },
+        {
+          id: "q41", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "아침마다", hideStemText: true,
+          options: ["Sáng sớm", "Mỗi sáng", "Buổi chiều", "Mỗi ngày"],
+          answer: 1,
+          explanation: "Từ vừa nghe là 아침마다 (mỗi sáng). 새벽: sáng sớm, 오후: buổi chiều, 매일: mỗi ngày."
+        },
+        {
+          id: "q42", section: "D", type: "mcq", points: 2, typeLabel: "Nghe chọn nghĩa",
+          prompt: "Bấm nút loa để nghe và chọn nghĩa tiếng Việt đúng:",
+          speakText: "단독주택", hideStemText: true,
+          options: ["Nhà riêng, nhà biệt lập", "Nhà chung cư", "Căn hộ văn phòng", "Ký túc xá"],
+          answer: 0,
+          explanation: "Từ vừa nghe là 단독주택 (nhà riêng, nhà biệt lập). 아파트: nhà chung cư, 오피스텔: căn hộ văn phòng, 기숙사: ký túc xá."
+        },
+        {
+          id: "q43", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc mũi âm hóa / biến âm):",
+          koStem: "작년 (năm ngoái)", speakText: "작년",
+          options: ["[작년]", "[장년]", "[잔년]", "[자년]"],
+          answer: 1,
+          explanation: "Phụ âm cuối ㄱ đứng trước ㄴ biến âm thành ㅇ → đọc là [장년]."
+        },
+        {
+          id: "q44", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc âm hóa ㄹ → ㄴ/ㄹ):",
+          koStem: "설날 (ngày Tết)", speakText: "설날",
+          options: ["[설날]", "[설랄]", "[선날]", "[서랄]"],
+          answer: 1,
+          explanation: "Phụ âm ㄹ gặp ㄴ khiến ㄴ biến thành ㄹ (유음화) → đọc là [설랄]."
+        },
+        {
+          id: "q45", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc âm bật hơi / nối âm):",
+          koStem: "깨끗하다 (sạch sẽ)", speakText: "깨끗하다",
+          options: ["[깨끄타다]", "[깨끗하다]", "[깨끄다다]", "[깨끈하다]"],
+          answer: 0,
+          explanation: "Phụ âm cuối ㅅ đổi thành ㄷ gặp ㅎ bật hơi thành ㅌ → đọc là [깨끄타다]."
+        },
+        {
+          id: "q46", section: "D", type: "mcq", points: 2, typeLabel: "Quy tắc phát âm",
+          prompt: "Chọn cách đọc đúng của từ sau (quy tắc nối âm liên tiếp):",
+          koStem: "십일월 (tháng 11)", speakText: "십일월",
+          options: ["[시비뤌]", "[십이월]", "[시빌월]", "[십일월]"],
+          answer: 0,
+          explanation: "Áp dụng nối âm liên tiếp: ㅂ nối sang 이 → 시비, ㄹ nối sang 월 → 뤌 → [시비뤌]."
+        },
+        {
+          id: "q47", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ chỉ thành viên gia đình với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "삼촌", vi: "Chú (em/anh trai của bố)" },
+            { ko: "고모", vi: "Cô (chị/em gái của bố)" },
+            { ko: "사촌", vi: "Anh chị em họ" },
+            { ko: "부모님", vi: "Bố mẹ" }
+          ],
+          rightOrder: [2, 0, 3, 1],
+          explanation: "삼촌: chú, 고모: cô, 사촌: anh chị em họ, 부모님: bố mẹ."
+        },
+        {
+          id: "q48", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 đồ dùng trong nhà với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "베개", vi: "Cái gối" },
+            { ko: "선풍기", vi: "Quạt máy" },
+            { ko: "청소기", vi: "Máy hút bụi" },
+            { ko: "거울", vi: "Gương soi" }
+          ],
+          rightOrder: [3, 1, 0, 2],
+          explanation: "베개: cái gối, 선풍기: quạt máy, 청소기: máy hút bụi, 거울: gương soi."
+        },
+        {
+          id: "q49", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 từ chỉ bộ phận cơ thể với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "귀", vi: "Tai" },
+            { ko: "코", vi: "Mũi" },
+            { ko: "입", vi: "Miệng" },
+            { ko: "허리", vi: "Eo, thắt lưng" }
+          ],
+          rightOrder: [1, 3, 0, 2],
+          explanation: "귀: tai, 코: mũi, 입: miệng, 허리: eo/thắt lưng."
+        },
+        {
+          id: "q50", section: "D", type: "match", points: 2, typeLabel: "Ghép cặp từ",
+          prompt: "Nối 4 trạng từ thời gian / tần suất với nghĩa tiếng Việt đúng:",
+          pairs: [
+            { ko: "가끔", vi: "Thỉnh thoảng" },
+            { ko: "벌써", vi: "Đã... rồi (sớm hơn dự kiến)" },
+            { ko: "아직", vi: "Vẫn, vẫn chưa" },
+            { ko: "미리", vi: "Sẵn, từ trước" }
+          ],
+          rightOrder: [2, 3, 0, 1],
+          explanation: "가끔: thỉnh thoảng, 벌써: đã... rồi, 아직: vẫn/vẫn chưa, 미리: sẵn/từ trước."
+        }
+      ]
+    };
+  </script>
+  <script src="./assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>
