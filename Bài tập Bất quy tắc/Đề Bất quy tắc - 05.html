@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề Bất quy tắc - 05 | Stress-Test Bẫy & Ngoại lệ Hỗn hợp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../S%C6%A1%20c%E1%BA%A5p%201/%C4%90%E1%BB%81%20%C3%B4n%20s%C6%A1%20c%E1%BA%A5p%201/assets/exam-style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./assets/suite-config.js"></script>
+  <script>
+    const EXAM_DATA = {
+      id: "bqt-05",
+      suite: window.BQT_SUITE,
+      badge: "ĐỀ BẤT QUY TẮC 05 • STRESS-TEST BẪY & NGOẠI LỆ",
+      title: "Đề Ôn Tập Bất Quy Tắc — Đề 05",
+      subtitle: "Đề tổng hợp nâng cao rà soát toàn bộ 7 nhóm kinh điển, 3 nhóm mở rộng (우, 러, 여), các ngoại lệ dễ nhầm và 4 bẫy kinh điển trong kỳ thi.",
+      durationMinutes: 25,
+      sections: [
+        { id: "A", shortTitle: "Phần A: Tổng hợp 10 quy tắc", title: "Phần A: Chia hỗn hợp 10 quy tắc & Ngoại lệ toàn phần (Câu 1–20)", desc: "20 câu pha trộn ngẫu nhiên các nhóm ㅂ, ㄷ, ㅅ, ㅡ, 르, ㄹ, ㅎ, 우, 러, 여 và ngoại lệ ở nhiều thì/đuôi (3đ/câu = 60 điểm)." },
+        { id: "B", shortTitle: "Phần B: Săn lỗi sai & 4 Bẫy", title: "Phần B: Bắt lỗi chia sai, Nhận diện ngoại lệ & Chuỗi đối chiếu (Câu 21–30)", desc: "10 câu kiểm tra khả năng phát hiện bẫy *살으니까, *춥는, *고마와요, *지면 và tổng kết chuỗi chia 3 dạng (4đ/câu = 40 điểm)." }
+      ],
+      questions: [
+        // PHẦN A (1-20) - 3đ/câu
+        {
+          id: "q1", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc '우'",
+          prompt: "Chia động từ 푸다 (múc cơm, múc nước) với cấu trúc -아/어야 하다:",
+          koStem: "국을 큰 그릇에 (      ).",
+          options: ["푸워야 해요", "푸어야 해요", "퍼야 해요", "파야 해요"],
+          answer: 2,
+          explanation: "푸다 là từ duy nhất thuộc bất quy tắc '우': mất nguyên âm 우 khi gặp -아/어 → ㅍ + 어야 해요 = 퍼야 해요."
+        },
+        {
+          id: "q2", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc '우' (Quá khứ)",
+          prompt: "Chia động từ 푸다 (múc) sang thì quá khứ -았/었어요:",
+          koStem: "아침에 밥을 두 공기나 (      ).",
+          options: ["푸웠어요", "푸었어요", "펐어요", "팠어요"],
+          answer: 2,
+          explanation: "푸다 bỏ 우 rồi gắn -었어요 → ㅍ + 었어요 = 펐어요."
+        },
+        {
+          id: "q3", section: "A", type: "mcq", points: 3, typeLabel: "Đồng âm 이르다 ('러')",
+          prompt: "Chia động từ 이르다 (đạt tới, chạm đến) sang đuôi -아/어요:",
+          koStem: "마침내 정상에 (      ). (đạt tới)",
+          options: ["일러요", "이르러요", "이러요", "일라요"],
+          answer: 1,
+          explanation: "이르다 mang nghĩa 'đạt tới' thuộc bất quy tắc '러' → 이르러요."
+        },
+        {
+          id: "q4", section: "A", type: "mcq", points: 3, typeLabel: "Đồng âm 이르다 ('르')",
+          prompt: "Chia tính từ/động từ 이르다 (sớm / mách bảo) sang đuôi -아/어요:",
+          koStem: "지금 자기는 아직 (      ). (còn sớm)",
+          options: ["이르러요", "일러요", "이러요", "일라요"],
+          answer: 1,
+          explanation: "이르다 mang nghĩa 'sớm / mách' thuộc bất quy tắc '르' → 일러요."
+        },
+        {
+          id: "q5", section: "A", type: "mcq", points: 3, typeLabel: "Đồng âm 누르다 ('르')",
+          prompt: "Chia động từ 누르다 (ấn, nhấn nút) với -아/어 주세요:",
+          koStem: "벨을 (      ). (nhấn chuông)",
+          options: ["누르러 주세요", "눌러 주세요", "누라 주세요", "눌라 주세요"],
+          answer: 1,
+          explanation: "누르다 (ấn, nhấn) thuộc bất quy tắc '르' → 눌러 주세요."
+        },
+        {
+          id: "q6", section: "A", type: "mcq", points: 3, typeLabel: "Đồng âm 누르다 ('러')",
+          prompt: "Chia tính từ 누르다 (vàng sẫm) sang đuôi -아/어요:",
+          koStem: "오래된 책이 (      ). (vàng sẫm)",
+          options: ["눌러요", "누르러요", "눌라요", "누러요"],
+          answer: 1,
+          explanation: "누르다 (vàng sẫm) thuộc bất quy tắc '러' → 누르러요."
+        },
+        {
+          id: "q7", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ 르 (Quy tắc ㅡ)",
+          prompt: "Chia động từ 따르다 (đi theo, noi theo) với đuôi -아/어서:",
+          koStem: "선생님의 말씀을 (      ) 열심히 공부했어요.",
+          options: ["딸라서", "따라서", "따르라서", "따러서"],
+          answer: 1,
+          explanation: "따르다 là ngoại lệ của 르 (chia theo quy tắc ㅡ): bỏ ㅡ và gắn -아서 → 따라서."
+        },
+        {
+          id: "q8", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ 르 (Quy tắc ㅡ)",
+          prompt: "Chia động từ 치르다 (trải qua, thanh toán) sang đuôi -아/어요:",
+          koStem: "모든 학생이 시험을 (      ).",
+          options: ["칠러요", "치러요", "치르러요", "치라요"],
+          answer: 1,
+          explanation: "치르다 là ngoại lệ của 르 (chia theo quy tắc ㅡ): bỏ ㅡ và gắn -어요 → 치러요."
+        },
+        {
+          id: "q9", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc ㅂ (Bẫy 3)",
+          prompt: "Chia tính từ 가깝다 (gần) sang đuôi -아/어요:",
+          koStem: "집에서 학교까지 아주 (      ).",
+          options: ["가까와요", "가까워요", "가깝어요", "가깝아요"],
+          answer: 1,
+          explanation: "Chỉ 돕다 và 곱다 thành 오 với -아/어요; còn 가깝다 vẫn biến ㅂ thành 우 → 가까워요."
+        },
+        {
+          id: "q10", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc ㅂ (Đặc biệt)",
+          prompt: "Chia tính từ 곱다 (đẹp, mịn) sang thì quá khứ -았/었어요:",
+          koStem: "할머니의 손이 정말 (      ).",
+          options: ["고웠어요", "고왔어요", "곱았어요", "곱었어요"],
+          answer: 1,
+          explanation: "곱다 khi gặp -아/어 (kể cả quá khứ -았/었어요) biến ㅂ thành 오 → 고 + 오 + 았어요 = 고왔어요."
+        },
+        {
+          id: "q11", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㅂ + -(으)",
+          prompt: "Chia tính từ 넓다 (rộng rãi) với đuôi -(으)면:",
+          koStem: "방이 (      ) 친구들을 초대하고 싶어요.",
+          options: ["널우면", "넓으면", "너우면", "넓면"],
+          answer: 1,
+          explanation: "넓다 (patchim kép ㄼ) chia có quy tắc: giữ nguyên patchim và lấy 으 → 넓으면."
+        },
+        {
+          id: "q12", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㅂ",
+          prompt: "Chia động từ 뽑다 (chọn, rút, nhổ) sang đuôi -아/어요:",
+          koStem: "오늘 반장을 새로 (      ).",
+          options: ["뽀와요", "뽀워요", "뽑아요", "뽑어요"],
+          answer: 2,
+          explanation: "뽑다 là ngoại lệ chia có quy tắc của nhóm ㅂ: giữ nguyên ㅂ, gốc ㅗ + -아요 → 뽑아요."
+        },
+        {
+          id: "q13", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㄷ",
+          prompt: "Chia động từ 얻다 (đạt được, nhận lấy) sang thì quá khứ -았/었어요:",
+          koStem: "친구의 도움으로 좋은 정보를 (      ).",
+          options: ["얼었어요", "얻었어요", "얻았어요", "얼렀어요"],
+          answer: 1,
+          explanation: "얻다 là ngoại lệ nhóm ㄷ: giữ nguyên patchim ㄷ, gốc ㅓ + -었어요 → 얻었어요."
+        },
+        {
+          id: "q14", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc ㄷ + -(으)",
+          prompt: "Chia động từ 묻다 (hỏi) với đuôi -(으)니까:",
+          koStem: "직원에게 (      ) 친절하게 알려 주었어요.",
+          options: ["묻으니까", "물으니까", "물니까", "물르니까"],
+          answer: 1,
+          explanation: "묻다 (hỏi) thuộc bất quy tắc ㄷ: ㄷ biến thành ㄹ trước -(으)니까 → 물으니까."
+        },
+        {
+          id: "q15", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㅅ + -(으)",
+          prompt: "Chia động từ 벗다 (cởi giày/áo) với đuôi -(으)세요:",
+          koStem: "방에 들어가기 전에 신발을 (      ).",
+          options: ["버으세요", "벗으세요", "버세요", "벗세요"],
+          answer: 1,
+          explanation: "벗다 là ngoại lệ nhóm ㅅ: giữ nguyên patchim ㅅ và nhận 으 → 벗으세요."
+        },
+        {
+          id: "q16", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㅅ",
+          prompt: "Chia động từ 빼앗다 (cướp, tước đoạt) sang thì quá khứ -았/었어요:",
+          koStem: "도둑이 가방을 (      ).",
+          options: ["빼아았어요", "빼앗았어요", "빼았어요", "빼앗었어요"],
+          answer: 1,
+          explanation: "빼앗다 là ngoại lệ nhóm ㅅ (cùng với 웃다, 벗다, 씻다, 빗다): giữ nguyên ㅅ → 빼앗았어요."
+        },
+        {
+          id: "q17", section: "A", type: "mcq", points: 3, typeLabel: "Bẫy 1: ㄹ + -(으)니까",
+          prompt: "Chia tính từ 멀다 (xa) với đuôi -(으)니까:",
+          koStem: "집에서 회사가 (      ) 지하철을 타고 가요.",
+          options: ["멀으니까", "머니까", "멀니까", "머으니까"],
+          answer: 1,
+          explanation: "Bẫy 1: 멀다 + -(으)니까 bỏ cả 으 lẫn ㄹ → 머니까 (tuyệt đối không dùng 멀으니까)."
+        },
+        {
+          id: "q18", section: "A", type: "mcq", points: 3, typeLabel: "Lưu ý ㄹ + -(으)려고",
+          prompt: "Chia động từ 만들다 (làm) với cấu trúc -(으)려고 하다:",
+          koStem: "주말에 케이크를 (      ) 해요.",
+          options: ["만드려고", "만들려고", "만들으려고", "만드려"],
+          answer: 1,
+          explanation: "Lưu ý: patchim ㄹ không rụng trước -(으)려고 → 만들려고."
+        },
+        {
+          id: "q19", section: "A", type: "mcq", points: 3, typeLabel: "Ngoại lệ ㅎ + -(으)ㄴ",
+          prompt: "Chia tính từ 좋다 (tốt) với định ngữ -(으)ㄴ:",
+          koStem: "기분이 (      ) 날 (좋다 + -(으)ㄴ)",
+          options: ["존 날", "좋은 날", "좋는 날", "조은 날"],
+          answer: 1,
+          explanation: "좋다 là ngoại lệ nhóm ㅎ: giữ nguyên ㅎ và nhận 은 bình thường → 좋은 날."
+        },
+        {
+          id: "q20", section: "A", type: "mcq", points: 3, typeLabel: "Bất quy tắc ㅎ + -(으)ㄴ",
+          prompt: "Chia tính từ 까맣다 (đen tuyền) với định ngữ -(으)ㄴ:",
+          koStem: "까맣다 + -(으)ㄴ + 고양이 → (      )",
+          options: ["까맣은 고양이", "까만 고양이", "까맣는 고양이", "까매 고양이"],
+          answer: 1,
+          explanation: "까맣다 thuộc bất quy tắc ㅎ: gặp -(으)ㄴ bỏ cả ㅎ lẫn 으 → 까만 고양이."
+        },
+
+        // PHẦN B (21-30) - 4đ/câu
+        {
+          id: "q21", section: "B", type: "mcq", points: 4, typeLabel: "Bẫy 1: Săn lỗi nhóm ㄹ",
+          prompt: "Chọn câu chia SAI quy tắc rụng ㄹ:",
+          koStem: "다음 중 활용이 틀린 문장을 고르세요.",
+          options: [
+            "서울에 사니까 편해요.",
+            "김밥을 만드세요.",
+            "음식을 만들려고 해요.",
+            "내일 살으니까 좋아요."
+          ],
+          answer: 3,
+          explanation: "Bẫy 1: '살으니까' là SAI tuyệt đối! Phải chia là 사니까 (rụng cả 으 lẫn ㄹ)."
+        },
+        {
+          id: "q22", section: "B", type: "mcq", points: 4, typeLabel: "Bẫy 2: Định ngữ tính từ",
+          prompt: "Chọn cụm định ngữ chia SAI ngữ pháp:",
+          koStem: "다음 중 명사를 수식하는 형태가 틀린 것을 고르세요.",
+          options: ["추운 날씨", "하얀 눈", "나은 방법", "춥는 겨울"],
+          answer: 3,
+          explanation: "Bẫy 2: 춥다 là tính từ nên không dùng định ngữ -는; phải dùng -(으)ㄴ → 추운 겨울."
+        },
+        {
+          id: "q23", section: "B", type: "mcq", points: 4, typeLabel: "Bẫy 3: Nhóm ㅂ (오 vs 우)",
+          prompt: "Chọn dạng chia SAI của bất quy tắc ㅂ với đuôi -아/어요:",
+          koStem: "다음 중 '-아/어요' 활용이 틀린 것을 고르세요.",
+          options: ["도와요", "고마워요", "가까워요", "아름다와요"],
+          answer: 3,
+          explanation: "Bẫy 3: Chỉ 돕다 (도와요) và 곱다 (고와요) biến thành 오; 아름답다 phải biến thành 우 → 아름다워요."
+        },
+        {
+          id: "q24", section: "B", type: "mcq", points: 4, typeLabel: "Bẫy 4: Co âm ở ㅅ",
+          prompt: "Chọn dạng chia SAI của bất quy tắc ㅅ:",
+          koStem: "다음 중 ㅅ 불규칙 활용이 틀린 것을 고르세요.",
+          options: ["지어요", "나았어요", "지면 (từ 짓다 'xây')", "부으세요"],
+          answer: 2,
+          explanation: "Bẫy 4: 짓다 + -(으)면 khi rụng ㅅ vẫn phải giữ nguyên âm đệm 으 → 지으면 (không viết là 지면)."
+        },
+        {
+          id: "q25", section: "B", type: "mcq", points: 4, typeLabel: "Nhận diện ngoại lệ",
+          prompt: "Từ nào dưới đây chia CÓ QUY TẮC (giữ nguyên patchim khi gặp -아/어요)?",
+          koStem: "다음 중 규칙 활용을 하는 단어를 고르세요.",
+          options: ["어렵다 (khó)", "믿다 (tin tưởng)", "부르다 (hát/gọi)", "어떻다 (như thế nào)"],
+          answer: 1,
+          explanation: "믿다 là ngoại lệ của nhóm ㄷ → 믿어요. Còn 어렵다 → 어려워요 (ㅂ), 부르다 → 불러요 (르), 어떻다 → 어때요 (ㅎ)."
+        },
+        {
+          id: "q26", section: "B", type: "mcq", points: 4, typeLabel: "Nhận diện ngoại lệ ㅅ",
+          prompt: "Từ nào dưới đây chia CÓ QUY TẮC (giữ nguyên ㅅ khi gặp -아/어요)?",
+          koStem: "다음 중 규칙 활용을 하는 단어를 고르세요.",
+          options: ["낫다 (khỏi bệnh)", "짓다 (xây)", "빗다 (chải tóc)", "붓다 (sưng/rót)"],
+          answer: 2,
+          explanation: "빗다 (chải tóc) là ngoại lệ của nhóm ㅅ → 빗어요. Còn 낫다 (나아요), 짓다 (지어요), 붓다 (부어요) đều rụng ㅅ."
+        },
+        {
+          id: "q27", section: "B", type: "mcq", points: 4, typeLabel: "Nhận diện ngoại lệ ㅎ",
+          prompt: "Từ nào dưới đây chia CÓ QUY TẮC (giữ nguyên ㅎ khi gặp -아/어요)?",
+          koStem: "다음 중 규칙 활용을 하는 단어를 고르세요.",
+          options: ["빨갛다 (đỏ)", "까맣다 (đen)", "놓다 (đặt, để)", "하얗다 (trắng)"],
+          answer: 2,
+          explanation: "놓다 là ĐỘNG TỪ tận cùng bằng ㅎ nên luôn chia có quy tắc → 놓아요 (mọi động từ đuôi ㅎ đều giữ nguyên ㅎ)."
+        },
+        {
+          id: "q28", section: "B", type: "mcq", points: 4, typeLabel: "Ngoại lệ 르 (Quy tắc ㅡ)",
+          prompt: "Từ nào dưới đây KHÔNG biến thành ㄹㄹ (không thuộc bất quy tắc 르) khi gặp -아/어요?",
+          koStem: "다음 중 '-아/어요'와 결합할 때 'ㄹㄹ'로 바뀌지 않는 단어를 고르세요.",
+          options: ["고르다 (chọn)", "모르다 (không biết)", "따르다 (đi theo/rót)", "부르다 (hát/gọi)"],
+          answer: 2,
+          explanation: "따르다 thuộc quy tắc rụng ㅡ → 따라요 (không thêm patchim ㄹ). Còn 고르다 → 골라요, 모르다 → 몰라요, 부르다 → 불러요."
+        },
+        {
+          id: "q29", section: "B", type: "mcq", points: 4, typeLabel: "Chuỗi 3 dạng của 돕다",
+          prompt: "Chọn dãy chia ĐÚNG cả 3 dạng (-아/어요 | -(으)면 | -습니다) của 돕다 (giúp đỡ):",
+          koStem: "돕다 (giúp đỡ): [-아/어요 | -(으)면 | -습니다]",
+          options: [
+            "도와요 | 도우면 | 돕습니다",
+            "도워요 | 도우면 | 돕습니다",
+            "도와요 | 도오면 | 돕습니다",
+            "도와요 | 도우면 | 돕읍니다"
+          ],
+          answer: 0,
+          explanation: "돕다 gặp -아/어요 → 도와요 (오); gặp -(으)면 → 도우면 (vẫn là 우); gặp phụ âm -습니다 → 돕습니다."
+        },
+        {
+          id: "q30", section: "B", type: "mcq", points: 4, typeLabel: "Chuỗi 3 dạng của 살다",
+          prompt: "Chọn dãy chia ĐÚNG cả 3 dạng (-아/어요 | -(으)니까 | -ㅂ니다) của 살다 (sống):",
+          koStem: "살다 (sống): [-아/어요 | -(으)니까 | -ㅂ니다]",
+          options: [
+            "살아요 | 사니까 | 삽니다",
+            "사라요 | 살으니까 | 살습니다",
+            "살아요 | 살니까 | 삽니다",
+            "사아요 | 사니까 | 삽니다"
+          ],
+          answer: 0,
+          explanation: "살다 gặp -아/어요 → 살아요 (giữ ㄹ); gặp -(으)니까 → 사니까 (rụng cả 으 lẫn ㄹ); gặp -ㅂ니다 → 삽니다 (rụng ㄹ)."
+        }
+      ]
+    };
+  </script>
+  <script src="../S%C6%A1%20c%E1%BA%A5p%201/%C4%90%E1%BB%81%20%C3%B4n%20s%C6%A1%20c%E1%BA%A5p%201/assets/exam-engine.js"></script>
+  <script>initExamApp(EXAM_DATA);</script>
+</body>
+</html>

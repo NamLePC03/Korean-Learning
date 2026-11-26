@@ -1,6 +1,29 @@
 (function () {
-  const STORAGE_KEY = 'korean_sc1_exam_history_v1';
+  const DEFAULT_SUITE = {
+    storageKey: 'korean_sc1_exam_history_v1',
+    homeHref: '../Ng%E1%BB%AF%20ph%C3%A1p%20s%C6%A1%20c%E1%BA%A5p%201.htm',
+    homeLabel: '📚 Bộ Đề Ôn Tập Tiếng Hàn Sơ Cấp 1 (Bài 1–15)',
+    startDesc: 'Toàn bộ câu hỏi bám sát từ vựng và ngữ pháp Bài 1–15 Sơ cấp 1, thao tác 100% bằng chuột (không cần gõ bàn phím tiếng Hàn).',
+    excellentRank: 'Xuất sắc (Làm chủ Sơ cấp 1)',
+    exams: [
+      { id: 'de-01', label: 'Đề 01', file: 'Đề sơ cấp 1 - 01.html' },
+      { id: 'de-02', label: 'Đề 02', file: 'Đề sơ cấp 1 - 02.html' },
+      { id: 'de-03', label: 'Đề 03', file: 'Đề sơ cấp 1 - 03.html' },
+      { id: 'de-04', label: 'Đề 04', file: 'Đề sơ cấp 1 - 04.html' },
+      { id: 'de-05', label: 'Đề 05', file: 'Đề sơ cấp 1 - 05.html' }
+    ],
+    blueprintRows: [
+      { part: '<strong>Phần A</strong> – Từ vựng & Nền tảng', desc: 'Từ vựng ngữ cảnh, trái nghĩa/biến âm, số đếm Hán/Thuần Hàn', count: 10, points: '20 đ' },
+      { part: '<strong>Phần B</strong> – Ngữ pháp & Bất quy tắc', desc: 'Tiểu từ, bẫy ngữ pháp Sơ cấp 1, chia động/tính từ bất quy tắc', count: 14, points: '32 đ' },
+      { part: '<strong>Phần C</strong> – Đọc hiểu', desc: 'Tin nhắn/thông báo ngắn & 2 đoạn văn đọc hiểu', count: 8, points: '24 đ' },
+      { part: '<strong>Phần D</strong> – Viết câu (Ghép thẻ & Sửa lỗi)', desc: 'Sắp xếp câu, tìm & sửa lỗi sai, dịch Việt–Hàn từ ngân hàng thẻ', count: 8, points: '24 đ' }
+    ]
+  };
   const LETTERS = ['A', 'B', 'C', 'D'];
+
+  function getSuite(exam) {
+    return Object.assign({}, DEFAULT_SUITE, (exam && exam.suite) || {});
+  }
 
   let state = {
     mode: 'exam', // 'exam' | 'practice'
@@ -13,17 +36,18 @@
     answers: {} // qId -> value
   };
 
-  function getHistory() {
+  function getHistory(storageKey) {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      return JSON.parse(localStorage.getItem(storageKey || DEFAULT_SUITE.storageKey) || '{}');
     } catch {
       return {};
     }
   }
 
-  function saveResult(examId, score, maxScore, elapsedSec) {
+  function saveResult(storageKey, examId, score, maxScore, elapsedSec) {
     try {
-      const h = getHistory();
+      const key = storageKey || DEFAULT_SUITE.storageKey;
+      const h = getHistory(key);
       const prev = h[examId] || { best: 0, attempts: [] };
       const best = Math.max(prev.best || 0, score);
       const attempts = [
@@ -31,7 +55,7 @@
         ...(prev.attempts || [])
       ].slice(0, 10);
       h[examId] = { best, attempts };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(h));
+      localStorage.setItem(key, JSON.stringify(h));
     } catch {
       // ignore storage errors on restricted file:// origins
     }
@@ -51,11 +75,42 @@
     return normalizeText(str).replace(/[.?!]+$/, '');
   }
 
+  function escAttr(str) {
+    return String(str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  let cachedKoVoice = null;
+  function loadKoVoice() {
+    if (!('speechSynthesis' in window)) return;
+    const voices = window.speechSynthesis.getVoices();
+    cachedKoVoice = voices.find(v => v.lang === 'ko-KR' || v.lang.startsWith('ko')) || null;
+  }
+  if ('speechSynthesis' in window) {
+    loadKoVoice();
+    window.speechSynthesis.onvoiceschanged = loadKoVoice;
+  }
+
+  function speakKo(text) {
+    if (!('speechSynthesis' in window)) {
+      alert('Trình duyệt của bạn chưa hỗ trợ Web Speech API để phát âm!');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const clean = String(text || '').replace(/\(.*?\)/g, '').trim();
+    const u = new SpeechSynthesisUtterance(clean || text);
+    u.lang = 'ko-KR';
+    if (!cachedKoVoice) loadKoVoice();
+    if (cachedKoVoice) u.voice = cachedKoVoice;
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+
   function isAnswered(q) {
     const val = state.answers[q.id];
     if (q.type === 'mcq') return typeof val === 'number';
     if (q.type === 'tile-order' || q.type === 'tile-build') return Array.isArray(val) && val.length > 0;
     if (q.type === 'error-fix') return Boolean(val && typeof val.segIndex === 'number' && typeof val.fixIndex === 'number');
+    if (q.type === 'match') return Boolean(val && val.map && Array.isArray(q.pairs) && Object.keys(val.map).length === q.pairs.length);
     return false;
   }
 
@@ -92,19 +147,22 @@
         correctDisplay: `Chỗ sai: "${q.segments[q.errorSegIndex]}" → Sửa thành: "${q.fixOptions[q.correctFixIndex]}"`
       };
     }
+    if (q.type === 'match') {
+      const map = (val && val.map) || {};
+      const ok = Array.isArray(q.pairs) && q.pairs.length > 0 && q.pairs.every((_, i) => map[i] === i);
+      return {
+        correct: ok,
+        earned: ok ? q.points : 0,
+        correctDisplay: q.pairs.map(p => `${p.ko} = ${p.vi}`).join(' · ')
+      };
+    }
     return { correct: false, earned: 0, correctDisplay: '' };
   }
 
   function renderTopNav(exam) {
-    const history = getHistory();
-    const exams = [
-      { id: 'de-01', label: 'Đề 01', file: 'Đề sơ cấp 1 - 01.html' },
-      { id: 'de-02', label: 'Đề 02', file: 'Đề sơ cấp 1 - 02.html' },
-      { id: 'de-03', label: 'Đề 03', file: 'Đề sơ cấp 1 - 03.html' },
-      { id: 'de-04', label: 'Đề 04', file: 'Đề sơ cấp 1 - 04.html' },
-      { id: 'de-05', label: 'Đề 05', file: 'Đề sơ cấp 1 - 05.html' }
-    ];
-    const linksHtml = exams
+    const suite = getSuite(exam);
+    const history = getHistory(suite.storageKey);
+    const linksHtml = suite.exams
       .map(item => {
         const active = item.id === exam.id ? 'active' : '';
         const rec = history[item.id];
@@ -116,7 +174,7 @@
     return `
       <nav class="top-nav">
         <div class="top-nav-inner">
-          <a class="brand-link" href="../Ng%E1%BB%AF%20ph%C3%A1p%20s%C6%A1%20c%E1%BA%A5p%201.htm">📚 Bộ Đề Ôn Tập Tiếng Hàn Sơ Cấp 1 (Bài 1–15)</a>
+          <a class="brand-link" href="${suite.homeHref}">${suite.homeLabel}</a>
           <div class="exam-links">${linksHtml}</div>
         </div>
       </nav>
@@ -143,7 +201,8 @@
   }
 
   function getStartHistoryHtml(exam) {
-    const history = getHistory();
+    const suite = getSuite(exam);
+    const history = getHistory(suite.storageKey);
     const rec = history[exam.id];
     return rec
       ? `<p id="startHistLine" style="font-size:13.5px;color:#059669;font-weight:700;margin-bottom:14px;">🏆 Điểm cao nhất đã lưu: ${rec.best}/100 (${rec.attempts.length} lần làm)</p>`
@@ -151,18 +210,22 @@
   }
 
   function renderStartPanel(exam) {
+    const suite = getSuite(exam);
     const histLine = getStartHistoryHtml(exam);
+    const blueprintHtml = suite.blueprintRows
+      .map(row => `<tr><td>${row.part}</td><td>${row.desc}</td><td>${row.count}</td><td>${row.points}</td></tr>`)
+      .join('');
 
     return `
       <div class="start-panel" id="startPanel">
         <div class="start-card">
           <h2>Chuẩn bị làm bài: ${exam.title}</h2>
-          <p style="color:var(--text-muted);font-size:14px;">Toàn bộ câu hỏi bám sát từ vựng và ngữ pháp Bài 1–15 Sơ cấp 1, thao tác 100% bằng chuột (không cần gõ bàn phím tiếng Hàn).</p>
+          <p style="color:var(--text-muted);font-size:14px;">${suite.startDesc}</p>
           ${histLine}
           <div class="start-grid">
             <div class="mode-card selected" data-mode="exam" id="modeExamCard">
-              <h3>⏱️ Chế độ Thi thật (45 phút)</h3>
-              <p>Đồng hồ đếm ngược 45:00, tự động nộp khi hết giờ. Phù hợp kiểm tra năng lực tổng hợp.</p>
+              <h3>⏱️ Chế độ Thi thật (${exam.durationMinutes} phút)</h3>
+              <p>Đồng hồ đếm ngược ${formatTime(exam.durationMinutes * 60)}, tự động nộp khi hết giờ. Phù hợp kiểm tra năng lực tổng hợp.</p>
             </div>
             <div class="mode-card" data-mode="practice" id="modePracticeCard">
               <h3>📖 Chế độ Ôn tập (Không giới hạn)</h3>
@@ -175,10 +238,7 @@
               <tr><th>Phần thi</th><th>Dạng bài</th><th>Số câu</th><th>Điểm</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>Phần A</strong> – Từ vựng & Nền tảng</td><td>Từ vựng ngữ cảnh, trái nghĩa/biến âm, số đếm Hán/Thuần Hàn</td><td>10</td><td>20 đ</td></tr>
-              <tr><td><strong>Phần B</strong> – Ngữ pháp & Bất quy tắc</td><td>Tiểu từ, bẫy ngữ pháp Sơ cấp 1, chia động/tính từ bất quy tắc</td><td>14</td><td>32 đ</td></tr>
-              <tr><td><strong>Phần C</strong> – Đọc hiểu</td><td>Tin nhắn/thông báo ngắn & 2 đoạn văn đọc hiểu</td><td>8</td><td>24 đ</td></tr>
-              <tr><td><strong>Phần D</strong> – Viết câu (Ghép thẻ & Sửa lỗi)</td><td>Sắp xếp câu, tìm & sửa lỗi sai, dịch Việt–Hàn từ ngân hàng thẻ</td><td>8</td><td>24 đ</td></tr>
+              ${blueprintHtml}
             </tbody>
           </table>
 
@@ -283,10 +343,65 @@
         <div class="options-list">${fixesHtml}</div>
         ${partialHint}
       `;
+    } else if (q.type === 'match') {
+      const matchState = val || { activeLeft: null, map: {} };
+      const map = matchState.map || {};
+      const activeLeft = typeof matchState.activeLeft === 'number' ? matchState.activeLeft : null;
+      const rightOrder = Array.isArray(q.rightOrder) ? q.rightOrder : q.pairs.map((_, i) => i);
+
+      const reverseMap = {};
+      Object.keys(map).forEach(li => {
+        reverseMap[map[li]] = Number(li);
+      });
+
+      const leftHtml = q.pairs
+        .map((p, li) => {
+          const isAct = activeLeft === li;
+          const isLinked = typeof map[li] === 'number';
+          const cls = isAct ? 'active-pick' : isLinked ? 'paired' : '';
+          const badge = isLinked ? `<span class="match-tag">${li + 1}</span>` : `<span class="match-tag empty">${li + 1}</span>`;
+          return `<button type="button" class="match-item match-left ${cls}" data-qid="${q.id}" data-left="${li}">${badge}<span class="ko">${p.ko}</span></button>`;
+        })
+        .join('');
+
+      const rightHtml = rightOrder
+        .map(origIdx => {
+          const pairedLeft = reverseMap[origIdx];
+          const isLinked = typeof pairedLeft === 'number';
+          const badge = isLinked ? `<span class="match-tag">${pairedLeft + 1}</span>` : `<span class="match-tag empty">?</span>`;
+          return `<button type="button" class="match-item match-right ${isLinked ? 'paired' : ''}" data-qid="${q.id}" data-right="${origIdx}">${badge}<span>${q.pairs[origIdx].vi}</span></button>`;
+        })
+        .join('');
+
+      inner = `
+        <div class="tile-zone-label">
+          <span>Bấm 1 từ bên trái rồi bấm nghĩa tương ứng bên phải (bấm lại thẻ đã nối để gỡ):</span>
+          <button type="button" class="btn btn-outline btn-sm btn-clear-match" data-qid="${q.id}">Xóa hết</button>
+        </div>
+        <div class="match-grid">
+          <div class="match-col">${leftHtml}</div>
+          <div class="match-col">${rightHtml}</div>
+        </div>
+      `;
     }
 
     const noticeHtml = q.noticeBox ? `<div class="notice-card">${q.noticeBox}</div>` : '';
-    const koStemHtml = q.koStem ? `<div class="q-ko-stem">${q.koStem}</div>` : '';
+    let koStemHtml = '';
+    if (q.speakText && q.hideStemText) {
+      koStemHtml = `
+        <div class="q-ko-stem q-tts-box">
+          <button type="button" class="btn-tts" data-speak="${escAttr(q.speakText)}">🔊 Nghe phát âm</button>
+          <span class="tts-hint">Bấm để nghe từ tiếng Hàn</span>
+        </div>`;
+    } else if (q.koStem && q.speakText) {
+      koStemHtml = `
+        <div class="q-ko-stem q-ko-stem-flex">
+          <span>${q.koStem}</span>
+          <button type="button" class="btn-tts-icon" data-speak="${escAttr(q.speakText)}" title="Nghe phát âm">🔊</button>
+        </div>`;
+    } else if (q.koStem) {
+      koStemHtml = `<div class="q-ko-stem">${q.koStem}</div>`;
+    }
 
     return `
       <article class="q-card" id="qcard-${q.id}" data-qid="${q.id}" ${q.passageId ? `data-passage="${q.passageId}"` : ''}>
@@ -414,7 +529,7 @@
     }
 
     if (lockInputs) {
-      card.querySelectorAll('button:not(.btn-check-one)').forEach(b => (b.disabled = true));
+      card.querySelectorAll('button:not(.btn-check-one):not(.btn-tts):not(.btn-tts-icon)').forEach(b => (b.disabled = true));
       if (q.type === 'mcq') {
         const userVal = state.answers[q.id];
         card.querySelectorAll('.opt-btn').forEach((btn, oi) => {
@@ -429,6 +544,19 @@
         card.querySelectorAll('.opt-btn').forEach((btn, fi) => {
           if (fi === q.correctFixIndex) btn.classList.add('correct-ans');
           else if (fi === val.fixIndex) btn.classList.add('wrong-ans');
+        });
+      } else if (q.type === 'match') {
+        const map = (state.answers[q.id] && state.answers[q.id].map) || {};
+        const reverseMap = {};
+        Object.keys(map).forEach(li => { reverseMap[map[li]] = Number(li); });
+        card.querySelectorAll('.match-left').forEach(btn => {
+          btn.classList.remove('active-pick');
+          const li = Number(btn.dataset.left);
+          btn.classList.add(map[li] === li ? 'correct-ans' : 'wrong-ans');
+        });
+        card.querySelectorAll('.match-right').forEach(btn => {
+          const ri = Number(btn.dataset.right);
+          btn.classList.add(reverseMap[ri] === ri ? 'correct-ans' : 'wrong-ans');
         });
       }
     }
@@ -471,11 +599,12 @@
       ? exam.durationMinutes * 60 - state.remainingSec
       : state.elapsedSec;
 
-    saveResult(exam.id, totalEarned, totalMax, elapsed);
+    const suite = getSuite(exam);
+    saveResult(suite.storageKey, exam.id, totalEarned, totalMax, elapsed);
 
     const activePill = document.querySelector('.exam-nav-pill.active');
     if (activePill) {
-      const history = getHistory();
+      const history = getHistory(suite.storageKey);
       const rec = history[exam.id];
       if (rec && typeof rec.best === 'number') {
         let badge = activePill.querySelector('.nav-score-badge');
@@ -489,7 +618,7 @@
     }
 
     let rank = 'Cần ôn tập thêm';
-    if (totalEarned >= 90) rank = 'Xuất sắc (Làm chủ Sơ cấp 1)';
+    if (totalEarned >= 90) rank = suite.excellentRank;
     else if (totalEarned >= 80) rank = 'Giỏi (Sẵn sàng kiểm tra)';
     else if (totalEarned >= 65) rank = 'Khá (Cần rà lại lỗi sai)';
     else if (totalEarned >= 50) rank = 'Trung bình (Nên ôn kỹ lại các phần yếu)';
@@ -598,7 +727,7 @@
         document.getElementById('startPanel').classList.add('hidden');
         document.getElementById('hudBar').classList.remove('hidden');
         document.getElementById('modeBadge').innerHTML =
-          'Chế độ: <strong>' + (state.mode === 'exam' ? 'Thi thật (45p)' : 'Ôn tập tự do') + '</strong>';
+          'Chế độ: <strong>' + (state.mode === 'exam' ? `Thi thật (${exam.durationMinutes}p)` : 'Ôn tập tự do') + '</strong>';
         resetExamState(exam);
         return;
       }
@@ -667,6 +796,12 @@
       if (jumpDot) {
         const target = document.getElementById(jumpDot.dataset.jump);
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      const ttsBtn = e.target.closest('.btn-tts, .btn-tts-icon');
+      if (ttsBtn) {
+        speakKo(ttsBtn.dataset.speak);
         return;
       }
 
@@ -755,6 +890,55 @@
         const q = exam.questions.find(x => x.id === clearBtn.dataset.qid);
         if (!q) return;
         delete state.answers[q.id];
+        refreshQuestionCard(exam, q);
+        return;
+      }
+
+      const clearMatchBtn = e.target.closest('.btn-clear-match');
+      if (clearMatchBtn) {
+        const q = exam.questions.find(x => x.id === clearMatchBtn.dataset.qid);
+        if (!q) return;
+        delete state.answers[q.id];
+        refreshQuestionCard(exam, q);
+        return;
+      }
+
+      const matchLeft = e.target.closest('.match-left');
+      if (matchLeft) {
+        const q = exam.questions.find(x => x.id === matchLeft.dataset.qid);
+        if (!q) return;
+        const li = Number(matchLeft.dataset.left);
+        const prev = state.answers[q.id] || { activeLeft: null, map: {} };
+        const nextMap = { ...(prev.map || {}) };
+        if (prev.activeLeft === li) {
+          if (typeof nextMap[li] === 'number') delete nextMap[li];
+          state.answers[q.id] = { activeLeft: null, map: nextMap };
+        } else {
+          state.answers[q.id] = { activeLeft: li, map: nextMap };
+        }
+        refreshQuestionCard(exam, q);
+        return;
+      }
+
+      const matchRight = e.target.closest('.match-right');
+      if (matchRight) {
+        const q = exam.questions.find(x => x.id === matchRight.dataset.qid);
+        if (!q) return;
+        const ri = Number(matchRight.dataset.right);
+        const prev = state.answers[q.id] || { activeLeft: null, map: {} };
+        const nextMap = { ...(prev.map || {}) };
+        if (typeof prev.activeLeft === 'number') {
+          Object.keys(nextMap).forEach(k => {
+            if (nextMap[k] === ri) delete nextMap[k];
+          });
+          nextMap[prev.activeLeft] = ri;
+          state.answers[q.id] = { activeLeft: null, map: nextMap };
+        } else {
+          Object.keys(nextMap).forEach(k => {
+            if (nextMap[k] === ri) delete nextMap[k];
+          });
+          state.answers[q.id] = { activeLeft: null, map: nextMap };
+        }
         refreshQuestionCard(exam, q);
       }
     });
